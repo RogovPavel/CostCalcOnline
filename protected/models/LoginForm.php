@@ -48,19 +48,17 @@ class LoginForm extends CFormModel
 	 */
 	public function authenticate($attribute,$params)
 	{
-		if(!$this->hasErrors())
-		{
-                        echo '@@1';
-			$this->_identity=new UserIdentity($this->username,$this->password);
-                        $errorCode = $this->_identity->authenticate();
-			if(!$errorCode) {
-                            if ($errorCode == UserIdentity::ERROR_USERNAME_INVALID)
-				$this->addError('username','Неверный логин');
-                            else if ($errorCode == UserIdentity::ERROR_PASSWORD_INVALID)
-				$this->addError('password','Неверный пароль');
-                            else
-                                $this->addError('password','Неверный логин или пароль');
-                        }
+		if(!$this->hasErrors()) {
+                    $this->_identity=new UserIdentity($this->username,$this->password);
+                    $errorCode = $this->_identity->authenticate();
+                    if(!$errorCode) {
+                        if ($errorCode == UserIdentity::ERROR_USERNAME_INVALID)
+                            $this->addError('username','Неверный логин');
+                        else if ($errorCode == UserIdentity::ERROR_PASSWORD_INVALID)
+                            $this->addError('password','Неверный пароль');
+                        else
+                            $this->addError('password','Неверный логин или пароль');
+                    }
 		}
 	}
 
@@ -68,9 +66,7 @@ class LoginForm extends CFormModel
 	 * Logs in the user using the given username and password in the model.
 	 * @return boolean whether login is successful
 	 */
-	public function login()
-	{
-                echo '@2';
+	public function login() {
                 if($this->_identity===null)
 		{
                         $this->_identity=new UserIdentity($this->username,$this->password);
@@ -92,9 +88,9 @@ class LoginForm extends CFormModel
 			Yii::app()->user->login($this->_identity,$duration);
 			return true;
 		}
-		else {
-                        echo '@3';
-			return false;
-                }
+		else 
+                    return false;
+                        
+                
 	}
 }

@@ -2,6 +2,11 @@
 /* @var $this SiteController */
 
 $this->pageTitle=Yii::app()->name;
+
+$this->breadcrumbs=array(
+	'Главная' => array('site/index', array('id' => 1, 'id2' => 2)),
+);
+
 ?>
 
 <h1>!!! 123 Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>

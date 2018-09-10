@@ -51,6 +51,25 @@ return array(
 			),
 		),
 		*/
+            
+                'clientScript' => array(
+                    'packages' => array(
+                        'ls_libs' => array(
+                            'baseUrl' => '..',
+                            'js' => array(
+                                'js/ls.js',
+                                'jqwidgets/localization.js',
+                                'jqwidgets/jqx-all.js',
+                                'jqwidgets/globalization/globalize.js',
+                                'jqwidgets/globalization/globalize.culture.ru-RU.js',
+                            ),
+                            'css' => array(
+                                'jqwidgets/styles/jqx.base.css',
+                                'jqwidgets/styles/jqx.ui-sunny.css',
+                            ),
+                        ),
+                    ),
+                ),
 
 		// database settings are configured in database.php
 		'db'=>require(dirname(__FILE__).'/database.php'),

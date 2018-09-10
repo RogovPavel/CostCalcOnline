@@ -1,59 +1,79 @@
-<?php /* @var $this Controller */ ?>
-<!DOCTYPE html>
+<!--<!DOCTYPE html>-->
 <html>
-<head>
+    <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="language" content="en">
-
-	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection">
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print">
-	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection">
-	<![endif]-->
-
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
-
+        
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
+	
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        
+        <?php Yii::app()->clientScript->registerPackage('ls_libs'); ?>
+        
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#ls-top-menu").jqxMenu({theme: ls.defaults.theme, width: 'calc(100% - 2px)', height: '28px'});
+                $("#ls-top-menu").css('visibility', 'visible');
+                $("#ls-login").jqxInput({theme: ls.defaults.theme, width: '150px', height: 25});
+                $("#ls-password").jqxPasswordInput({theme: ls.defaults.theme, width: '150px', height: 25});
+                $("#ls-btn-login").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
+                $("#ls-btn-remember-pass").jqxButton({theme: ls.defaults.theme, width: '160px', height: 30});
+                
+            });
+        </script>
+        
+        
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
-</head>
-
-<body>
-
-<div class="container" id="page">
-
-	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
-
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
-	</div><!-- mainmenu -->
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
-
-	<?php echo $content; ?>
-
-	<div class="clear"></div>
-
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
-	</div><!-- footer -->
-
-</div><!-- page -->
-
-</body>
-</html>
+    </head>
+    <body>
+        <div class="ls-main-container">
+            <div class="ls-top-menu_container">
+                <div id="ls-top-menu" style="visibility: hidden;">
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Поддержка</a></li>
+                        <li><a href="#">Вход</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ls-breadcrumbs-container">
+                <div class="ls-breadcrumbs">
+                    <?php
+                        if(isset($this->breadcrumbs)) {
+                            foreach ($this->breadcrumbs as $key => $value) {
+                                $url = (isset($value[1])) ? Yii::app()->createUrl($value[0], $value[1]) : Yii::app()->createUrl($value[0]);
+                                echo    '<div class="ls-breadcrumbs-item">
+                                            <div class="ls-arrow-right-breadcrumbs"></div>
+                                            <span><a href="' . $url . '">' . $key . '</a></span>
+                                        </div>';
+                            }
+                        }
+                        
+                    ?>
+                </div>
+            </div>
+            <div class="ls-body-container">
+                <div class="ls-body-header"><span>Авторизация</span></div>
+                <div class="ls-body-content">
+                    <div class="ls-form">
+                        <div class="ls-form-header">Вход</div>
+                        <div class="ls-form-data">
+                            <div class="ls-form-row">
+                                <div class="ls-form-label">Логин:</div>
+                                <div class="ls-form-column"><input type="text" id="ls-login"/></div>
+                            </div>
+                            <div class="ls-form-row">
+                                <div class="ls-form-label">Пароль:</div>
+                                <div class="ls-form-column"><input type="password" id="ls-password"/></div>
+                            </div>
+                            <div class="ls-form-row">
+                                <div class="ls-form-column"><input type="button" id="ls-btn-login" value="Войти"/></div>
+                                <div class="ls-form-column" style="float: right;"><input type="button" id="ls-btn-remember-pass" value="Забыли пароль?"/></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>    
