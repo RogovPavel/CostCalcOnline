@@ -21,5 +21,13 @@ should you have any questions.</p>
 
 
 <?php 
+    $Users = new Users();
+    
+    $Res = $Users->find();
+    
+    print_r($Res);
+    
+    
+    
     
 ?>

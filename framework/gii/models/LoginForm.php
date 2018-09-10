@@ -35,6 +35,7 @@ class LoginForm extends CFormModel
 	 */
 	public function login()
 	{
+                echo '@1';
 		if($this->_identity===null)
 		{
 			$this->_identity=new UserIdentity('yiier',$this->password);

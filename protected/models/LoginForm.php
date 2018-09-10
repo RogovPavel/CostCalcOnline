@@ -50,9 +50,17 @@ class LoginForm extends CFormModel
 	{
 		if(!$this->hasErrors())
 		{
+                        echo '@@1';
 			$this->_identity=new UserIdentity($this->username,$this->password);
-			if(!$this->_identity->authenticate())
-				$this->addError('password','Incorrect username or password.');
+                        $errorCode = $this->_identity->authenticate();
+			if(!$errorCode) {
+                            if ($errorCode == UserIdentity::ERROR_USERNAME_INVALID)
+				$this->addError('username','Неверный логин');
+                            else if ($errorCode == UserIdentity::ERROR_PASSWORD_INVALID)
+				$this->addError('password','Неверный пароль');
+                            else
+                                $this->addError('password','Неверный логин или пароль');
+                        }
 		}
 	}
 
@@ -62,18 +70,31 @@ class LoginForm extends CFormModel
 	 */
 	public function login()
 	{
-		if($this->_identity===null)
+                echo '@2';
+                if($this->_identity===null)
 		{
-			$this->_identity=new UserIdentity($this->username,$this->password);
-			$this->_identity->authenticate();
+                        $this->_identity=new UserIdentity($this->username,$this->password);
+                        $this->_identity->authenticate();
+                        if($this->_identity->errorCode != 0) {
+                            if ($this->_identity->errorCode == UserIdentity::ERROR_USERNAME_INVALID)
+				$this->addError('username','Неверный логин');
+                            else if ($this->_identity->errorCode == UserIdentity::ERROR_PASSWORD_INVALID)
+				$this->addError('password','Неверный пароль');
+                            else
+                                $this->addError('password','Неверный логин или пароль');
+                        }
+                        
 		}
-		if($this->_identity->errorCode===UserIdentity::ERROR_NONE)
+
+                if($this->_identity->errorCode===UserIdentity::ERROR_NONE)
 		{
 			$duration=$this->rememberMe ? 3600*24*30 : 0; // 30 days
 			Yii::app()->user->login($this->_identity,$duration);
 			return true;
 		}
-		else
+		else {
+                        echo '@3';
 			return false;
+                }
 	}
 }
