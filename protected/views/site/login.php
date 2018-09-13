@@ -1,53 +1,37 @@
-<?php
-/* @var $this SiteController */
-/* @var $model LoginForm */
-/* @var $form CActiveForm  */
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#ls-login").jqxInput({theme: ls.defaults.theme, width: '150px', height: 25});
+        $("#ls-password").jqxPasswordInput({theme: ls.defaults.theme, width: '150px', height: 25});
+        $("#ls-btn-login").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
+        $("#ls-btn-remember-pass").jqxButton({theme: ls.defaults.theme, width: '160px', height: 30});
+    });
+</script>
 
-$this->pageTitle=Yii::app()->name . ' - Login';
+<?php
+
+$this->pageTitle=Yii::app()->name . ' - Авторизация';
 $this->breadcrumbs=array(
-	'Login',
+        'Главная' => array('site/index'),
+	'Авторизация',
 );
 ?>
 
-<h1>Login</h1>
+<div class="ls-form">
+    <div class="ls-form-header">Вход</div>
+    <div class="ls-form-data">
+        <div class="ls-form-row">
+            <div class="ls-form-label">Логин:</div>
+            <div class="ls-form-column"><input type="text" id="ls-login"/></div>
+        </div>
+        <div class="ls-form-row">
+            <div class="ls-form-label">Пароль:</div>
+            <div class="ls-form-column"><input type="password" id="ls-password"/></div>
+        </div>
+        <div class="ls-form-row">
+            <div class="ls-form-column"><input type="button" id="ls-btn-login" value="Войти"/></div>
+            <div class="ls-form-column" style="float: right;"><input type="button" id="ls-btn-remember-pass" value="Забыли пароль?"/></div>
+        </div>
+    </div>
+</div>
 
-<p>Please fill out the following form with your login credentials:</p>
 
-<div class="form">
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'login-form',
-	'enableClientValidation'=>true,
-	'clientOptions'=>array(
-		'validateOnSubmit'=>true,
-	),
-)); ?>
-
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password'); ?>
-		<?php echo $form->error($model,'password'); ?>
-		<p class="hint">
-			Hint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>.
-		</p>
-	</div>
-
-	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Login'); ?>
-	</div>
-
-<?php $this->endWidget(); ?>
-</div><!-- form -->

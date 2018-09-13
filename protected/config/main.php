@@ -55,9 +55,9 @@ return array(
                 'clientScript' => array(
                     'packages' => array(
                         'ls_libs' => array(
-                            'baseUrl' => '..',
+                            'baseUrl' => '/js',
                             'js' => array(
-                                'js/ls.js',
+                                'ls.js',
                                 'jqwidgets/localization.js',
                                 'jqwidgets/jqx-all.js',
                                 'jqwidgets/globalization/globalize.js',
