@@ -59,7 +59,7 @@ a {
     border-radius: 3px 3px 0px 0px;
     font-weight: bold;
     font-size: 14px;
-    background: #fece2f url(/../jqwidgets/styles/images/sunny/ui-bg_gloss-wave_60_fece2f_500x100.png) 50% 50% repeat-x;
+    background: #fece2f url(/js/jqwidgets/styles/images/sunny/ui-bg_gloss-wave_60_fece2f_500x100.png) 50% 50% repeat-x;
 }
 
 .ls-body-content {
@@ -81,7 +81,7 @@ a {
 }
 
 .ls-arrow-right-breadcrumbs {
-    background-image: url(/../jqwidgets/styles/images/metro-icon-right.png);
+    background-image: url(/js/jqwidgets/styles/images/metro-icon-right.png);
     background-repeat: no-repeat;
     background-position: center;
     width: 17px;
@@ -91,7 +91,7 @@ a {
 }
 
 .ls-form {
-    background: #feeebd url(/../jqwidgets/styles/images/sunny/ui-bg_highlight-soft_100_feeebd_1x100.png) 50% top repeat-x;
+    background: #feeebd url(/js/jqwidgets/styles/images/sunny/ui-bg_highlight-soft_100_feeebd_1x100.png) 50% top repeat-x;
     border: 1px solid #c7c7c7;
     float: left;
     border-radius: 8px;
@@ -111,7 +111,7 @@ a {
     height: auto;
     white-space: nowrap;
     overflow: hidden;
-    background: #817865 url(/../jqwidgets/styles/images/sunny/ui-bg_gloss-wave_45_817865_500x100.png) 50% 50% repeat-x;
+    background: #817865 url(/js/jqwidgets/styles/images/sunny/ui-bg_gloss-wave_45_817865_500x100.png) 50% 50% repeat-x;
     border-radius: 8px;
     color: #ffffff;
     line-height: 1.231;
@@ -144,6 +144,18 @@ a {
 .ls-form-label {
     line-height: 27px;
     min-width: 120px;
+    float: left;
+}
+
+.ls-form-error {
+    color: red;
+    font-weight: bold;
+    float: left;
+}
+
+.errorMessage {
+    color: red;
+    font-weight: bold;
     float: left;
 }
 

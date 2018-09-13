@@ -1,38 +1,47 @@
 <?php
-/* @var $this SiteController */
-
-$this->pageTitle=Yii::app()->name;
-
-$this->breadcrumbs=array(
-	'Главная' => array('site/index', array('id' => 1, 'id2' => 2)),
-);
-
+    $this->pageTitle=Yii::app()->name;
+    $this->pageName = 'Добро пожаловать!';
+    $this->breadcrumbs=array(
+            'Главная' => 'site/index',
+    );
 ?>
 
-<h1>!!! 123 Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<h1>Приветствуем Вас <i>на страницах нашего проекта</i>!!!</h1>
 
-<p>Congratulations! You have successfully created your Yii application.</p>
+<p>
+    Данный проект был разработан для коммерческих организаций, индивидуальных предпринимателей, которые занимаются установками и обслуживанием систем безопасности.
+    В этот проект были включены основные требования для программного обеспечения подобного рода.
+</p>
+<p>Основные функции которые выполняет приложение:</p>
+    <ul>
+        <li>Заведение новых клиентов в систему</li>
+        <li>Заведение адресов клиентов</li>
+        <li>Регитсрация заявок от клиентов двумя способами: внетрення форма; форма для клиентов;</li>
+    </ul>
 
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
-
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
-
+<p></p>
 
 <?php 
-    $Users = new Users();
+
+    $model = new Users();
     
-    $Res = $Users->find();
+    echo $model->command->text;
     
-    print_r($Res);
+//    $r = $model->find(array(
+//            array(
+//                'sql'=>'u.login=:p1',
+//                'params' => array(':p1'=>'admin')
+//            )
+//        ));
+
+    
+//    print_r($r);
+    
+    
+    
     
     
     
     
 ?>
+

@@ -34,14 +34,21 @@ return array(
 
 	// application components
 	'components'=>array(
-
+                
+                'authManager' => array(
+                    // Будем использовать свой менеджер авторизации
+                    'class' => 'LSPhpAuthManager',
+                    // Роль по умолчанию. Все, кто не админы, модераторы и юзеры — гости.
+                    'defaultRoles' => array('guest'),
+                ),
+            
 		'user'=>array(
-			// enable cookie-based authentication
-			'allowAutoLogin'=>true,
+                    'class' => 'WebUser',
+                    'allowAutoLogin'=>true,
 		),
 
 		// uncomment the following to enable URLs in path-format
-		/*
+		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
@@ -50,12 +57,12 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		*/
+		
             
                 'clientScript' => array(
                     'packages' => array(
                         'ls_libs' => array(
-                            'baseUrl' => '/js',
+                            'baseUrl' => Yii::app()->request->basePath . '/js',
                             'js' => array(
                                 'ls.js',
                                 'jqwidgets/localization.js',
