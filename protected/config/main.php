@@ -51,6 +51,7 @@ return array(
 		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+                        'showScriptName' => false,
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
@@ -64,8 +65,8 @@ return array(
                         'ls_libs' => array(
                             'baseUrl' => Yii::app()->request->basePath . '/js',
                             'js' => array(
-                                'ls.js',
                                 'jqwidgets/localization.js',
+                                'ls.js',
                                 'jqwidgets/jqx-all.js',
                                 'jqwidgets/globalization/globalize.js',
                                 'jqwidgets/globalization/globalize.culture.ru-RU.js',

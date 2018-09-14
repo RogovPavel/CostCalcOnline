@@ -12,7 +12,7 @@ class AjaxDataController extends Controller {
         return array(
             array('allow',
                     'actions'=>array('DataJQXSimple'),
-                    'users'=>array('*'),
+                    'users'=>array('@'),
             ),
             array('deny',
                     'users'=>array('*'),
@@ -25,24 +25,22 @@ class AjaxDataController extends Controller {
         $modelname = '';
         if (isset($_POST['ModelName']))
             $modelname = $_POST['ModelName'];
-        if (isset($_POST['ModelName']))
-            $modelname = $_POST['ModelName'];
+        if (isset($_GET['ModelName']))
+            $modelname = $_GET['ModelName'];
         
         $model = new $modelname();
-//        
-//        $res = $model->command->queryAll();
-//        $count = count($res);
-//        
-//        $data = array();
-//        
-//        $data[] = array(
-//            'TotalRows' => $count,
-//            'Rows' => $res
-//        );
-//        
-//        echo json_encode($data);
         
-        echo '11';
+        $res = $model->command->queryAll();
+        $count = count($res);
+        
+        $data = array();
+        
+        $data[] = array(
+            'TotalRows' => $count,
+            'Rows' => $res
+        );
+        
+        echo json_encode($data);
         return;
     }
 }

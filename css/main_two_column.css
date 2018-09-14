@@ -179,3 +179,35 @@ a {
 .ls-form-data {
     padding: 4px;
 }
+
+.ls-row {
+    margin-bottom: 4px;
+}
+
+.ls-row:last-child {
+    margin-bottom: 0px;
+}
+
+.ls-row:after {
+    content: ' ';
+    display: block;
+    clear: both;
+}
+
+.ls-row-column {
+    float: left;
+    margin-left: 6px;
+}
+
+.ls-row-column:first-child {    
+    margin-left: 0px;
+}
+
+.ls-row-column-right {
+    float: right;
+    margin-left: 6px;
+}
+
+.ls-row-column-right:last-child {
+    margin-left: 0px;
+}

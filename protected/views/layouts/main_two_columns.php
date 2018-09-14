@@ -50,6 +50,7 @@
                         </div>
                         <div>
                             <ul>
+                                <li><a href='<?php echo Yii::app()->createUrl('regions'); ?>'>Регионы</a></li>
                                 <li><a href='#'>Адреса</a></li>
                                 <li><a href='#'>Клиенты</a></li>
                                 <li><a href='#'>Банки</a></li>

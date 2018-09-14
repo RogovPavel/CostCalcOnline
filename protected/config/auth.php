@@ -2,6 +2,9 @@
     return array_merge(
         /* Личный кабинет*/
         include(dirname(__FILE__).'/security/profile.php'),
+        
+        /* Регионы */
+        include(dirname(__FILE__).'/security/regions.php'),
             
         array(    
             'guest' => array(
@@ -18,6 +21,9 @@
                 'data' => null,
                 'children' => array(
                     'admin_profile',
+                    
+                    /* Адреса */
+                    'admin_regions',
                 ),
             ),
         )
