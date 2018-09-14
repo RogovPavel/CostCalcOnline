@@ -6,6 +6,20 @@ ls.defaults = {
 
 ls.sources = [];
 ls.settings = [];
+ls.functions = {};
+
+ls.settings['dialog']  = {
+    theme: ls.defaults.theme,
+    width: '500px',
+    maxHeight: 2000,
+    maxWidth: 2000,
+    height: '230px',
+    resizable: true,
+    position: 'center',
+    isModal: true,
+    autoOpen: false,
+    animationType: 'none'
+};
 
 ls.settings['grid'] = {
     width: 'calc(100% - 2px)',

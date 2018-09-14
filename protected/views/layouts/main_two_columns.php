@@ -97,6 +97,14 @@
                 </div>
             </div>
         </div>
+        <div id="ls-dialog" style="display: none;">
+            <div id="ls-dialog-header">
+                <span id="ls-dialog-header-text"></span>
+            </div>
+            <div style="padding: 10px;" id="ls-dialog-content">
+                
+            </div>
+        </div>
     </body>
 </html>
 

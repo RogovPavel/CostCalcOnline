@@ -46,6 +46,10 @@ return array(
                     'class' => 'WebUser',
                     'allowAutoLogin'=>true,
 		),
+            
+                'errorManager' => array(
+                    'class' => 'application.components.LSErrorManager',
+                ),
 
 		// uncomment the following to enable URLs in path-format
 		
