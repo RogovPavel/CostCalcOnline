@@ -83,7 +83,7 @@ Stack trace:
 REQUEST_URI=/Regions/Create
 HTTP_REFERER=http://ls.ru/regions
 ---
-2018/09/16 20:09:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+2018/09/16 20:09:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ.пїЅ. пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 ' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
 Stack trace:
 #0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
@@ -110,7 +110,7 @@ Stack trace:
 REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=Regions
 HTTP_REFERER=http://ls.ru/regions
 ---
-2018/09/16 20:09:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+2018/09/16 20:09:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ.пїЅ. пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 ' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
 Stack trace:
 #0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
@@ -143,6 +143,24 @@ REQUEST_URI=/Regions/Create
 HTTP_REFERER=http://ls.ru/regions
 ---
 2018/09/16 21:11:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/09/16 21:35:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/09/16 21:35:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
 Stack trace:
 #0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
 #1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
