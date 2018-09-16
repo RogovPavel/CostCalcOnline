@@ -43,10 +43,11 @@
                         $("#ls-dialog-content").html(Res.content);
                         $("#ls-dialog-header-text").html(Res.dialog_header);
                         $('#ls-dialog').jqxWindow('open');
-                    }
+                    } else
+                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
                 },
                 error: function(Res) {
-//                    Aliton.ShowErrorMessage(Aliton.Message['ERROR_LOAD_PAGE'], Res.responseText);
+                    ls.showerrormassage('Ошибка')
                 }
             });
         });

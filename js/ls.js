@@ -8,6 +8,25 @@ ls.sources = [];
 ls.settings = [];
 ls.functions = {};
 
+ls.showerrormassage = function(header, message) {
+    
+    $('#ls-error-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 400, height: 130, initContent: function() {
+            $('#ls-btn-error-close').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));    
+            $('#ls-error-message').jqxTextArea($.extend(true, {}, ls.settings['textarea'], { height: 'calc(100% - 2px)', width: 'calc(100% - 2px)'}));
+            $('#ls-btn-error-close').on('click', function() {
+                $('#ls-error-dialog').jqxWindow('close');
+            });
+        }
+    }));
+    $('#ls-error-dialog-header-text').html(header);
+    $('#ls-error-message').html(message);
+    $('#ls-error-dialog').jqxWindow('open');
+}
+
+ls.settings['textarea']  = {
+    theme: ls.defaults.theme,
+};
+
 ls.settings['dialog']  = {
     theme: ls.defaults.theme,
     width: '500px',
@@ -31,6 +50,13 @@ ls.settings['grid'] = {
     rendergridrows: function (params) {
             return params.data;
     }    
+};
+
+ls.settings['button'] = {
+    theme: ls.defaults.theme,
+    width: 120,
+    height: 30,
+    imgPosition: "left",   
 };
 
 ls.settings['button'] = {

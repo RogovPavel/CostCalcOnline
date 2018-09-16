@@ -27,7 +27,7 @@ class RegionsController extends Controller {
     
     public function actionCreate() {
         $result = array(
-            'state' => 0,
+            'error' => 0,
             'content' => '',
             'dialog_header' => 'Вставка записи',
             'id' => 0,
@@ -36,8 +36,9 @@ class RegionsController extends Controller {
         );
         
         try {
-            throw new Exception('Division by zero.');
-            
+            throw new Exception('ошибка');
+
+
             $model = new Regions();
 
             if (isset($_POST['params']))
@@ -49,9 +50,9 @@ class RegionsController extends Controller {
             ), true);
         
         } catch (Exception $e) {
-            $result['state'] = 1;
-            $result['error_type'] = Yii::app()->errorManager->get_error_type(1);
-            $result['error_text'] = $e->getMessage();
+            $result['error'] = 1;
+            $result['error_type'] = Yii::app()->errorManager->getErrorType(15);
+            $result['error_text'] = Yii::app()->errorManager->getErrorMessage(15);
             
         } finally {
             echo json_encode($result);
