@@ -1,14 +1,17 @@
 <script type="text/javascript">
-    ls.functions.refresh_regions = function(_id) {
-        $("#ls-regions-grid").jqxGrid('updatebounddata');
-        var index = $("#ls-regions-grid").jqxGrid('getrowdatabyid', _id);
-        $("#ls-regions-grid").jqxGrid('selectrow', index);
+    ls.regions = {
+        id: 0
     };
     
     $(document).ready(function() {
         var currentrow_regions;
         
-        var regions_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['regions']));
+        var regions_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['regions']), {
+            loadError: function(jqXHR, status, error) {
+                ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
+                ls.lock_operation = false;
+            }
+        });
         
         var checkbutton = function() {
             $('#ls-btn-update').jqxButton({disabled: !(currentrow_regions != undefined)})
@@ -21,7 +24,10 @@
         });
         
         $('#ls-btn-refresh').on('click', function() {
-            ls.functions.refresh_regions();
+            if (ls.lock_operation) return;
+            console.log(ls.lock_operation);
+            ls.lock_operation = true;
+            $("#ls-regions-grid").jqxGrid('updatebounddata');
         });
         
         $("#ls-regions-grid").on('rowdoubleclick', function(){
@@ -29,17 +35,58 @@
         });
         
         $("#ls-regions-grid").on('bindingcomplete', function() {
+            var idx = $('#ls-regions-grid').jqxGrid('selectedrowindex'); 
+            
+            if (ls.regions.id != 0) {
+                idx = $("#ls-regions-grid").jqxGrid('getrowboundindexbyid', ls.regions.id);
+            }
+            
+            if (idx == -1)
+                idx = 0;
+            
+            $("#ls-regions-grid").jqxGrid('selectrow', idx);
+            $("#ls-regions-grid").jqxGrid('ensurerowvisible', idx);
+            
             checkbutton();
+            ls.lock_operation = false;
         });
         
-        $('#ls-btn-create').on('click', function() {
+        $('#ls-btn-delete').on('click', function() {
+            if ($('#ls-btn-delete').jqxButton('disabled') || ls.lock_operation) return;
+            if (currentrow_regions == undefined) return;            
             $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('Regions/Create')) ?>,
+                url: <?php echo json_encode(Yii::app()->createUrl('regions/delete')) ?>,
                 type: 'POST',
+                data: {
+                    region_id: currentrow_regions.region_id
+                },
                 async: false,
                 success: function(Res) {
                     Res = JSON.parse(Res);
-                    if (Res.state == 0) {
+                    if (Res.error == 0) {
+                        $('#ls-btn-refresh').click();
+                    } else
+                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
+                },
+                error: function(Res) {
+                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
+                }
+            });
+        });
+        
+        $('#ls-btn-update').on('click', function() {
+            if ($('#ls-btn-update').jqxButton('disabled') || ls.lock_operation) return;
+            if (currentrow_regions == undefined) return;            
+            $.ajax({
+                url: <?php echo json_encode(Yii::app()->createUrl('regions/update')) ?>,
+                type: 'POST',
+                data: {
+                    region_id: currentrow_regions.region_id
+                },
+                async: false,
+                success: function(Res) {
+                    Res = JSON.parse(Res);
+                    if (Res.error == 0) {
                         $("#ls-dialog-content").html(Res.content);
                         $("#ls-dialog-header-text").html(Res.dialog_header);
                         $('#ls-dialog').jqxWindow('open');
@@ -47,12 +94,33 @@
                         ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
                 },
                 error: function(Res) {
-                    ls.showerrormassage('Ошибка')
+                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
                 }
             });
         });
         
-        $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 400, height: 360}));
+        $('#ls-btn-create').on('click', function() {
+            if ($('#ls-btn-create').jqxButton('disabled') || ls.lock_operation) return;
+            $.ajax({
+                url: <?php echo json_encode(Yii::app()->createUrl('regions/create')) ?>,
+                type: 'POST',
+                async: false,
+                success: function(Res) {
+                    Res = JSON.parse(Res);
+                    if (Res.error == 0) {
+                        $("#ls-dialog-content").html(Res.content);
+                        $("#ls-dialog-header-text").html(Res.dialog_header);
+                        $('#ls-dialog').jqxWindow('open');
+                    } else
+                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
+                },
+                error: function(Res) {
+                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
+                }
+            });
+        });
+        
+        $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 400, height: 124}));
         
         $('#ls-btn-create').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
         $('#ls-btn-update').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));

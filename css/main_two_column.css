@@ -139,8 +139,17 @@ a {
     
 }
 
+.ls-form-html {
+    margin: 0;
+}
+
 .ls-form-row {
     padding: 4px 0px;
+    overflow: hidden;
+}
+.ls-form-row:last-child {
+    padding: 4px 0px 0px 0px;
+    
 }
 
 .ls-form-column {
@@ -148,6 +157,16 @@ a {
     margin-left: 6px;
     line-height: 27px;
     
+}
+
+.ls-form-column-right {
+    float: right;
+    margin-left: 6px;
+    line-height: 27px;
+}
+
+.ls-form-column-right:first-child {
+    margin-left: 0px;
 }
 
 .ls-form-column:first-child {

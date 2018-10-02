@@ -110,7 +110,7 @@
                 <span id="ls-error-dialog-header-text"></span>
             </div>
             <div style="padding: 10px;" id="ls-error-dialog-content">
-                <div class="ls-row" style="height: calc(100% - 40px);"><textarea id="ls-error-message"></textarea></div>
+                <div class="ls-row" style="height: calc(100% - 34px);"><textarea id="ls-error-message"></textarea></div>
                 <div class="ls-row">
                     <div class="ls-row-column-right"><input type="button" id="ls-btn-error-close" value="Закрыть" /></div>
                 </div>

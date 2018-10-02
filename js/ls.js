@@ -4,13 +4,15 @@ ls.defaults = {
     theme: 'ui-sunny'
 };
 
+ls.lock_operation = false;
+
 ls.sources = [];
 ls.settings = [];
 ls.functions = {};
 
 ls.showerrormassage = function(header, message) {
     
-    $('#ls-error-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 400, height: 130, initContent: function() {
+    $('#ls-error-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 400, height: 160, initContent: function() {
             $('#ls-btn-error-close').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));    
             $('#ls-error-message').jqxTextArea($.extend(true, {}, ls.settings['textarea'], { height: 'calc(100% - 2px)', width: 'calc(100% - 2px)'}));
             $('#ls-btn-error-close').on('click', function() {

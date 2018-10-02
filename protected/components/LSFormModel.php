@@ -21,6 +21,7 @@ class LSFormModel extends CFormModel
     protected $field_id_with_tm;
     
     public $command; // Комманда для выполения модели
+    public $proc_params;
     
     public function __construct($scenario = '') {
         parent::__construct($scenario);
@@ -59,16 +60,46 @@ class LSFormModel extends CFormModel
         return $res;
     }
     
-    public function insert() {
+    public function insert($params = array()) {
+        $sp = new LSStoredProc();
+    
+        $sp->sp_proc_name = $this->sp_insert_name;
+        $sp->proc_params = $this->proc_params[$this->sp_insert_name];
         
+        if (count($params) > 0)
+            $res = $sp->execute($params);
+        else
+            $res = $sp->execute($this);
+        
+        return array('tmp' => $res['tmp'], 'data' => $res['data']);
     }
     
-    public function update() {
+    public function update($params = array()) {
+        $sp = new LSStoredProc();
+    
+        $sp->sp_proc_name = $this->sp_update_name;
+        $sp->proc_params = $this->proc_params[$this->sp_update_name];
         
+        if (count($params) > 0)
+            $res = $sp->execute($params);
+        else
+            $res = $sp->execute($this);
+        
+        return array('tmp' => $res['tmp'], 'data' => $res['data']);
     }
     
-    public function delete() {
+    public function delete($params = array()) {
+        $sp = new LSStoredProc();
+    
+        $sp->sp_proc_name = $this->sp_delete_name;
+        $sp->proc_params = $this->proc_params[$this->sp_delete_name];
         
+        if (count($params) > 0)
+            $res = $sp->execute($params);
+        else
+            $res = $sp->execute($this);
+        
+        return array('tmp' => $res['tmp'], 'data' => $res['data']);
     }
     
     

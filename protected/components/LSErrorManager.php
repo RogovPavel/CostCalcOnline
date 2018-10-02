@@ -4,6 +4,8 @@ class LSErrorManager extends CComponent {
     
     const ERROR_TYPE = 0;
     const ERROR_CREATE_TYPE = 15;
+    const ERROR_UPDATE_TYPE = 20;
+    const ERROR_DELETE_TYPE = 30;
     
     const ERROR_UNDEFINED_MESSAGE = 10;
     const ERROR_CREATE_MESSAGE = 15;

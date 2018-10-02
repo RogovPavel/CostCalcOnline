@@ -14,6 +14,16 @@ class Regions extends LSFormModel {
     public function __construct($scenario = '') {
         parent::__construct($scenario);
         
+        $this->sp_insert_name = 'insert_regions';
+        $this->sp_update_name = 'update_regions';
+        $this->sp_delete_name = 'delete_regions';
+        
+        $this->proc_params = array(
+            'insert_regions' => array('region_id', 'region_name', 'group_id', 'user_create'),
+            'update_regions' => array('region_id', 'region_name', 'user_change'),
+            'delete_regions' => array('region_id', 'group_id', 'user_change'),
+        );
+        
         $this->command->select = "r.region_id,
                                     r.region_name,
                                     r.date_create,

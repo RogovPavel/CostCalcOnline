@@ -59,8 +59,6 @@ class SiteController extends Controller
             $model=new LoginForm;
             if(isset($_POST['LoginForm'])) {
                 
-                print_r($_POST['LoginForm']);
-                
                 $model->attributes=$_POST['LoginForm'];
                 if ($model->login()) {
                     $this->redirect(Yii::app()->user->returnUrl);
