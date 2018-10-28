@@ -44,6 +44,7 @@ class Regions extends LSFormModel {
     
     public function rules() {
         return array(
+            array('region_name', 'required'),
             array('region_id,
                     region_name,
                     date_create,

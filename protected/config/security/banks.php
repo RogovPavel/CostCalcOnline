@@ -1,68 +1,68 @@
 <?php
 
     return array(
-        'admin_regions' => array(
+        'admin_banks' => array(
             'type' => CAuthItem::TYPE_ROLE,
-            'description' => 'regions',
+            'description' => 'banks',
             'bizRule' => null,
             'data' => null,
-            'defaultIndex' => 'regions/index',
+            'defaultIndex' => 'banks/index',
             'children' => array(
-                'view_regions',
-                'create_regions',
-                'update_regions',
-                'delete_regions',
+                'view_banks',
+                'create_banks',
+                'update_banks',
+                'delete_banks',
             ),
         ),
         
-        'manager_regions' => array(
+        'manager_banks' => array(
             'type' => CAuthItem::TYPE_ROLE,
-            'description' => 'regions',
+            'description' => 'banks',
             'bizRule' => null,
             'data' => null,
-            'defaultIndex' => 'regions/index',
+            'defaultIndex' => 'banks/index',
             'children' => array(
-                'view_regions',
-                'create_regions',
-                'update_regions',
+                'view_banks',
+                'create_banks',
+                'update_banks',
             ),
         ),
         
-        'user_regions' => array(
+        'user_banks' => array(
             'type' => CAuthItem::TYPE_ROLE,
-            'description' => 'regions',
+            'description' => 'banks',
             'bizRule' => null,
             'data' => null,
-            'defaultIndex' => 'regions/index',
+            'defaultIndex' => 'banks/index',
             'children' => array(
-                'view_regions',
+                'view_banks',
             ),
         ),
         
-        'view_regions' => array(
+        'view_banks' => array(
             'type' => CAuthItem::TYPE_OPERATION,
-            'description' => 'view_regions',
+            'description' => 'view_banks',
             'bizRule' => null,
             'data' => null,
         ),
         
-        'create_regions' => array(
+        'create_banks' => array(
             'type' => CAuthItem::TYPE_OPERATION,
-            'description' => 'create_regions',
+            'description' => 'create_banks',
             'bizRule' => null,
             'data' => null,
         ),
         
-        'update_regions' => array(
+        'update_banks' => array(
             'type' => CAuthItem::TYPE_OPERATION,
-            'description' => 'update_regions',
+            'description' => 'update_banks',
             'bizRule' => null,
             'data' => null,
         ),
         
-        'delete_regions' => array(
+        'delete_banks' => array(
             'type' => CAuthItem::TYPE_OPERATION,
-            'description' => 'delete_regions',
+            'description' => 'delete_banks',
             'bizRule' => null,
             'data' => null,
         ),

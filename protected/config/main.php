@@ -50,6 +50,10 @@ return array(
                 'errorManager' => array(
                     'class' => 'application.components.LSErrorManager',
                 ),
+            
+                'security' => array(
+                    'class' => 'application.components.LSSecurity',
+                ),
 
 		// uncomment the following to enable URLs in path-format
 		

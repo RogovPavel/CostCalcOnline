@@ -114,3 +114,36 @@ ls.sources['regions'] = {
         this.totalrecords = data[0].TotalRows;
     }
 };
+ls.sources['firms'] = {
+    datatype: "json",
+    datafields: [
+        {name: 'firm_id', typr: 'int'},
+        {name: 'firmname', typr: 'string'},
+        {name: 'inn', typr: 'string'},
+        {name: 'kpp', typr: 'string'},
+        {name: 'account', typr: 'string'},
+        {name: 'ogrn', typr: 'string'},
+        {name: 'okpo', typr: 'string'},
+        {name: 'bank_id', typr: 'int'},
+        {name: 'bankname', typr: 'string'},
+        {name: 'jur_address', typr: 'string'},
+        {name: 'fact_address', typr: 'string'},
+        {name: 'date_create', typr: 'date'},
+        {name: 'user_create', typr: 'int'},
+        {name: 'date_change', typr: 'date'},
+        {name: 'user_change', typr: 'int'},
+        {name: 'group_id', typr: 'int'},
+        {name: 'deldate', typr: 'date'},       
+    ],
+    id: 'firm_id',
+    url: '/index.php/AjaxData/DataJQXSimple?ModelName=Firms',
+    type: 'POST',
+    root: 'Rows',
+    cache: false,
+    async: false,
+    pagenum: 0,
+    pagesize: 200,
+    beforeprocessing: function (data) {
+        this.totalrecords = data[0].TotalRows;
+    }
+};

@@ -1,12 +1,12 @@
 <script type="text/javascript">
-    ls.regions = {
+    ls.firms = {
         id: 0
     };
     
     $(document).ready(function() {
-        var currentrow_regions;
+        var currentrow_firms;
         
-        var regions_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['regions']), {
+        var firms_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['firms']), {
             loadError: function(jqXHR, status, error) {
                 ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
                 ls.lock_operation = false;
@@ -14,12 +14,12 @@
         });
         
         var checkbutton = function() {
-            $('#ls-btn-update').jqxButton({disabled: !(currentrow_regions != undefined)})
-            $('#ls-btn-delete').jqxButton({disabled: !(currentrow_regions != undefined)})
+            $('#ls-btn-update').jqxButton({disabled: !(currentrow_firms != undefined)})
+            $('#ls-btn-delete').jqxButton({disabled: !(currentrow_firms != undefined)})
         }
         
-        $("#ls-regions-grid").on('rowselect', function (event) {
-            currentrow_regions = $('#ls-regions-grid').jqxGrid('getrowdata', event.args.rowindex);
+        $("#ls-firms-grid").on('rowselect', function (event) {
+            currentrow_firms = $('#ls-firms-grid').jqxGrid('getrowdata', event.args.rowindex);
             checkbutton();
         });
         
@@ -27,25 +27,25 @@
             if (ls.lock_operation) return;
             
             ls.lock_operation = true;
-            $("#ls-regions-grid").jqxGrid('updatebounddata');
+            $("#ls-firms-grid").jqxGrid('updatebounddata');
         });
         
-        $("#ls-regions-grid").on('rowdoubleclick', function(){
+        $("#ls-firms-grid").on('rowdoubleclick', function(){
             $('#ls-btn-update').click();
         });
         
-        $("#ls-regions-grid").on('bindingcomplete', function() {
-            var idx = $('#ls-regions-grid').jqxGrid('selectedrowindex'); 
+        $("#ls-firms-grid").on('bindingcomplete', function() {
+            var idx = $('#ls-firms-grid').jqxGrid('selectedrowindex'); 
             
-            if (ls.regions.id != 0) {
-                idx = $("#ls-regions-grid").jqxGrid('getrowboundindexbyid', ls.regions.id);
+            if (ls.firms.id != 0) {
+                idx = $("#ls-firms-grid").jqxGrid('getrowboundindexbyid', ls.firms.id);
             }
             
             if (idx == -1)
                 idx = 0;
             
-            $("#ls-regions-grid").jqxGrid('selectrow', idx);
-            $("#ls-regions-grid").jqxGrid('ensurerowvisible', idx);
+            $("#ls-firms-grid").jqxGrid('selectrow', idx);
+            $("#ls-firms-grid").jqxGrid('ensurerowvisible', idx);
             
             checkbutton();
             ls.lock_operation = false;
@@ -53,12 +53,12 @@
         
         $('#ls-btn-delete').on('click', function() {
             if ($('#ls-btn-delete').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_regions == undefined) return;            
+            if (currentrow_firms == undefined) return;            
             $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('regions/delete')) ?>,
+                url: <?php echo json_encode(Yii::app()->createUrl('firms/delete')) ?>,
                 type: 'POST',
                 data: {
-                    region_id: currentrow_regions.region_id
+                    firm_id: currentrow_firms.firm_id
                 },
                 async: false,
                 success: function(Res) {
@@ -76,12 +76,12 @@
         
         $('#ls-btn-update').on('click', function() {
             if ($('#ls-btn-update').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_regions == undefined) return;            
+            if (currentrow_firms == undefined) return;            
             $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('regions/update')) ?>,
+                url: <?php echo json_encode(Yii::app()->createUrl('firms/update')) ?>,
                 type: 'POST',
                 data: {
-                    region_id: currentrow_regions.region_id
+                    firm_id: currentrow_firms.firm_id
                 },
                 async: false,
                 success: function(Res) {
@@ -102,7 +102,7 @@
         $('#ls-btn-create').on('click', function() {
             if ($('#ls-btn-create').jqxButton('disabled') || ls.lock_operation) return;
             $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('regions/create')) ?>,
+                url: <?php echo json_encode(Yii::app()->createUrl('firms/create')) ?>,
                 type: 'POST',
                 async: false,
                 success: function(Res) {
@@ -127,13 +127,14 @@
         $('#ls-btn-refresh').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
         $('#ls-btn-delete').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
         
-        $("#ls-regions-grid").jqxGrid(
+        $("#ls-firms-grid").jqxGrid(
             $.extend(true, {}, ls.settings['grid'], {
-                source: regions_adapter,
+                source: firms_adapter,
 //                height: 300,
                 columns: [
-                    { text: 'Наименование', datafield: 'region_name', filtercondition: 'CONTAINS', width: 150},    
-                    { text: 'Дата создания', datafield: 'date_create', filtercondition: 'CONTAINS', width: 130, cellsformat: 'dd.MM.yyyy HH:mm'},
+                    { text: 'Наименование', datafield: 'firmname', filtercondition: 'CONTAINS', width: 150},    
+                    { text: 'Дата создания', columntype: 'date', datafield: 'date_create', width: 130, cellsformat: 'dd.MM.yyyy'},
+                    { text: 'Дата создания', columntype: 'date', datafield: 'date_change', width: 130, cellsformat: 'dd.MM.yyyy'},
                 ]
 
         }));
@@ -143,16 +144,16 @@
 </script>
 
 <?php
-    $this->pageTitle=Yii::app()->name . ' - Регионы';
-    $this->pageName = 'Справочник регионов';
+    $this->pageTitle=Yii::app()->name . ' - Организации';
+    $this->pageName = 'Мои организации';
     $this->breadcrumbs=array(
             'Главная' => 'site',
-            'Регионы' => 'regions',
+            'Мои организации' => 'firms',
     );
 ?>
 <div style="height: calc(100% - 182px)">
     <div class="ls-row" style="height: calc(100% - 34px)">
-        <div class="ls-grid" id="ls-regions-grid"></div>
+        <div class="ls-grid" id="ls-firms-grid"></div>
     </div>
     <div class="ls-row">
         <div class="ls-row-column"><input type="button" id="ls-btn-create" value="Создать" /></div>

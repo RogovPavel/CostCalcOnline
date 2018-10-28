@@ -43,7 +43,12 @@ class LSStoredProc extends CComponent {
         $command = Yii::app()->db->createCommand();
         $command->text = $sql_init_params . $sql_call_proc;
         $command->bindValues($tmp);
-        $command->execute();
+        $r = $command->execute();
+        
+//        echo '<pre>';
+//        var_dump($r);
+//        echo '</pre>';
+        
         $command->text = $sql_select;
         return array('tmp' => $tmp, 'sql' => $sql_init_params . $sql_call_proc . $sql_select, 'data' => $command->queryRow());
     }

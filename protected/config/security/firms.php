@@ -1,68 +1,68 @@
 <?php
 
     return array(
-        'admin_regions' => array(
+        'admin_firms' => array(
             'type' => CAuthItem::TYPE_ROLE,
-            'description' => 'regions',
+            'description' => 'firms',
             'bizRule' => null,
             'data' => null,
-            'defaultIndex' => 'regions/index',
+            'defaultIndex' => 'firms/index',
             'children' => array(
-                'view_regions',
-                'create_regions',
-                'update_regions',
-                'delete_regions',
+                'view_firms',
+                'create_firms',
+                'update_firms',
+                'delete_firms',
             ),
         ),
         
-        'manager_regions' => array(
+        'manager_firms' => array(
             'type' => CAuthItem::TYPE_ROLE,
-            'description' => 'regions',
+            'description' => 'firms',
             'bizRule' => null,
             'data' => null,
-            'defaultIndex' => 'regions/index',
+            'defaultIndex' => 'firms/index',
             'children' => array(
-                'view_regions',
-                'create_regions',
-                'update_regions',
+                'view_firms',
+                'create_firms',
+                'update_firms',
             ),
         ),
         
-        'user_regions' => array(
+        'user_firms' => array(
             'type' => CAuthItem::TYPE_ROLE,
-            'description' => 'regions',
+            'description' => 'firms',
             'bizRule' => null,
             'data' => null,
-            'defaultIndex' => 'regions/index',
+            'defaultIndex' => 'firms/index',
             'children' => array(
-                'view_regions',
+                'view_firms',
             ),
         ),
         
-        'view_regions' => array(
+        'view_firms' => array(
             'type' => CAuthItem::TYPE_OPERATION,
-            'description' => 'view_regions',
+            'description' => 'view_firms',
             'bizRule' => null,
             'data' => null,
         ),
         
-        'create_regions' => array(
+        'create_firms' => array(
             'type' => CAuthItem::TYPE_OPERATION,
-            'description' => 'create_regions',
+            'description' => 'create_firms',
             'bizRule' => null,
             'data' => null,
         ),
         
-        'update_regions' => array(
+        'update_firms' => array(
             'type' => CAuthItem::TYPE_OPERATION,
-            'description' => 'update_regions',
+            'description' => 'update_firms',
             'bizRule' => null,
             'data' => null,
         ),
         
-        'delete_regions' => array(
+        'delete_firms' => array(
             'type' => CAuthItem::TYPE_OPERATION,
-            'description' => 'delete_regions',
+            'description' => 'delete_firms',
             'bizRule' => null,
             'data' => null,
         ),

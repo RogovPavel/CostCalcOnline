@@ -5,6 +5,34 @@
         
         /* Регионы */
         include(dirname(__FILE__).'/security/regions.php'),
+        /* Банки */
+        include(dirname(__FILE__).'/security/banks.php'),
+        /* Клиенты */
+        include(dirname(__FILE__).'/security/clients.php'),
+        /* Приоритеты заявок */
+        include(dirname(__FILE__).'/security/demandpriors.php'),
+        /* Статусы заявок */
+        include(dirname(__FILE__).'/security/demandstatus.php'),
+        /* Типы заявок */
+        include(dirname(__FILE__).'/security/demandtypes.php'),
+        /* Оборудование */
+        include(dirname(__FILE__).'/security/equips.php'),
+        /* Фирмы */
+        include(dirname(__FILE__).'/security/firms.php'),
+        /* Должности */
+        include(dirname(__FILE__).'/security/positions.php'),
+        /* Роли */
+        include(dirname(__FILE__).'/security/roles.php'),
+        /* Улицы */
+        include(dirname(__FILE__).'/security/streets.php'),
+        /* Типы улиц */
+        include(dirname(__FILE__).'/security/streettypes.php'),
+        /* Тарифы */
+        include(dirname(__FILE__).'/security/tariffs.php'),
+        /* Ед. изм. */
+        include(dirname(__FILE__).'/security/units.php'),
+        /* Работы */
+        include(dirname(__FILE__).'/security/works.php'),
             
         array(    
             'guest' => array(
@@ -22,8 +50,9 @@
                 'children' => array(
                     'admin_profile',
                     
-                    /* Адреса */
+                    
                     'admin_regions',
+                    'admin_firms',
                 ),
             ),
         )

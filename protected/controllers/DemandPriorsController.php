@@ -1,6 +1,6 @@
 <?php
 
-class RegionsController extends Controller {
+class DemandPriorsController extends Controller {
     
     public function filters() {
         return array(
@@ -11,10 +11,10 @@ class RegionsController extends Controller {
     
     public function accessRules() {
         return array(
-            array('allow', 'actions'=>array('index'), 'roles'=>array('view_regions'),),
-            array('allow', 'actions'=>array('create'), 'roles'=>array('create_regions'),),
-            array('allow', 'actions'=>array('update'), 'roles'=>array('update_regions'),),
-            array('allow', 'actions'=>array('delete'), 'roles'=>array('delete_regions'),),
+            array('allow', 'actions'=>array('index'), 'roles'=>array('view_demandpriors'),),
+            array('allow', 'actions'=>array('create'), 'roles'=>array('create_demandpriors'),),
+            array('allow', 'actions'=>array('update'), 'roles'=>array('update_demandpriors'),),
+            array('allow', 'actions'=>array('delete'), 'roles'=>array('delete_demandpriors'),),
             array('deny',
                     'users'=>array('*'),
             ),
@@ -38,23 +38,20 @@ class RegionsController extends Controller {
         );
         
         try {
-            $model = new Regions();
+            $model = new DemandPriors();
 
             if (isset($_POST['params']))
                 $model->setAttributes($_POST['params']);
             
-            if (isset($_POST['regions'])) {
-                $model->setAttributes($_POST['regions']);
+            if (isset($_POST['demandpriors'])) {
                 if ($model->validate()) {
+                    $model->setAttributes($_POST['demandpriors']);
                     $model->user_create = Yii::app()->user->user_id;
                     $res = $model->insert();
                     $result['out'] = $res;
-                    $result['id'] = $res['data']['region_id'];
-                    return;
-                } else {
-                    $result['error'] = 1;
+                    $result['id'] = $res['data']['demandpriors_id'];
                 }
-                
+                return;
             }
 
             $result['content'] = $this->renderPartial('_form', array(
@@ -86,27 +83,25 @@ class RegionsController extends Controller {
         );
         
         try {
-            $model = new Regions();
+            $model = new DemandPriors();
             
-            if (isset($_POST['region_id']))
-                $model->get_by_id($_POST['region_id']);
+            if (isset($_POST['demandpriors_id']))
+                $model->get_by_id($_POST['demandpriors_id']);
 
             if (isset($_POST['params']))
                 $model->setAttributes($_POST['params']);
             
-            if (isset($_POST['regions'])) {
-                $model->setAttributes($_POST['regions']);
+            if (isset($_POST['demandpriors'])) {
                 if ($model->validate()) {
+                    $model->setAttributes($_POST['demandpriors']);
                     $model->user_change = Yii::app()->user->user_id;
                     $res = $model->update();
                     $result['out'] = $res;
-                    $result['id'] = $res['data']['region_id'];
-                    return;
-                } else {
-                    $result['error'] = 1;
+                    $result['id'] = $res['data']['demandpriors_id'];
                 }
-                
+                return;
             }
+
             $result['content'] = $this->renderPartial('_form', array(
                 'model' => $model,
             ), true);
@@ -135,14 +130,14 @@ class RegionsController extends Controller {
         );
         
         try {
-            $model = new Regions();
+            $model = new DemandPriors();
             
-            if (isset($_POST['region_id'])) {
-                $model->get_by_id($_POST['region_id']);
+            if (isset($_POST['demandpriors_id'])) {
+                $model->get_by_id($_POST['demandpriors_id']);
                 $model->user_chnage = Yii::app()->user->user_id;
                 $res = $model->delete();
                 $result['out'] = $res;
-                $result['id'] = $res['data']['region_id'];
+                $result['id'] = $res['data']['demandpriors_id'];
                 
             }
             

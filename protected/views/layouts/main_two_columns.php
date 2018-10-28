@@ -50,7 +50,8 @@
                         </div>
                         <div>
                             <ul>
-                                <li><a href='<?php echo Yii::app()->createUrl('regions'); ?>'>Регионы</a></li>
+                                <li <?php Yii::app()->security->HideShowMenuItem('view_firms'); ?>><a href='<?php echo Yii::app()->createUrl('firms'); ?>'>Мои организации</a></li>
+                                <li <?php Yii::app()->security->HideShowMenuItem('view_regions'); ?>><a href='<?php echo Yii::app()->createUrl('regions'); ?>'>Регионы</a></li>
                                 <li><a href='#'>Адреса</a></li>
                                 <li><a href='#'>Клиенты</a></li>
                                 <li><a href='#'>Банки</a></li>

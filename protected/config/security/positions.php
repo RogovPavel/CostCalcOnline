@@ -1,68 +1,68 @@
 <?php
 
     return array(
-        'admin_regions' => array(
+        'admin_positions' => array(
             'type' => CAuthItem::TYPE_ROLE,
-            'description' => 'regions',
+            'description' => 'positions',
             'bizRule' => null,
             'data' => null,
-            'defaultIndex' => 'regions/index',
+            'defaultIndex' => 'positions/index',
             'children' => array(
-                'view_regions',
-                'create_regions',
-                'update_regions',
-                'delete_regions',
+                'view_positions',
+                'create_positions',
+                'update_positions',
+                'delete_positions',
             ),
         ),
         
-        'manager_regions' => array(
+        'manager_positions' => array(
             'type' => CAuthItem::TYPE_ROLE,
-            'description' => 'regions',
+            'description' => 'positions',
             'bizRule' => null,
             'data' => null,
-            'defaultIndex' => 'regions/index',
+            'defaultIndex' => 'positions/index',
             'children' => array(
-                'view_regions',
-                'create_regions',
-                'update_regions',
+                'view_positions',
+                'create_positions',
+                'update_positions',
             ),
         ),
         
-        'user_regions' => array(
+        'user_positions' => array(
             'type' => CAuthItem::TYPE_ROLE,
-            'description' => 'regions',
+            'description' => 'positions',
             'bizRule' => null,
             'data' => null,
-            'defaultIndex' => 'regions/index',
+            'defaultIndex' => 'positions/index',
             'children' => array(
-                'view_regions',
+                'view_positions',
             ),
         ),
         
-        'view_regions' => array(
+        'view_positions' => array(
             'type' => CAuthItem::TYPE_OPERATION,
-            'description' => 'view_regions',
+            'description' => 'view_positions',
             'bizRule' => null,
             'data' => null,
         ),
         
-        'create_regions' => array(
+        'create_positions' => array(
             'type' => CAuthItem::TYPE_OPERATION,
-            'description' => 'create_regions',
+            'description' => 'create_positions',
             'bizRule' => null,
             'data' => null,
         ),
         
-        'update_regions' => array(
+        'update_positions' => array(
             'type' => CAuthItem::TYPE_OPERATION,
-            'description' => 'update_regions',
+            'description' => 'update_positions',
             'bizRule' => null,
             'data' => null,
         ),
         
-        'delete_regions' => array(
+        'delete_positions' => array(
             'type' => CAuthItem::TYPE_OPERATION,
-            'description' => 'delete_regions',
+            'description' => 'delete_positions',
             'bizRule' => null,
             'data' => null,
         ),

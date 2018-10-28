@@ -1,6 +1,6 @@
 <?php
 
-class RegionsController extends Controller {
+class ClientsController extends Controller {
     
     public function filters() {
         return array(
@@ -11,10 +11,10 @@ class RegionsController extends Controller {
     
     public function accessRules() {
         return array(
-            array('allow', 'actions'=>array('index'), 'roles'=>array('view_regions'),),
-            array('allow', 'actions'=>array('create'), 'roles'=>array('create_regions'),),
-            array('allow', 'actions'=>array('update'), 'roles'=>array('update_regions'),),
-            array('allow', 'actions'=>array('delete'), 'roles'=>array('delete_regions'),),
+            array('allow', 'actions'=>array('index'), 'roles'=>array('view_clients'),),
+            array('allow', 'actions'=>array('create'), 'roles'=>array('create_clients'),),
+            array('allow', 'actions'=>array('update'), 'roles'=>array('update_clients'),),
+            array('allow', 'actions'=>array('delete'), 'roles'=>array('delete_clients'),),
             array('deny',
                     'users'=>array('*'),
             ),
@@ -38,23 +38,20 @@ class RegionsController extends Controller {
         );
         
         try {
-            $model = new Regions();
+            $model = new Clients();
 
             if (isset($_POST['params']))
                 $model->setAttributes($_POST['params']);
             
-            if (isset($_POST['regions'])) {
-                $model->setAttributes($_POST['regions']);
+            if (isset($_POST['clients'])) {
                 if ($model->validate()) {
+                    $model->setAttributes($_POST['clients']);
                     $model->user_create = Yii::app()->user->user_id;
                     $res = $model->insert();
                     $result['out'] = $res;
-                    $result['id'] = $res['data']['region_id'];
-                    return;
-                } else {
-                    $result['error'] = 1;
+                    $result['id'] = $res['data']['client_id'];
                 }
-                
+                return;
             }
 
             $result['content'] = $this->renderPartial('_form', array(
@@ -86,27 +83,25 @@ class RegionsController extends Controller {
         );
         
         try {
-            $model = new Regions();
+            $model = new Clients();
             
-            if (isset($_POST['region_id']))
-                $model->get_by_id($_POST['region_id']);
+            if (isset($_POST['client_id']))
+                $model->get_by_id($_POST['client_id']);
 
             if (isset($_POST['params']))
                 $model->setAttributes($_POST['params']);
             
-            if (isset($_POST['regions'])) {
-                $model->setAttributes($_POST['regions']);
+            if (isset($_POST['clients'])) {
                 if ($model->validate()) {
+                    $model->setAttributes($_POST['clients']);
                     $model->user_change = Yii::app()->user->user_id;
                     $res = $model->update();
                     $result['out'] = $res;
-                    $result['id'] = $res['data']['region_id'];
-                    return;
-                } else {
-                    $result['error'] = 1;
+                    $result['id'] = $res['data']['client_id'];
                 }
-                
+                return;
             }
+
             $result['content'] = $this->renderPartial('_form', array(
                 'model' => $model,
             ), true);
@@ -135,14 +130,14 @@ class RegionsController extends Controller {
         );
         
         try {
-            $model = new Regions();
+            $model = new Clients();
             
-            if (isset($_POST['region_id'])) {
-                $model->get_by_id($_POST['region_id']);
+            if (isset($_POST['client_id'])) {
+                $model->get_by_id($_POST['client_id']);
                 $model->user_chnage = Yii::app()->user->user_id;
                 $res = $model->delete();
                 $result['out'] = $res;
-                $result['id'] = $res['data']['region_id'];
+                $result['id'] = $res['data']['client_id'];
                 
             }
             

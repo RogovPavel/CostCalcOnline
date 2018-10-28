@@ -1,68 +1,68 @@
 <?php
 
     return array(
-        'admin_regions' => array(
+        'admin_works' => array(
             'type' => CAuthItem::TYPE_ROLE,
-            'description' => 'regions',
+            'description' => 'works',
             'bizRule' => null,
             'data' => null,
-            'defaultIndex' => 'regions/index',
+            'defaultIndex' => 'works/index',
             'children' => array(
-                'view_regions',
-                'create_regions',
-                'update_regions',
-                'delete_regions',
+                'view_works',
+                'create_works',
+                'update_works',
+                'delete_works',
             ),
         ),
         
-        'manager_regions' => array(
+        'manager_works' => array(
             'type' => CAuthItem::TYPE_ROLE,
-            'description' => 'regions',
+            'description' => 'works',
             'bizRule' => null,
             'data' => null,
-            'defaultIndex' => 'regions/index',
+            'defaultIndex' => 'works/index',
             'children' => array(
-                'view_regions',
-                'create_regions',
-                'update_regions',
+                'view_works',
+                'create_works',
+                'update_works',
             ),
         ),
         
-        'user_regions' => array(
+        'user_works' => array(
             'type' => CAuthItem::TYPE_ROLE,
-            'description' => 'regions',
+            'description' => 'works',
             'bizRule' => null,
             'data' => null,
-            'defaultIndex' => 'regions/index',
+            'defaultIndex' => 'works/index',
             'children' => array(
-                'view_regions',
+                'view_works',
             ),
         ),
         
-        'view_regions' => array(
+        'view_works' => array(
             'type' => CAuthItem::TYPE_OPERATION,
-            'description' => 'view_regions',
+            'description' => 'view_works',
             'bizRule' => null,
             'data' => null,
         ),
         
-        'create_regions' => array(
+        'create_works' => array(
             'type' => CAuthItem::TYPE_OPERATION,
-            'description' => 'create_regions',
+            'description' => 'create_works',
             'bizRule' => null,
             'data' => null,
         ),
         
-        'update_regions' => array(
+        'update_works' => array(
             'type' => CAuthItem::TYPE_OPERATION,
-            'description' => 'update_regions',
+            'description' => 'update_works',
             'bizRule' => null,
             'data' => null,
         ),
         
-        'delete_regions' => array(
+        'delete_works' => array(
             'type' => CAuthItem::TYPE_OPERATION,
-            'description' => 'delete_regions',
+            'description' => 'delete_works',
             'bizRule' => null,
             'data' => null,
         ),

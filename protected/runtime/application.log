@@ -4218,3 +4218,2214 @@ Stack trace:
 REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=Regions
 HTTP_REFERER=http://ls.ru/regions
 ---
+2018/10/28 12:16:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "favicon.ico".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://ls.ru/
+---
+2018/10/28 12:16:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:16:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:17:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:18:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:18:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:19:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:20:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:20:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:20:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Regions.php(15): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\controllers\AjaxDataController.php(31): Regions->__construct()
+#7 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#8 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\Work\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#17 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#18 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 D:\Work\Home\LS\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=Regions
+HTTP_REFERER=http://ls.ru/regions
+---
+2018/10/28 12:20:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:22:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:30:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:33:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:33:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:33:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:34:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:36:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:37:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Users.php(14): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
+#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
+#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
+#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
+#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
+#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('view_regions')
+#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
+#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(RegionsController), Object(CInlineAction), '127.0.0.1', 'GET')
+#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('')
+#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions')
+#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 D:\Work\Home\LS\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/regions
+HTTP_REFERER=http://ls.ru/
+---
+2018/10/28 12:37:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:38:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:39:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:40:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:40:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:40:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:41:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:41:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Users.php(14): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
+#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
+#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
+#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
+#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
+#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('update_regions')
+#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
+#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(RegionsController), Object(CInlineAction), '127.0.0.1', 'POST')
+#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('update')
+#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/update')
+#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 D:\Work\Home\LS\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/regions/update
+HTTP_REFERER=http://ls.ru/regions
+---
+2018/10/28 12:41:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:42:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Users.php(14): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
+#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
+#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
+#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
+#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
+#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('create_regions')
+#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
+#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(RegionsController), Object(CInlineAction), '127.0.0.1', 'POST')
+#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('create')
+#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/create')
+#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 D:\Work\Home\LS\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/regions/create
+HTTP_REFERER=http://ls.ru/regions
+---
+2018/10/28 12:42:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Regions.php(15): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\controllers\AjaxDataController.php(31): Regions->__construct()
+#7 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#8 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\Work\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#17 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#18 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 D:\Work\Home\LS\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=Regions
+HTTP_REFERER=http://ls.ru/regions
+---
+2018/10/28 12:42:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:43:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:54:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 12:55:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 13:05:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 13:07:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 13:17:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 13:22:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 13:23:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 13:28:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 13:29:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 13:36:40 [error] [system.db.CDbCommand] РќРµ СѓРґР°Р»РѕСЃСЊ РІС‹РїРѕР»РЅРёС‚СЊ CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dt.user_create' in 'on clause'. Р’С‹РїРѕР»РЅСЏРІС€РёР№СЃСЏ SQL-Р·Р°РїСЂРѕСЃ: SELECT `e`.`equip_id`, `e`.`equipname`, `e`.`unit_id`, `un`.`unit_name`, `e`.`note`, `e`.`date_create`, `e`.`user_create`, `e`.`date_change`, `e`.`user_change`, `e`.`group_id`, `e`.`deldate`
+FROM equips e left join units un on (e.unit_id = un.unit_id)
+                                    left join users u on (dt.user_create = u.user_id)
+WHERE e.deldate is null
+ORDER BY `e`.`equipname`.
+in D:\Work\Home\LS\protected\components\LSFormModel.php (59)
+in D:\Work\Home\LS\protected\views\site\index.php (28)
+in D:\Work\Home\LS\protected\controllers\SiteController.php (29)
+2018/10/28 13:36:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand РЅРµ СѓРґР°Р»РѕСЃСЊ РёСЃРїРѕР»РЅРёС‚СЊ SQL-Р·Р°РїСЂРѕСЃ: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dt.user_create' in 'on clause'. The SQL statement executed was: SELECT `e`.`equip_id`, `e`.`equipname`, `e`.`unit_id`, `un`.`unit_name`, `e`.`note`, `e`.`date_create`, `e`.`user_create`, `e`.`date_change`, `e`.`user_change`, `e`.`group_id`, `e`.`deldate`
+FROM equips e left join units un on (e.unit_id = un.unit_id)
+                                    left join users u on (dt.user_create = u.user_id)
+WHERE e.deldate is null
+ORDER BY `e`.`equipname`' in D:\Work\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\Work\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 D:\Work\Home\LS\protected\views\site\index.php(28): LSFormModel->find()
+#3 D:\Work\Home\LS\framework\web\CBaseController.php(126): require('D:\\Work\\Home\\LS...')
+#4 D:\Work\Home\LS\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\Work\\Home\\LS...', NULL, true)
+#5 D:\Work\Home\LS\framework\web\CController.php(872): CBaseController->renderFile('D:\\Work\\Home\\LS...', NULL, true)
+#6 D:\Work\Home\LS\framework\web\CController.php(785): CController->renderPartial('index', NULL, true)
+#7 D:\Work\Home\LS\protected\controllers\SiteController.php(29): CController->render('index')
+#8 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#9 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\Work\Home\LS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('index')
+#13 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#14 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 D:\Work\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/site/index
+HTTP_REFERER=http://ls.ru/site
+---
+2018/10/28 13:36:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 13:40:39 [error] [system.db.CDbCommand] РќРµ СѓРґР°Р»РѕСЃСЊ РІС‹РїРѕР»РЅРёС‚СЊ CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'f.clientname' in 'order clause'. Р’С‹РїРѕР»РЅСЏРІС€РёР№СЃСЏ SQL-Р·Р°РїСЂРѕСЃ: SELECT `f`.`firm_id`, `f`.`firmname`, `f`.`inn`, `f`.`kpp`, `f`.`account`, `f`.`ogrn`, `f`.`okpo`, `f`.`bank_id`, `b`.`bankname`, `f`.`jur_address`, `f`.`fact_address`, `f`.`date_create`, `f`.`user_create`, `f`.`date_change`, `f`.`user_change`, `f`.`group_id`, `f`.`deldate`
+FROM firms f left join banks b on (f.bank_id = b.bank_id)
+                                    left join users u on (f.user_create = u.user_id)
+WHERE f.deldate is null
+ORDER BY `f`.`clientname`.
+in D:\Work\Home\LS\protected\components\LSFormModel.php (59)
+in D:\Work\Home\LS\protected\views\site\index.php (28)
+in D:\Work\Home\LS\protected\controllers\SiteController.php (29)
+2018/10/28 13:40:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand РЅРµ СѓРґР°Р»РѕСЃСЊ РёСЃРїРѕР»РЅРёС‚СЊ SQL-Р·Р°РїСЂРѕСЃ: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'f.clientname' in 'order clause'. The SQL statement executed was: SELECT `f`.`firm_id`, `f`.`firmname`, `f`.`inn`, `f`.`kpp`, `f`.`account`, `f`.`ogrn`, `f`.`okpo`, `f`.`bank_id`, `b`.`bankname`, `f`.`jur_address`, `f`.`fact_address`, `f`.`date_create`, `f`.`user_create`, `f`.`date_change`, `f`.`user_change`, `f`.`group_id`, `f`.`deldate`
+FROM firms f left join banks b on (f.bank_id = b.bank_id)
+                                    left join users u on (f.user_create = u.user_id)
+WHERE f.deldate is null
+ORDER BY `f`.`clientname`' in D:\Work\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\Work\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 D:\Work\Home\LS\protected\views\site\index.php(28): LSFormModel->find()
+#3 D:\Work\Home\LS\framework\web\CBaseController.php(126): require('D:\\Work\\Home\\LS...')
+#4 D:\Work\Home\LS\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\Work\\Home\\LS...', NULL, true)
+#5 D:\Work\Home\LS\framework\web\CController.php(872): CBaseController->renderFile('D:\\Work\\Home\\LS...', NULL, true)
+#6 D:\Work\Home\LS\framework\web\CController.php(785): CController->renderPartial('index', NULL, true)
+#7 D:\Work\Home\LS\protected\controllers\SiteController.php(29): CController->render('index')
+#8 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#9 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\Work\Home\LS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('index')
+#13 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#14 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 D:\Work\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/site/index
+HTTP_REFERER=http://ls.ru/site
+---
+2018/10/28 13:40:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 13:47:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 13:54:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 13:54:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 13:55:08 [error] [system.db.CDbCommand] РќРµ СѓРґР°Р»РѕСЃСЊ РІС‹РїРѕР»РЅРёС‚СЊ CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.streettyep_name' in 'field list'. Р’С‹РїРѕР»РЅСЏРІС€РёР№СЃСЏ SQL-Р·Р°РїСЂРѕСЃ: SELECT `s`.`street_id`, `s`.`streetname`, `s`.`streettype_id`, `st`.`streettyep_name`, `s`.`region_id`, `r`.`region_name`, `s`.`date_create`, `s`.`user_create`, `s`.`date_change`, `s`.`user_change`, `s`.`group_id`, `s`.`deldate`
+FROM streets s left join streettypes st on (s.streettype_id = st.streettype_id)
+                                    left join regions r on (s.region_id = r.region_id)
+                                    left join users u on (s.user_create = u.user_id)
+WHERE s.deldate is null
+ORDER BY `r`.`region_name`, `s`.`streetname`.
+in D:\Work\Home\LS\protected\components\LSFormModel.php (59)
+in D:\Work\Home\LS\protected\views\site\index.php (28)
+in D:\Work\Home\LS\protected\controllers\SiteController.php (29)
+2018/10/28 13:55:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand РЅРµ СѓРґР°Р»РѕСЃСЊ РёСЃРїРѕР»РЅРёС‚СЊ SQL-Р·Р°РїСЂРѕСЃ: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.streettyep_name' in 'field list'. The SQL statement executed was: SELECT `s`.`street_id`, `s`.`streetname`, `s`.`streettype_id`, `st`.`streettyep_name`, `s`.`region_id`, `r`.`region_name`, `s`.`date_create`, `s`.`user_create`, `s`.`date_change`, `s`.`user_change`, `s`.`group_id`, `s`.`deldate`
+FROM streets s left join streettypes st on (s.streettype_id = st.streettype_id)
+                                    left join regions r on (s.region_id = r.region_id)
+                                    left join users u on (s.user_create = u.user_id)
+WHERE s.deldate is null
+ORDER BY `r`.`region_name`, `s`.`streetname`' in D:\Work\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\Work\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 D:\Work\Home\LS\protected\views\site\index.php(28): LSFormModel->find()
+#3 D:\Work\Home\LS\framework\web\CBaseController.php(126): require('D:\\Work\\Home\\LS...')
+#4 D:\Work\Home\LS\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\Work\\Home\\LS...', NULL, true)
+#5 D:\Work\Home\LS\framework\web\CController.php(872): CBaseController->renderFile('D:\\Work\\Home\\LS...', NULL, true)
+#6 D:\Work\Home\LS\framework\web\CController.php(785): CController->renderPartial('index', NULL, true)
+#7 D:\Work\Home\LS\protected\controllers\SiteController.php(29): CController->render('index')
+#8 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#9 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\Work\Home\LS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('index')
+#13 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#14 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 D:\Work\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/site/index
+HTTP_REFERER=http://ls.ru/site
+---
+2018/10/28 13:55:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 14:02:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 14:08:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 14:09:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 14:13:41 [error] [system.db.CDbCommand] РќРµ СѓРґР°Р»РѕСЃСЊ РІС‹РїРѕР»РЅРёС‚СЊ CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'u'. Р’С‹РїРѕР»РЅСЏРІС€РёР№СЃСЏ SQL-Р·Р°РїСЂРѕСЃ: SELECT `u`.`unit_id`, `u`.`unit_name`, `u`.`date_create`, `u`.`user_create`, `u`.`date_change`, `u`.`user_change`, `u`.`group_id`, `u`.`deldate`
+FROM units u left join users u on (u.user_create = u.user_id)
+WHERE u.deldate is null
+ORDER BY `u`.`unit_name`.
+in D:\Work\Home\LS\protected\components\LSFormModel.php (59)
+in D:\Work\Home\LS\protected\views\site\index.php (28)
+in D:\Work\Home\LS\protected\controllers\SiteController.php (29)
+2018/10/28 14:13:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand РЅРµ СѓРґР°Р»РѕСЃСЊ РёСЃРїРѕР»РЅРёС‚СЊ SQL-Р·Р°РїСЂРѕСЃ: SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'u'. The SQL statement executed was: SELECT `u`.`unit_id`, `u`.`unit_name`, `u`.`date_create`, `u`.`user_create`, `u`.`date_change`, `u`.`user_change`, `u`.`group_id`, `u`.`deldate`
+FROM units u left join users u on (u.user_create = u.user_id)
+WHERE u.deldate is null
+ORDER BY `u`.`unit_name`' in D:\Work\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\Work\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 D:\Work\Home\LS\protected\views\site\index.php(28): LSFormModel->find()
+#3 D:\Work\Home\LS\framework\web\CBaseController.php(126): require('D:\\Work\\Home\\LS...')
+#4 D:\Work\Home\LS\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\Work\\Home\\LS...', NULL, true)
+#5 D:\Work\Home\LS\framework\web\CController.php(872): CBaseController->renderFile('D:\\Work\\Home\\LS...', NULL, true)
+#6 D:\Work\Home\LS\framework\web\CController.php(785): CController->renderPartial('index', NULL, true)
+#7 D:\Work\Home\LS\protected\controllers\SiteController.php(29): CController->render('index')
+#8 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#9 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\Work\Home\LS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('index')
+#13 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#14 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 D:\Work\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/site/index
+HTTP_REFERER=http://ls.ru/site
+---
+2018/10/28 14:14:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 14:18:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 14:22:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 14:34:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:13:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:13:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:14:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:25:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:25:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:25:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'РЈ РІР°СЃ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїСЂР°РІ РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ СѓРєР°Р·Р°РЅРЅРѕРіРѕ РґРµР№СЃС‚РІРёСЏ.' in D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '\xD0\xA3 \xD0\xB2\xD0\xB0\xD1\x81 \xD0\xBD\xD0\xB5\xD0...')
+#1 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#6 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('')
+#8 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions')
+#9 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\Work\Home\LS\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/regions
+HTTP_REFERER=http://ls.ru/site/index
+---
+2018/10/28 15:25:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:25:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'РЈ РІР°СЃ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїСЂР°РІ РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ СѓРєР°Р·Р°РЅРЅРѕРіРѕ РґРµР№СЃС‚РІРёСЏ.' in D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '\xD0\xA3 \xD0\xB2\xD0\xB0\xD1\x81 \xD0\xBD\xD0\xB5\xD0...')
+#1 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#6 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('')
+#8 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions')
+#9 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\Work\Home\LS\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/regions
+HTTP_REFERER=http://ls.ru/
+---
+2018/10/28 15:26:20 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'РЈ РІР°СЃ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїСЂР°РІ РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ СѓРєР°Р·Р°РЅРЅРѕРіРѕ РґРµР№СЃС‚РІРёСЏ.' in D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '\xD0\xA3 \xD0\xB2\xD0\xB0\xD1\x81 \xD0\xBD\xD0\xB5\xD0...')
+#1 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#6 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('')
+#8 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions')
+#9 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\Work\Home\LS\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/regions
+HTTP_REFERER=http://ls.ru/
+---
+2018/10/28 15:26:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:26:44 [error] [exception.CDbException] SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+
+2018/10/28 15:26:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection.' in D:\Work\Home\LS\framework\db\CDbConnection.php:405
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Users.php(14): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
+#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
+#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
+#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
+#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
+#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('view_regions')
+#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
+#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(RegionsController), Object(CInlineAction), '127.0.0.1', 'GET')
+#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('')
+#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions')
+#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 D:\Work\Home\LS\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/regions
+HTTP_REFERER=http://ls.ru/regions
+---
+2018/10/28 15:26:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:27:06 [error] [exception.CDbException] SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+
+2018/10/28 15:27:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:27:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:27:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:28:33 [error] [exception.CDbException] SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+
+2018/10/28 15:28:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection.' in D:\Work\Home\LS\framework\db\CDbConnection.php:405
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Roles.php(11): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\views\site\index.php(26): Roles->__construct()
+#7 D:\Work\Home\LS\framework\web\CBaseController.php(126): require('D:\\Work\\Home\\LS...')
+#8 D:\Work\Home\LS\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\Work\\Home\\LS...', NULL, true)
+#9 D:\Work\Home\LS\framework\web\CController.php(872): CBaseController->renderFile('D:\\Work\\Home\\LS...', NULL, true)
+#10 D:\Work\Home\LS\framework\web\CController.php(785): CController->renderPartial('index', NULL, true)
+#11 D:\Work\Home\LS\protected\controllers\SiteController.php(29): CController->render('index')
+#12 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#13 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 D:\Work\Home\LS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('index')
+#17 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#18 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 D:\Work\Home\LS\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/site/index
+HTTP_REFERER=http://ls.ru/site/index
+---
+2018/10/28 15:28:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:28:54 [error] [exception.CDbException] SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+
+2018/10/28 15:29:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:30:01 [error] [exception.CDbException] SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+
+2018/10/28 15:30:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:31:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:31:30 [error] [exception.CDbException] SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+
+2018/10/28 15:31:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:31:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:32:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:32:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:32:50 [error] [exception.CException] exception 'CException' with message 'РљРѕРЅС‚СЂРѕР»Р»РµСЂ FirmsController РЅРµ РјРѕР¶РµС‚ РЅР°Р№С‚Рё РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ "index".' in D:\Work\Home\LS\framework\web\CController.php:881
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CController.php(785): CController->renderPartial('index', NULL, true)
+#1 D:\Work\Home\LS\protected\controllers\FirmsController.php(25): CController->render('index')
+#2 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): FirmsController->actionIndex()
+#3 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 D:\Work\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#10 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('')
+#12 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('firms')
+#13 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 D:\Work\Home\LS\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/firms
+HTTP_REFERER=http://ls.ru/site/index
+---
+2018/10/28 15:32:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:37:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:38:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:40:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:41:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:51:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:52:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:52:23 [error] [exception.CDbException] SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+
+2018/10/28 15:52:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection.' in D:\Work\Home\LS\framework\db\CDbConnection.php:405
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Firms.php(24): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\controllers\AjaxDataController.php(31): Firms->__construct()
+#7 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#8 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\Work\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#17 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#18 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 D:\Work\Home\LS\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=Firms
+HTTP_REFERER=http://ls.ru/firms
+---
+2018/10/28 15:54:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 15:56:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:03:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:05:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:05:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:05:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:06:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:09:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:15:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:17:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:19:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Firms.php(24): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\views\site\index.php(26): Firms->__construct()
+#7 D:\Work\Home\LS\framework\web\CBaseController.php(126): require('D:\\Work\\Home\\LS...')
+#8 D:\Work\Home\LS\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\Work\\Home\\LS...', NULL, true)
+#9 D:\Work\Home\LS\framework\web\CController.php(872): CBaseController->renderFile('D:\\Work\\Home\\LS...', NULL, true)
+#10 D:\Work\Home\LS\framework\web\CController.php(785): CController->renderPartial('index', NULL, true)
+#11 D:\Work\Home\LS\protected\controllers\SiteController.php(29): CController->render('index')
+#12 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#13 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 D:\Work\Home\LS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('index')
+#17 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#18 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 D:\Work\Home\LS\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/site/index
+HTTP_REFERER=http://ls.ru/site/index
+---
+2018/10/28 16:19:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:19:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:19:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:19:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Firms.php(24): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\controllers\AjaxDataController.php(31): Firms->__construct()
+#7 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#8 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\Work\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#17 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#18 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 D:\Work\Home\LS\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=Firms
+HTTP_REFERER=http://ls.ru/firms
+---
+2018/10/28 16:20:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:20:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:22:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:22:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:22:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:23:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:24:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:25:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:25:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:25:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:25:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Users.php(14): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
+#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
+#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
+#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
+#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
+#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('create_regions')
+#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
+#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(RegionsController), Object(CInlineAction), '127.0.0.1', 'POST')
+#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('create')
+#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/create')
+#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 D:\Work\Home\LS\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/regions/create
+HTTP_REFERER=http://ls.ru/regions
+---
+2018/10/28 16:26:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Users.php(14): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
+#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
+#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
+#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
+#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
+#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('create_regions')
+#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
+#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(RegionsController), Object(CInlineAction), '127.0.0.1', 'POST')
+#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('create')
+#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/create')
+#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 D:\Work\Home\LS\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/regions/create
+HTTP_REFERER=http://ls.ru/regions
+---
+2018/10/28 16:26:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Users.php(14): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
+#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
+#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
+#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
+#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
+#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('create_regions')
+#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
+#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(RegionsController), Object(CInlineAction), '127.0.0.1', 'POST')
+#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('create')
+#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/create')
+#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 D:\Work\Home\LS\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/regions/create
+HTTP_REFERER=http://ls.ru/regions
+---
+2018/10/28 16:27:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Users.php(14): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
+#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
+#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
+#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
+#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
+#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('create_regions')
+#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
+#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(RegionsController), Object(CInlineAction), '127.0.0.1', 'POST')
+#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('create')
+#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/create')
+#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 D:\Work\Home\LS\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/regions/create
+HTTP_REFERER=http://ls.ru/regions
+---
+2018/10/28 16:27:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:28:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Users.php(14): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
+#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
+#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
+#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
+#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
+#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('view_regions')
+#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
+#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(RegionsController), Object(CInlineAction), '127.0.0.1', 'GET')
+#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('')
+#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions')
+#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 D:\Work\Home\LS\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/regions
+HTTP_REFERER=http://ls.ru/firms
+---
+2018/10/28 16:28:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:28:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Regions.php(15): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\controllers\AjaxDataController.php(31): Regions->__construct()
+#7 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#8 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\Work\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#17 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#18 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 D:\Work\Home\LS\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=Regions
+HTTP_REFERER=http://ls.ru/regions
+---
+2018/10/28 16:28:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:29:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Regions.php(15): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\controllers\AjaxDataController.php(31): Regions->__construct()
+#7 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#8 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\Work\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#17 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#18 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 D:\Work\Home\LS\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=Regions
+HTTP_REFERER=http://ls.ru/regions
+---
+2018/10/28 16:29:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Users.php(14): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
+#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
+#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
+#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
+#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
+#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('view_regions')
+#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
+#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(RegionsController), Object(CInlineAction), '127.0.0.1', 'GET')
+#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('')
+#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions')
+#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 D:\Work\Home\LS\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/regions
+HTTP_REFERER=http://ls.ru/firms
+---
+2018/10/28 16:29:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:32:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:34:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:34:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:35:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:35:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:36:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:37:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:37:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:38:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:43:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Users.php(14): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
+#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
+#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
+#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
+#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
+#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('update_regions')
+#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
+#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(RegionsController), Object(CInlineAction), '127.0.0.1', 'POST')
+#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('update')
+#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/update')
+#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 D:\Work\Home\LS\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/regions/update
+HTTP_REFERER=http://ls.ru/regions
+---
+2018/10/28 16:45:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:49:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:50:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:50:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Users.php(14): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
+#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
+#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
+#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
+#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
+#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('update_regions')
+#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
+#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(RegionsController), Object(CInlineAction), '127.0.0.1', 'POST')
+#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('update')
+#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/update')
+#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 D:\Work\Home\LS\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/regions/update
+HTTP_REFERER=http://ls.ru/regions
+---
+2018/10/28 16:51:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:52:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:53:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:54:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:54:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:55:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Users.php(14): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
+#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
+#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
+#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
+#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
+#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('view_regions')
+#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
+#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(RegionsController), Object(CInlineAction), '127.0.0.1', 'GET')
+#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('')
+#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions')
+#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 D:\Work\Home\LS\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/regions
+HTTP_REFERER=http://ls.ru/firms
+---
+2018/10/28 16:55:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:56:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:56:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 16:57:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Users.php(14): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
+#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
+#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
+#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
+#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
+#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('view_regions')
+#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
+#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(RegionsController), Object(CInlineAction), '127.0.0.1', 'GET')
+#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('')
+#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions')
+#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 D:\Work\Home\LS\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/regions
+HTTP_REFERER=http://ls.ru/firms
+---
+2018/10/28 16:57:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 17:00:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 17:01:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 17:01:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 17:03:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 17:03:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 17:04:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 17:05:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 17:06:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 17:07:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 17:07:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 17:07:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 17:08:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 17:08:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 17:09:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Users.php(14): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
+#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
+#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
+#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
+#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
+#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('view_regions')
+#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
+#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(RegionsController), Object(CInlineAction), '127.0.0.1', 'GET')
+#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('')
+#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('regions')
+#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 D:\Work\Home\LS\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/regions
+HTTP_REFERER=http://ls.ru/site
+---
+2018/10/28 17:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 17:09:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 17:12:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
+2018/10/28 17:13:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Firms.php(24): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\controllers\AjaxDataController.php(31): Firms->__construct()
+#7 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#8 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\Work\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#17 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#18 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 D:\Work\Home\LS\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=Firms
+HTTP_REFERER=http://ls.ru/firms
+---
