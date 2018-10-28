@@ -6429,3 +6429,133 @@ Stack trace:
 REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=Firms
 HTTP_REFERER=http://ls.ru/firms
 ---
+2018/10/28 20:55:52 [error] [exception.CException] exception 'CException' with message 'РќРµ РѕРїСЂРµРґРµР»РµРЅРѕ СЃРІРѕР№СЃС‚РІРѕ "WebUser.group_id".' in D:\Work\Home\LS\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\auth\CWebUser.php(146): CComponent->__get('group_id')
+#1 D:\Work\Home\LS\protected\components\LSStoredProc.php(33): CWebUser->__get('group_id')
+#2 D:\Work\Home\LS\protected\components\LSFormModel.php(72): LSStoredProc->execute(Object(Regions))
+#3 D:\Work\Home\LS\protected\views\site\index.php(30): LSFormModel->insert()
+#4 D:\Work\Home\LS\framework\web\CBaseController.php(126): require('D:\\Work\\Home\\LS...')
+#5 D:\Work\Home\LS\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\Work\\Home\\LS...', NULL, true)
+#6 D:\Work\Home\LS\framework\web\CController.php(872): CBaseController->renderFile('D:\\Work\\Home\\LS...', NULL, true)
+#7 D:\Work\Home\LS\framework\web\CController.php(785): CController->renderPartial('index', NULL, true)
+#8 D:\Work\Home\LS\protected\controllers\SiteController.php(29): CController->render('index')
+#9 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\Work\Home\LS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('')
+#14 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 D:\Work\Home\LS\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/
+---
+2018/10/28 20:55:52 [error] [exception.CException] exception 'CException' with message 'РќРµ РѕРїСЂРµРґРµР»РµРЅРѕ СЃРІРѕР№СЃС‚РІРѕ "WebUser.group_id".' in D:\Work\Home\LS\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\auth\CWebUser.php(146): CComponent->__get('group_id')
+#1 D:\Work\Home\LS\protected\components\LSStoredProc.php(33): CWebUser->__get('group_id')
+#2 D:\Work\Home\LS\protected\components\LSFormModel.php(72): LSStoredProc->execute(Object(Regions))
+#3 D:\Work\Home\LS\protected\views\site\index.php(30): LSFormModel->insert()
+#4 D:\Work\Home\LS\framework\web\CBaseController.php(126): require('D:\\Work\\Home\\LS...')
+#5 D:\Work\Home\LS\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\Work\\Home\\LS...', NULL, true)
+#6 D:\Work\Home\LS\framework\web\CController.php(872): CBaseController->renderFile('D:\\Work\\Home\\LS...', NULL, true)
+#7 D:\Work\Home\LS\framework\web\CController.php(785): CController->renderPartial('index', NULL, true)
+#8 D:\Work\Home\LS\protected\controllers\SiteController.php(29): CController->render('index')
+#9 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\Work\Home\LS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('')
+#14 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 D:\Work\Home\LS\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/
+---
+2018/10/28 20:55:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "favicon.ico".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://ls.ru/
+---
+2018/10/28 20:55:56 [error] [exception.CException] exception 'CException' with message 'РќРµ РѕРїСЂРµРґРµР»РµРЅРѕ СЃРІРѕР№СЃС‚РІРѕ "WebUser.group_id".' in D:\Work\Home\LS\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\auth\CWebUser.php(146): CComponent->__get('group_id')
+#1 D:\Work\Home\LS\protected\components\LSStoredProc.php(33): CWebUser->__get('group_id')
+#2 D:\Work\Home\LS\protected\components\LSFormModel.php(72): LSStoredProc->execute(Object(Regions))
+#3 D:\Work\Home\LS\protected\views\site\index.php(30): LSFormModel->insert()
+#4 D:\Work\Home\LS\framework\web\CBaseController.php(126): require('D:\\Work\\Home\\LS...')
+#5 D:\Work\Home\LS\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\Work\\Home\\LS...', NULL, true)
+#6 D:\Work\Home\LS\framework\web\CController.php(872): CBaseController->renderFile('D:\\Work\\Home\\LS...', NULL, true)
+#7 D:\Work\Home\LS\framework\web\CController.php(785): CController->renderPartial('index', NULL, true)
+#8 D:\Work\Home\LS\protected\controllers\SiteController.php(29): CController->render('index')
+#9 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\Work\Home\LS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('')
+#14 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 D:\Work\Home\LS\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/
+---
+2018/10/28 20:56:13 [error] [exception.CException] exception 'CException' with message 'РќРµ РѕРїСЂРµРґРµР»РµРЅРѕ СЃРІРѕР№СЃС‚РІРѕ "WebUser.group_id".' in D:\Work\Home\LS\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\auth\CWebUser.php(146): CComponent->__get('group_id')
+#1 D:\Work\Home\LS\protected\components\LSStoredProc.php(33): CWebUser->__get('group_id')
+#2 D:\Work\Home\LS\protected\components\LSFormModel.php(72): LSStoredProc->execute(Object(Regions))
+#3 D:\Work\Home\LS\protected\views\site\index.php(30): LSFormModel->insert()
+#4 D:\Work\Home\LS\framework\web\CBaseController.php(126): require('D:\\Work\\Home\\LS...')
+#5 D:\Work\Home\LS\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\Work\\Home\\LS...', NULL, true)
+#6 D:\Work\Home\LS\framework\web\CController.php(872): CBaseController->renderFile('D:\\Work\\Home\\LS...', NULL, true)
+#7 D:\Work\Home\LS\framework\web\CController.php(785): CController->renderPartial('index', NULL, true)
+#8 D:\Work\Home\LS\protected\controllers\SiteController.php(29): CController->render('index')
+#9 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\Work\Home\LS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('')
+#14 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 D:\Work\Home\LS\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/
+---
+2018/10/28 20:57:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Users.php(14): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\components\UserIdentity.php(12): Users->__construct()
+#7 D:\Work\Home\LS\protected\models\LoginForm.php(73): UserIdentity->authenticate()
+#8 D:\Work\Home\LS\protected\controllers\SiteController.php(63): LoginForm->login()
+#9 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#10 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\Work\Home\LS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('login')
+#14 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 D:\Work\Home\LS\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://ls.ru/site/login
+---
+2018/10/28 20:57:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РїСЂРѕСЃ "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---

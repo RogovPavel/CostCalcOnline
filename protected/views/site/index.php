@@ -23,11 +23,11 @@
 
 <?php 
     
-    $model = new Regions();
-    
-    $model->region_name = '------';
-    
-    $r = $model->insert();
+//    $model = new Regions();
+//    
+//    $model->region_name = '------';
+//    
+//    $r = $model->insert();
     
 //    echo '<pre>';
 //    
