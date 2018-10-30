@@ -56,10 +56,14 @@
                     if (Res.error == 0) {
                         ls.firms.id = parseInt(Res.id);
                         $('#ls-btn-refresh').click();
+                        
+                        if ($('#ls-dialog').length>0)
+                        $('#ls-dialog').jqxWindow('close');
+                    } else {
+                        $("#ls-dialog-content").html(Res.content);
                     }
                     
-                    if ($('#ls-dialog').length>0)
-                        $('#ls-dialog').jqxWindow('close');
+                    
                     
                     
                 },

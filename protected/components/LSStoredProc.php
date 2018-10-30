@@ -37,7 +37,7 @@ class LSStoredProc extends CComponent {
                 if ($params[$value] == '')
                     $tmp[':p_' . $value] = null;
                 else
-                    $tmp[':p_' . $value] = $params[$value];
+                    $tmp[':p_' . $value] = htmlspecialchars(htmlentities($params[$value], ENT_QUOTES, "UTF-8"), ENT_QUOTES);
             }
             else
                 $tmp[':p_' . $value] = null;
@@ -45,14 +45,11 @@ class LSStoredProc extends CComponent {
         }
         
         $command = Yii::app()->db->createCommand();
-        $command->text = $sql_init_params . $sql_call_proc;
+        $command->text = $sql_init_params; //. $sql_call_proc;
         $command->bindValues($tmp);
-        $r = $command->execute();
-        
-//        echo '<pre>';
-//        var_dump($r);
-//        echo '</pre>';
-        
+        $command->execute();
+        $command->text = $sql_call_proc;
+        $command->execute();
         $command->text = $sql_select;
         return array('tmp' => $tmp, 'sql' => $sql_init_params . $sql_call_proc . $sql_select, 'data' => $command->queryRow());
     }

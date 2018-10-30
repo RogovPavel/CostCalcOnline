@@ -23,17 +23,17 @@
 
 <?php 
     
-//    $model = new Regions();
-//    
-//    $model->region_name = '------';
-//    
+//    $model = new Banks();
+//    $model->bankname = '123';
+//    $model->city = '222';
+//    $model->account = '333';
+//    $model->bik = '444';
 //    $r = $model->insert();
-    
+//    
+//    
+//    
 //    echo '<pre>';
-//    
 //    var_dump($r);
-//    
 //    echo '</pre>';
-    
 ?>
 

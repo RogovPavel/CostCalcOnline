@@ -44,14 +44,18 @@ class BanksController extends Controller {
                 $model->setAttributes($_POST['params']);
             
             if (isset($_POST['banks'])) {
+                $model->setAttributes($_POST['banks']);
                 if ($model->validate()) {
-                    $model->setAttributes($_POST['banks']);
+                    
                     $model->user_create = Yii::app()->user->user_id;
                     $res = $model->insert();
                     $result['out'] = $res;
                     $result['id'] = $res['data']['bank_id'];
+                    return;
+                } else {
+                    $result['error'] = 1;
                 }
-                return;
+                
             }
 
             $result['content'] = $this->renderPartial('_form', array(
@@ -92,14 +96,18 @@ class BanksController extends Controller {
                 $model->setAttributes($_POST['params']);
             
             if (isset($_POST['banks'])) {
+                $model->setAttributes($_POST['banks']);
                 if ($model->validate()) {
-                    $model->setAttributes($_POST['banks']);
+                    
                     $model->user_change = Yii::app()->user->user_id;
                     $res = $model->update();
                     $result['out'] = $res;
                     $result['id'] = $res['data']['bank_id'];
+                    return;
+                } else {
+                    $result['error'] = 1;
                 }
-                return;
+                
             }
 
             $result['content'] = $this->renderPartial('_form', array(

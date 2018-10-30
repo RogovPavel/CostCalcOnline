@@ -52,9 +52,11 @@
                             <ul>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_firms'); ?>><a href='<?php echo Yii::app()->createUrl('firms'); ?>'>Мои организации</a></li>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_regions'); ?>><a href='<?php echo Yii::app()->createUrl('regions'); ?>'>Регионы</a></li>
+                                <li <?php Yii::app()->security->HideShowMenuItem('view_clients'); ?>><a href='<?php echo Yii::app()->createUrl('clients'); ?>'>Клиенты</a></li>
+                                <li <?php Yii::app()->security->HideShowMenuItem('view_banks'); ?>><a href='<?php echo Yii::app()->createUrl('banks'); ?>'>Банки</a></li>
                                 <li><a href='#'>Адреса</a></li>
-                                <li><a href='#'>Клиенты</a></li>
-                                <li><a href='#'>Банки</a></li>
+                                
+                                
                                 <li><a href='#'>Типы заявок</a></li>
                                 <li><a href='#'>Приоритеты</a></li>
                             </ul>

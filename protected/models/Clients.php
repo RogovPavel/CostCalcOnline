@@ -27,9 +27,9 @@ class Clients extends LSFormModel {
         $this->sp_delete_name = 'delete_clients';
         
         $this->proc_params = array(
-            'insert_regions' => array('client_id', 'clientname', 'inn', 'kpp', 'account', 'ogrn', 'okpo', 'bank_id', 'jur_address', 'fact_address', 'group_id', 'user_create'),
-            'update_regions' => array('client_id', 'clientname', 'inn', 'kpp', 'account', 'ogrn', 'okpo', 'bank_id', 'jur_address', 'fact_address', 'group_id', 'user_change'),
-            'delete_regions' => array('client_id', 'group_id', 'user_change'),
+            'insert_clients' => array('client_id', 'clientname', 'inn', 'kpp', 'account', 'ogrn', 'okpo', 'bank_id', 'jur_address', 'fact_address', 'user_create', 'group_id'),
+            'update_clients' => array('client_id', 'clientname', 'inn', 'kpp', 'account', 'ogrn', 'okpo', 'bank_id', 'jur_address', 'fact_address', 'user_change', 'group_id'),
+            'delete_clients' => array('client_id', 'user_change', 'group_id'),
         );
         
         $this->command->select = "c.client_id,

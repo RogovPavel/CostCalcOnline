@@ -22,9 +22,9 @@ class Banks extends LSFormModel {
         $this->sp_delete_name = 'delete_banks';
         
         $this->proc_params = array(
-            'insert_regions' => array('bank_id', 'bankname', 'city', 'account', 'bik', 'user_create', 'group_id'),
-            'update_regions' => array('bank_id', 'bankname', 'city', 'account', 'bik', 'user_change', 'group_id'),
-            'delete_regions' => array('bank_id', 'group_id', 'user_change'),
+            'insert_banks' => array('bank_id', 'bankname', 'city', 'account', 'bik', 'user_create', 'group_id'),
+            'update_banks' => array('bank_id', 'bankname', 'city', 'account', 'bik', 'user_change', 'group_id'),
+            'delete_banks' => array('bank_id', 'user_change', 'group_id'),
         );
         
         $this->command->select = "b.bank_id,
@@ -68,10 +68,10 @@ class Banks extends LSFormModel {
     public function attributeLabels() {
         return array(
             'bank_id' => '',
-            'bankname' => '',
-            'city' => '',
-            'account' => '',
-            'bik' => '',
+            'bankname' => 'Наименование',
+            'city' => 'Город',
+            'account' => 'Р/Счет',
+            'bik' => 'БИК',
             'date_create' => '',
             'user_create' => '',
             'date_change' => '',

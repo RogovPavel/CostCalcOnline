@@ -53,6 +53,8 @@
                     
                     'admin_regions',
                     'admin_firms',
+                    'admin_clients',
+                    'admin_banks',
                 ),
             ),
         )

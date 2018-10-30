@@ -184,3 +184,63 @@ ls.sources['banks'] = {
         this.totalrecords = data[0].TotalRows;
     }
 };
+ls.sources['clients'] = {
+    datatype: "json",
+    datafields: [
+        {name: 'client_id', typr: 'int'},
+        {name: 'clientname', typr: 'string'},
+        {name: 'inn', typr: 'string'},
+        {name: 'kpp', typr: 'string'},
+        {name: 'account', typr: 'string'},
+        {name: 'ogrn', typr: 'string'},
+        {name: 'okpo', typr: 'string'},
+        {name: 'bank_id', typr: 'int'},
+        {name: 'bankname', typr: 'string'},
+        {name: 'jur_address', typr: 'string'},
+        {name: 'fact_address', typr: 'string'},
+        {name: 'date_create', typr: 'date'},
+        {name: 'user_create', typr: 'int'},
+        {name: 'date_change', typr: 'date'},
+        {name: 'user_change', typr: 'int'},
+        {name: 'group_id', typr: 'int'},
+        {name: 'deldate', typr: 'date'},       
+    ],
+    id: 'client_id',
+    url: '/index.php/AjaxData/DataJQXSimple?ModelName=Clients',
+    type: 'POST',
+    root: 'Rows',
+    cache: false,
+    async: false,
+    pagenum: 0,
+    pagesize: 200,
+    beforeprocessing: function (data) {
+        this.totalrecords = data[0].TotalRows;
+    }
+};
+ls.sources['banks'] = {
+    datatype: "json",
+    datafields: [
+        {name: 'bank_id', type: 'int'},
+        {name: 'bankname', type: 'string'},
+        {name: 'city', type: 'string'},
+        {name: 'account', type: 'string'},
+        {name: 'bik', type: 'string'},
+        {name: 'date_create', type: 'date'},
+        {name: 'user_create', type: 'int'},
+        {name: 'date_change', type: 'date'},
+        {name: 'user_change', type: 'int'},
+        {name: 'group_id', type: 'int'},
+        {name: 'deldate', type: 'date'},      
+    ],
+    id: 'bank_id',
+    url: '/index.php/AjaxData/DataJQXSimple?ModelName=Banks',
+    type: 'POST',
+    root: 'Rows',
+    cache: false,
+    async: false,
+    pagenum: 0,
+    pagesize: 200,
+    beforeprocessing: function (data) {
+        this.totalrecords = data[0].TotalRows;
+    }
+};
