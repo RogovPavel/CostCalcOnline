@@ -39,7 +39,9 @@
             
             if (ls.regions.id != 0) {
                 idx = $("#ls-regions-grid").jqxGrid('getrowboundindexbyid', ls.regions.id);
+                ls.regions.id = 0;
             }
+                       
             
             if (idx == -1)
                 idx = 0;

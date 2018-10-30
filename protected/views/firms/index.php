@@ -39,6 +39,7 @@
             
             if (ls.firms.id != 0) {
                 idx = $("#ls-firms-grid").jqxGrid('getrowboundindexbyid', ls.firms.id);
+                ls.firms.id = 0;
             }
             
             if (idx == -1)
