@@ -33,8 +33,12 @@ class LSStoredProc extends CComponent {
                 $tmp[':p_' . $value] = Yii::app()->user->group_id;
             else if ($value == 'user_create' || $value == 'user_change')
                 $tmp[':p_' . $value] = Yii::app()->user->user_id;
-            else if (isset($params[$value]))
-                $tmp[':p_' . $value] = $params[$value];
+            else if (isset($params[$value])) {
+                if ($params[$value] == '')
+                    $tmp[':p_' . $value] = null;
+                else
+                    $tmp[':p_' . $value] = $params[$value];
+            }
             else
                 $tmp[':p_' . $value] = null;
             $i++;

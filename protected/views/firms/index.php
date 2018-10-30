@@ -120,7 +120,7 @@
             });
         });
         
-        $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 400, height: 124}));
+        $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 400, height: 404}));
         
         $('#ls-btn-create').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
         $('#ls-btn-update').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
@@ -130,11 +130,18 @@
         $("#ls-firms-grid").jqxGrid(
             $.extend(true, {}, ls.settings['grid'], {
                 source: firms_adapter,
-//                height: 300,
                 columns: [
-                    { text: 'Наименование', datafield: 'firmname', filtercondition: 'CONTAINS', width: 150},    
+                    { text: 'Наименование', datafield: 'firmname', filtercondition: 'CONTAINS', width: 150},
+                    { text: 'ИНН', datafield: 'inn', filtercondition: 'CONTAINS', width: 150},
+                    { text: 'КПП', datafield: 'kpp', filtercondition: 'CONTAINS', width: 150},
+                    { text: 'Рас./Счет', datafield: 'account', filtercondition: 'CONTAINS', width: 150},
+                    { text: 'ОГРН', datafield: 'ogrn', filtercondition: 'CONTAINS', width: 150},
+                    { text: 'ОКПО', datafield: 'okpo', filtercondition: 'CONTAINS', width: 150},
+                    { text: 'Банк', datafield: 'bankname', filtercondition: 'CONTAINS', width: 150},
+                    { text: 'Юр. адрес', datafield: 'jur_address', filtercondition: 'CONTAINS', width: 150},
+                    { text: 'Факт. адрес', datafield: 'fact_address', filtercondition: 'CONTAINS', width: 150},
                     { text: 'Дата создания', columntype: 'date', datafield: 'date_create', width: 130, cellsformat: 'dd.MM.yyyy'},
-                    { text: 'Дата создания', columntype: 'date', datafield: 'date_change', width: 130, cellsformat: 'dd.MM.yyyy'},
+                    { text: 'Дата изменения', columntype: 'date', datafield: 'date_change', width: 130, cellsformat: 'dd.MM.yyyy'},
                 ]
 
         }));

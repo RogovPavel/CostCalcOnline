@@ -61,6 +61,16 @@ ls.settings['button'] = {
     imgPosition: "left",   
 };
 
+ls.settings['input'] = {
+    theme: ls.defaults.theme,
+    height: 25,
+};
+
+ls.settings['combobox'] = {
+    theme: ls.defaults.theme,
+    height: 25,
+};
+
 ls.settings['button'] = {
     theme: ls.defaults.theme,
     width: 120,
@@ -137,6 +147,33 @@ ls.sources['firms'] = {
     ],
     id: 'firm_id',
     url: '/index.php/AjaxData/DataJQXSimple?ModelName=Firms',
+    type: 'POST',
+    root: 'Rows',
+    cache: false,
+    async: false,
+    pagenum: 0,
+    pagesize: 200,
+    beforeprocessing: function (data) {
+        this.totalrecords = data[0].TotalRows;
+    }
+};
+ls.sources['banks'] = {
+    datatype: "json",
+    datafields: [
+        {name: 'bank_id', type: 'int'},
+        {name: 'bankname', type: 'string'},
+        {name: 'city', type: 'string'},
+        {name: 'account', type: 'string'},
+        {name: 'bik', type: 'string'},
+        {name: 'date_create', type: 'date'},
+        {name: 'user_create', type: 'int'},
+        {name: 'date_change', type: 'date'},
+        {name: 'user_change', type: 'int'},
+        {name: 'group_id', type: 'int'},
+        {name: 'deldate', type: 'date'},      
+    ],
+    id: 'bank_id',
+    url: '/index.php/AjaxData/DataJQXSimple?ModelName=Banks',
     type: 'POST',
     root: 'Rows',
     cache: false,
