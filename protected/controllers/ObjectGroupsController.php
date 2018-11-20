@@ -1,6 +1,6 @@
 <?php
 
-class DemandTypesController extends Controller {
+class ObjectGroupsController extends Controller {
     
     public function filters() {
         return array(
@@ -11,10 +11,10 @@ class DemandTypesController extends Controller {
     
     public function accessRules() {
         return array(
-            array('allow', 'actions'=>array('index'), 'roles'=>array('view_demandtypes'),),
-            array('allow', 'actions'=>array('create'), 'roles'=>array('create_demandtypes'),),
-            array('allow', 'actions'=>array('update'), 'roles'=>array('update_demandtypes'),),
-            array('allow', 'actions'=>array('delete'), 'roles'=>array('delete_demandtypes'),),
+            array('allow', 'actions'=>array('index', 'view', 'getdata'), 'roles'=>array('view_objectgroups'),),
+            array('allow', 'actions'=>array('create'), 'roles'=>array('create_objectgroups'),),
+            array('allow', 'actions'=>array('update'), 'roles'=>array('update_objectgroups'),),
+            array('allow', 'actions'=>array('delete'), 'roles'=>array('delete_objectgroups'),),
             array('deny',
                     'users'=>array('*'),
             ),
@@ -25,35 +25,50 @@ class DemandTypesController extends Controller {
         $this->render('index');
     }
     
+    public function actionGetData($id) {
+        $model = new ObjectGroups();
+        
+        $model->get_by_id($id);
+        
+        echo json_encode($model);
+    }
+    
+    public function actionView($id) {
+        $model = new ObjectGroups();
+        
+        $model->get_by_id($id);
+        
+        $this->render('view', array(
+            'model' => $model
+        ));
+    }
+    
     public function actionCreate() {
         $result = array(
-            'error' => 0,
+            'state' => 0,
             'content' => '',
             'dialog_header' => 'Вставка записи',
             'id' => 0,
-            'error_type' => '',
-            'error_text' => '',
-            '_error' => '',
+            'error' => '',
             'out' => array(),
         );
         
         try {
-            $model = new DemandTypes();
+            $model = new ObjectGroups();
 
             if (isset($_POST['params']))
                 $model->setAttributes($_POST['params']);
             
-            if (isset($_POST['demandtypes'])) {
-                $model->setAttributes($_POST['demandtypes']);
+            if (isset($_POST['objectgroups'])) {
+                $model->setAttributes($_POST['objectgroups']);
                 if ($model->validate()) {
-                    
                     $model->user_create = Yii::app()->user->user_id;
                     $res = $model->insert();
                     $result['out'] = $res;
-                    $result['id'] = $res['data']['demandtype_id'];
+                    $result['id'] = $res['data']['objectgr_id'];
                     return;
                 } else {
-                    $result['error'] = 1;
+                    $result['state'] = 1;
                 }
                 
             }
@@ -63,10 +78,10 @@ class DemandTypesController extends Controller {
             ), true);
         
         } catch (Exception $e) {
-            $result['error'] = 1;
-            $result['error_type'] = Yii::app()->errorManager->getErrorType(15);
-            $result['error_text'] = Yii::app()->errorManager->getErrorMessage(15);
-            $result['_error'] = $e->getMessage();
+            $result['state'] = 2;
+//            $result['error_type'] = Yii::app()->errorManager->getErrorType(15);
+//            $result['error_text'] = Yii::app()->errorManager->getErrorMessage(15);
+            $result['error'] = $e->getMessage();
             
         } finally {
             echo json_encode($result);
@@ -76,49 +91,43 @@ class DemandTypesController extends Controller {
     
     public function actionUpdate() {
         $result = array(
-            'error' => 0,
+            'state' => 0,
             'content' => '',
             'dialog_header' => 'Редактирование записи',
             'id' => 0,
-            'error_type' => '',
-            'error_text' => '',
-            '_error' => '',
+            'error' => '',
             'out' => array(),
         );
         
         try {
-            $model = new DemandTypes();
+            $model = new ObjectGroups();
             
-            if (isset($_POST['demandtype_id']))
-                $model->get_by_id($_POST['demandtype_id']);
+            if (isset($_POST['objectgr_id']))
+                $model->get_by_id($_POST['objectgr_id']);
 
             if (isset($_POST['params']))
                 $model->setAttributes($_POST['params']);
             
-            if (isset($_POST['demandtypes'])) {
-                $model->setAttributes($_POST['demandtypes']);
+            if (isset($_POST['objectgroups'])) {
+                $model->setAttributes($_POST['objectgroups']);
                 if ($model->validate()) {
-                    
                     $model->user_change = Yii::app()->user->user_id;
                     $res = $model->update();
                     $result['out'] = $res;
-                    $result['id'] = $res['data']['demandtype_id'];
+                    $result['id'] = $res['data']['objectgr_id'];
                     return;
                 } else {
-                    $result['error'] = 1;
+                    $result['state'] = 1;
                 }
                 
             }
-
             $result['content'] = $this->renderPartial('_form', array(
                 'model' => $model,
             ), true);
         
         } catch (Exception $e) {
-            $result['error'] = 1;
-            $result['error_type'] = Yii::app()->errorManager->getErrorType(15);
-            $result['error_text'] = Yii::app()->errorManager->getErrorMessage(15);
-            $result['_error'] = $e->getMessage();
+            $result['state'] = 2;
+            $result['error'] = $e->getMessage();
             
         } finally {
             echo json_encode($result);
@@ -138,14 +147,14 @@ class DemandTypesController extends Controller {
         );
         
         try {
-            $model = new DemandTypes();
+            $model = new ObjectGroups();
             
-            if (isset($_POST['demandtype_id'])) {
-                $model->get_by_id($_POST['demandtype_id']);
+            if (isset($_POST['objectgr_id'])) {
+                $model->get_by_id($_POST['objectgr_id']);
                 $model->user_chnage = Yii::app()->user->user_id;
                 $res = $model->delete();
                 $result['out'] = $res;
-                $result['id'] = $res['data']['demandtype_id'];
+                $result['id'] = $res['data']['objectgr_id'];
                 
             }
             

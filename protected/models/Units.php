@@ -19,9 +19,9 @@ class Units extends LSFormModel {
         $this->sp_delete_name = 'delete_units';
         
         $this->proc_params = array(
-            'insert_regions' => array('unit_id', 'unit_name', 'user_create', 'group_id'),
-            'update_regions' => array('unit_id', 'unit_name', 'user_change', 'group_id'),
-            'delete_regions' => array('unit_id', 'user_change', 'group_id'),
+            'insert_units' => array('unit_id', 'unit_name', 'user_create', 'group_id'),
+            'update_units' => array('unit_id', 'unit_name', 'user_change', 'group_id'),
+            'delete_units' => array('unit_id', 'user_change', 'group_id'),
         );
         
         $this->command->select = "un.unit_id,

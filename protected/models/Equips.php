@@ -5,6 +5,7 @@ class Equips extends LSFormModel {
     public $equip_id;
     public $equipname;
     public $unit_id;
+    public $unit_name;
     public $note;
     public $date_create;
     public $user_create;

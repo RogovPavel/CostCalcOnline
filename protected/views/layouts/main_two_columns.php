@@ -14,7 +14,7 @@
             $(document).ready(function() {
                 $("#ls-top-menu").jqxMenu({theme: ls.defaults.theme, width: 'calc(100% - 2px)', height: '28px'});
                 $("#ls-top-menu").css('visibility', 'visible');
-                $("#ls-left-menu").jqxNavigationBar({theme: ls.defaults.theme, width: 200, expandMode: 'multiple', expandedIndexes: [0, 1]});
+                $("#ls-left-menu").jqxNavigationBar({theme: ls.defaults.theme, width: 200, expandMode: 'multiple', expandedIndexes: [0, 1, 2]});
             });
         </script>
         
@@ -36,7 +36,7 @@
                         </div>
                         <div>
                             <ul>
-                                <li><a href='<?php echo Yii::app()->createUrl('profile'); ?>'>Личный кабинет</a></li>
+                                <li><a href='<?php echo Yii::app()->createUrl('profile'); ?>'>Админка</a></li>
                                 <li><a href='#'>Обратная связь</a></li>
                             </ul>
                         </div>
@@ -51,14 +51,28 @@
                         <div>
                             <ul>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_firms'); ?>><a href='<?php echo Yii::app()->createUrl('firms'); ?>'>Мои организации</a></li>
-                                <li <?php Yii::app()->security->HideShowMenuItem('view_regions'); ?>><a href='<?php echo Yii::app()->createUrl('regions'); ?>'>Регионы</a></li>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_clients'); ?>><a href='<?php echo Yii::app()->createUrl('clients'); ?>'>Клиенты</a></li>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_banks'); ?>><a href='<?php echo Yii::app()->createUrl('banks'); ?>'>Банки</a></li>
-                                <li><a href='#'>Адреса</a></li>
-                                
-                                
-                                <li><a href='#'>Типы заявок</a></li>
-                                <li><a href='#'>Приоритеты</a></li>
+                                <li <?php Yii::app()->security->HideShowMenuItem('view_regions'); ?>><a href='<?php echo Yii::app()->createUrl('regions'); ?>'>Регионы</a></li>
+                                <li <?php Yii::app()->security->HideShowMenuItem('view_streets'); ?>><a href='<?php echo Yii::app()->createUrl('streets'); ?>'>Улицы</a></li>
+                                <li <?php Yii::app()->security->HideShowMenuItem('view_streettypes'); ?>><a href='<?php echo Yii::app()->createUrl('streettypes'); ?>'>Типы улиц</a></li>
+                                <li <?php Yii::app()->security->HideShowMenuItem('view_demandtypes'); ?>><a href='<?php echo Yii::app()->createUrl('demandtypes'); ?>'>Типы заявок</a></li>
+                                <li <?php Yii::app()->security->HideShowMenuItem('view_demandpriors'); ?>><a href='<?php echo Yii::app()->createUrl('demandpriors'); ?>'>Приоритеты заявок</a></li>
+                                <li <?php Yii::app()->security->HideShowMenuItem('view_units'); ?>><a href='<?php echo Yii::app()->createUrl('units'); ?>'>Ед. измерения</a></li>
+                                <li <?php Yii::app()->security->HideShowMenuItem('view_equips'); ?>><a href='<?php echo Yii::app()->createUrl('equips'); ?>'>Оборудование</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div style='margin-top: 2px;'>
+                                <div style='float: left;'>
+                                    <img alt='Genegals' src='/images/contactsIcon.png' />
+                                </div>
+                                <div style='margin-left: 4px; float: left;'>Реестры</div>
+                            </div>
+                        </div>
+                        <div>
+                            <ul>
+                                <li <?php Yii::app()->security->HideShowMenuItem('view_objectgroups'); ?>><a href='<?php echo Yii::app()->createUrl('objectgroups'); ?>'>Реестр объектов</a></li>
                             </ul>
                         </div>
                     </div>

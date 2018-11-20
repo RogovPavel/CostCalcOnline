@@ -5,7 +5,9 @@ class Streets extends LSFormModel {
     public $street_id;
     public $streetname;
     public $streettype_id;
+    public $streettype_name;
     public $region_id;
+    public $region_name;
     public $date_create;
     public $user_create;
     public $date_change;
@@ -21,13 +23,13 @@ class Streets extends LSFormModel {
         $this->sp_delete_name = 'delete_streets';
         
         $this->proc_params = array(
-            'insert_regions' => array('street_id', 'streetname', 'streettype_id', 'region_id', 'user_create', 'group_id'),
-            'update_regions' => array('street_id', 'streetname', 'streettype_id', 'region_id', 'user_chnage', 'group_id'),
-            'delete_regions' => array('street_id', 'user_change', 'group_id'),
+            'insert_streets' => array('street_id', 'streetname', 'streettype_id', 'region_id', 'user_create', 'group_id'),
+            'update_streets' => array('street_id', 'streetname', 'streettype_id', 'region_id', 'user_chnage', 'group_id'),
+            'delete_streets' => array('street_id', 'user_change', 'group_id'),
         );
         
         $this->command->select = "s.street_id,
-                                    s.streetname,
+                                    concat(s.streetname, ' ', st.streettype_name) as streetname,
                                     s.streettype_id,
                                     st.streettype_name,
                                     s.region_id,
@@ -56,7 +58,9 @@ class Streets extends LSFormModel {
             array('street_id,
                     streetname,
                     streettype_id,
+                    streettype_name,
                     region_id,
+                    region_name,
                     date_create,
                     user_create,
                     date_change,
@@ -71,7 +75,9 @@ class Streets extends LSFormModel {
             'street_id' => '',
             'streetname' => 'Улица',
             'streettype_id' => 'Тип улицы',
+            'streettype_name' => '',
             'region_id' => 'Регион',
+            'region_name' => '',
             'date_create' => '',
             'user_create' => '',
             'date_change' => '',

@@ -19,9 +19,9 @@ class DemandTypes extends LSFormModel {
         $this->sp_delete_name = 'delete_demandtypes';
         
         $this->proc_params = array(
-            'insert_regions' => array('demandtype_id', 'demandtype_name', 'user_create', 'group_id'),
-            'update_regions' => array('demandtype_id', 'demandtype_name', 'user_change', 'group_id'),
-            'delete_regions' => array('demandtype_id', 'user_change', 'group_id'),
+            'insert_demandtypes' => array('demandtype_id', 'demandtype_name', 'user_create', 'group_id'),
+            'update_demandtypes' => array('demandtype_id', 'demandtype_name', 'user_change', 'group_id'),
+            'delete_demandtypes' => array('demandtype_id', 'user_change', 'group_id'),
         );
         
         $this->command->select = "dt.demandtype_id,

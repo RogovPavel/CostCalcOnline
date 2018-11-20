@@ -27,13 +27,11 @@ class EquipsController extends Controller {
     
     public function actionCreate() {
         $result = array(
-            'error' => 0,
+            'state' => 0,
             'content' => '',
             'dialog_header' => 'Вставка записи',
             'id' => 0,
-            'error_type' => '',
-            'error_text' => '',
-            '_error' => '',
+            'error' => '',
             'out' => array(),
         );
         
@@ -44,14 +42,18 @@ class EquipsController extends Controller {
                 $model->setAttributes($_POST['params']);
             
             if (isset($_POST['equips'])) {
+                $model->setAttributes($_POST['equips']);
                 if ($model->validate()) {
-                    $model->setAttributes($_POST['equips']);
+                    
                     $model->user_create = Yii::app()->user->user_id;
                     $res = $model->insert();
                     $result['out'] = $res;
                     $result['id'] = $res['data']['equip_id'];
+                    return;
+                } else {
+                    $result['state'] = 1;
                 }
-                return;
+                
             }
 
             $result['content'] = $this->renderPartial('_form', array(
@@ -59,10 +61,8 @@ class EquipsController extends Controller {
             ), true);
         
         } catch (Exception $e) {
-            $result['error'] = 1;
-            $result['error_type'] = Yii::app()->errorManager->getErrorType(15);
-            $result['error_text'] = Yii::app()->errorManager->getErrorMessage(15);
-            $result['_error'] = $e->getMessage();
+            $result['state'] = 2;
+            $result['error'] = $e->getMessage();
             
         } finally {
             echo json_encode($result);
@@ -72,13 +72,11 @@ class EquipsController extends Controller {
     
     public function actionUpdate() {
         $result = array(
-            'error' => 0,
+            'state' => 0,
             'content' => '',
             'dialog_header' => 'Редактирование записи',
             'id' => 0,
-            'error_type' => '',
-            'error_text' => '',
-            '_error' => '',
+            'error' => '',
             'out' => array(),
         );
         
@@ -92,14 +90,18 @@ class EquipsController extends Controller {
                 $model->setAttributes($_POST['params']);
             
             if (isset($_POST['equips'])) {
+                $model->setAttributes($_POST['equips']);
                 if ($model->validate()) {
-                    $model->setAttributes($_POST['equips']);
+                    
                     $model->user_change = Yii::app()->user->user_id;
                     $res = $model->update();
                     $result['out'] = $res;
                     $result['id'] = $res['data']['equip_id'];
+                    return;
+                } else {
+                    $result['state'] = 1;
                 }
-                return;
+                
             }
 
             $result['content'] = $this->renderPartial('_form', array(
@@ -107,10 +109,8 @@ class EquipsController extends Controller {
             ), true);
         
         } catch (Exception $e) {
-            $result['error'] = 1;
-            $result['error_type'] = Yii::app()->errorManager->getErrorType(15);
-            $result['error_text'] = Yii::app()->errorManager->getErrorMessage(15);
-            $result['_error'] = $e->getMessage();
+            $result['state'] = 2;
+            $result['error'] = $e->getMessage();
             
         } finally {
             echo json_encode($result);
@@ -119,13 +119,11 @@ class EquipsController extends Controller {
     
     public function actionDelete() {
         $result = array(
-            'error' => 0,
+            'state' => 0,
             'content' => '',
             'dialog_header' => 'Удаление записи',
             'id' => 0,
-            'error_type' => '',
-            'error_text' => '',
-            '_error' => '',
+            'error' => '',
             'out' => array(),
         );
         
@@ -143,10 +141,8 @@ class EquipsController extends Controller {
             
         
         } catch (Exception $e) {
-            $result['error'] = 1;
-            $result['error_type'] = Yii::app()->errorManager->getErrorType(30);
-            $result['error_text'] = Yii::app()->errorManager->getErrorMessage(30);
-            $result['_error'] = $e->getMessage();
+            $result['state'] = 2;
+            $result['error'] = $e->getMessage();
             
         } finally {
             echo json_encode($result);

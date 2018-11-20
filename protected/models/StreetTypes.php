@@ -19,9 +19,9 @@ class StreetTypes extends LSFormModel {
         $this->sp_delete_name = 'delete_streettypes';
         
         $this->proc_params = array(
-            'insert_regions' => array('streettype_id', 'streettype_name', 'user_create', 'group_id'),
-            'update_regions' => array('streettype_id', 'streettype_name', 'user_change', 'group_id'),
-            'delete_regions' => array('streettype_id', 'user_change', 'group_id'),
+            'insert_streettypes' => array('streettype_id', 'streettype_name', 'user_create', 'group_id'),
+            'update_streettypes' => array('streettype_id', 'streettype_name', 'user_change', 'group_id'),
+            'delete_streettypes' => array('streettype_id', 'user_change', 'group_id'),
         );
         
         $this->command->select = "st.streettype_id,

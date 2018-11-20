@@ -44,14 +44,18 @@ class StreetsController extends Controller {
                 $model->setAttributes($_POST['params']);
             
             if (isset($_POST['streets'])) {
+                $model->setAttributes($_POST['streets']);
                 if ($model->validate()) {
-                    $model->setAttributes($_POST['streets']);
+                    
                     $model->user_create = Yii::app()->user->user_id;
                     $res = $model->insert();
                     $result['out'] = $res;
                     $result['id'] = $res['data']['street_id'];
+                    return;
+                } else {
+                    $result['error'] = 1;
                 }
-                return;
+                
             }
 
             $result['content'] = $this->renderPartial('_form', array(
@@ -92,14 +96,18 @@ class StreetsController extends Controller {
                 $model->setAttributes($_POST['params']);
             
             if (isset($_POST['streets'])) {
+                $model->setAttributes($_POST['streets']);
                 if ($model->validate()) {
-                    $model->setAttributes($_POST['streets']);
+                    
                     $model->user_change = Yii::app()->user->user_id;
                     $res = $model->update();
                     $result['out'] = $res;
                     $result['id'] = $res['data']['street_id'];
+                    return;
+                } else {
+                    $result['error'] = 1;
                 }
-                return;
+                
             }
 
             $result['content'] = $this->renderPartial('_form', array(

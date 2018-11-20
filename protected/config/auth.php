@@ -3,6 +3,8 @@
         /* Личный кабинет*/
         include(dirname(__FILE__).'/security/profile.php'),
         
+        /* Пользователи */
+        include(dirname(__FILE__).'/security/users.php'),
         /* Регионы */
         include(dirname(__FILE__).'/security/regions.php'),
         /* Банки */
@@ -34,6 +36,16 @@
         /* Работы */
         include(dirname(__FILE__).'/security/works.php'),
             
+        /* Дома */
+        include(dirname(__FILE__).'/security/objectgroups.php'),
+        /* Подъезды/Помещения */
+        include(dirname(__FILE__).'/security/objects.php'),
+        /* Оборудование на подъездах */
+        include(dirname(__FILE__).'/security/objectequips.php'),
+        /* Контакты */
+        include(dirname(__FILE__).'/security/objectgroupcontacts.php'),   
+        
+            
         array(    
             'guest' => array(
                 'type' => CAuthItem::TYPE_ROLE,
@@ -50,11 +62,21 @@
                 'children' => array(
                     'admin_profile',
                     
-                    
+                    'admin_users',
                     'admin_regions',
                     'admin_firms',
                     'admin_clients',
                     'admin_banks',
+                    'admin_streets',
+                    'admin_streettypes',
+                    'admin_demandtypes',
+                    'admin_demandpriors',
+                    'admin_objectgroups',
+                    'admin_objectgroupcontacts',
+                    'admin_objects',
+                    'admin_units',
+                    'admin_equips',
+                    'admin_objectequips',
                 ),
             ),
         )

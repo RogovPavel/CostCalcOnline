@@ -22,9 +22,9 @@ class DemandPriors extends LSFormModel {
         $this->sp_delete_name = 'delete_demandpriors';
         
         $this->proc_params = array(
-            'insert_regions' => array('demandprior_id', 'demandprior_name', 'time_exec', 'worktime', 'weekend', 'user_create', 'group_id'),
-            'update_regions' => array('demandprior_id', 'demandprior_name', 'time_exec', 'worktime', 'weekend', 'user_change', 'group_id'),
-            'delete_regions' => array('demandprior_id', 'user_change', 'group_id'),
+            'insert_demandpriors' => array('demandprior_id', 'demandprior_name', 'time_exec', 'worktime', 'weekend', 'user_create', 'group_id'),
+            'update_demandpriors' => array('demandprior_id', 'demandprior_name', 'time_exec', 'worktime', 'weekend', 'user_change', 'group_id'),
+            'delete_demandpriors' => array('demandprior_id', 'user_change', 'group_id'),
         );
         
         $this->command->select = "dp.demandprior_id,
