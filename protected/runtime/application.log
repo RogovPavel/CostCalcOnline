@@ -19369,3 +19369,12 @@ Stack trace:
 REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
 HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
 ---
+2018/11/20 22:19:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jqwidgets/st...')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jqwidgets/styles/images/sunny/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://ls.ru/js/jqwidgets/styles/jqx.ui-sunny.css
+---
