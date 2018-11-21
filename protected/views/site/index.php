@@ -27,3 +27,11 @@
     });
 </script>
 
+
+<?php 
+    $model = new Streets();
+    
+    echo '<pre>';
+    var_dump($model->proc_params);
+    echo '</pre>';
+?>

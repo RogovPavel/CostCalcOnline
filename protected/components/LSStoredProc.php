@@ -122,6 +122,7 @@ class LSStoredProc extends CComponent {
         $command->execute();
         $command->text = $sql_select;
         return array('tmp' => $tmp, 'sql' => $sql_init_params . $sql_call_proc . $sql_select, 'data' => $command->queryRow());
+          
     }
 }
 

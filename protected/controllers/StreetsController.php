@@ -39,7 +39,7 @@ class StreetsController extends Controller {
         
         try {
             $model = new Streets();
-
+            
             if (isset($_POST['params']))
                 $model->setAttributes($_POST['params']);
             

@@ -1,6 +1,6 @@
 <?php
 
-class DemandStatusController extends Controller {
+class ObjectequipsController extends Controller {
     
     public function filters() {
         return array(
@@ -11,10 +11,10 @@ class DemandStatusController extends Controller {
     
     public function accessRules() {
         return array(
-            array('allow', 'actions'=>array('index'), 'roles'=>array('view_demandstatus'),),
-            array('allow', 'actions'=>array('create'), 'roles'=>array('create_demandstatus'),),
-            array('allow', 'actions'=>array('update'), 'roles'=>array('update_demandstatus'),),
-            array('allow', 'actions'=>array('delete'), 'roles'=>array('delete_demandstatus'),),
+            array('allow', 'actions'=>array('index', 'view', 'getdata'), 'roles'=>array('view_objectgroups'),),
+            array('allow', 'actions'=>array('create'), 'roles'=>array('create_objectgroups'),),
+            array('allow', 'actions'=>array('update'), 'roles'=>array('update_objectgroups'),),
+            array('allow', 'actions'=>array('delete'), 'roles'=>array('delete_objectgroups'),),
             array('deny',
                     'users'=>array('*'),
             ),
@@ -25,33 +25,52 @@ class DemandStatusController extends Controller {
         $this->render('index');
     }
     
+    public function actionGetData($id) {
+        $model = new ObjectEquips();
+        
+        $model->get_by_id($id);
+        
+        echo json_encode($model);
+    }
+    
+    public function actionView($id) {
+        $model = new ObjectEquips();
+        
+        $model->get_by_id($id);
+        
+        $this->render('view', array(
+            'model' => $model
+        ));
+    }
+    
     public function actionCreate() {
         $result = array(
-            'error' => 0,
+            'state' => 0,
             'content' => '',
             'dialog_header' => 'Вставка записи',
             'id' => 0,
-            'error_type' => '',
-            'error_text' => '',
-            '_error' => '',
+            'error' => '',
             'out' => array(),
         );
         
         try {
-            $model = new DemandStatus();
+            $model = new ObjectEquips();
 
             if (isset($_POST['params']))
                 $model->setAttributes($_POST['params']);
             
-            if (isset($_POST['demandstatus'])) {
+            if (isset($_POST['objectequips'])) {
+                $model->setAttributes($_POST['objectequips']);
                 if ($model->validate()) {
-                    $model->setAttributes($_POST['demandstatus']);
                     $model->user_create = Yii::app()->user->user_id;
                     $res = $model->insert();
                     $result['out'] = $res;
-                    $result['id'] = $res['data']['demandstatus_id'];
+                    $result['id'] = $res['data']['objeq_id'];
+                    return;
+                } else {
+                    $result['state'] = 1;
                 }
-                return;
+                
             }
 
             $result['content'] = $this->renderPartial('_form', array(
@@ -59,10 +78,8 @@ class DemandStatusController extends Controller {
             ), true);
         
         } catch (Exception $e) {
-            $result['error'] = 1;
-            $result['error_type'] = Yii::app()->errorManager->getErrorType(15);
-            $result['error_text'] = Yii::app()->errorManager->getErrorMessage(15);
-            $result['_error'] = $e->getMessage();
+            $result['state'] = 2;
+            $result['error'] = $e->getMessage();
             
         } finally {
             echo json_encode($result);
@@ -72,45 +89,43 @@ class DemandStatusController extends Controller {
     
     public function actionUpdate() {
         $result = array(
-            'error' => 0,
+            'state' => 0,
             'content' => '',
             'dialog_header' => 'Редактирование записи',
             'id' => 0,
-            'error_type' => '',
-            'error_text' => '',
-            '_error' => '',
+            'error' => '',
             'out' => array(),
         );
         
         try {
-            $model = new DemandStatus();
+            $model = new ObjectEquips();
             
-            if (isset($_POST['demandstatus_id']))
-                $model->get_by_id($_POST['demandstatus_id']);
+            if (isset($_POST['objeq_id']))
+                $model->get_by_id($_POST['objeq_id']);
 
             if (isset($_POST['params']))
                 $model->setAttributes($_POST['params']);
             
-            if (isset($_POST['demandstatus'])) {
+            if (isset($_POST['objectequips'])) {
+                $model->setAttributes($_POST['objectequips']);
                 if ($model->validate()) {
-                    $model->setAttributes($_POST['demandstatus']);
                     $model->user_change = Yii::app()->user->user_id;
                     $res = $model->update();
                     $result['out'] = $res;
-                    $result['id'] = $res['data']['demandstatus_id'];
+                    $result['id'] = $res['data']['objeq_id'];
+                    return;
+                } else {
+                    $result['state'] = 1;
                 }
-                return;
+                
             }
-
             $result['content'] = $this->renderPartial('_form', array(
                 'model' => $model,
             ), true);
         
         } catch (Exception $e) {
-            $result['error'] = 1;
-            $result['error_type'] = Yii::app()->errorManager->getErrorType(15);
-            $result['error_text'] = Yii::app()->errorManager->getErrorMessage(15);
-            $result['_error'] = $e->getMessage();
+            $result['state'] = 2;
+            $result['error'] = $e->getMessage();
             
         } finally {
             echo json_encode($result);
@@ -119,34 +134,30 @@ class DemandStatusController extends Controller {
     
     public function actionDelete() {
         $result = array(
-            'error' => 0,
+            'state' => 0,
             'content' => '',
             'dialog_header' => 'Удаление записи',
             'id' => 0,
-            'error_type' => '',
-            'error_text' => '',
-            '_error' => '',
+            'error' => '',
             'out' => array(),
         );
         
         try {
-            $model = new DemandStatus();
+            $model = new ObjectEquips();
             
-            if (isset($_POST['demandstatus_id'])) {
-                $model->get_by_id($_POST['demandstatus_id']);
-                $model->user_chnage = Yii::app()->user->user_id;
+            if (isset($_POST['objeq_id'])) {
+                $model->get_by_id($_POST['objeq_id']);
+                $model->user_change = Yii::app()->user->user_id;
                 $res = $model->delete();
                 $result['out'] = $res;
-                $result['id'] = $res['data']['demandstatus_id'];
+                $result['id'] = $res['data']['objeq_id'];
                 
             }
             
         
         } catch (Exception $e) {
-            $result['error'] = 1;
-            $result['error_type'] = Yii::app()->errorManager->getErrorType(30);
-            $result['error_text'] = Yii::app()->errorManager->getErrorMessage(30);
-            $result['_error'] = $e->getMessage();
+            $result['state'] = 2;
+            $result['error'] = $e->getMessage();
             
         } finally {
             echo json_encode($result);

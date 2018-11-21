@@ -71,7 +71,8 @@ class LSFormModel extends CFormModel
         else
             $res = $sp->execute($this);
         
-        return array('tmp' => $res['tmp'], 'data' => $res['data']);
+        return array('tmp' => $res['tmp'], 'data' => $res['data'], 'sql' => $res['sql']);
+        
     }
     
     public function update($params = array()) {
