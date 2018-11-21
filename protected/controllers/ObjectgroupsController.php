@@ -1,6 +1,6 @@
 <?php
 
-class ObjectEquipsController extends Controller {
+class ObjectgroupsController extends Controller {
     
     public function filters() {
         return array(
@@ -26,7 +26,7 @@ class ObjectEquipsController extends Controller {
     }
     
     public function actionGetData($id) {
-        $model = new ObjectEquips();
+        $model = new ObjectGroups();
         
         $model->get_by_id($id);
         
@@ -34,7 +34,7 @@ class ObjectEquipsController extends Controller {
     }
     
     public function actionView($id) {
-        $model = new ObjectEquips();
+        $model = new ObjectGroups();
         
         $model->get_by_id($id);
         
@@ -54,18 +54,18 @@ class ObjectEquipsController extends Controller {
         );
         
         try {
-            $model = new ObjectEquips();
+            $model = new ObjectGroups();
 
             if (isset($_POST['params']))
                 $model->setAttributes($_POST['params']);
             
-            if (isset($_POST['objectequips'])) {
-                $model->setAttributes($_POST['objectequips']);
+            if (isset($_POST['objectgroups'])) {
+                $model->setAttributes($_POST['objectgroups']);
                 if ($model->validate()) {
                     $model->user_create = Yii::app()->user->user_id;
                     $res = $model->insert();
                     $result['out'] = $res;
-                    $result['id'] = $res['data']['objeq_id'];
+                    $result['id'] = $res['data']['objectgr_id'];
                     return;
                 } else {
                     $result['state'] = 1;
@@ -79,6 +79,8 @@ class ObjectEquipsController extends Controller {
         
         } catch (Exception $e) {
             $result['state'] = 2;
+//            $result['error_type'] = Yii::app()->errorManager->getErrorType(15);
+//            $result['error_text'] = Yii::app()->errorManager->getErrorMessage(15);
             $result['error'] = $e->getMessage();
             
         } finally {
@@ -98,21 +100,21 @@ class ObjectEquipsController extends Controller {
         );
         
         try {
-            $model = new ObjectEquips();
+            $model = new ObjectGroups();
             
-            if (isset($_POST['objeq_id']))
-                $model->get_by_id($_POST['objeq_id']);
+            if (isset($_POST['objectgr_id']))
+                $model->get_by_id($_POST['objectgr_id']);
 
             if (isset($_POST['params']))
                 $model->setAttributes($_POST['params']);
             
-            if (isset($_POST['objectequips'])) {
-                $model->setAttributes($_POST['objectequips']);
+            if (isset($_POST['objectgroups'])) {
+                $model->setAttributes($_POST['objectgroups']);
                 if ($model->validate()) {
                     $model->user_change = Yii::app()->user->user_id;
                     $res = $model->update();
                     $result['out'] = $res;
-                    $result['id'] = $res['data']['objeq_id'];
+                    $result['id'] = $res['data']['objectgr_id'];
                     return;
                 } else {
                     $result['state'] = 1;
@@ -134,30 +136,34 @@ class ObjectEquipsController extends Controller {
     
     public function actionDelete() {
         $result = array(
-            'state' => 0,
+            'error' => 0,
             'content' => '',
             'dialog_header' => 'Удаление записи',
             'id' => 0,
-            'error' => '',
+            'error_type' => '',
+            'error_text' => '',
+            '_error' => '',
             'out' => array(),
         );
         
         try {
-            $model = new ObjectEquips();
+            $model = new ObjectGroups();
             
-            if (isset($_POST['objeq_id'])) {
-                $model->get_by_id($_POST['objeq_id']);
-                $model->user_change = Yii::app()->user->user_id;
+            if (isset($_POST['objectgr_id'])) {
+                $model->get_by_id($_POST['objectgr_id']);
+                $model->user_chnage = Yii::app()->user->user_id;
                 $res = $model->delete();
                 $result['out'] = $res;
-                $result['id'] = $res['data']['objeq_id'];
+                $result['id'] = $res['data']['objectgr_id'];
                 
             }
             
         
         } catch (Exception $e) {
-            $result['state'] = 2;
-            $result['error'] = $e->getMessage();
+            $result['error'] = 1;
+            $result['error_type'] = Yii::app()->errorManager->getErrorType(30);
+            $result['error_text'] = Yii::app()->errorManager->getErrorMessage(30);
+            $result['_error'] = $e->getMessage();
             
         } finally {
             echo json_encode($result);
