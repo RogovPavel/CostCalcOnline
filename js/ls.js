@@ -77,6 +77,11 @@ ls.showerrormassage = function(header, message) {
     $('#ls-error-dialog').jqxWindow('open');
 }
 
+ls.loaderror = function(jqXHR, status, error) {
+    ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
+    ls.lock_operation = false;
+}
+
 ls.settings['datetime'] = {
     theme: ls.defaults.theme,
     showFooter: true,
@@ -530,7 +535,7 @@ ls.sources['objectgroupcontacts'] = {
     type: 'POST',
     root: 'Rows',
     cache: false,
-    async: false,
+    async: true,
     pagenum: 0,
     pagesize: 200,
     beforeprocessing: function (data) {
@@ -559,7 +564,7 @@ ls.sources['objects'] = {
     type: 'POST',
     root: 'Rows',
     cache: false,
-    async: false,
+    async: true,
     pagenum: 0,
     pagesize: 200,
     beforeprocessing: function (data) {
@@ -644,10 +649,11 @@ ls.sources['objectequips'] = {
     type: 'POST',
     root: 'Rows',
     cache: false,
-    async: false,
+    async: true,
     pagenum: 0,
     pagesize: 200,
     beforeprocessing: function (data) {
         this.totalrecords = data[0].TotalRows;
     }
 };
+

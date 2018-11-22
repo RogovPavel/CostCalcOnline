@@ -1,27 +1,120 @@
 <script type="text/javascript">
-    ls.objectgroups = {id: 0, refresh: null};
-    ls.objectgroupcontacts = {id: 0};
-    ls.object = {id: 0};
-    ls.objectequip = {id: 0};
+    ls.objectgroups = {
+        id: undefined,
+        row: <?php echo json_encode($model); ?>,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = true;
+            
+            if (reset) {
+                $.ajax({
+                    url: '/objectgroups/getdata/' + ls.objectgroups.row.objectgr_id,
+                    success: function(Res) {
+                        ls.objectgroups.row = JSON.parse(Res);
+                        ls.objectgroups.setvalues();
+                    },
+                    error: function(Res) {
+                        ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
+                    }
+                });
+            }
+            else {
+                this.setvalues();
+            }
+        },
+        setvalues: function() {
+            $("#ls-og-clientname").jqxInput('val', ls.objectgroups.row.clientname);
+            $("#ls-og-address").jqxInput('val', ls.objectgroups.row.address);
+            $("#ls-og-note").jqxTextArea('val', ls.objectgroups.row.note);
+        }
+    };
+    
+    ls.objectgroupcontacts = {
+        id: undefined,
+        row: undefined,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = false;
+            if (!$("#ls-objectgroupcontacts-grid").jqxGrid('isBindingCompleted'))
+                return;
+            if (reset) {
+                var adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['objectgroupcontacts']), {
+                    loadError: ls.loaderror,
+                    formatData: function (data) {
+                        var fltrs = [];
+                        if (ls.objectgroups.row.objectgr_id != null && ls.objectgroups.row.objectgr_id != undefined)
+                            fltrs.push({field: 'ogc.objectgr_id', operand: 1, value: ls.objectgroups.row.objectgr_id});
+                        else
+                            fltrs.push({field: 'ogc.objectgr_id', operand: 1, value: -1});
+                        $.extend(data, {filters: fltrs});
+                        return data;
+                    },
+                });
+                $("#ls-objectgroupcontacts-grid").jqxGrid({source: adapter});
+            }
+            else
+                $("#ls-objectgroupcontacts-grid").jqxGrid('updatebounddata');
+        }
+    };
+    ls.objects = {
+        rowid: undefined,
+        row: undefined,
+        rowindex: undefined,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = false;
+            if (!$("#ls-objects-grid").jqxGrid('isBindingCompleted'))
+                return;
+            if (reset) {
+                var adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['objects']), {
+                    loadError: ls.loaderror,
+                    formatData: function (data) {
+                        var fltrs = [];
+                        if (ls.objectgroups.row.objectgr_id != null && ls.objectgroups.row.objectgr_id != undefined)
+                            fltrs.push({field: 'o.objectgr_id', operand: 1, value: ls.objectgroups.row.objectgr_id});
+                        else
+                            fltrs.push({field: 'o.objectgr_id', operand: 1, value: -1});
+                        $.extend(data, {filters: fltrs});
+                        return data;
+                    },
+                });
+                $("#ls-objects-grid").jqxGrid({source: adapter});
+            }
+            else
+                $("#ls-objects-grid").jqxGrid('updatebounddata');
+        }
+    };
+    ls.objectequips = {
+        rowid: undefined,
+        row: undefined,
+        rowindex: undefined,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = false;
+            if (!$("#ls-objectequips-grid").jqxGrid('isBindingCompleted'))
+                return;
+            
+            if (reset) {
+                var adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['objectequips']), {
+                    loadError: ls.loaderror,
+                    formatData: function (data) {
+                        var fltrs = [];
+                        if (ls.objects.row != undefined && ls.objects.row != null)
+                            fltrs.push({field: 'oe.object_id', operand: 1, value: ls.objects.row.object_id});
+                        else
+                            fltrs.push({field: 'oe.object_id', operand: 1, value: -1});
+                        $.extend(data, {filters: fltrs});
+                        return data;
+                    },
+                });
+                $("#ls-objectequips-grid").jqxGrid({source: adapter});
+            }
+            else 
+                $("#ls-objectequips-grid").jqxGrid('updatebounddata');
+        }
+    };
     
     $(document).ready(function() {
-        
-        var model = <?php echo json_encode($model); ?>;
-        
-        ls.objectgroups.refresh = function() {
-            $.ajax({
-                url: '/objectgroups/getdata/' + model.objectgr_id,
-                success: function(Res) {
-                    model = JSON.parse(Res);
-                    setvalues();
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
-                }
-                
-            });
-        };
-        
         var settabindex = function(idx) {
             try {
                 history.pushState(null, null, '#' + idx);
@@ -34,22 +127,17 @@
             return parseInt(idx);
         };
         
-        var setvalues = function() {
-            $("#ls-og-clientname").jqxInput('val', model.clientname);
-            $("#ls-og-address").jqxInput('val', model.address);
-            $("#ls-og-note").jqxTextArea('val', model.note);
-        };
+        
         
         var initWidgets = function(tab) {
             switch(tab) {
                 case 0:
-                    var currentrow_contacts;
-                    
                     $("#ls-og-clientname").jqxInput($.extend(true, {}, ls.settings['input'], {width: '250px', height: 25, disabled: false}));
                     $("#ls-og-address").jqxInput($.extend(true, {}, ls.settings['input'], {width: '250px', height: 25, disabled: false}));
                     $("#ls-og-note").jqxTextArea($.extend(true, {}, ls.settings['textarea'], {theme: ls.defaults.theme, width: 'calc(100% - 2px)', height: 'calc(100% - 2px)'}));
-                    
                     $("#ls-og-edit").jqxButton($.extend(true, {}, ls.settings['button'], {theme: ls.defaults.theme, width: '100px', height: 30}));
+                    ls.objectgroups.refresh(false);
+                    
                     
                     $('#ls-og-edit').on('click', function() {
                         if ($('#ls-og-edit').jqxButton('disabled') || ls.lock_operation) return;
@@ -57,13 +145,12 @@
                             url: <?php echo json_encode(Yii::app()->createUrl('objectgroups/update')) ?>,
                             type: 'POST',
                             data: {
-                                objectgr_id: model.objectgr_id
+                                objectgr_id: ls.objectgroups.row.objectgr_id
                             },
                             async: false,
                             success: function(Res) {
                                 Res = JSON.parse(Res);
                                 if (Res.state == 0) {
-                                    console.log(Res);
                                     $("#ls-dialog-content").html(Res.content);
                                     $("#ls-dialog-header-text").html(Res.dialog_header);
                                     $('#ls-dialog').jqxWindow('open');
@@ -76,24 +163,11 @@
                         });
                     });
                     
-                    var objectgroupcontacts_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['objectgroupcontacts']), {
-                        loadError: function(jqXHR, status, error) {
-                            ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
-                            ls.lock_operation = false;
-                        },
-                        formatData: function (data) {
-                            $.extend(data, {
-                                filters: [
-                                    {field: 'ogc.objectgr_id', operand: 1, value: model.objectgr_id}
-                                ],
-                            });
-                            return data;
-                        },
-                    });
+                    
                     
                     var checkbuttoncontacts = function() {
-                        $('#ls-btn-update-contact').jqxButton({disabled: !(currentrow_contacts != undefined)})
-                        $('#ls-btn-delete-contact').jqxButton({disabled: !(currentrow_contacts != undefined)})
+                        $('#ls-btn-update-contact').jqxButton({disabled: !(ls.objectgroupcontacts.row != undefined)})
+                        $('#ls-btn-delete-contact').jqxButton({disabled: !(ls.objectgroupcontacts.row != undefined)})
                     };
                     
                     $("#ls-objectgroupcontacts-grid").on('bindingcomplete', function() {
@@ -121,13 +195,14 @@
                     });
                     
                     $("#ls-objectgroupcontacts-grid").on('rowselect', function (event) {
-                        currentrow_contacts = $('#ls-objectgroupcontacts-grid').jqxGrid('getrowdata', event.args.rowindex);
+                        var args = event.args;
+                        ls.objectgroupcontacts.index = args.rowindex;
+                        ls.objectgroupcontacts.row = args.row;
                         checkbuttoncontacts();
                     });
                     
                     $("#ls-objectgroupcontacts-grid").jqxGrid(
                         $.extend(true, {}, ls.settings['grid'], {
-                            source: objectgroupcontacts_adapter,
                             columns: [
                                 { text: 'ФИО', columngroup: 'group1', datafield: 'fullname', width: 180},    
                                 { text: 'Должность', columngroup: 'group1', datafield: 'position_name', width: 120},
@@ -145,6 +220,8 @@
                     $('#ls-btn-refresh-contact').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
                     $('#ls-btn-delete-contact').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
                     
+                    ls.objectgroupcontacts.refresh(true);
+                    
                     $('#ls-btn-refresh-contact').on('click', function() {
                         $("#ls-objectgroupcontacts-grid").jqxGrid('updatebounddata');
                     });
@@ -157,7 +234,7 @@
                             async: false,
                             data: {
                                 params: {
-                                    objectgr_id: model.objectgr_id
+                                    objectgr_id: ls.objectgroups.row.objectgr_id
                                 }
                             },
                             success: function(Res) {
@@ -182,7 +259,7 @@
                             type: 'POST',
                             async: false,
                             data: {
-                                contact_id: currentrow_contacts.contact_id
+                                contact_id: ls.objectgroupcontacts.row.contact_id
                             },
                             success: function(Res) {
                                 Res = JSON.parse(Res);
@@ -201,12 +278,12 @@
                     
                     $('#ls-btn-delete-contact').on('click', function() {
                         if ($('#ls-btn-delete-contact').jqxButton('disabled') || ls.lock_operation) return;
-                        if (currentrow_contacts == undefined) return;            
+                        if (ls.objectgroupcontacts.row == undefined) return;            
                         $.ajax({
                             url: <?php echo json_encode(Yii::app()->createUrl('objectgroupcontacts/delete')) ?>,
                             type: 'POST',
                             data: {
-                                contact_id: currentrow_contacts.contact_id
+                                contact_id: ls.objectgroupcontacts.row.contact_id
                             },
                             async: false,
                             success: function(Res) {
@@ -229,45 +306,25 @@
                     });
                 break;
                 case 1:
-                    var currentrow_objects;
                     
-                    var objects_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['objects']), {
-                        loadError: function(jqXHR, status, error) {
-                            ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
-                            ls.lock_operation = false;
-                        },
-                        formatData: function (data) {
-                            $.extend(data, {
-                                filters: [
-                                    {field: 'o.objectgr_id', operand: 1, value: model.objectgr_id}
-                                ],
-                            });
-                            return data;
-                        },
-                    });
                     
                     var checkbuttonobjects = function() {
-                        $('#ls-btn-update-object').jqxButton({disabled: !(currentrow_objects != undefined)})
-                        $('#ls-btn-delete-object').jqxButton({disabled: !(currentrow_objects != undefined)})
+                        $('#ls-btn-update-object').jqxButton({disabled: !(ls.objects.row != undefined)})
+                        $('#ls-btn-delete-object').jqxButton({disabled: !(ls.objects.row != undefined)})
                     };
                     
                     $("#ls-objects-grid").on('bindingcomplete', function() {
                         var idx = $('#ls-objects-grid').jqxGrid('selectedrowindex'); 
                         
-                        
-                        if (ls.object.id != 0) {
-                            
-                            
-                            idx = $("#ls-objects-grid").jqxGrid('getrowboundindexbyid', ls.object.id);
-                            ls.object.id = 0;
+                        if (ls.objects.rowid != undefined) {
+                            idx = $("#ls-objects-grid").jqxGrid('getrowboundindexbyid', ls.objects.rowid);
+                            ls.objects.rowid = 0;
                         }
-
 
                         if (idx == -1)
                             idx = 0;
                         
-                        
-
+                                                
                         $("#ls-objects-grid").jqxGrid('selectrow', idx);
                         $("#ls-objects-grid").jqxGrid('ensurerowvisible', idx);
 
@@ -276,16 +333,15 @@
                     });
                     
                     $("#ls-objects-grid").on('rowselect', function (event) {
-                        currentrow_objects = $('#ls-objects-grid').jqxGrid('getrowdata', event.args.rowindex);
-                        
-                        $("#ls-objectequips-grid").jqxGrid('updatebounddata');
-                                
+                        var args = event.args;
+                        ls.objects.index = args.rowindex;
+                        ls.objects.row = args.row;
+                        ls.objectequips.refresh(1);
                         checkbuttonobjects();
                     });
                     
                     $("#ls-objects-grid").jqxGrid(
                         $.extend(true, {}, ls.settings['grid'], {
-                            source: objects_adapter,
                             columns: [
                                 { text: 'Номер', columngroup: 'group1', datafield: 'doorway', width: 180},    
                                 
@@ -301,6 +357,8 @@
                     $('#ls-btn-refresh-object').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
                     $('#ls-btn-delete-object').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
                     
+                    ls.objects.refresh(true);
+                    
                     $('#ls-btn-refresh-object').on('click', function() {
                         $("#ls-objects-grid").jqxGrid('updatebounddata');
                     });
@@ -314,7 +372,7 @@
                             async: false,
                             data: {
                                 params: {
-                                    objectgr_id: model.objectgr_id
+                                    objectgr_id: ls.objectgroups.row.objectgr_id
                                 }
                             },
                             success: function(Res) {
@@ -391,29 +449,38 @@
                             case 0: 
                                 var currentrow_objectequips1;
                     
-                                var objectequips_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['objectequips']), {
-                                    loadError: function(jqXHR, status, error) {
-                                        ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
-                                        ls.lock_operation = false;
-                                    },
-                                    formatData: function (data) {
-                                        $.extend(data, {
-                                            filters: [
-                                                {field: 'oe.object_id', operand: 1, value: currentrow_objects.object_id}
-                                            ],
-                                        });
-                                        return data;
-                                    },
+                                
+                                
+                                var checkbuttonobjectequips1 = function() {
+                                    $('#ls-btn-update-objectequip').jqxButton({disabled: !(currentrow_objectequips1 != undefined)})
+                                    $('#ls-btn-delete-objectequip').jqxButton({disabled: !(currentrow_objectequips1 != undefined)})
+                                };
+
+                                $("#ls-objectequips-grid").on('bindingcomplete', function() {
+                                    var idx = $('#ls-objectequips-grid').jqxGrid('selectedrowindex'); 
+
+                                    if (ls.objectequips.rowid != 0) {
+                                        idx = $("#ls-objectequips-grid").jqxGrid('getrowboundindexbyid', ls.objectequips.rowid);
+                                        ls.objectequips.rowid = 0;
+                                    }
+                                    if (idx == -1)
+                                        idx = 0;
+                                    
+                                    $("#ls-objectequips-grid").jqxGrid('selectrow', idx);
+                                    $("#ls-objectequips-grid").jqxGrid('ensurerowvisible', idx);
+
+                                    checkbuttonobjectequips1();
+                                    ls.lock_operation = false;
                                 });
                                 
                                 $("#ls-objectequips-grid").on('rowselect', function (event) {
                                     currentrow_objectequips1 = $('#ls-objectequips-grid').jqxGrid('getrowdata', event.args.rowindex);
-//                                    checkbuttoncontacts();
+                                    checkbuttonobjectequips1();
                                 });
                                 
                                 $("#ls-objectequips-grid").jqxGrid(
                                     $.extend(true, {}, ls.settings['grid'], {
-                                        source: objectequips_adapter,
+//                                        source: objectequips_adapter,
                                         columns: [
                                             { text: 'Оборудование', datafield: 'equipname', width: 180},
                                             { text: 'Ед. изм.', datafield: 'unit_name', width: 80},    
@@ -442,7 +509,7 @@
                                         data: {
                                             params: {
                                                 object_id: currentrow_objects.object_id,
-                                                objectgr_id: model.objectgr_id
+                                                objectgr_id: ls.objectgroups.row.objectgr_id
                                             }
                                         },
                                         success: function(Res) {
@@ -500,12 +567,11 @@
             settabindex(idx);
         });
         
-        $('#ls-objectgroup-tab').jqxTabs($.extend(true, {}, ls.settings['tab'], { width: 'calc(100% - 2px)', height: 'calc(100% - 2px)', position: 'top', initTabContent: initWidgets}));
-        
         var idx = gettabindex();
-        $('#ls-objectgroup-tab').jqxTabs('select', idx);
-        
-        setvalues();
+        if (isNaN(idx))
+            idx = 0;
+            
+        $('#ls-objectgroup-tab').jqxTabs($.extend(true, {}, ls.settings['tab'], {selectedItem: idx, width: 'calc(100% - 2px)', height: 'calc(100% - 2px)', position: 'top', initTabContent: initWidgets}));
     });
     
 </script>
