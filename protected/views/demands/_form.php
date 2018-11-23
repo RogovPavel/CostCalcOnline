@@ -11,7 +11,7 @@
         $.ajax({
             url: '/index.php/AjaxData/DataJQXSimpleList',
             type: 'POST',
-            async: false,
+            async: true,
             data: {
                 Models: ['ObjectGroups', 'DemandTypes', 'DemandPriors', 'Clients']
             },
@@ -22,16 +22,32 @@
                 datademandpriors = Res[2];
                 dataclients = Res[3];
                 
+                initsource();
+                setvalues();
             }
         });
         
+        var initsource = function() {
+            $("#ls-demands-edit-objectgr").jqxComboBox({source: dataobjectgroups});
+            $("#ls-demands-edit-demandtype").jqxComboBox({source: datademandtypes});
+            $("#ls-demands-edit-prior").jqxComboBox({source: datademandpriors});
+            $("#ls-demands-edit-client").jqxComboBox({source: dataclients});
+        };
+        
+        var setvalues = function() {
+            $("#ls-demands-edit-objectgr").val(model.objectgr_id);
+            $("#ls-demands-edit-demandtype").val(model.demandtype_id);
+            $("#ls-demands-edit-prior").val(model.prior_id);
+            $("#ls-demands-edit-client").val(model.client_id);
+        };
+        
         $("#ls-demands-edit-demand").jqxInput($.extend(true, {}, ls.settings['input'], {theme: ls.defaults.theme, width: '100px', height: 25}));
         $("#ls-demands-edit-datereg").jqxDateTimeInput($.extend(true, {}, ls.settings['datetime'], {value: new Date(), width: '150px', height: 25, formatString: 'dd.MM.yyyy HH:mm'}));
-        $("#ls-demands-edit-objectgr").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {source: dataobjectgroups, displayMember: "address", valueMember: "objectgr_id", width: '400px'}));
-        $("#ls-demands-edit-demandtype").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {source: datademandtypes, displayMember: "demandtype_name", valueMember: "demandtype_id", width: '400px'}));
-        $("#ls-demands-edit-prior").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {source: datademandpriors, displayMember: "demandprior_name", valueMember: "demandprior_id", width: '130px'}));
+        $("#ls-demands-edit-objectgr").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {displayMember: "address", valueMember: "objectgr_id", width: '400px'}));
+        $("#ls-demands-edit-demandtype").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {displayMember: "demandtype_name", valueMember: "demandtype_id", width: '400px'}));
+        $("#ls-demands-edit-prior").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {displayMember: "demandprior_name", valueMember: "demandprior_id", width: '130px'}));
         $("#ls-demands-edit-deadline").jqxDateTimeInput($.extend(true, {}, ls.settings['datetime'], {value: null, readonly: true, width: '150px', height: 25, formatString: 'dd.MM.yyyy HH:mm'}));
-        $("#ls-demands-edit-client").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {source: dataclients, displayMember: "clientname", valueMember: "client_id", width: '400px'}));
+        $("#ls-demands-edit-client").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {displayMember: "clientname", valueMember: "client_id", width: '400px'}));
         $("#ls-demands-edit-contact").jqxInput($.extend(true, {}, ls.settings['input'], {theme: ls.defaults.theme, width: '400px', height: 25}));
         $("#ls-demands-edit-demandtext").jqxTextArea($.extend(true, {}, ls.settings['textarea'], {height: '70px', width: 'calc(100% - 8px)'}));
         
