@@ -8,6 +8,70 @@ class AjaxDataController extends Controller {
         );
     }
     
+    public function is_date($date) {
+        $type = 0;
+        
+        $date = str_replace('-', '.', $date);
+        
+        if (strlen($date) >= 10) {        
+            if ($date[2] == '.' && $date[5] == '.')
+                $type = 1;
+            if ($date[4] == '.' && $date[7] == '.')
+                $type = 2;
+        }
+        
+        return $type;
+    }
+    
+    public function datetime_convert($date, $format) {
+        $result = '';
+        $type = $this->is_date($date);
+        
+        $d = '';
+        $M = '';
+        $Y = '';
+        
+        $H = '00';
+        $m = '00';
+        $s = '00';
+        
+        if ($type != 0) {
+            if ($type == 1) {
+                $d = $date[0] . $date[1];
+                $M = $date[3] . $date[4];
+                $Y = $date[6] . $date[7] . $date[8] . $date[9];
+            }
+            
+            if ($type == 2) {
+                $d = $date[8] . $date[9];
+                $M = $date[5] . $date[6];
+                $Y = $date[0] . $date[1] . $date[2] . $date[3];
+            }
+            
+            if (strlen($date) > 10) {
+                $H = $date[11] . $date[12];
+            }
+            if (strlen($date) > 13) {
+                $m = $date[14] . $date[15];
+            }
+            if (strlen($date) > 16) {
+                $s = $date[17] . $date[18];
+            }
+            
+            $result = str_replace('dd', $d, $format);
+            $result = str_replace('MM', $M, $result);
+            $result = str_replace('yyyy', $Y, $result);
+            $result = str_replace('HH', $H, $result);
+            $result = str_replace('mm', $m, $result);
+            $result = str_replace('ss', $s, $result);
+            
+        }
+        else
+            $result = $date;
+        
+        return $result;
+    }
+    
     public function accessRules() {
         return array(
             array('allow',
@@ -49,7 +113,7 @@ class AjaxDataController extends Controller {
             if ((int)$value['operand'] == 4)
                 $operand = ' < ';
             
-            array_push($conditions, array('sql' => $value['field'] . $operand . ':p' . $i, 'params' => array(':p' . $i => $value['value'])));
+            array_push($conditions, array('sql' => $value['field'] . $operand . ':p' . $i, 'params' => array(':p' . $i => $this->datetime_convert ($value['value'], 'yyyy-MM-dd HH:mm:ss'))));
             $i++;
         };
         
@@ -108,7 +172,7 @@ class AjaxDataController extends Controller {
                 $tmpdatafield = "";
                 $tmpfilteroperator = "";
                 for ($i=0; $i < $filterscount; $i++) {
-                    $filtervalue = $filters['filters']["filtervalue" . $i];
+                    $filtervalue = $this->datetime_convert($filters['filters']["filtervalue" . $i], 'yyyy-MM-dd HH:mm:ss');
                     $filtercondition = $filters['filters']["filtercondition" . $i];
                     $filterdatafield = $model->getattributeforfilters($filters['filters']["filterdatafield" . $i]);
                     $filteroperator = $filters['filters']["filteroperator" . $i];
