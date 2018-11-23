@@ -84,9 +84,9 @@ class ObjectGroupContacts extends LSFormModel {
         return array(
             'contact_id' => '',
             'objectgr_id' => '',
-            'firstname' => '',
+            'firstname' => 'Имя',
             'surname' => 'Фамилия',
-            'lastname' => '',
+            'lastname' => 'Отчество',
             'fullname' => '',
             'position_id' => '',
             'position_name' => '',

@@ -30,37 +30,23 @@
             ls.lock_operation = true;
             
             if (state_insert)
-                var url = <?php echo json_encode(Yii::app()->createUrl('objects/create')); ?>;
+                var action = 'create';
             else
-                var url = <?php echo json_encode(Yii::app()->createUrl('objects/update')); ?>;
-            $.ajax({
-                url: url,
-                type: 'POST',
-                data: $('#objects').serialize(),
-                success: function(Res) {
-                    Res = JSON.parse(Res);
+                var action = 'update';
+            
+            ls.save('objects', action, $('#objects').serialize(), function(Res) {
+                Res = JSON.parse(Res);
+                if (Res.state == 0) {
                     ls.lock_operation = false;
-                    
-                    if (Res.state == 0) {
-                        ls.object.id = parseInt(Res.id);
-                        $('#ls-btn-refresh-object').click();
-                        
-                        if ($('#ls-dialog').length>0)
-                        $('#ls-dialog').jqxWindow('close');
-                    }
-                    else if (Res.state == 1) {
-                        $("#ls-dialog-content").html(Res.content);
-                    }
-                    else
-                        ls.showerrormassage('Ошибка', Res.error);
-                    
-                    
-                    
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', Res.error);
-                    ls.lock_operation = false;
+                    ls.objects.rowid = parseInt(Res.id);
+                    ls.objects.refresh(false);
+                    $('#ls-dialog').jqxWindow('close');
                 }
+                else if (Res.state == 1)
+                    $("#ls-dialog-content").html(Res.responseText);
+                else
+                    ls.showerrormassage('Ошибка! ' + Res.responseText);
+                
             });
         });
         

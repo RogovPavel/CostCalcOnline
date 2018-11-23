@@ -47,38 +47,23 @@
             ls.lock_operation = true;
             
             if (state_insert)
-                var url = <?php echo json_encode(Yii::app()->createUrl('objectgroupcontacts/create')); ?>;
+                var action = 'create';
             else
-                var url = <?php echo json_encode(Yii::app()->createUrl('objectgroupcontacts/update')); ?>;
-            $.ajax({
-                url: url,
-                type: 'POST',
-                data: $('#objectgroupcontacts').serialize(),
-                success: function(Res) {
-                    Res = JSON.parse(Res);
+                var action = 'update';
+            
+            ls.save('objectgroupcontacts', action, $('#objectgroupcontacts').serialize(), function(Res) {
+                Res = JSON.parse(Res);
+                if (Res.state == 0) {
                     ls.lock_operation = false;
-                    
-                    if (Res.state == 0) {
-                        
-                        ls.objectgroupcontacts.id = parseInt(Res.id);
-                        
-                        if ($('#ls-btn-refresh-contact').length>0)
-                            $('#ls-btn-refresh-contact').click();
-                        
-                        if ($('#ls-dialog').length>0)
-                            $('#ls-dialog').jqxWindow('close');
-                    }
-                    else if (Res.state == 1) {
-                        $("#ls-dialog-content").html(Res.content);
-                    }
-                    else
-                        ls.showerrormassage('Ошибка', Res.error);                        
-                    
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При сохранении данных произошла ошибка. Повторите попытку позже.');
-                    ls.lock_operation = false;
+                    ls.objectgroupcontacts.rowid = parseInt(Res.id);
+                    ls.objectgroupcontacts.refresh(false);
+                    $('#ls-dialog').jqxWindow('close');
                 }
+                else if (Res.state == 1)
+                    $("#ls-dialog-content").html(Res.responseText);
+                else
+                    ls.showerrormassage('Ошибка! ' + Res.responseText);
+                
             });
         });
         

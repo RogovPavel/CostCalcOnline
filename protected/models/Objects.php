@@ -41,7 +41,8 @@ class Objects extends LSFormModel {
                                     o.user_change,
                                     o.group_id";
         $this->command->from = 'objects o';
-        $this->command->where = 'o.deldate is null';
+        $this->command->where = 'o.deldate is null
+                    and o.doorway <> \'Общее\'';
         $this->command->order = 'o.object_id';
         
                 

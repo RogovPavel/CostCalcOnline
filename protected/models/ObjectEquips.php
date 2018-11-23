@@ -59,7 +59,7 @@ class ObjectEquips extends LSFormModel {
     
     public function rules() {
         return array(
-            array('object_id, equip_id, quant', 'required'),
+            array('objectgr_id, equip_id, quant', 'required'),
             array('objeq_id,
                     object_id,
                     objectgr_id,

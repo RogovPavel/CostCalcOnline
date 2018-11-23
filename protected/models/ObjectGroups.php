@@ -11,6 +11,7 @@ class ObjectGroups extends LSFormModel {
     public $client_id;
     public $clientname;
     public $note; 
+    public $object_id;
     
     public function __construct($scenario = '') {
         parent::__construct($scenario);
@@ -33,7 +34,8 @@ class ObjectGroups extends LSFormModel {
                                     og.address,
                                     og.client_id,
                                     c.clientname,
-                                    og.note";
+                                    og.note,
+                                    og.object_id";
         $this->command->from = 'objectgroups og left join clients c on (og.client_id = c.client_id)';
         $this->command->where = 'og.deldate is null';
         $this->command->order = 'og.address';
@@ -55,7 +57,8 @@ class ObjectGroups extends LSFormModel {
                     address,
                     client_id,
                     clientname,
-                    note', 'safe'),
+                    note,
+                    object_id', 'safe'),
         );
     }
     
@@ -70,6 +73,7 @@ class ObjectGroups extends LSFormModel {
             'client_id' => 'Клиент',
             'clientname' => '',
             'note' => '',
+            'object_id' => '',
         );
     }
 }

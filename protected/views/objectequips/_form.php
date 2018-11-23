@@ -48,37 +48,32 @@
             ls.lock_operation = true;
             
             if (state_insert)
-                var url = <?php echo json_encode(Yii::app()->createUrl('objectequips/create')); ?>;
+                var action = 'create';
             else
-                var url = <?php echo json_encode(Yii::app()->createUrl('objectequips/update')); ?>;
-            $.ajax({
-                url: url,
-                type: 'POST',
-                data: $('#objectequips').serialize(),
-                success: function(Res) {
-                    Res = JSON.parse(Res);
+                var action = 'update';
+            
+            ls.save('objectequips', action, $('#objectequips').serialize(), function(Res) {
+                Res = JSON.parse(Res);
+                if (Res.state == 0) {
                     ls.lock_operation = false;
+                    var tab = $('#ls-objectequips-tab').jqxTabs('selectedItem');
                     
-                    if (Res.state == 0) {
-                        ls.objectequip.id = parseInt(Res.id);
-                        $('#ls-btn-refresh-objectequip').click();
+                    if (tab == 0) {
+                        ls.objectequips.rowid = parseInt(Res.id);
+                        ls.objectequips.refresh(true);
+                    }
+                    else {
+                        ls.objectgroups.refresh(true, true);
+                        ls.objectequipsgeneral.rowid = parseInt(Res.id);
+                    }
                         
-                        if ($('#ls-dialog').length>0)
-                        $('#ls-dialog').jqxWindow('close');
-                    }
-                    else if (Res.state == 1) {
-                        $("#ls-dialog-content").html(Res.content);
-                    }
-                    else
-                        ls.showerrormassage('Ошибка', Res.error);
-                    
-                    
-                    
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', Res.responseText);
-                    ls.lock_operation = false;
+                    $('#ls-dialog').jqxWindow('close');
                 }
+                else if (Res.state == 1)
+                    $("#ls-dialog-content").html(Res.responseText);
+                else 
+                    ls.showerrormassage('Ошибка! ' + Res.responseText);
+                
             });
         });
         

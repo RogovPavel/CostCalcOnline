@@ -77,10 +77,120 @@ ls.showerrormassage = function(header, message) {
     $('#ls-error-dialog').jqxWindow('open');
 }
 
+
 ls.loaderror = function(jqXHR, status, error) {
-    ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
+    ls.showerrormassage('Ошибка', jqXHR.responseText);
     ls.lock_operation = false;
 }
+
+ls.opendialogforedit = function(controller, action, params, type, async, size) {
+    if (controller == undefined || action == undefined)
+        return;
+    
+    if (type == undefined)
+        type = 'POST';
+    
+    if (params == undefined)
+        params = {};
+    
+    if (async == undefined)
+        async = false;
+    
+    if (size == undefined)
+        size = {width: '600px', height: '300px'};
+    
+    var url = '/' + controller + '/' + action;
+    $.ajax({
+        url: url,
+        type: type,
+        data: params,
+        async: async,
+        success: function(Res) {
+            Res = JSON.parse(Res);
+            if (Res.state == 0) {
+                $('#ls-dialog').jqxWindow(size);
+                $("#ls-dialog-content").html(Res.responseText);
+                $("#ls-dialog-header-text").html(Res.header);
+                $('#ls-dialog').jqxWindow('open');
+            } else
+                ls.showerrormassage('Ошибка!', Res.responseText);
+        },
+        error: function(Res) {
+            ls.showerrormassage('Ошибка', Res.responseText);
+        }
+    });
+};
+
+ls.save = function(controller, action, params, after, type, async) {
+    if (controller == undefined || action == undefined)
+        return;
+    
+    if (type == undefined)
+        type = 'POST';
+    
+    if (params == undefined)
+        params = {};
+    
+    if (async == undefined)
+        async = false;
+    
+    if (after == undefined)
+        after = function(Res) {
+            Res = JSON.parse(Res);
+            
+            if (Res.state != 0)
+                ls.showerrormassage('Ошибка! ' + Res.responseText);
+        }
+    
+    var url = '/' + controller + '/' + action;
+    
+    $.ajax({
+        url: url,
+        type: type,
+        data: params,
+        async: async,
+        success: after,
+        error: function(Res) {
+            ls.showerrormassage('Ошибка', Res.responseText);
+            ls.lock_operation = false;
+        }
+    });
+};
+
+ls.delete = function(controller, action, params, after, type, async) {
+    if (controller == undefined || action == undefined)
+        return;
+    
+    if (type == undefined)
+        type = 'POST';
+    
+    if (params == undefined)
+        params = {};
+    
+    if (async == undefined)
+        async = false;
+    
+    if (after == undefined)
+        after = function(Res) {
+            Res = JSON.parse(Res);
+            
+            if (Res.state != 0)
+                ls.showerrormassage('Ошибка! ' + Res.responseText);
+        }
+    
+    var url = '/' + controller + '/' + action;
+    
+    $.ajax({
+        url: url,
+        type: type,
+        data: params,
+        async: async,
+        success: after,
+        error: function(Res) {
+            ls.showerrormassage('Ошибка', Res.responseText);
+        }
+    });
+};
 
 ls.settings['datetime'] = {
     theme: ls.defaults.theme,
