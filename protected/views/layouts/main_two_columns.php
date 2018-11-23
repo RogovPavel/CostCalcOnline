@@ -73,6 +73,7 @@
                         <div>
                             <ul>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_objectgroups'); ?>><a href='<?php echo Yii::app()->createUrl('objectgroups'); ?>'>Реестр объектов</a></li>
+                                <li <?php Yii::app()->security->HideShowMenuItem('view_demands'); ?>><a href='<?php echo Yii::app()->createUrl('demands'); ?>'>Реестр заявок</a></li>
                             </ul>
                         </div>
                     </div>

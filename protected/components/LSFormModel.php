@@ -134,4 +134,18 @@ class LSFormModel extends CFormModel
         $this->setAttributes($res);
         return $res;
     }
+    
+    public function attributeFilters() {
+        return array();
+    }
+    
+    public function getattributeforfilters($fieldname) {
+        $result = $fieldname;
+        $attributefilters = $this->attributeFilters();
+        
+        if (isset($attributefilters[$fieldname])) 
+            $result = $attributefilters[$fieldname];
+
+        return $result; 
+    }
 }

@@ -45,6 +45,8 @@
         /* Контакты */
         include(dirname(__FILE__).'/security/objectgroupcontacts.php'),   
         
+        /* Заявки */
+        include(dirname(__FILE__).'/security/demands.php'),   
             
         array(    
             'guest' => array(
@@ -77,6 +79,8 @@
                     'admin_units',
                     'admin_equips',
                     'admin_objectequips',
+                    
+                    'admin_demands',
                 ),
             ),
         )

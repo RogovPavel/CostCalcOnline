@@ -21978,3 +21978,460 @@ Stack trace:
 REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=Objects
 HTTP_REFERER=http://ls.ru/objectgroups/view/25
 ---
+2018/11/23 15:40:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in C:\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://ls.ru/site
+---
+2018/11/23 15:41:55 [error] [php] Undefined variable: pagesize (C:\Home\LS\protected\controllers\AjaxDataController.php:236)
+Stack trace:
+#0 C:\Home\LS\framework\web\filters\CFilterChain.php(134): AjaxDataController->runAction()
+#1 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\Home\LS\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#3 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): AjaxDataController->filterAccessControl()
+#4 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Home\LS\framework\web\CController.php(265): AjaxDataController->runActionWithFilters()
+#7 C:\Home\LS\framework\web\CWebApplication.php(282): AjaxDataController->run()
+#8 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Home\LS\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/AjaxData/DataJQX?ModelName=Demands
+in C:\Home\LS\protected\controllers\AjaxDataController.php (236)
+in C:\Home\LS\index.php (13)
+2018/11/23 15:46:07 [error] [php] Indirect modification of overloaded property Demands::$commnad has no effect (C:\Home\LS\protected\controllers\AjaxDataController.php:264)
+Stack trace:
+#0 C:\Home\LS\framework\web\filters\CFilterChain.php(134): AjaxDataController->runAction()
+#1 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\Home\LS\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#3 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): AjaxDataController->filterAccessControl()
+#4 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Home\LS\framework\web\CController.php(265): AjaxDataController->runActionWithFilters()
+#7 C:\Home\LS\framework\web\CWebApplication.php(282): AjaxDataController->run()
+#8 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Home\LS\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/AjaxData/DataJQX?ModelName=Demands
+in C:\Home\LS\protected\controllers\AjaxDataController.php (264)
+in C:\Home\LS\index.php (13)
+2018/11/23 15:46:59 [error] [php] Indirect modification of overloaded property Demands::$commnad has no effect (C:\Home\LS\protected\controllers\AjaxDataController.php:264)
+Stack trace:
+#0 C:\Home\LS\framework\web\filters\CFilterChain.php(134): AjaxDataController->runAction()
+#1 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\Home\LS\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#3 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): AjaxDataController->filterAccessControl()
+#4 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Home\LS\framework\web\CController.php(265): AjaxDataController->runActionWithFilters()
+#7 C:\Home\LS\framework\web\CWebApplication.php(282): AjaxDataController->run()
+#8 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Home\LS\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/AjaxData/DataJQX?ModelName=Demands
+in C:\Home\LS\protected\controllers\AjaxDataController.php (264)
+in C:\Home\LS\index.php (13)
+2018/11/23 15:47:48 [error] [php] Indirect modification of overloaded property Demands::$commnad has no effect (C:\Home\LS\protected\controllers\AjaxDataController.php:264)
+Stack trace:
+#0 C:\Home\LS\framework\web\filters\CFilterChain.php(134): AjaxDataController->runAction()
+#1 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\Home\LS\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#3 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): AjaxDataController->filterAccessControl()
+#4 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Home\LS\framework\web\CController.php(265): AjaxDataController->runActionWithFilters()
+#7 C:\Home\LS\framework\web\CWebApplication.php(282): AjaxDataController->run()
+#8 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Home\LS\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/AjaxData/DataJQX?ModelName=Demands
+in C:\Home\LS\protected\controllers\AjaxDataController.php (264)
+in C:\Home\LS\index.php (13)
+2018/11/23 15:47:58 [error] [php] Indirect modification of overloaded property Demands::$commnad has no effect (C:\Home\LS\protected\controllers\AjaxDataController.php:265)
+Stack trace:
+#0 C:\Home\LS\framework\web\filters\CFilterChain.php(134): AjaxDataController->runAction()
+#1 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\Home\LS\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#3 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): AjaxDataController->filterAccessControl()
+#4 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Home\LS\framework\web\CController.php(265): AjaxDataController->runActionWithFilters()
+#7 C:\Home\LS\framework\web\CWebApplication.php(282): AjaxDataController->run()
+#8 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Home\LS\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/AjaxData/DataJQX?ModelName=Demands
+in C:\Home\LS\protected\controllers\AjaxDataController.php (265)
+in C:\Home\LS\index.php (13)
+2018/11/23 16:05:47 [error] [php] Undefined variable: rows (C:\Home\LS\protected\controllers\AjaxDataController.php:278)
+Stack trace:
+#0 C:\Home\LS\framework\web\filters\CFilterChain.php(134): AjaxDataController->runAction()
+#1 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\Home\LS\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#3 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): AjaxDataController->filterAccessControl()
+#4 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Home\LS\framework\web\CController.php(265): AjaxDataController->runActionWithFilters()
+#7 C:\Home\LS\framework\web\CWebApplication.php(282): AjaxDataController->run()
+#8 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Home\LS\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/AjaxData/DataJQX?ModelName=Demands
+in C:\Home\LS\protected\controllers\AjaxDataController.php (278)
+in C:\Home\LS\index.php (13)
+2018/11/23 16:09:35 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.StreetName' in 'order clause'. Выполнявшийся SQL-запрос: SELECT   d.demand_id,
+                                    d.date_reg,
+                                    d.object_id,
+                                    d.objectgr_id,
+                                    IF (o.address is Null, og.address, o.address) as address,
+                                    d.client_id,
+                                    c.clientname,
+                                    d.status_id,
+                                    ds.status_name,
+                                    d.demandtype_id,
+                                    dt.demandtype_name,
+                                    d.prior_id,
+                                    dp.demandprior_name,
+                                    d.deadline,
+                                    d.demand_text,
+                                    d.contact,
+                                    d.date_exec,
+                                    d.date_create,
+                                    d.user_create,
+                                    d.date_change,
+                                    d.user_change,
+                                    d.group_id
+FROM demands d LEFT JOIN objects o on (d.object_id = o.object_id)
+                                    LEFT JOIN objectgroups og on (d.objectgr_id = og.objectgr_id)
+                                    LEFT JOIN clients c on (d.client_id = c.client_id)
+                                    LEFT JOIN demandstatus ds on (d.status_id = ds.status_id)
+                                    LEFT JOIN demandtypes dt on (d.demandtype_id = dt.demandtype_id)
+                                    LEFT JOIN demandpriors dp on (d.prior_id = dp.demandprior_id)
+                                    LEFT join users u on (d.user_create = u.shortname)
+WHERE d.deldate is null
+ORDER BY `s`.`StreetName` ASC LIMIT 200.
+in C:\Home\LS\protected\controllers\AjaxDataController.php (268)
+in C:\Home\LS\index.php (13)
+2018/11/23 16:09:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.StreetName' in 'order clause'. The SQL statement executed was: SELECT   d.demand_id,
+                                    d.date_reg,
+                                    d.object_id,
+                                    d.objectgr_id,
+                                    IF (o.address is Null, og.address, o.address) as address,
+                                    d.client_id,
+                                    c.clientname,
+                                    d.status_id,
+                                    ds.status_name,
+                                    d.demandtype_id,
+                                    dt.demandtype_name,
+                                    d.prior_id,
+                                    dp.demandprior_name,
+                                    d.deadline,
+                                    d.demand_text,
+                                    d.contact,
+                                    d.date_exec,
+                                    d.date_create,
+                                    d.user_create,
+                                    d.date_change,
+                                    d.user_change,
+                                    d.group_id
+FROM demands d LEFT JOIN objects o on (d.object_id = o.object_id)
+                                    LEFT JOIN objectgroups og on (d.objectgr_id = og.objectgr_id)
+                                    LEFT JOIN clients c on (d.client_id = c.client_id)
+                                    LEFT JOIN demandstatus ds on (d.status_id = ds.status_id)
+                                    LEFT JOIN demandtypes dt on (d.demandtype_id = dt.demandtype_id)
+                                    LEFT JOIN demandpriors dp on (d.prior_id = dp.demandprior_id)
+                                    LEFT join users u on (d.user_create = u.shortname)
+WHERE d.deldate is null
+ORDER BY `s`.`StreetName` ASC LIMIT 200' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\controllers\AjaxDataController.php(268): CDbCommand->queryAll()
+#2 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQX()
+#3 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQX')
+#12 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#13 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\Home\LS\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQX?ModelName=Demands
+HTTP_REFERER=http://ls.ru/demands
+---
+2018/11/23 16:10:20 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'd``.``date_reg`` DESC LIMIT 200' at line 31. Выполнявшийся SQL-запрос: SELECT   d.demand_id,
+                                    d.date_reg,
+                                    d.object_id,
+                                    d.objectgr_id,
+                                    IF (o.address is Null, og.address, o.address) as address,
+                                    d.client_id,
+                                    c.clientname,
+                                    d.status_id,
+                                    ds.status_name,
+                                    d.demandtype_id,
+                                    dt.demandtype_name,
+                                    d.prior_id,
+                                    dp.demandprior_name,
+                                    d.deadline,
+                                    d.demand_text,
+                                    d.contact,
+                                    d.date_exec,
+                                    d.date_create,
+                                    d.user_create,
+                                    d.date_change,
+                                    d.user_change,
+                                    d.group_id
+FROM demands d LEFT JOIN objects o on (d.object_id = o.object_id)
+                                    LEFT JOIN objectgroups og on (d.objectgr_id = og.objectgr_id)
+                                    LEFT JOIN clients c on (d.client_id = c.client_id)
+                                    LEFT JOIN demandstatus ds on (d.status_id = ds.status_id)
+                                    LEFT JOIN demandtypes dt on (d.demandtype_id = dt.demandtype_id)
+                                    LEFT JOIN demandpriors dp on (d.prior_id = dp.demandprior_id)
+                                    LEFT join users u on (d.user_create = u.shortname)
+WHERE d.deldate is null
+ORDER BY ``d``.``date_reg`` DESC LIMIT 200.
+in C:\Home\LS\protected\controllers\AjaxDataController.php (268)
+in C:\Home\LS\index.php (13)
+2018/11/23 16:10:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'd``.``date_reg`` DESC LIMIT 200' at line 31. The SQL statement executed was: SELECT   d.demand_id,
+                                    d.date_reg,
+                                    d.object_id,
+                                    d.objectgr_id,
+                                    IF (o.address is Null, og.address, o.address) as address,
+                                    d.client_id,
+                                    c.clientname,
+                                    d.status_id,
+                                    ds.status_name,
+                                    d.demandtype_id,
+                                    dt.demandtype_name,
+                                    d.prior_id,
+                                    dp.demandprior_name,
+                                    d.deadline,
+                                    d.demand_text,
+                                    d.contact,
+                                    d.date_exec,
+                                    d.date_create,
+                                    d.user_create,
+                                    d.date_change,
+                                    d.user_change,
+                                    d.group_id
+FROM demands d LEFT JOIN objects o on (d.object_id = o.object_id)
+                                    LEFT JOIN objectgroups og on (d.objectgr_id = og.objectgr_id)
+                                    LEFT JOIN clients c on (d.client_id = c.client_id)
+                                    LEFT JOIN demandstatus ds on (d.status_id = ds.status_id)
+                                    LEFT JOIN demandtypes dt on (d.demandtype_id = dt.demandtype_id)
+                                    LEFT JOIN demandpriors dp on (d.prior_id = dp.demandprior_id)
+                                    LEFT join users u on (d.user_create = u.shortname)
+WHERE d.deldate is null
+ORDER BY ``d``.``date_reg`` DESC LIMIT 200' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\controllers\AjaxDataController.php(268): CDbCommand->queryAll()
+#2 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQX()
+#3 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQX')
+#12 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#13 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\Home\LS\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQX?ModelName=Demands
+HTTP_REFERER=http://ls.ru/demands
+---
+2018/11/23 16:11:40 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'address' in where clause is ambiguous. Выполнявшийся SQL-запрос: SELECT count(*) as quant
+FROM demands d LEFT JOIN objects o on (d.object_id = o.object_id)
+                                    LEFT JOIN objectgroups og on (d.objectgr_id = og.objectgr_id)
+                                    LEFT JOIN clients c on (d.client_id = c.client_id)
+                                    LEFT JOIN demandstatus ds on (d.status_id = ds.status_id)
+                                    LEFT JOIN demandtypes dt on (d.demandtype_id = dt.demandtype_id)
+                                    LEFT JOIN demandpriors dp on (d.prior_id = dp.demandprior_id)
+                                    LEFT join users u on (d.user_create = u.shortname)
+WHERE (d.deldate is null) AND (( address LIKE :p0)).
+in C:\Home\LS\protected\controllers\AjaxDataController.php (252)
+in C:\Home\LS\index.php (13)
+2018/11/23 16:11:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'address' in where clause is ambiguous. The SQL statement executed was: SELECT count(*) as quant
+FROM demands d LEFT JOIN objects o on (d.object_id = o.object_id)
+                                    LEFT JOIN objectgroups og on (d.objectgr_id = og.objectgr_id)
+                                    LEFT JOIN clients c on (d.client_id = c.client_id)
+                                    LEFT JOIN demandstatus ds on (d.status_id = ds.status_id)
+                                    LEFT JOIN demandtypes dt on (d.demandtype_id = dt.demandtype_id)
+                                    LEFT JOIN demandpriors dp on (d.prior_id = dp.demandprior_id)
+                                    LEFT join users u on (d.user_create = u.shortname)
+WHERE (d.deldate is null) AND (( address LIKE :p0))' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\Home\LS\protected\controllers\AjaxDataController.php(252): CDbCommand->queryRow()
+#2 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQX()
+#3 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQX')
+#12 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#13 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\Home\LS\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQX?ModelName=Demands
+HTTP_REFERER=http://ls.ru/demands
+---
+2018/11/23 16:21:52 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'address' in where clause is ambiguous. Выполнявшийся SQL-запрос: SELECT count(*) as quant
+FROM demands d LEFT JOIN objects o on (d.object_id = o.object_id)
+                                    LEFT JOIN objectgroups og on (d.objectgr_id = og.objectgr_id)
+                                    LEFT JOIN clients c on (d.client_id = c.client_id)
+                                    LEFT JOIN demandstatus ds on (d.status_id = ds.status_id)
+                                    LEFT JOIN demandtypes dt on (d.demandtype_id = dt.demandtype_id)
+                                    LEFT JOIN demandpriors dp on (d.prior_id = dp.demandprior_id)
+                                    LEFT join users u on (d.user_create = u.shortname)
+WHERE (d.deldate is null) AND (( address LIKE :p0)).
+in C:\Home\LS\protected\controllers\AjaxDataController.php (252)
+in C:\Home\LS\index.php (13)
+2018/11/23 16:21:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'address' in where clause is ambiguous. The SQL statement executed was: SELECT count(*) as quant
+FROM demands d LEFT JOIN objects o on (d.object_id = o.object_id)
+                                    LEFT JOIN objectgroups og on (d.objectgr_id = og.objectgr_id)
+                                    LEFT JOIN clients c on (d.client_id = c.client_id)
+                                    LEFT JOIN demandstatus ds on (d.status_id = ds.status_id)
+                                    LEFT JOIN demandtypes dt on (d.demandtype_id = dt.demandtype_id)
+                                    LEFT JOIN demandpriors dp on (d.prior_id = dp.demandprior_id)
+                                    LEFT join users u on (d.user_create = u.shortname)
+WHERE (d.deldate is null) AND (( address LIKE :p0))' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\Home\LS\protected\controllers\AjaxDataController.php(252): CDbCommand->queryRow()
+#2 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQX()
+#3 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQX')
+#12 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#13 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\Home\LS\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQX?ModelName=Demands
+HTTP_REFERER=http://ls.ru/demands
+---
+2018/11/23 16:24:36 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIKE '%белы%'))' at line 9. Выполнявшийся SQL-запрос: SELECT count(*) as quant
+FROM demands d LEFT JOIN objects o on (d.object_id = o.object_id)
+                                    LEFT JOIN objectgroups og on (d.objectgr_id = og.objectgr_id)
+                                    LEFT JOIN clients c on (d.client_id = c.client_id)
+                                    LEFT JOIN demandstatus ds on (d.status_id = ds.status_id)
+                                    LEFT JOIN demandtypes dt on (d.demandtype_id = dt.demandtype_id)
+                                    LEFT JOIN demandpriors dp on (d.prior_id = dp.demandprior_id)
+                                    LEFT join users u on (d.user_create = u.shortname)
+WHERE (d.deldate is null) AND (( IF(o.address is null, og.address) LIKE :p0)).
+in C:\Home\LS\protected\controllers\AjaxDataController.php (252)
+in C:\Home\LS\index.php (13)
+2018/11/23 16:24:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIKE '%белы%'))' at line 9. The SQL statement executed was: SELECT count(*) as quant
+FROM demands d LEFT JOIN objects o on (d.object_id = o.object_id)
+                                    LEFT JOIN objectgroups og on (d.objectgr_id = og.objectgr_id)
+                                    LEFT JOIN clients c on (d.client_id = c.client_id)
+                                    LEFT JOIN demandstatus ds on (d.status_id = ds.status_id)
+                                    LEFT JOIN demandtypes dt on (d.demandtype_id = dt.demandtype_id)
+                                    LEFT JOIN demandpriors dp on (d.prior_id = dp.demandprior_id)
+                                    LEFT join users u on (d.user_create = u.shortname)
+WHERE (d.deldate is null) AND (( IF(o.address is null, og.address) LIKE :p0))' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\Home\LS\protected\controllers\AjaxDataController.php(252): CDbCommand->queryRow()
+#2 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQX()
+#3 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQX')
+#12 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#13 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\Home\LS\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQX?ModelName=Demands
+HTTP_REFERER=http://ls.ru/demands
+---
+2018/11/23 17:29:50 [warning] [application] Не удалось присвоить небезопасный атрибут "demand_id" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:29:50 [warning] [application] Не удалось присвоить небезопасный атрибут "date_reg" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:29:50 [warning] [application] Не удалось присвоить небезопасный атрибут "demandtype_id" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:29:50 [warning] [application] Не удалось присвоить небезопасный атрибут "prior_id" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:29:50 [warning] [application] Не удалось присвоить небезопасный атрибут "deadline" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:29:50 [warning] [application] Не удалось присвоить небезопасный атрибут "contact" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:31:12 [warning] [application] Не удалось присвоить небезопасный атрибут "demand_id" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:31:12 [warning] [application] Не удалось присвоить небезопасный атрибут "date_reg" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:31:12 [warning] [application] Не удалось присвоить небезопасный атрибут "demandtype_id" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:31:12 [warning] [application] Не удалось присвоить небезопасный атрибут "prior_id" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:31:12 [warning] [application] Не удалось присвоить небезопасный атрибут "deadline" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:31:12 [warning] [application] Не удалось присвоить небезопасный атрибут "contact" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:31:12 [warning] [application] Не удалось присвоить небезопасный атрибут "demand_text" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:31:54 [warning] [application] Не удалось присвоить небезопасный атрибут "demand_id" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:31:54 [warning] [application] Не удалось присвоить небезопасный атрибут "date_reg" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:31:54 [warning] [application] Не удалось присвоить небезопасный атрибут "demandtype_id" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:31:54 [warning] [application] Не удалось присвоить небезопасный атрибут "prior_id" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:31:54 [warning] [application] Не удалось присвоить небезопасный атрибут "deadline" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:31:54 [warning] [application] Не удалось присвоить небезопасный атрибут "contact" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:31:54 [warning] [application] Не удалось присвоить небезопасный атрибут "demand_text" класса "ObjectGroups".
+in C:\Home\LS\protected\controllers\DemandsController.php (61)
+in C:\Home\LS\index.php (13)
+2018/11/23 17:34:11 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'client_id' cannot be null. Выполнявшийся SQL-запрос: call insert_demands(@demand_id,@client_id,@objectgr_id,@object_id,@demandtype_id,@date_reg,@prior_id,@deadline,@demand_text,@contact,@user_create,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (72)
+in C:\Home\LS\protected\controllers\DemandsController.php (64)

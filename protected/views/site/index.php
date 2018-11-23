@@ -29,9 +29,11 @@
 
 
 <?php 
-    $model = new Streets();
+    $model = new Demands();
+    
+    $r = $model->command->queryAll();
     
     echo '<pre>';
-    var_dump($model->proc_params);
+    var_dump($r);
     echo '</pre>';
 ?>

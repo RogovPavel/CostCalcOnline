@@ -767,3 +767,42 @@ ls.sources['objectequips'] = {
     }
 };
 
+ls.sources['demands'] = {
+    datatype: "json",
+    datafields: [
+        {name: 'demand_id', type: 'int'},
+        {name: 'date_reg', type: 'date'},
+        {name: 'object_id', type: 'int'},
+        {name: 'objectgr_id', type: 'int'},
+        {name: 'address', type: 'string'},
+        {name: 'client_id', type: 'int'},
+        {name: 'clientname', type: 'string'},
+        {name: 'status_id', type: 'int'},
+        {name: 'status_name', type: 'string'},
+        {name: 'demandtype_id', type: 'int'},
+        {name: 'demandtype_name', type: 'string'},
+        {name: 'prior_id', type: 'int'},
+        {name: 'demandprior_name', type: 'string'},
+        {name: 'deadline', type: 'date'},
+        {name: 'demand_text', type: 'string'},
+        {name: 'contact', type: 'string'},
+        {name: 'date_exec', type: 'date'},
+        {name: 'date_create', type: 'date'},
+        {name: 'user_create', type: 'int'},
+        {name: 'date_change', type: 'date'},
+        {name: 'user_change', type: 'int'},
+        {name: 'group_id', type: 'int'},
+    ],
+    id: 'demand_id',
+    url: '/index.php/AjaxData/DataJQX?ModelName=Demands',
+    type: 'POST',
+    root: 'Rows',
+    cache: false,
+    async: true,
+    pagenum: 0,
+    pagesize: 200,
+    beforeprocessing: function (data) {
+        this.totalrecords = data[0].TotalRows;
+    }
+};
+
