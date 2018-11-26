@@ -3,10 +3,21 @@
         var state_insert = <?php if (mb_strtoupper(Yii::app()->controller->action->id) == mb_strtoupper('Create') || mb_strtoupper(Yii::app()->controller->action->id) == 'Insert') echo json_encode(true); else echo json_encode(false); ?>;
         var model = <?php echo json_encode($model); ?>;
         
-        var roles_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['roles']), {
-            loadError: function(jqXHR, status, error) {
-                ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
-                ls.lock_operation = false;
+        var dataroles;
+        
+        $.ajax({
+            url: '/index.php/AjaxData/DataJQXSimpleList',
+            type: 'POST',
+            async: true,
+            data: {
+                Models: ['Roles']
+            },
+            success: function(Res) {
+                Res = JSON.parse(Res);
+                dataroles = Res[0];
+                
+                $("#ls-user-roleid").jqxComboBox({source: dataroles});
+                $("#ls-user-roleid").jqxComboBox('val', model.role_id);
             }
         });
         
@@ -21,7 +32,7 @@
         $("#ls-user-homephonenumber").jqxInput($.extend(true, {}, ls.settings['input'], {width: '180px', height: 25, disabled: false}));
         $("#ls-user-workphonenumber").jqxInput($.extend(true, {}, ls.settings['input'], {width: '180px', height: 25, disabled: false}));
         $("#ls-user-workemail").jqxInput($.extend(true, {}, ls.settings['input'], {width: '180px', height: 25, disabled: false}));
-        $("#ls-user-roleid").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {source: roles_adapter, displayMember: "rolename", valueMember: "role_id", width: '200px'}));
+        $("#ls-user-roleid").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {displayMember: "rolename", valueMember: "role_id", width: '200px'}));
         
         
         $("#ls-user-save").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
@@ -45,36 +56,23 @@
             ls.lock_operation = true;
             
             if (state_insert)
-                var url = <?php echo json_encode(Yii::app()->createUrl('users/create')); ?>;
+                var action = 'create';
             else
-                var url = <?php echo json_encode(Yii::app()->createUrl('users/update')); ?>;
-            $.ajax({
-                url: url,
-                type: 'POST',
-                data: $('#users').serialize(),
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    ls.lock_operation = false;
-                    
-                    if (Res.error == 0) {
-                        ls.users.id = parseInt(Res.id);
-                        $('#ls-btn-refresh').click();
-                        
-                        if ($('#ls-dialog').length>0)
-                            $('#ls-dialog').jqxWindow('close');
-                    }
-                    else {
-                        $("#ls-dialog-content").html(Res.content);
-                    }
-                    
-                    
-                    
-                    
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При сохранении данных произошла ошибка. Повторите попытку позже.');
-                    ls.lock_operation = false;
+                var action = 'update';
+            
+            ls.save('users', action, $('#users').serialize(), function(Res) {
+                Res = JSON.parse(Res);
+                ls.lock_operation = false;
+                if (Res.state == 0) {
+                    ls.users.rowid = parseInt(Res.id);
+                    ls.users.refresh(true);
+                    $('#ls-dialog').jqxWindow('close');
                 }
+                else if (Res.state == 1)
+                    $("#ls-dialog-content").html(Res.responseText);
+                else
+                    ls.showerrormassage('Ошибка! ', Res.responseText);
+                
             });
         });
         

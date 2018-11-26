@@ -23086,3 +23086,39 @@ Stack trace:
 REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=Equips
 HTTP_REFERER=http://ls.ru/equips
 ---
+2018/11/27 00:11:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
+#5 D:\Work\Home\LS\protected\models\Users.php(30): LSFormModel->__construct('')
+#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
+#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
+#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
+#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
+#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
+#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
+#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('update_users')
+#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
+#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(UsersController), Object(CInlineAction), '127.0.0.1', 'POST')
+#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('update')
+#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('users/update')
+#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 D:\Work\Home\LS\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/users/update
+HTTP_REFERER=http://ls.ru/profile
+---
+2018/11/27 00:15:45 [error] [system.db.CDbCommand] РќРµ СѓРґР°Р»РѕСЃСЊ РІС‹РїРѕР»РЅРёС‚СЊ CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'role_id' cannot be null. Р’С‹РїРѕР»РЅСЏРІС€РёР№СЃСЏ SQL-Р·Р°РїСЂРѕСЃ: call insert_users(@user_id,@login,@password,@firstname,@surname,@lastname,@birthday,@sex,@work_phonenumber,@home_phonenumber,@work_email,@role_id,@user_create,@group_id);.
+in D:\Work\Home\LS\protected\components\LSStoredProc.php (122)
+in D:\Work\Home\LS\protected\components\LSFormModel.php (72)
+in D:\Work\Home\LS\protected\controllers\UsersController.php (46)
