@@ -29,6 +29,9 @@ ls.wopen = function(url, params, wname) {
 ls.dateconverttosjs = function(datestr) {
     var Result = null;
     if (datestr === null) return null;
+    
+    if (typeof(datestr) != 'string')
+        return null;    
     // Дата приводим к формату ГГГГ-ММ-ДД ЧЧ:ММ
     if (datestr === '' || datestr.length <  10) return null;
     datestr = datestr.slice(0, 16);
@@ -190,6 +193,16 @@ ls.delete = function(controller, action, params, after, type, async) {
             ls.showerrormassage('Ошибка', Res.responseText);
         }
     });
+};
+
+ls.settings['datatable'] = {
+    localization: getLocalization('ru'),
+    enableBrowserSelection: true,
+    altRows: true,
+    sortable: true,
+    width: 'calc(100% - 2px)',
+    height: 'calc(100% - 2px)',
+    theme: ls.defaults.theme
 };
 
 ls.settings['datetime'] = {
@@ -806,3 +819,30 @@ ls.sources['demands'] = {
     }
 };
 
+ls.sources['demandcomments'] = {
+    datatype: "json",
+    datafields: [
+        {name: 'comment_id', type: 'int'},
+        {name: 'demand_id', type: 'int'},
+        {name: 'date', type: 'date'},
+        {name: 'user_id', type: 'int'},
+        {name: 'shortname', type: 'string'},
+        {name: 'text', type: 'string'},
+        {name: 'user_create', type: 'int'},
+        {name: 'date_create', type: 'date'},
+        {name: 'user_change', type: 'int'},
+        {name: 'date_change', type: 'date'},
+        {name: 'group_id', type: 'int'},
+    ],
+    id: 'comment_id',
+    url: '/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments',
+    type: 'POST',
+    root: 'Rows',
+    cache: false,
+    async: true,
+    pagenum: 0,
+    pagesize: 200,
+    beforeprocessing: function (data) {
+        this.totalrecords = data[0].TotalRows;
+    }
+};
