@@ -64,7 +64,7 @@
         $('#ls-btn-delete').on('click', function() {
             if ($('#ls-btn-delete').jqxButton('disabled') || ls.lock_operation) return;
             if (ls.objectgroups.row == undefined) return;            
-            ls.delete('objectgroups', 'delete', {contact_id: ls.objectgroups.row.objectgr_id}, function(Res) {
+            ls.delete('objectgroups', 'delete', {contact_id: ls.objectgroups.row.contact_id}, function(Res) {
                 Res = JSON.parse(Res);
                 if (Res.state == 0) {
                     ls.objectgroups.rowindex--;

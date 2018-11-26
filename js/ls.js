@@ -154,7 +154,7 @@ ls.save = function(controller, action, params, after, type, async) {
         async: async,
         success: after,
         error: function(Res) {
-            ls.showerrormassage('Ошибка', Res.responseText);
+            ls.showerrormassage('Ошибка!', Res.responseText);
             ls.lock_operation = false;
         }
     });
@@ -355,7 +355,7 @@ ls.sources['regions'] = {
     type: 'POST',
     root: 'Rows',
     cache: false,
-    async: false,
+    async: true,
     pagenum: 0,
     pagesize: 200,
     beforeprocessing: function (data) {
@@ -388,7 +388,7 @@ ls.sources['firms'] = {
     type: 'POST',
     root: 'Rows',
     cache: false,
-    async: false,
+    async: true,
     pagenum: 0,
     pagesize: 200,
     beforeprocessing: function (data) {
@@ -448,7 +448,7 @@ ls.sources['clients'] = {
     type: 'POST',
     root: 'Rows',
     cache: false,
-    async: false,
+    async: true,
     pagenum: 0,
     pagesize: 200,
     beforeprocessing: function (data) {
@@ -503,7 +503,7 @@ ls.sources['streets'] = {
     type: 'POST',
     root: 'Rows',
     cache: false,
-    async: false,
+    async: true,
     pagenum: 0,
     pagesize: 200,
     beforeprocessing: function (data) {
@@ -527,7 +527,7 @@ ls.sources['streettypes'] = {
     type: 'POST',
     root: 'Rows',
     cache: false,
-    async: false,
+    async: true,
     pagenum: 0,
     pagesize: 200,
     beforeprocessing: function (data) {
@@ -578,7 +578,7 @@ ls.sources['demandpriors'] = {
     type: 'POST',
     root: 'Rows',
     cache: false,
-    async: false,
+    async: true,
     pagenum: 0,
     pagesize: 200,
     beforeprocessing: function (data) {
@@ -712,7 +712,7 @@ ls.sources['units'] = {
     type: 'POST',
     root: 'Rows',
     cache: false,
-    async: false,
+    async: true,
     pagenum: 0,
     pagesize: 200,
     beforeprocessing: function (data) {
@@ -740,7 +740,7 @@ ls.sources['equips'] = {
     type: 'POST',
     root: 'Rows',
     cache: false,
-    async: false,
+    async: true,
     pagenum: 0,
     pagesize: 200,
     beforeprocessing: function (data) {

@@ -1,33 +1,39 @@
 <script type="text/javascript">
     ls.demandpriors = {
-        id: 0
+        rowid: undefined,
+        row: undefined,
+        rowindex: undefined,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = false;
+            if (!$("#ls-demandpriors-grid").jqxGrid('isBindingCompleted'))
+                return;
+            if (reset) {
+                var adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['demandpriors']), {loadError: ls.loaderror});
+                $("#ls-demandpriors-grid").jqxGrid({source: adapter});
+            }
+            else
+                $("#ls-demandpriors-grid").jqxGrid('updatebounddata');
+        }
     };
     
     $(document).ready(function() {
-        var currentrow_demandpriors;
-        
-        var demandpriors_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['demandpriors']), {
-            loadError: function(jqXHR, status, error) {
-                ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
-                ls.lock_operation = false;
-            }
-        });
-        
         var checkbutton = function() {
-            $('#ls-btn-update').jqxButton({disabled: !(currentrow_demandpriors != undefined)})
-            $('#ls-btn-delete').jqxButton({disabled: !(currentrow_demandpriors != undefined)})
+            $('#ls-btn-update').jqxButton({disabled: !(ls.demandpriors.row != undefined)})
+            $('#ls-btn-delete').jqxButton({disabled: !(ls.demandpriors.row != undefined)})
         }
         
         $("#ls-demandpriors-grid").on('rowselect', function (event) {
-            currentrow_demandpriors = $('#ls-demandpriors-grid').jqxGrid('getrowdata', event.args.rowindex);
+            var args = event.args;
+            ls.demandpriors.rowindex = args.rowindex;
+            ls.demandpriors.row = args.row;
             checkbutton();
         });
         
         $('#ls-btn-refresh').on('click', function() {
             if (ls.lock_operation) return;
-            
             ls.lock_operation = true;
-            $("#ls-demandpriors-grid").jqxGrid('updatebounddata');
+            ls.demandpriors.refresh(false);
         });
         
         $("#ls-demandpriors-grid").on('rowdoubleclick', function(){
@@ -35,91 +41,50 @@
         });
         
         $("#ls-demandpriors-grid").on('bindingcomplete', function() {
-            var idx = $('#ls-demandpriors-grid').jqxGrid('selectedrowindex'); 
-            
-            if (ls.demandpriors.id != 0) {
-                idx = $("#ls-demandpriors-grid").jqxGrid('getrowboundindexbyid', ls.demandpriors.id);
-                ls.demandpriors.id = 0;
+            var idx  = ls.demandpriors.rowindex;
+                        
+            if (ls.demandpriors.rowid != undefined) {
+                idx = $("#ls-demandpriors-grid").jqxGrid('getrowboundindexbyid', ls.demandpriors.rowid);
+                ls.demandpriors.rowid = undefined;
             }
-                       
-            
-            if (idx == -1)
+
+            var rows = $("#ls-demandpriors-grid").jqxGrid('getrows');
+
+            if (idx == undefined || idx >= rows.length) 
                 idx = 0;
-            
+
             $("#ls-demandpriors-grid").jqxGrid('selectrow', idx);
             $("#ls-demandpriors-grid").jqxGrid('ensurerowvisible', idx);
-            
+
             checkbutton();
             ls.lock_operation = false;
         });
         
         $('#ls-btn-delete').on('click', function() {
             if ($('#ls-btn-delete').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_demandpriors == undefined) return;            
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('demandpriors/delete')) ?>,
-                type: 'POST',
-                data: {
-                    demandprior_id: currentrow_demandpriors.demandprior_id
-                },
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $('#ls-btn-refresh').click();
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
+            if (ls.demandpriors.row == undefined) return;            
+            if (ls.demandpriors.row == undefined) return;            
+            ls.delete('demandpriors', 'delete', {demandprior_id: ls.demandpriors.row.demandprior_id}, function(Res) {
+                Res = JSON.parse(Res);
+                if (Res.state == 0) {
+                    ls.demandpriors.rowindex--;
+                    ls.demandpriors.refresh(false);
+                }
+                else {
+                    ls.showerrormassage('Ошибка! ' + Res.responseText);
                 }
             });
         });
         
         $('#ls-btn-update').on('click', function() {
             if ($('#ls-btn-update').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_demandpriors == undefined) return;            
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('demandpriors/update')) ?>,
-                type: 'POST',
-                data: {
-                    demandprior_id: currentrow_demandpriors.demandprior_id
-                },
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $("#ls-dialog-content").html(Res.content);
-                        $("#ls-dialog-header-text").html(Res.dialog_header);
-                        $('#ls-dialog').jqxWindow('open');
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
-                }
-            });
+            if (ls.demandpriors.row == undefined) return;            
+            ls.opendialogforedit('demandpriors', 'update', {demandprior_id: ls.demandpriors.row.demandprior_id}, 'POST', false, {width: '400px', height: '224px'});
         });
         
         $('#ls-btn-create').on('click', function() {
             if ($('#ls-btn-create').jqxButton('disabled') || ls.lock_operation) return;
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('demandpriors/create')) ?>,
-                type: 'POST',
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $("#ls-dialog-content").html(Res.content);
-                        $("#ls-dialog-header-text").html(Res.dialog_header);
-                        $('#ls-dialog').jqxWindow('open');
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
-                }
-            });
+            ls.opendialogforedit('demandpriors', 'create', {}, 'POST', false, {width: '400px', height: '224px'});
         });
         
         $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 400, height: 224}));
@@ -131,7 +96,6 @@
         
         $("#ls-demandpriors-grid").jqxGrid(
             $.extend(true, {}, ls.settings['grid'], {
-                source: demandpriors_adapter,
                 columns: [
                     { text: 'Наименование', datafield: 'demandprior_name', width: 150},    
                     { text: 'Время на выполнение', datafield: 'time_exec', width: 150, cellsformat: 'n'},
@@ -142,7 +106,7 @@
 
         }));
         
-        
+        ls.demandpriors.refresh(true);
     });
 </script>
 
@@ -154,7 +118,7 @@
             'Приоритеты заявок' => 'demandpriors',
     );
 ?>
-<div style="height: calc(100% - 182px)">
+<div style="height: 100%">
     <div class="ls-row" style="height: calc(100% - 34px)">
         <div class="ls-grid" id="ls-demandpriors-grid"></div>
     </div>

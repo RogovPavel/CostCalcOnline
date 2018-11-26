@@ -3,15 +3,26 @@
         var state_insert = <?php if (mb_strtoupper(Yii::app()->controller->action->id) == mb_strtoupper('Create') || mb_strtoupper(Yii::app()->controller->action->id) == 'Insert') echo json_encode(true); else echo json_encode(false); ?>;
         var model = <?php echo json_encode($model); ?>;
         
-        var units_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['units']), {
-            loadError: function(jqXHR, status, error) {
-                ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
-                ls.lock_operation = false;
+        var dataunits;
+        
+        $.ajax({
+            url: '/index.php/AjaxData/DataJQXSimpleList',
+            type: 'POST',
+            async: true,
+            data: {
+                Models: ['Units']
+            },
+            success: function(Res) {
+                Res = JSON.parse(Res);
+                dataunits = Res[0];
+                
+                $("#ls-equip-unit").jqxComboBox({source: dataunits});
+                $("#ls-equip-unit").jqxComboBox('val', model.unit_id);
             }
         });
         
         $("#ls-equip-name").jqxInput({theme: ls.defaults.theme, width: 'calc(100% - 8px)', height: 25});
-        $("#ls-equip-unit").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {source: units_adapter, displayMember: "unit_name", valueMember: "unit_id", width: '80px'}));
+        $("#ls-equip-unit").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {displayMember: "unit_name", valueMember: "unit_id", width: '80px'}));
         $("#ls-equip-note").jqxTextArea($.extend(true, {}, ls.settings['textarea'], {height: '70px', width: 'calc(100% - 8px)'}));
         $("#ls-equip-save").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
         $("#ls-equip-cancel").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
@@ -34,42 +45,27 @@
             ls.lock_operation = true;
             
             if (state_insert)
-                var url = <?php echo json_encode(Yii::app()->createUrl('equips/create')); ?>;
+                var action = 'create';
             else
-                var url = <?php echo json_encode(Yii::app()->createUrl('equips/update')); ?>;
-            $.ajax({
-                url: url,
-                type: 'POST',
-                data: $('#equips').serialize(),
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    ls.lock_operation = false;
-                    
-                    if (Res.state == 0) {
-                        ls.equips.id = parseInt(Res.id);
-                        $('#ls-btn-refresh').click();
-                        
-                        if ($('#ls-dialog').length>0)
-                            $('#ls-dialog').jqxWindow('close');
-                    }
-                    else if (Res.state == 1) {
-                        $("#ls-dialog-content").html(Res.content);
-                    }
-                    else
-                        ls.showerrormassage('Ошибка', 'При сохранении данных произошла ошибка. Повторите попытку позже.');
-                    
-                    
-                    
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При сохранении данных произошла ошибка. Повторите попытку позже.');
-                    ls.lock_operation = false;
+                var action = 'update';
+            
+            ls.save('equips', action, $('#equips').serialize(), function(Res) {
+                Res = JSON.parse(Res);
+                ls.lock_operation = false;
+                if (Res.state == 0) {
+                    ls.equips.rowid = parseInt(Res.id);
+                    ls.equips.refresh(false);
+                    $('#ls-dialog').jqxWindow('close');
                 }
+                else if (Res.state == 1)
+                    $("#ls-dialog-content").html(Res.responseText);
+                else
+                    ls.showerrormassage('Ошибка! ', Res.responseText);
+                
             });
         });
         
         $("#ls-equip-name").jqxInput('val', model.equipname);
-        $("#ls-equip-unit").jqxComboBox('val', model.unit_id);
         $("#ls-equip-note").jqxTextArea('val', model.note);
     });
 </script>

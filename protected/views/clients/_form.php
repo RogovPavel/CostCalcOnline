@@ -3,10 +3,24 @@
         var state_insert = <?php if (mb_strtoupper(Yii::app()->controller->action->id) == mb_strtoupper('Create') || mb_strtoupper(Yii::app()->controller->action->id) == 'Insert') echo json_encode(true); else echo json_encode(false); ?>;
         var model = <?php echo json_encode($model); ?>;
         
-        var banks_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['banks']), {
-            loadError: function(jqXHR, status, error) {
-                ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
-                ls.lock_operation = false;
+        var databanks;
+        
+        $.ajax({
+            url: '/index.php/AjaxData/DataJQXSimpleList',
+            type: 'POST',
+            async: true,
+            data: {
+                Models: ['Banks']
+            },
+            success: function(Res) {
+                Res = JSON.parse(Res);
+                databanks = Res[0];
+                
+                $("#ls-client-bank").jqxComboBox({source: databanks});
+                $("#ls-client-bank").jqxComboBox('val', model.bank_id);
+            },
+            error: function(Res) {
+                ls.showerrormassage('Ошибка!', Res.responseText);
             }
         });
         
@@ -16,7 +30,7 @@
         $("#ls-client-account").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
         $("#ls-client-ogrn").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
         $("#ls-client-okpo").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
-        $("#ls-client-bank").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {selectedIndex: 0, source: banks_adapter, displayMember: "bankname", valueMember: "bank_id", width: 'calc(100% - 8px)'}));
+        $("#ls-client-bank").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {selectedIndex: 0, displayMember: "bankname", valueMember: "bank_id", width: 'calc(100% - 8px)'}));
         $("#ls-client-juraddress").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
         $("#ls-client-factaddress").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
         
@@ -42,36 +56,23 @@
             ls.lock_operation = true;
             
             if (state_insert)
-                var url = <?php echo json_encode(Yii::app()->createUrl('clients/create')); ?>;
+                var action = 'create';
             else
-                var url = <?php echo json_encode(Yii::app()->createUrl('clients/update')); ?>;
-            $.ajax({
-                url: url,
-                type: 'POST',
-                data: $('#clients').serialize(),
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    ls.lock_operation = false;
-                    
-                    if (Res.error == 0) {
-                        ls.clients.id = parseInt(Res.id);
-                        $('#ls-btn-refresh').click();
-                        
-                        if ($('#ls-dialog').length>0)
-                        $('#ls-dialog').jqxWindow('close');
-                    }
-                    else {
-                        $("#ls-dialog-content").html(Res.content);
-                    }
-                    
-                    
-                    
-                    
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При сохранении данных произошла ошибка. Повторите попытку позже.');
-                    ls.lock_operation = false;
+                var action = 'update';
+            
+            ls.save('clients', action, $('#clients').serialize(), function(Res) {
+                Res = JSON.parse(Res);
+                ls.lock_operation = false;
+                if (Res.state == 0) {
+                    ls.clients.rowid = parseInt(Res.id);
+                    ls.clients.refresh(false);
+                    $('#ls-dialog').jqxWindow('close');
                 }
+                else if (Res.state == 1)
+                    $("#ls-dialog-content").html(Res.responseText);
+                else
+                    ls.showerrormassage('Ошибка! ', Res.responseText);
+                
             });
         });
         

@@ -1,33 +1,39 @@
 <script type="text/javascript">
     ls.clients = {
-        id: 0
+        rowid: undefined,
+        row: undefined,
+        rowindex: undefined,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = false;
+            if (!$("#ls-clients-grid").jqxGrid('isBindingCompleted'))
+                return;
+            if (reset) {
+                var adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['clients']), {loadError: ls.loaderror});
+                $("#ls-clients-grid").jqxGrid({source: adapter});
+            }
+            else
+                $("#ls-clients-grid").jqxGrid('updatebounddata');
+        }
     };
     
     $(document).ready(function() {
-        var currentrow_clients;
-        
-        var clients_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['clients']), {
-            loadError: function(jqXHR, status, error) {
-                ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
-                ls.lock_operation = false;
-            }
-        });
-        
         var checkbutton = function() {
-            $('#ls-btn-update').jqxButton({disabled: !(currentrow_clients != undefined)})
-            $('#ls-btn-delete').jqxButton({disabled: !(currentrow_clients != undefined)})
+            $('#ls-btn-update').jqxButton({disabled: !(ls.clients.row != undefined)})
+            $('#ls-btn-delete').jqxButton({disabled: !(ls.clients.row != undefined)})
         }
         
         $("#ls-clients-grid").on('rowselect', function (event) {
-            currentrow_clients = $('#ls-clients-grid').jqxGrid('getrowdata', event.args.rowindex);
+            var args = event.args;
+            ls.clients.rowindex = args.rowindex;
+            ls.clients.row = args.row;
             checkbutton();
         });
         
         $('#ls-btn-refresh').on('click', function() {
             if (ls.lock_operation) return;
-            
             ls.lock_operation = true;
-            $("#ls-clients-grid").jqxGrid('updatebounddata');
+            ls.clients.refresh(false);
         });
         
         $("#ls-clients-grid").on('rowdoubleclick', function(){
@@ -35,90 +41,48 @@
         });
         
         $("#ls-clients-grid").on('bindingcomplete', function() {
-            var idx = $('#ls-clients-grid').jqxGrid('selectedrowindex'); 
-            
-            if (ls.clients.id != 0) {
-                idx = $("#ls-clients-grid").jqxGrid('getrowboundindexbyid', ls.clients.id);
-                ls.clients.id = 0;
+            var idx  = ls.clients.rowindex;
+                        
+            if (ls.clients.rowid != undefined) {
+                idx = $("#ls-clients-grid").jqxGrid('getrowboundindexbyid', ls.clients.rowid);
+                ls.clients.rowid = undefined;
             }
-            
-            if (idx == -1)
+
+            var rows = $("#ls-clients-grid").jqxGrid('getrows');
+
+            if (idx == undefined || idx >= rows.length) 
                 idx = 0;
-            
+
             $("#ls-clients-grid").jqxGrid('selectrow', idx);
             $("#ls-clients-grid").jqxGrid('ensurerowvisible', idx);
-            
+
             checkbutton();
             ls.lock_operation = false;
         });
         
         $('#ls-btn-delete').on('click', function() {
             if ($('#ls-btn-delete').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_clients == undefined) return;            
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('clients/delete')) ?>,
-                type: 'POST',
-                data: {
-                    client_id: currentrow_clients.client_id
-                },
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $('#ls-btn-refresh').click();
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
+            if (ls.clients.row == undefined) return;            
+            ls.delete('clients', 'delete', {client_id: ls.clients.row.client_id}, function(Res) {
+                Res = JSON.parse(Res);
+                if (Res.state == 0) {
+                    ls.clients.rowindex--;
+                    ls.clients.refresh(false);
+                }
+                else {
+                    ls.showerrormassage('Ошибка! ' + Res.responseText);
                 }
             });
         });
         
         $('#ls-btn-update').on('click', function() {
             if ($('#ls-btn-update').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_clients == undefined) return;            
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('clients/update')) ?>,
-                type: 'POST',
-                data: {
-                    client_id: currentrow_clients.client_id
-                },
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $("#ls-dialog-content").html(Res.content);
-                        $("#ls-dialog-header-text").html(Res.dialog_header);
-                        $('#ls-dialog').jqxWindow('open');
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
-                }
-            });
+            ls.opendialogforedit('clients', 'update', {client_id: ls.clients.row.client_id}, 'POST', false, {width: '400px', height: '404px'});
         });
         
         $('#ls-btn-create').on('click', function() {
             if ($('#ls-btn-create').jqxButton('disabled') || ls.lock_operation) return;
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('clients/create')) ?>,
-                type: 'POST',
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $("#ls-dialog-content").html(Res.content);
-                        $("#ls-dialog-header-text").html(Res.dialog_header);
-                        $('#ls-dialog').jqxWindow('open');
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
-                }
-            });
+            ls.opendialogforedit('clients', 'create', {}, 'POST', false, {width: '400px', height: '404px'});
         });
         
         $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 400, height: 404}));
@@ -130,7 +94,6 @@
         
         $("#ls-clients-grid").jqxGrid(
             $.extend(true, {}, ls.settings['grid'], {
-                source: clients_adapter,
                 columns: [
                     { text: 'Наименование', datafield: 'clientname', filtercondition: 'CONTAINS', width: 150},
                     { text: 'ИНН', datafield: 'inn', filtercondition: 'CONTAINS', width: 150},
@@ -147,19 +110,19 @@
 
         }));
         
-        
+        ls.clients.refresh(true);        
     });
 </script>
 
 <?php
-    $this->pageTitle=Yii::app()->name . ' - Клиенты';
+    $this->pageTitle='Клиенты';
     $this->pageName = 'Клиенты';
     $this->breadcrumbs=array(
             'Главная' => 'site',
             'Клиенты' => 'clients',
     );
 ?>
-<div style="height: calc(100% - 182px)">
+<div style="height: 100%">
     <div class="ls-row" style="height: calc(100% - 34px)">
         <div class="ls-grid" id="ls-clients-grid"></div>
     </div>

@@ -25,37 +25,23 @@
             ls.lock_operation = true;
             
             if (state_insert)
-                var url = <?php echo json_encode(Yii::app()->createUrl('units/create')); ?>;
+                var action = 'create';
             else
-                var url = <?php echo json_encode(Yii::app()->createUrl('units/update')); ?>;
-            $.ajax({
-                url: url,
-                type: 'POST',
-                data: $('#units').serialize(),
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    ls.lock_operation = false;
-                    
-                    if (Res.state == 0) {
-                        ls.units.id = parseInt(Res.id);
-                        $('#ls-btn-refresh').click();
-                        
-                        if ($('#ls-dialog').length>0)
-                            $('#ls-dialog').jqxWindow('close');
-                    }
-                    else if (Res.state == 1) {
-                        $("#ls-dialog-content").html(Res.content);
-                    }
-                    else
-                        ls.showerrormassage('Ошибка', 'При сохранении данных произошла ошибка. Повторите попытку позже.');
-                    
-                    
-                    
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При сохранении данных произошла ошибка. Повторите попытку позже.');
-                    ls.lock_operation = false;
+                var action = 'update';
+            
+            ls.save('units', action, $('#units').serialize(), function(Res) {
+                Res = JSON.parse(Res);
+                ls.lock_operation = false;
+                if (Res.state == 0) {
+                    ls.units.rowid = parseInt(Res.id);
+                    ls.units.refresh(false);
+                    $('#ls-dialog').jqxWindow('close');
                 }
+                else if (Res.state == 1)
+                    $("#ls-dialog-content").html(Res.responseText);
+                else
+                    ls.showerrormassage('Ошибка! ', Res.responseText);
+                
             });
         });
         

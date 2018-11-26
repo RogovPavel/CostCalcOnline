@@ -28,11 +28,9 @@ class EquipsController extends Controller {
     public function actionCreate() {
         $result = array(
             'state' => 0,
-            'content' => '',
-            'dialog_header' => 'Вставка записи',
+            'header' => 'Вставка записи',
             'id' => 0,
-            'error' => '',
-            'out' => array(),
+            'responseText' => '',
         );
         
         try {
@@ -44,26 +42,20 @@ class EquipsController extends Controller {
             if (isset($_POST['equips'])) {
                 $model->setAttributes($_POST['equips']);
                 if ($model->validate()) {
-                    
                     $model->user_create = Yii::app()->user->user_id;
                     $res = $model->insert();
-                    $result['out'] = $res;
                     $result['id'] = $res['data']['equip_id'];
                     return;
                 } else {
                     $result['state'] = 1;
                 }
-                
             }
-
-            $result['content'] = $this->renderPartial('_form', array(
+            $result['responseText'] = $this->renderPartial('_form', array(
                 'model' => $model,
             ), true);
-        
         } catch (Exception $e) {
             $result['state'] = 2;
-            $result['error'] = $e->getMessage();
-            
+            $result['responseText'] = $e->getMessage();
         } finally {
             echo json_encode($result);
         }
@@ -73,11 +65,9 @@ class EquipsController extends Controller {
     public function actionUpdate() {
         $result = array(
             'state' => 0,
-            'content' => '',
-            'dialog_header' => 'Редактирование записи',
+            'header' => 'Редактирование записи',
             'id' => 0,
-            'error' => '',
-            'out' => array(),
+            'responseText' => '',
         );
         
         try {
@@ -95,23 +85,18 @@ class EquipsController extends Controller {
                     
                     $model->user_change = Yii::app()->user->user_id;
                     $res = $model->update();
-                    $result['out'] = $res;
                     $result['id'] = $res['data']['equip_id'];
                     return;
                 } else {
                     $result['state'] = 1;
                 }
-                
             }
-
-            $result['content'] = $this->renderPartial('_form', array(
+            $result['responseText'] = $this->renderPartial('_form', array(
                 'model' => $model,
             ), true);
-        
         } catch (Exception $e) {
             $result['state'] = 2;
-            $result['error'] = $e->getMessage();
-            
+            $result['responseText'] = $e->getMessage();
         } finally {
             echo json_encode($result);
         }
@@ -120,30 +105,22 @@ class EquipsController extends Controller {
     public function actionDelete() {
         $result = array(
             'state' => 0,
-            'content' => '',
-            'dialog_header' => 'Удаление записи',
+            'header' => 'Удаление записи',
             'id' => 0,
-            'error' => '',
-            'out' => array(),
+            'responseText' => '',
         );
         
         try {
             $model = new Equips();
-            
             if (isset($_POST['equip_id'])) {
                 $model->get_by_id($_POST['equip_id']);
                 $model->user_chnage = Yii::app()->user->user_id;
                 $res = $model->delete();
-                $result['out'] = $res;
                 $result['id'] = $res['data']['equip_id'];
-                
             }
-            
-        
         } catch (Exception $e) {
             $result['state'] = 2;
-            $result['error'] = $e->getMessage();
-            
+            $result['responseText'] = $e->getMessage();
         } finally {
             echo json_encode($result);
         }

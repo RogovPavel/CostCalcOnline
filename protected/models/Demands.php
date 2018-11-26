@@ -34,8 +34,8 @@ class Demands extends LSFormModel {
         
         $this->proc_params = array(
             'insert_demands' => array('demand_id', 'client_id', 'objectgr_id', 'object_id', 'demandtype_id', 'date_reg', 'prior_id', 'deadline', 'demand_text', 'contact', 'user_create', 'group_id'),
-            'update_demands' => array('objectgr_id', 'region_id', 'street_id', 'house', 'corp', 'client_id', 'note', 'user_change', 'group_id'),
-            'delete_demands' => array('region_id', 'user_change', 'group_id'),
+            'update_demands' => array('demand_id', 'client_id', 'objectgr_id', 'object_id', 'demandtype_id', 'date_reg', 'prior_id', 'deadline', 'demand_text', 'contact', 'date_exec', 'user_change', 'group_id'),
+            'delete_demands' => array('demand_id', 'user_change', 'group_id'),
         );
         
         $this->command->select = "  d.demand_id,

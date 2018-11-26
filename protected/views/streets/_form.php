@@ -3,22 +3,32 @@
         var state_insert = <?php if (mb_strtoupper(Yii::app()->controller->action->id) == mb_strtoupper('Create') || mb_strtoupper(Yii::app()->controller->action->id) == 'Insert') echo json_encode(true); else echo json_encode(false); ?>;
         var model = <?php echo json_encode($model); ?>;
         
-        var streettypes_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['streettypes']), {
-            loadError: function(jqXHR, status, error) {
-                ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
-                ls.lock_operation = false;
-            }
-        });
-        var regions_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['regions']), {
-            loadError: function(jqXHR, status, error) {
-                ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
-                ls.lock_operation = false;
+        var datastreettypes;
+        var dataregions;
+        
+        $.ajax({
+            url: '/index.php/AjaxData/DataJQXSimpleList',
+            type: 'POST',
+            async: true,
+            data: {
+                Models: ['StreetTypes', 'Regions']
+            },
+            success: function(Res) {
+                Res = JSON.parse(Res);
+                datastreettypes = Res[0];
+                dataregions = Res[1];
+                
+                $("#ls-street-streettype").jqxComboBox({source: datastreettypes});
+                $("#ls-street-region").jqxComboBox({source: dataregions});
+                
+                $("#ls-street-streettype").jqxComboBox('val', model.streettype_id);
+                $("#ls-street-region").jqxComboBox('val', model.region_id);
             }
         });
         
         $("#ls-street-name").jqxInput({theme: ls.defaults.theme, width: 'calc(100% - 8px)', height: 25});
-        $("#ls-street-streettype").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {source: streettypes_adapter, displayMember: "streettype_name", valueMember: "streettype_id", width: 'calc(100% - 8px)'}));
-        $("#ls-street-region").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {source: regions_adapter, displayMember: "region_name", valueMember: "region_id", width: 'calc(100% - 8px)'}));
+        $("#ls-street-streettype").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {displayMember: "streettype_name", valueMember: "streettype_id", width: 'calc(100% - 8px)'}));
+        $("#ls-street-region").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {displayMember: "region_name", valueMember: "region_id", width: 'calc(100% - 8px)'}));
         
         $("#ls-street-save").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
         $("#ls-street-cancel").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
@@ -41,36 +51,23 @@
             ls.lock_operation = true;
             
             if (state_insert)
-                var url = <?php echo json_encode(Yii::app()->createUrl('streets/create')); ?>;
+                var action = 'create';
             else
-                var url = <?php echo json_encode(Yii::app()->createUrl('streets/update')); ?>;
-            $.ajax({
-                url: url,
-                type: 'POST',
-                data: $('#streets').serialize(),
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    ls.lock_operation = false;
-                    
-                    if (Res.error == 0) {
-                        ls.streets.id = parseInt(Res.id);
-                        $('#ls-btn-refresh').click();
-                        
-                        if ($('#ls-dialog').length>0)
-                            $('#ls-dialog').jqxWindow('close');
-                    }
-                    else {
-                        $("#ls-dialog-content").html(Res.content);
-                    }
-                    
-                    
-                    
-                    
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При сохранении данных произошла ошибка. Повторите попытку позже.');
-                    ls.lock_operation = false;
+                var action = 'update';
+            
+            ls.save('streets', action, $('#streets').serialize(), function(Res) {
+                Res = JSON.parse(Res);
+                ls.lock_operation = false;
+                if (Res.state == 0) {
+                    ls.streets.rowid = parseInt(Res.id);
+                    ls.streets.refresh(true);
+                    $('#ls-dialog').jqxWindow('close');
                 }
+                else if (Res.state == 1)
+                    $("#ls-dialog-content").html(Res.responseText);
+                else
+                    ls.showerrormassage('Ошибка! ', Res.responseText);
+                
             });
         });
         

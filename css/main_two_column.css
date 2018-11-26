@@ -48,41 +48,46 @@ a {
 .ls-top-menu_container {
     height: 30px;
     width: calc(100% - 0px);
-    padding-top: 20px;
+    padding-top: 8px;
     background-color: #fff;
 }
 
 .ls-left-menu-container {
-    margin-top: 100px;
+    margin-top: 68px;
     float: right;
     margin-right: 10px;
 }
 
 .ls-breadcrumbs-container {
-    margin-top: 20px;
+    margin-top: 6px;
     height: 20px;
 }
 
 .ls-body-container {
-    margin-top: 10px;
+    margin-top: 6px;
     border: 1px solid #d19405;
     border-radius: 3px;
-    min-height: calc(100% - 122px);
+    min-height: calc(100% - 92px);
 }
 
 .ls-body-header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    height: 30px;
     border-radius: 3px 3px 0px 0px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 13px;
     background: #fece2f url(/js/jqwidgets/styles/images/sunny/ui-bg_gloss-wave_60_fece2f_500x100.png) 50% 50% repeat-x;
 }
 
 .ls-body-content {
     padding: 10px;
+    min-height: calc(100% - 142px);
+}
+
+#content {
+    height: calc(100% - 142px);
 }
 
 .ls-breadcrumbs-item {

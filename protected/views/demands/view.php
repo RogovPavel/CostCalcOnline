@@ -90,6 +90,11 @@
         $("#ls-demands-demandtext").jqxTextArea($.extend(true, {}, ls.settings['textarea'], {height: '70px', width: 'calc(100% - 8px)'}));
         $("#ls-demands-edit").jqxButton($.extend(true, {}, ls.settings['button'], {theme: ls.defaults.theme, width: '100px', height: 30}));
         
+        $('#ls-demands-edit').on('click', function() {
+            if ($('#ls-demands-edit').jqxButton('disabled') || ls.lock_operation) return;
+            ls.opendialogforedit('demands', 'update', {demand_id: ls.demands.row.demand_id}, 'POST', false, {width: '600px', height: '430px'});
+        });
+        
         var initWidgets = function(tab) {
             switch(tab) {
                 case 0: 
@@ -162,6 +167,8 @@
                     break;
             };
         };
+        
+        $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 600, height: 400}));
         
         $('#ls-demands-tab').jqxTabs($.extend(true, {}, ls.settings['tab'], { width: 'calc(100% - 2px)', height: 'calc(100% - 2px)', position: 'top', initTabContent: initWidgets}));
         

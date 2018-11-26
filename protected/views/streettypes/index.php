@@ -1,33 +1,39 @@
 <script type="text/javascript">
     ls.streettypes = {
-        id: 0
+        rowid: undefined,
+        row: undefined,
+        rowindex: undefined,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = false;
+            if (!$("#ls-streettypes-grid").jqxGrid('isBindingCompleted'))
+                return;
+            if (reset) {
+                var adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['streettypes']), {loadError: ls.loaderror});
+                $("#ls-streettypes-grid").jqxGrid({source: adapter});
+            }
+            else
+                $("#ls-streettypes-grid").jqxGrid('updatebounddata');
+        }
     };
     
     $(document).ready(function() {
-        var currentrow_streettypes;
-        
-        var streettypes_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['streettypes']), {
-            loadError: function(jqXHR, status, error) {
-                ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
-                ls.lock_operation = false;
-            }
-        });
-        
         var checkbutton = function() {
-            $('#ls-btn-update').jqxButton({disabled: !(currentrow_streettypes != undefined)})
-            $('#ls-btn-delete').jqxButton({disabled: !(currentrow_streettypes != undefined)})
+            $('#ls-btn-update').jqxButton({disabled: !(ls.streettypes.row != undefined)})
+            $('#ls-btn-delete').jqxButton({disabled: !(ls.streettypes.row != undefined)})
         }
         
         $("#ls-streettypes-grid").on('rowselect', function (event) {
-            currentrow_streettypes = $('#ls-streettypes-grid').jqxGrid('getrowdata', event.args.rowindex);
+            var args = event.args;
+            ls.streettypes.rowindex = args.rowindex;
+            ls.streettypes.row = args.row;
             checkbutton();
         });
         
         $('#ls-btn-refresh').on('click', function() {
             if (ls.lock_operation) return;
-            
             ls.lock_operation = true;
-            $("#ls-streettypes-grid").jqxGrid('updatebounddata');
+            ls.streettypes.refresh(false);
         });
         
         $("#ls-streettypes-grid").on('rowdoubleclick', function(){
@@ -35,91 +41,49 @@
         });
         
         $("#ls-streettypes-grid").on('bindingcomplete', function() {
-            var idx = $('#ls-streettypes-grid').jqxGrid('selectedrowindex'); 
-            
-            if (ls.streettypes.id != 0) {
-                idx = $("#ls-streettypes-grid").jqxGrid('getrowboundindexbyid', ls.streettypes.id);
-                ls.streettypes.id = 0;
+            var idx  = ls.streettypes.rowindex;
+                        
+            if (ls.streettypes.rowid != undefined) {
+                idx = $("#ls-streettypes-grid").jqxGrid('getrowboundindexbyid', ls.streettypes.rowid);
+                ls.streettypes.rowid = undefined;
             }
-                       
-            
-            if (idx == -1)
+
+            var rows = $("#ls-streettypes-grid").jqxGrid('getrows');
+
+            if (idx == undefined || idx >= rows.length) 
                 idx = 0;
-            
+
             $("#ls-streettypes-grid").jqxGrid('selectrow', idx);
             $("#ls-streettypes-grid").jqxGrid('ensurerowvisible', idx);
-            
+
             checkbutton();
             ls.lock_operation = false;
         });
         
         $('#ls-btn-delete').on('click', function() {
             if ($('#ls-btn-delete').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_streettypes == undefined) return;            
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('streettypes/delete')) ?>,
-                type: 'POST',
-                data: {
-                    streettype_id: currentrow_streettypes.streettype_id
-                },
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $('#ls-btn-refresh').click();
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
+            if (ls.streettypes.row == undefined) return;            
+            ls.delete('streettypes', 'delete', {streettype_id: ls.streettypes.row.streettype_id}, function(Res) {
+                Res = JSON.parse(Res);
+                if (Res.state == 0) {
+                    ls.streettypes.rowindex--;
+                    ls.streettypes.refresh(false);
+                }
+                else {
+                    ls.showerrormassage('Ошибка! ' + Res.responseText);
                 }
             });
         });
         
         $('#ls-btn-update').on('click', function() {
             if ($('#ls-btn-update').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_streettypes == undefined) return;            
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('streettypes/update')) ?>,
-                type: 'POST',
-                data: {
-                    streettype_id: currentrow_streettypes.streettype_id
-                },
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $("#ls-dialog-content").html(Res.content);
-                        $("#ls-dialog-header-text").html(Res.dialog_header);
-                        $('#ls-dialog').jqxWindow('open');
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
-                }
-            });
+            if (ls.streettypes.row == undefined) return;            
+            ls.opendialogforedit('streettypes', 'update', {streettype_id: ls.streettypes.row.streettype_id}, 'POST', false, {width: '400px', height: '124px'});
         });
         
         $('#ls-btn-create').on('click', function() {
             if ($('#ls-btn-create').jqxButton('disabled') || ls.lock_operation) return;
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('streettypes/create')) ?>,
-                type: 'POST',
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $("#ls-dialog-content").html(Res.content);
-                        $("#ls-dialog-header-text").html(Res.dialog_header);
-                        $('#ls-dialog').jqxWindow('open');
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
-                }
-            });
+            ls.opendialogforedit('streettypes', 'create', {}, 'POST', false, {width: '400px', height: '124px'});
         });
         
         $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 400, height: 124}));
@@ -131,8 +95,6 @@
         
         $("#ls-streettypes-grid").jqxGrid(
             $.extend(true, {}, ls.settings['grid'], {
-                source: streettypes_adapter,
-//                height: 300,
                 columns: [
                     { text: 'Наименование', datafield: 'streettype_name', filtercondition: 'CONTAINS', width: 150},    
                     { text: 'Дата создания', datafield: 'date_create', filtercondition: 'CONTAINS', width: 130, cellsformat: 'dd.MM.yyyy HH:mm'},
@@ -140,19 +102,19 @@
 
         }));
         
-        
+        ls.streettypes.refresh(true);
     });
 </script>
 
 <?php
-    $this->pageTitle=Yii::app()->name . ' - Типы улиц';
+    $this->pageTitle = 'Типы улиц';
     $this->pageName = 'Справочник типов улиц';
     $this->breadcrumbs=array(
             'Главная' => 'site',
             'Типы улиц' => 'streettypes',
     );
 ?>
-<div style="height: calc(100% - 182px)">
+<div style="height: 100%">
     <div class="ls-row" style="height: calc(100% - 34px)">
         <div class="ls-grid" id="ls-streettypes-grid"></div>
     </div>

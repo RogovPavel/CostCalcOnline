@@ -27,14 +27,10 @@ class StreettypesController extends Controller {
     
     public function actionCreate() {
         $result = array(
-            'error' => 0,
-            'content' => '',
-            'dialog_header' => 'Вставка записи',
+            'state' => 0,
+            'header' => 'Вставка записи',
             'id' => 0,
-            'error_type' => '',
-            'error_text' => '',
-            '_error' => '',
-            'out' => array(),
+            'responseText' => '',
         );
         
         try {
@@ -49,24 +45,18 @@ class StreettypesController extends Controller {
                     
                     $model->user_create = Yii::app()->user->user_id;
                     $res = $model->insert();
-                    $result['out'] = $res;
                     $result['id'] = $res['data']['streettype_id'];
                     return;
                 } else {
-                    $result['error'] = 1;
+                    $result['state'] = 1;
                 }
-                
             }
-
-            $result['content'] = $this->renderPartial('_form', array(
+            $result['responseText'] = $this->renderPartial('_form', array(
                 'model' => $model,
             ), true);
-        
         } catch (Exception $e) {
-            $result['error'] = 1;
-            $result['error_type'] = Yii::app()->errorManager->getErrorType(15);
-            $result['error_text'] = Yii::app()->errorManager->getErrorMessage(15);
-            $result['_error'] = $e->getMessage();
+            $result['state'] = 2;
+            $result['responseText'] = $e->getMessage();
             
         } finally {
             echo json_encode($result);
@@ -76,14 +66,10 @@ class StreettypesController extends Controller {
     
     public function actionUpdate() {
         $result = array(
-            'error' => 0,
-            'content' => '',
-            'dialog_header' => 'Редактирование записи',
+            'state' => 0,
+            'header' => 'Редактирование записи',
             'id' => 0,
-            'error_type' => '',
-            'error_text' => '',
-            '_error' => '',
-            'out' => array(),
+            'responseText' => '',
         );
         
         try {
@@ -98,28 +84,21 @@ class StreettypesController extends Controller {
             if (isset($_POST['streettypes'])) {
                 $model->setAttributes($_POST['streettypes']);
                 if ($model->validate()) {
-                    
                     $model->user_change = Yii::app()->user->user_id;
                     $res = $model->update();
-                    $result['out'] = $res;
                     $result['id'] = $res['data']['streettype_id'];
                     return;
                 } else {
-                    $result['error'] = 1;
+                    $result['state'] = 1;
                 }
-                
             }
 
-            $result['content'] = $this->renderPartial('_form', array(
+            $result['responseText'] = $this->renderPartial('_form', array(
                 'model' => $model,
             ), true);
-        
         } catch (Exception $e) {
-            $result['error'] = 1;
-            $result['error_type'] = Yii::app()->errorManager->getErrorType(15);
-            $result['error_text'] = Yii::app()->errorManager->getErrorMessage(15);
-            $result['_error'] = $e->getMessage();
-            
+            $result['state'] = 1;
+            $result['responseText'] = $e->getMessage();
         } finally {
             echo json_encode($result);
         }
@@ -127,14 +106,10 @@ class StreettypesController extends Controller {
     
     public function actionDelete() {
         $result = array(
-            'error' => 0,
-            'content' => '',
-            'dialog_header' => 'Удаление записи',
+            'state' => 0,
+            'header' => 'Удаление записи',
             'id' => 0,
-            'error_type' => '',
-            'error_text' => '',
-            '_error' => '',
-            'out' => array(),
+            'responseText' => '',
         );
         
         try {
@@ -144,17 +119,11 @@ class StreettypesController extends Controller {
                 $model->get_by_id($_POST['streettype_id']);
                 $model->user_chnage = Yii::app()->user->user_id;
                 $res = $model->delete();
-                $result['out'] = $res;
                 $result['id'] = $res['data']['streettype_id'];
-                
             }
-            
-        
         } catch (Exception $e) {
-            $result['error'] = 1;
-            $result['error_type'] = Yii::app()->errorManager->getErrorType(30);
-            $result['error_text'] = Yii::app()->errorManager->getErrorMessage(30);
-            $result['_error'] = $e->getMessage();
+            $result['state'] = 1;
+            $result['responseText'] = $e->getMessage();
             
         } finally {
             echo json_encode($result);

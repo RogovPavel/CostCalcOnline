@@ -113,7 +113,7 @@ class DemandsController extends Controller {
                 }
                 
             }
-            $result['responseText'] = $this->renderPartial('_form', array(
+            $result['responseText'] = $this->renderPartial('_form_update', array(
                 'model' => $model,
             ), true);
         
