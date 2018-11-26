@@ -22479,3 +22479,116 @@ Stack trace:
 REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=ObjectGroupContacts
 HTTP_REFERER=http://ls.ru/demands/view/3
 ---
+2018/11/26 16:26:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in C:\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://ls.ru/
+---
+2018/11/26 16:30:29 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ogc.demand_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `ogc`.`contact_id`, `ogc`.`objectgr_id`, `ogc`.`firstname`, `ogc`.`surname`, `ogc`.`lastname`, `ogc`.`fullname`, `ogc`.`position_id`, `p`.`position_name`, `ogc`.`phonenumber`, `ogc`.`email`, `ogc`.`date_create`, `ogc`.`user_create`, `ogc`.`date_change`, `ogc`.`user_change`, `ogc`.`group_id`, `ogc`.`deldate`
+FROM objectgroupcontacts ogc left join positions p on (ogc.position_id = p.position_id)
+WHERE (ogc.deldate is null) AND (ogc.demand_id = :p0)
+ORDER BY `ogc`.`contact_id`.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/26 16:30:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ogc.demand_id' in 'where clause'. The SQL statement executed was: SELECT `ogc`.`contact_id`, `ogc`.`objectgr_id`, `ogc`.`firstname`, `ogc`.`surname`, `ogc`.`lastname`, `ogc`.`fullname`, `ogc`.`position_id`, `p`.`position_name`, `ogc`.`phonenumber`, `ogc`.`email`, `ogc`.`date_create`, `ogc`.`user_create`, `ogc`.`date_change`, `ogc`.`user_change`, `ogc`.`group_id`, `ogc`.`deldate`
+FROM objectgroupcontacts ogc left join positions p on (ogc.position_id = p.position_id)
+WHERE (ogc.deldate is null) AND (ogc.demand_id = :p0)
+ORDER BY `ogc`.`contact_id`' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=ObjectGroupContacts
+HTTP_REFERER=http://ls.ru/demands/view/3
+---
+2018/11/26 16:30:33 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.demand_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `o`.`object_id`, `o`.`objectgr_id`, `o`.`doorway`, `o`.`quant_flats`, `o`.`code`, `o`.`address`, `o`.`note`, `o`.`date_create`, `o`.`user_create`, `o`.`date_change`, `o`.`user_change`, `o`.`group_id`
+FROM `objects` `o`
+WHERE (o.deldate is null
+                    and o.doorway <> 'Общее') AND (o.demand_id = :p0)
+ORDER BY `o`.`object_id`.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/26 16:30:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.demand_id' in 'where clause'. The SQL statement executed was: SELECT `o`.`object_id`, `o`.`objectgr_id`, `o`.`doorway`, `o`.`quant_flats`, `o`.`code`, `o`.`address`, `o`.`note`, `o`.`date_create`, `o`.`user_create`, `o`.`date_change`, `o`.`user_change`, `o`.`group_id`
+FROM `objects` `o`
+WHERE (o.deldate is null
+                    and o.doorway <> 'Общее') AND (o.demand_id = :p0)
+ORDER BY `o`.`object_id`' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=Objects
+HTTP_REFERER=http://ls.ru/demands/view/3
+---
+2018/11/26 18:08:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "demandcomments/create".' in C:\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('demandcomments/...')
+#1 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/demandcomments/create
+HTTP_REFERER=http://ls.ru/demands/view/2
+---
+2018/11/26 18:11:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "demandcomments/create".' in C:\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('demandcomments/...')
+#1 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/demandcomments/create
+HTTP_REFERER=http://ls.ru/demands/view/2
+---
+2018/11/26 18:32:18 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE pasharle_ls_sql.insert_demandcomments; expected 5, got 12. Выполнявшийся SQL-запрос: call insert_demandcomments(@demand_id,@client_id,@objectgr_id,@object_id,@demandtype_id,@date_reg,@prior_id,@deadline,@demand_text,@contact,@user_create,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (72)
+in C:\Home\LS\protected\controllers\DemandcommentsController.php (47)
+2018/11/26 18:32:30 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE pasharle_ls_sql.insert_demandcomments; expected 5, got 12. Выполнявшийся SQL-запрос: call insert_demandcomments(@demand_id,@client_id,@objectgr_id,@object_id,@demandtype_id,@date_reg,@prior_id,@deadline,@demand_text,@contact,@user_create,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (72)
+in C:\Home\LS\protected\controllers\DemandcommentsController.php (47)
+2018/11/26 18:33:54 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE pasharle_ls_sql.insert_demandcomments; expected 5, got 12. Выполнявшийся SQL-запрос: call insert_demandcomments(@demand_id,@client_id,@objectgr_id,@object_id,@demandtype_id,@date_reg,@prior_id,@deadline,@demand_text,@contact,@user_create,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (72)
+in C:\Home\LS\protected\controllers\DemandcommentsController.php (47)
+2018/11/26 18:47:09 [warning] [application] Не удалось присвоить небезопасный атрибут "equipname" класса "ObjectEquips".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\controllers\ObjectequipsController.php (98)
+in C:\Home\LS\index.php (13)
+2018/11/26 18:47:09 [warning] [application] Не удалось присвоить небезопасный атрибут "unit_name" класса "ObjectEquips".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\controllers\ObjectequipsController.php (98)
+in C:\Home\LS\index.php (13)

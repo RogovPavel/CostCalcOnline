@@ -47,6 +47,8 @@
         
         /* Заявки */
         include(dirname(__FILE__).'/security/demands.php'),   
+        /* Ход работы */
+        include(dirname(__FILE__).'/security/demandcomments.php'),   
             
         array(    
             'guest' => array(
@@ -81,6 +83,7 @@
                     'admin_objectequips',
                     
                     'admin_demands',
+                    'admin_demandcomments',
                 ),
             ),
         )
