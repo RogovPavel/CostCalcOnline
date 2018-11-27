@@ -1,6 +1,6 @@
 <?php
 
-class DemandtypesController extends Controller {
+class CostcalculationsController extends Controller {
     
     public function filters() {
         return array(
@@ -11,10 +11,10 @@ class DemandtypesController extends Controller {
     
     public function accessRules() {
         return array(
-            array('allow', 'actions'=>array('index'), 'roles'=>array('view_demandtypes'),),
-            array('allow', 'actions'=>array('create'), 'roles'=>array('create_demandtypes'),),
-            array('allow', 'actions'=>array('update'), 'roles'=>array('update_demandtypes'),),
-            array('allow', 'actions'=>array('delete'), 'roles'=>array('delete_demandtypes'),),
+            array('allow', 'actions'=>array('index', 'view', 'getdata'), 'roles'=>array('view_costcalculations'),),
+            array('allow', 'actions'=>array('create'), 'roles'=>array('create_costcalculations'),),
+            array('allow', 'actions'=>array('update'), 'roles'=>array('update_costcalculations'),),
+            array('allow', 'actions'=>array('delete'), 'roles'=>array('delete_costcalculations'),),
             array('deny',
                     'users'=>array('*'),
             ),
@@ -23,6 +23,24 @@ class DemandtypesController extends Controller {
     
     public function actionIndex() {
         $this->render('index');
+    }
+    
+    public function actionGetData($id) {
+        $model = new CostCalculations();
+        
+        $model->get_by_id($id);
+        
+        echo json_encode($model);
+    }
+    
+    public function actionView($id) {
+        $model = new CostCalculations();
+        
+        $model->get_by_id($id);
+        
+        $this->render('view', array(
+            'model' => $model
+        ));
     }
     
     public function actionCreate() {
@@ -34,22 +52,24 @@ class DemandtypesController extends Controller {
         );
         
         try {
-            $model = new DemandTypes();
-
+            $model = new CostCalculations();
+            
+            $model->type = 1;
+            
             if (isset($_POST['params']))
                 $model->setAttributes($_POST['params']);
             
-            if (isset($_POST['demandtypes'])) {
-                $model->setAttributes($_POST['demandtypes']);
+            if (isset($_POST['costcalculations'])) {
+                $model->setAttributes($_POST['costcalculations']);
                 if ($model->validate()) {
-                    
                     $model->user_create = Yii::app()->user->user_id;
                     $res = $model->insert();
-                    $result['id'] = $res['data']['demandtype_id'];
+                    $result['id'] = $res['data']['calc_id'];
                     return;
                 } else {
                     $result['state'] = 1;
                 }
+                
             }
 
             $result['responseText'] = $this->renderPartial('_form', array(
@@ -57,7 +77,7 @@ class DemandtypesController extends Controller {
             ), true);
         
         } catch (Exception $e) {
-            $result['state'] = 1;
+            $result['state'] = 2;
             $result['responseText'] = $e->getMessage();
             
         } finally {
@@ -75,33 +95,32 @@ class DemandtypesController extends Controller {
         );
         
         try {
-            $model = new DemandTypes();
+            $model = new CostCalculations();
             
-            if (isset($_POST['demandtype_id']))
-                $model->get_by_id($_POST['demandtype_id']);
+            if (isset($_POST['calc_id']))
+                $model->get_by_id($_POST['calc_id']);
 
             if (isset($_POST['params']))
                 $model->setAttributes($_POST['params']);
             
-            if (isset($_POST['demandtypes'])) {
-                $model->setAttributes($_POST['demandtypes']);
+            if (isset($_POST['costcalculations'])) {
+                $model->setAttributes($_POST['costcalculations']);
                 if ($model->validate()) {
-                    
                     $model->user_change = Yii::app()->user->user_id;
                     $res = $model->update();
-                    $result['id'] = $res['data']['demandtype_id'];
+                    $result['id'] = $res['data']['calc_id'];
                     return;
                 } else {
                     $result['state'] = 1;
                 }
+                
             }
-
             $result['responseText'] = $this->renderPartial('_form', array(
                 'model' => $model,
             ), true);
         
         } catch (Exception $e) {
-            $result['state'] = 1;
+            $result['state'] = 2;
             $result['responseText'] = $e->getMessage();
             
         } finally {
@@ -118,16 +137,16 @@ class DemandtypesController extends Controller {
         );
         
         try {
-            $model = new DemandTypes();
+            $model = new CostCalculations();
             
-            if (isset($_POST['demandtype_id'])) {
-                $model->get_by_id($_POST['demandtype_id']);
+            if (isset($_POST['calc_id'])) {
+                $model->get_by_id($_POST['calc_id']);
                 $model->user_chnage = Yii::app()->user->user_id;
                 $res = $model->delete();
-                $result['id'] = $res['data']['demandtype_id'];
+                $result['id'] = $res['data']['calc_id'];
             }
         } catch (Exception $e) {
-            $result['state'] = 1;
+            $result['state'] = 2;
             $result['responseText'] = $e->getMessage();
             
         } finally {

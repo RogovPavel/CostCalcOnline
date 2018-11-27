@@ -233,7 +233,7 @@
 <div class="ls-row">
     <div class="ls-row-column"><input type="button" id="ls-demands-edit" value="Изменить"/></div>
 </div>
-<div class="ls-row" style="height: calc(100% - 450px)">
+<div class="ls-row" style="height: calc(100% - 266px)">
     <div id='ls-demands-tab'>
         <ul>
             <li style="margin-left: 30px;">Ход работы</li>

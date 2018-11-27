@@ -93,7 +93,7 @@
         
         $('#ls-btn-create').on('click', function() {
             if ($('#ls-btn-create').jqxButton('disabled') || ls.lock_operation) return;
-            ls.opendialogforedit('demands', 'create', {params: {objectgr_id: 22}}, 'POST', false, {width: '600px', height: '400px'});
+            ls.opendialogforedit('demands', 'create', {}, 'POST', false, {width: '600px', height: '400px'});
         });
         
         $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 600, height: 350}));

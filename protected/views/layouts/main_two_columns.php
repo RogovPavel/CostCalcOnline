@@ -74,6 +74,7 @@
                             <ul>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_objectgroups'); ?>><a href='<?php echo Yii::app()->createUrl('objectgroups'); ?>'>Реестр объектов</a></li>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_demands'); ?>><a href='<?php echo Yii::app()->createUrl('demands'); ?>'>Реестр заявок</a></li>
+                                <li <?php Yii::app()->security->HideShowMenuItem('view_costcalculations'); ?>><a href='<?php echo Yii::app()->createUrl('costcalculations'); ?>'>Реестр смет</a></li>
                             </ul>
                         </div>
                     </div>

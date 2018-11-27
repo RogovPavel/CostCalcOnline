@@ -1,33 +1,39 @@
 <script type="text/javascript">
     ls.demandtypes = {
-        id: 0
+        rowid: undefined,
+        row: undefined,
+        rowindex: undefined,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = false;
+            if (!$("#ls-demandtypes-grid").jqxGrid('isBindingCompleted'))
+                return;
+            if (reset) {
+                var adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['demandtypes']), {loadError: ls.loaderror});
+                $("#ls-demandtypes-grid").jqxGrid({source: adapter});
+            }
+            else
+                $("#ls-demandtypes-grid").jqxGrid('updatebounddata');
+        }
     };
     
     $(document).ready(function() {
-        var currentrow_demandtypes;
-        
-        var demandtypes_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['demandtypes']), {
-            loadError: function(jqXHR, status, error) {
-                ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
-                ls.lock_operation = false;
-            }
-        });
-        
         var checkbutton = function() {
-            $('#ls-btn-update').jqxButton({disabled: !(currentrow_demandtypes != undefined)})
-            $('#ls-btn-delete').jqxButton({disabled: !(currentrow_demandtypes != undefined)})
+            $('#ls-btn-update').jqxButton({disabled: !(ls.demandtypes.row != undefined)})
+            $('#ls-btn-delete').jqxButton({disabled: !(ls.demandtypes.row != undefined)})
         }
         
         $("#ls-demandtypes-grid").on('rowselect', function (event) {
-            currentrow_demandtypes = $('#ls-demandtypes-grid').jqxGrid('getrowdata', event.args.rowindex);
+            var args = event.args;
+            ls.demandtypes.rowindex = args.rowindex;
+            ls.demandtypes.row = args.row;
             checkbutton();
         });
         
         $('#ls-btn-refresh').on('click', function() {
             if (ls.lock_operation) return;
-            
             ls.lock_operation = true;
-            $("#ls-demandtypes-grid").jqxGrid('updatebounddata');
+            ls.demandtypes.refresh(false);
         });
         
         $("#ls-demandtypes-grid").on('rowdoubleclick', function(){
@@ -35,91 +41,49 @@
         });
         
         $("#ls-demandtypes-grid").on('bindingcomplete', function() {
-            var idx = $('#ls-demandtypes-grid').jqxGrid('selectedrowindex'); 
-            
-            if (ls.demandtypes.id != 0) {
-                idx = $("#ls-demandtypes-grid").jqxGrid('getrowboundindexbyid', ls.demandtypes.id);
-                ls.demandtypes.id = 0;
+            var idx  = ls.demandtypes.rowindex;
+                        
+            if (ls.demandtypes.rowid != undefined) {
+                idx = $("#ls-demandtypes-grid").jqxGrid('getrowboundindexbyid', ls.demandtypes.rowid);
+                ls.demandtypes.rowid = undefined;
             }
-                       
-            
-            if (idx == -1)
+
+            var rows = $("#ls-demandtypes-grid").jqxGrid('getrows');
+
+            if (idx == undefined || idx >= rows.length) 
                 idx = 0;
-            
+
             $("#ls-demandtypes-grid").jqxGrid('selectrow', idx);
             $("#ls-demandtypes-grid").jqxGrid('ensurerowvisible', idx);
-            
+
             checkbutton();
             ls.lock_operation = false;
         });
         
         $('#ls-btn-delete').on('click', function() {
             if ($('#ls-btn-delete').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_demandtypes == undefined) return;            
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('demandtypes/delete')) ?>,
-                type: 'POST',
-                data: {
-                    demandtype_id: currentrow_demandtypes.demandtype_id
-                },
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $('#ls-btn-refresh').click();
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
+            if (ls.demandtypes.row == undefined) return;            
+            ls.delete('demandtypes', 'delete', {demandprior_id: ls.demandtypes.row.demandtype_id}, function(Res) {
+                Res = JSON.parse(Res);
+                if (Res.state == 0) {
+                    ls.demandtypes.rowindex--;
+                    ls.demandtypes.refresh(false);
+                }
+                else {
+                    ls.showerrormassage('Ошибка! ' + Res.responseText);
                 }
             });
         });
         
         $('#ls-btn-update').on('click', function() {
             if ($('#ls-btn-update').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_demandtypes == undefined) return;            
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('demandtypes/update')) ?>,
-                type: 'POST',
-                data: {
-                    demandtype_id: currentrow_demandtypes.demandtype_id
-                },
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $("#ls-dialog-content").html(Res.content);
-                        $("#ls-dialog-header-text").html(Res.dialog_header);
-                        $('#ls-dialog').jqxWindow('open');
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
-                }
-            });
+            if (ls.demandtypes.row == undefined) return;            
+            ls.opendialogforedit('demandtypes', 'update', {demandtype_id: ls.demandtypes.row.demandtype_id}, 'POST', false, {width: '400px', height: '124px'});
         });
         
         $('#ls-btn-create').on('click', function() {
             if ($('#ls-btn-create').jqxButton('disabled') || ls.lock_operation) return;
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('demandtypes/create')) ?>,
-                type: 'POST',
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $("#ls-dialog-content").html(Res.content);
-                        $("#ls-dialog-header-text").html(Res.dialog_header);
-                        $('#ls-dialog').jqxWindow('open');
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
-                }
-            });
+            ls.opendialogforedit('demandtypes', 'create', {}, 'POST', false, {width: '400px', height: '124px'});
         });
         
         $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 400, height: 124}));
@@ -131,8 +95,6 @@
         
         $("#ls-demandtypes-grid").jqxGrid(
             $.extend(true, {}, ls.settings['grid'], {
-                source: demandtypes_adapter,
-//                height: 300,
                 columns: [
                     { text: 'Наименование', datafield: 'demandtype_name', filtercondition: 'CONTAINS', width: 150},    
                     { text: 'Дата создания', datafield: 'date_create', filtercondition: 'CONTAINS', width: 130, cellsformat: 'dd.MM.yyyy HH:mm'},
@@ -140,6 +102,7 @@
 
         }));
         
+        ls.demandtypes.refresh(true);        
         
     });
 </script>
@@ -152,7 +115,7 @@
             'Типы заявок' => 'demandtypes',
     );
 ?>
-<div style="height: calc(100% - 182px)">
+<div style="height: 100%">
     <div class="ls-row" style="height: calc(100% - 34px)">
         <div class="ls-grid" id="ls-demandtypes-grid"></div>
     </div>

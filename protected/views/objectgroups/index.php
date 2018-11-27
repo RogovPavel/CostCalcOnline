@@ -113,7 +113,7 @@
             'Объекты' => 'objectgroups',
     );
 ?>
-<div style="height: calc(100% - 182px)">
+<div style="height: 100%">
     <div class="ls-row" style="height: calc(100% - 34px)">
         <div class="ls-grid" id="ls-objectgroups-grid"></div>
     </div>

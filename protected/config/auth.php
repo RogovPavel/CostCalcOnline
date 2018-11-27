@@ -48,7 +48,12 @@
         /* Заявки */
         include(dirname(__FILE__).'/security/demands.php'),   
         /* Ход работы */
-        include(dirname(__FILE__).'/security/demandcomments.php'),   
+        include(dirname(__FILE__).'/security/demandcomments.php'),
+            
+        /* Сметы */
+        include(dirname(__FILE__).'/security/costcalculations.php'),   
+        /* Оборудование в сметах */
+        include(dirname(__FILE__).'/security/costcalcequips.php'),
             
         array(    
             'guest' => array(
@@ -84,7 +89,75 @@
                     
                     'admin_demands',
                     'admin_demandcomments',
+                    
+                    'admin_costcalculations',
+                    'admin_costcalcequips',
                 ),
             ),
+            
+            'AdministratorDB' => array(
+                'type' => CAuthItem::TYPE_ROLE,
+                'description' => 'Admin',
+                'bizRule' => null,
+                'data' => null,
+                'children' => array(
+                    'admin_profile',
+                    
+                    'admin_users',
+                    'admin_regions',
+                    'admin_firms',
+                    'admin_clients',
+                    'admin_banks',
+                    'admin_streets',
+                    'admin_streettypes',
+                    'admin_demandtypes',
+                    'admin_demandpriors',
+                    'admin_objectgroups',
+                    'admin_objectgroupcontacts',
+                    'admin_objects',
+                    'admin_units',
+                    'admin_equips',
+                    'admin_objectequips',
+                    
+                    'admin_demands',
+                    'admin_demandcomments',
+                    
+                    'admin_costcalculations',
+                    'admin_costcalcequips',
+                ),
+            ),
+            
+            'Manager' => array(
+                'type' => CAuthItem::TYPE_ROLE,
+                'description' => 'Admin',
+                'bizRule' => null,
+                'data' => null,
+                'children' => array(
+                    'admin_profile',
+                    
+                    'manager_users',
+                    'manager_regions',
+                    'manager_firms',
+                    'manager_clients',
+                    'manager_banks',
+                    'manager_streets',
+                    'manager_streettypes',
+                    'manager_demandtypes',
+                    'manager_demandpriors',
+                    'manager_objectgroups',
+                    'manager_objectgroupcontacts',
+                    'manager_objects',
+                    'manager_units',
+                    'manager_equips',
+                    'manager_objectequips',
+                    
+                    'manager_demands',
+                    'manager_demandcomments',
+                    
+                    'manager_costcalculations',
+                    'manager_costcalcequips',
+                ),
+            ),
+            
         )
     );
