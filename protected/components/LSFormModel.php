@@ -49,7 +49,7 @@ class LSFormModel extends CFormModel
         // Добавляем фильтр по группе
         if (!Yii::app()->user->isGuest) {
             if (Yii::app()->user->group_id != 1)
-                $this->command->andWhere($alias . '.group_id', $value['group_id']);
+                $this->command->andWhere(str_replace('.', '', $this->alias) . '.group_id = :p_group_id', array(':p_group_id' => Yii::app()->user->group_id));
         }
         else {
             if (get_class($this) != 'Users')
@@ -122,7 +122,7 @@ class LSFormModel extends CFormModel
         // Добавляем фильтр по группе
         if (!Yii::app()->user->isGuest) {
             if (Yii::app()->user->group_id != 1)
-                $this->command->andWhere($alias . '.group_id', $value['group_id']);
+                $this->command->andWhere(str_replace('.', '', $this->alias) . '.group_id = :p_group_id', array(':p_group_id' => Yii::app()->user->group_id));
         }
         else {
             if (get_class($this) != 'Users')

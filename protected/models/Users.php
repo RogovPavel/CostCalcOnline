@@ -69,6 +69,7 @@ class Users extends LSFormModel {
         
         $this->filed_id = 'user_id';
         $this->field_id_with_tm = 'u.user_id';
+        $this->alias = 'u';
     }
     
     public function rules() {
