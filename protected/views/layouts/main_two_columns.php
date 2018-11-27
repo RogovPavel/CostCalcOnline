@@ -36,7 +36,7 @@
                         </div>
                         <div>
                             <ul>
-                                <li><a href='<?php echo Yii::app()->createUrl('profile'); ?>'>Админка</a></li>
+                                <li <?php Yii::app()->security->HideShowMenuItem('view_profile'); ?>><a href='<?php echo Yii::app()->createUrl('profile'); ?>'>Админка</a></li>
                                 <li><a href='#'>Обратная связь</a></li>
                             </ul>
                         </div>
