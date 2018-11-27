@@ -48,7 +48,12 @@
         /* Заявки */
         include(dirname(__FILE__).'/security/demands.php'),   
         /* Ход работы */
-        include(dirname(__FILE__).'/security/demandcomments.php'),   
+        include(dirname(__FILE__).'/security/demandcomments.php'),
+            
+        /* Сметы */
+        include(dirname(__FILE__).'/security/costcalculations.php'),   
+        /* Оборудование в сметах */
+        include(dirname(__FILE__).'/security/costcalcequips.php'),
             
         array(    
             'guest' => array(
@@ -84,6 +89,9 @@
                     
                     'admin_demands',
                     'admin_demandcomments',
+                    
+                    'admin_costcalculations',
+                    'admin_costcalcequips',
                 ),
             ),
         )

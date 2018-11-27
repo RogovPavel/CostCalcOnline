@@ -22535,3 +22535,1059 @@ Stack trace:
 REQUEST_URI=/favicon.ico
 HTTP_REFERER=http://ls.ru/
 ---
+2018/11/27 11:23:13 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM costcalculations c left join clients cl on (c.client_id = cl.client_id)
+  ' at line 2. Выполнявшийся SQL-запрос: SELECT count(*) as quant
+FROM FROM costcalculations c left join clients cl on (c.client_id = cl.client_id)
+                                    left join objectgroups og on (c.objectgr_id = og.objectgr_id)
+                                    left join firms f on (c.firm_id = f.firm_id)
+                                    left join users u on (c.manager_id = u.user_id)
+WHERE c.deldate is null.
+in C:\Home\LS\protected\controllers\AjaxDataController.php (316)
+in C:\Home\LS\index.php (13)
+2018/11/27 11:23:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM costcalculations c left join clients cl on (c.client_id = cl.client_id)
+  ' at line 2. The SQL statement executed was: SELECT count(*) as quant
+FROM FROM costcalculations c left join clients cl on (c.client_id = cl.client_id)
+                                    left join objectgroups og on (c.objectgr_id = og.objectgr_id)
+                                    left join firms f on (c.firm_id = f.firm_id)
+                                    left join users u on (c.manager_id = u.user_id)
+WHERE c.deldate is null' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\Home\LS\protected\controllers\AjaxDataController.php(316): CDbCommand->queryRow()
+#2 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQX()
+#3 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQX')
+#12 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#13 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\Home\LS\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQX?ModelName=CostCalculations
+HTTP_REFERER=http://ls.ru/costcalculations
+---
+2018/11/27 11:23:32 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`type = 1 THEN 'Коммерческое предложение' ELSE 'Смет' at line 1. Выполнявшийся SQL-запрос: SELECT `c`.`calc_id`, `c`.`type`, `CASE` AS `WHEN c`.`type = 1 THEN 'Коммерческое предложение' ELSE 'Смета' END as typename`, `c`.`date`, `c`.`status_id`, `c`.`client_id`, `cl`.`clientname`, `c`.`objectgr_id`, `og`.`address`, `c`.`demand_id`, `c`.`firm_id`, `f`.`firmname`, `c`.`manager_id`, `u`.`shortname`, `c`.`contact`, `c`.`specnote`, `c`.`note`, `c`.`koef`, `c`.`discount`, `c`.`date_ready`, `c`.`user_ready`, `c`.`sum_materials_low`, `c`.`sum_materials_high`, `c`.`sum_works_low`, `c`.`sum_works_high`, `c`.`sum_equips_low`, `c`.`sum_equips_high`, `c`.`sum_low_full`, `c`.`sum_high_full`, `c`.`sum_marj`, `c`.`percent_marj`, `c`.`date_create`, `c`.`user_create`, `c`.`date_change`, `c`.`user_change`, `c`.`group_id`
+FROM costcalculations c left join clients cl on (c.client_id = cl.client_id)
+                                    left join objectgroups og on (c.objectgr_id = og.objectgr_id)
+                                    left join firms f on (c.firm_id = f.firm_id)
+                                    left join users u on (c.manager_id = u.user_id)
+WHERE c.deldate is null
+ORDER BY `c`.`calc_id` DESC LIMIT 200.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (332)
+in C:\Home\LS\index.php (13)
+2018/11/27 11:23:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`type = 1 THEN 'Коммерческое предложение' ELSE 'Смет' at line 1. The SQL statement executed was: SELECT `c`.`calc_id`, `c`.`type`, `CASE` AS `WHEN c`.`type = 1 THEN 'Коммерческое предложение' ELSE 'Смета' END as typename`, `c`.`date`, `c`.`status_id`, `c`.`client_id`, `cl`.`clientname`, `c`.`objectgr_id`, `og`.`address`, `c`.`demand_id`, `c`.`firm_id`, `f`.`firmname`, `c`.`manager_id`, `u`.`shortname`, `c`.`contact`, `c`.`specnote`, `c`.`note`, `c`.`koef`, `c`.`discount`, `c`.`date_ready`, `c`.`user_ready`, `c`.`sum_materials_low`, `c`.`sum_materials_high`, `c`.`sum_works_low`, `c`.`sum_works_high`, `c`.`sum_equips_low`, `c`.`sum_equips_high`, `c`.`sum_low_full`, `c`.`sum_high_full`, `c`.`sum_marj`, `c`.`percent_marj`, `c`.`date_create`, `c`.`user_create`, `c`.`date_change`, `c`.`user_change`, `c`.`group_id`
+FROM costcalculations c left join clients cl on (c.client_id = cl.client_id)
+                                    left join objectgroups og on (c.objectgr_id = og.objectgr_id)
+                                    left join firms f on (c.firm_id = f.firm_id)
+                                    left join users u on (c.manager_id = u.user_id)
+WHERE c.deldate is null
+ORDER BY `c`.`calc_id` DESC LIMIT 200' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(332): LSFormModel->find()
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQX()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQX')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQX?ModelName=CostCalculations
+HTTP_REFERER=http://ls.ru/costcalculations
+---
+2018/11/27 11:28:58 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`type = 1 THEN 'Коммерческое предложение' ELSE 'Смет' at line 1. Выполнявшийся SQL-запрос: SELECT `c`.`calc_id`, `c`.`type`, `CASE` AS `WHEN c`.`type = 1 THEN 'Коммерческое предложение' ELSE 'Смета' END as typename`, `c`.`date`, `c`.`status_id`, `c`.`client_id`, `cl`.`clientname`, `c`.`objectgr_id`, `og`.`address`, `c`.`demand_id`, `c`.`firm_id`, `f`.`firmname`, `c`.`manager_id`, `u`.`shortname`, `c`.`contact`, `c`.`specnote`, `c`.`note`, `c`.`koef`, `c`.`discount`, `c`.`date_ready`, `c`.`user_ready`, `c`.`sum_materials_low`, `c`.`sum_materials_high`, `c`.`sum_works_low`, `c`.`sum_works_high`, `c`.`sum_equips_low`, `c`.`sum_equips_high`, `c`.`sum_low_full`, `c`.`sum_high_full`, `c`.`sum_marj`, `c`.`percent_marj`, `c`.`date_create`, `c`.`user_create`, `c`.`date_change`, `c`.`user_change`, `c`.`group_id`
+FROM costcalculations c left join clients cl on (c.client_id = cl.client_id)
+                                    left join objectgroups og on (c.objectgr_id = og.objectgr_id)
+                                    left join firms f on (c.firm_id = f.firm_id)
+                                    left join users u on (c.manager_id = u.user_id)
+WHERE c.deldate is null
+ORDER BY `c`.`calc_id` DESC LIMIT 200.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (332)
+in C:\Home\LS\index.php (13)
+2018/11/27 11:28:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`type = 1 THEN 'Коммерческое предложение' ELSE 'Смет' at line 1. The SQL statement executed was: SELECT `c`.`calc_id`, `c`.`type`, `CASE` AS `WHEN c`.`type = 1 THEN 'Коммерческое предложение' ELSE 'Смета' END as typename`, `c`.`date`, `c`.`status_id`, `c`.`client_id`, `cl`.`clientname`, `c`.`objectgr_id`, `og`.`address`, `c`.`demand_id`, `c`.`firm_id`, `f`.`firmname`, `c`.`manager_id`, `u`.`shortname`, `c`.`contact`, `c`.`specnote`, `c`.`note`, `c`.`koef`, `c`.`discount`, `c`.`date_ready`, `c`.`user_ready`, `c`.`sum_materials_low`, `c`.`sum_materials_high`, `c`.`sum_works_low`, `c`.`sum_works_high`, `c`.`sum_equips_low`, `c`.`sum_equips_high`, `c`.`sum_low_full`, `c`.`sum_high_full`, `c`.`sum_marj`, `c`.`percent_marj`, `c`.`date_create`, `c`.`user_create`, `c`.`date_change`, `c`.`user_change`, `c`.`group_id`
+FROM costcalculations c left join clients cl on (c.client_id = cl.client_id)
+                                    left join objectgroups og on (c.objectgr_id = og.objectgr_id)
+                                    left join firms f on (c.firm_id = f.firm_id)
+                                    left join users u on (c.manager_id = u.user_id)
+WHERE c.deldate is null
+ORDER BY `c`.`calc_id` DESC LIMIT 200' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(332): LSFormModel->find()
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQX()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQX')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQX?ModelName=CostCalculations
+HTTP_REFERER=http://ls.ru/costcalculations
+---
+2018/11/27 12:20:39 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'type' cannot be null. Выполнявшийся SQL-запрос: call insert_costcalculations(@calc_id,@date,@type,@name,@client_id,@objectgr_id,@demand_id,@firm_id,@manager_id,@contact,@specnote,@note,@user_create,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (72)
+in C:\Home\LS\protected\controllers\CostcalculationsController.php (64)
+2018/11/27 12:21:21 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'firm_id' cannot be null. Выполнявшийся SQL-запрос: call insert_costcalculations(@calc_id,@date,@type,@name,@client_id,@objectgr_id,@demand_id,@firm_id,@manager_id,@contact,@specnote,@note,@user_create,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (72)
+in C:\Home\LS\protected\controllers\CostcalculationsController.php (66)
+2018/11/27 12:25:47 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`pasharle_ls_sql`.`costcalculations`, CONSTRAINT `costcalculations_ibfk_6` FOREIGN KEY (`demand_id`) REFERENCES `demands` (`demand_id`)). Выполнявшийся SQL-запрос: call insert_costcalculations(@calc_id,@date,@type,@name,@client_id,@objectgr_id,@demand_id,@firm_id,@manager_id,@contact,@specnote,@note,@user_create,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (72)
+in C:\Home\LS\protected\controllers\CostcalculationsController.php (66)
+2018/11/27 12:27:30 [error] [exception.CException] exception 'CException' with message 'Контроллер CostcalculationsController не может найти представление "view".' in C:\Home\LS\framework\web\CController.php:881
+Stack trace:
+#0 C:\Home\LS\framework\web\CController.php(785): CController->renderPartial('view', Array, true)
+#1 C:\Home\LS\protected\controllers\CostcalculationsController.php(43): CController->render('view', Array)
+#2 [internal function]: CostcalculationsController->actionView('2')
+#3 C:\Home\LS\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(CostcalculationsController), Array)
+#4 C:\Home\LS\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CostcalculationsController), Object(ReflectionMethod), Array)
+#5 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('view')
+#14 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('costcalculation...')
+#15 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\Home\LS\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/costcalculations/view/2
+HTTP_REFERER=http://ls.ru/costcalculations
+---
+2018/11/27 12:27:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in C:\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:28:52 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:28:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:30:55 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:30:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:32:04 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:32:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:36:14 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:36:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:37:30 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:37:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:38:45 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:38:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:39:33 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:39:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:41:06 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:41:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:41:25 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:41:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:41:58 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:41:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:44:40 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:44:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:51:01 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:51:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:51:11 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:51:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:52:12 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:52:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:52:32 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:52:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:52:40 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:52:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:52:46 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:52:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:53:51 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:53:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:54:05 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:54:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:54:14 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:54:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:54:37 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:54:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:55:50 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:55:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:56:42 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:56:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:57:06 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:57:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:57:32 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:57:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 12:58:24 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 12:58:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 13:02:56 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC.
+in C:\Home\LS\protected\components\LSFormModel.php (59)
+in C:\Home\LS\protected\controllers\AjaxDataController.php (121)
+in C:\Home\LS\index.php (13)
+2018/11/27 13:02:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dc.calc_id' in 'where clause'. The SQL statement executed was: SELECT `dc`.`comment_id`, `dc`.`demand_id`, `dc`.`date`, `dc`.`user_id`, `u`.`shortname`, `dc`.`text`, `dc`.`user_create`, `dc`.`date_create`, `dc`.`user_change`, `dc`.`date_change`, `dc`.`group_id`
+FROM demandcomments dc left join users u on (dc.user_id = u.user_id)
+WHERE (dc.deldate is null) AND (dc.calc_id = :p0)
+ORDER BY `dc`.`comment_id` DESC' in C:\Home\LS\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Home\LS\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Home\LS\protected\components\LSFormModel.php(59): CDbCommand->queryAll()
+#2 C:\Home\LS\protected\controllers\AjaxDataController.php(121): LSFormModel->find(Array)
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
+#13 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
+#14 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Home\LS\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=DemandComments
+HTTP_REFERER=http://ls.ru/costcalculations/view/2
+---
+2018/11/27 16:10:47 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE pasharle_ls_sql.insert_costcalcequips does not exist. Выполнявшийся SQL-запрос: call insert_costcalcequips(@calc_id,@date,@type,@name,@client_id,@objectgr_id,@demand_id,@firm_id,@manager_id,@contact,@specnote,@note,@user_create,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (72)
+in C:\Home\LS\protected\controllers\CostcalcequipsController.php (64)
+2018/11/27 16:11:39 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE pasharle_ls_sql.insert_costcalcequips does not exist. Выполнявшийся SQL-запрос: call insert_costcalcequips(@calc_id,@date,@type,@name,@client_id,@objectgr_id,@demand_id,@firm_id,@manager_id,@contact,@specnote,@note,@user_create,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (72)
+in C:\Home\LS\protected\controllers\CostcalcequipsController.php (64)
+2018/11/27 16:19:16 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE pasharle_ls_sql.insert_costcalcequips; expected 9, got 14. Выполнявшийся SQL-запрос: call insert_costcalcequips(@calc_id,@date,@type,@name,@client_id,@objectgr_id,@demand_id,@firm_id,@manager_id,@contact,@specnote,@note,@user_create,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (72)
+in C:\Home\LS\protected\controllers\CostcalcequipsController.php (64)
+2018/11/27 17:07:50 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.sum_equips_high' in 'field list'. Выполнявшийся SQL-запрос: call update_costcalcequips(@cceq_id,@calc_id,@equip_id,@quant,@price_low,@price_high,@note,@user_change,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (87)
+in C:\Home\LS\protected\controllers\CostcalcequipsController.php (107)
+2018/11/27 17:09:12 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'w.sum_price_low' in 'field list'. Выполнявшийся SQL-запрос: call update_costcalcequips(@cceq_id,@calc_id,@equip_id,@quant,@price_low,@price_high,@note,@user_change,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (87)
+in C:\Home\LS\protected\controllers\CostcalcequipsController.php (107)
+2018/11/27 17:10:41 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'w.sum_price_low' in 'field list'. Выполнявшийся SQL-запрос: call update_costcalcequips(@cceq_id,@calc_id,@equip_id,@quant,@price_low,@price_high,@note,@user_change,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (87)
+in C:\Home\LS\protected\controllers\CostcalcequipsController.php (107)
+2018/11/27 17:13:18 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'w.sum_price_low' in 'field list'. Выполнявшийся SQL-запрос: call update_costcalcequips(@cceq_id,@calc_id,@equip_id,@quant,@price_low,@price_high,@note,@user_change,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (87)
+in C:\Home\LS\protected\controllers\CostcalcequipsController.php (107)
+2018/11/27 18:02:10 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.startworks_high' in 'field list'. Выполнявшийся SQL-запрос: call update_costcalcequips(@cceq_id,@calc_id,@equip_id,@quant,@price_low,@price_high,@note,@user_change,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (87)
+in C:\Home\LS\protected\controllers\CostcalcequipsController.php (107)
+2018/11/27 18:02:38 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.startworks_high' in 'field list'. Выполнявшийся SQL-запрос: call update_costcalcequips(@cceq_id,@calc_id,@equip_id,@quant,@price_low,@price_high,@note,@user_change,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (87)
+in C:\Home\LS\protected\controllers\CostcalcequipsController.php (107)

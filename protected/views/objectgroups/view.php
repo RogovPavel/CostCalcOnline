@@ -534,7 +534,7 @@
     );
 ?>
 
-<div class="ls-row" style="height: calc(100% - 182px);">
+<div class="ls-row" style="height: 100%">
     <div id='ls-objectgroup-tab'>
         <ul>
             <li style="margin-left: 30px;">Общие</li>
