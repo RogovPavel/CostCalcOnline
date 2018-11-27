@@ -30,36 +30,23 @@
             ls.lock_operation = true;
             
             if (state_insert)
-                var url = <?php echo json_encode(Yii::app()->createUrl('demandpriors/create')); ?>;
+                var action = 'create';
             else
-                var url = <?php echo json_encode(Yii::app()->createUrl('demandpriors/update')); ?>;
-            $.ajax({
-                url: url,
-                type: 'POST',
-                data: $('#demandpriors').serialize(),
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    ls.lock_operation = false;
-                    
-                    if (Res.error == 0) {
-                        ls.demandpriors.id = parseInt(Res.id);
-                        $('#ls-btn-refresh').click();
-                        
-                        if ($('#ls-dialog').length>0)
-                            $('#ls-dialog').jqxWindow('close');
-                    }
-                    else {
-                        $("#ls-dialog-content").html(Res.content);
-                    }
-                    
-                    
-                    
-                    
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При сохранении данных произошла ошибка. Повторите попытку позже.');
-                    ls.lock_operation = false;
+                var action = 'update';
+            
+            ls.save('demandpriors', action, $('#demandpriors').serialize(), function(Res) {
+                Res = JSON.parse(Res);
+                ls.lock_operation = false;
+                if (Res.state == 0) {
+                    ls.demandpriors.rowid = parseInt(Res.id);
+                    ls.demandpriors.refresh(false);
+                    $('#ls-dialog').jqxWindow('close');
                 }
+                else if (Res.state == 1)
+                    $("#ls-dialog-content").html(Res.responseText);
+                else
+                    ls.showerrormassage('Ошибка! ', Res.responseText);
+                
             });
         });
         

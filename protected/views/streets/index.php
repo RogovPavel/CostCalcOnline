@@ -1,33 +1,39 @@
 <script type="text/javascript">
     ls.streets = {
-        id: 0
+        rowid: undefined,
+        row: undefined,
+        rowindex: undefined,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = false;
+            if (!$("#ls-streets-grid").jqxGrid('isBindingCompleted'))
+                return;
+            if (reset) {
+                var adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['streets']), {loadError: ls.loaderror});
+                $("#ls-streets-grid").jqxGrid({source: adapter});
+            }
+            else
+                $("#ls-streets-grid").jqxGrid('updatebounddata');
+        }
     };
     
     $(document).ready(function() {
-        var currentrow_streets;
-        
-        var streets_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['streets']), {
-            loadError: function(jqXHR, status, error) {
-                ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
-                ls.lock_operation = false;
-            }
-        });
-        
         var checkbutton = function() {
-            $('#ls-btn-update').jqxButton({disabled: !(currentrow_streets != undefined)})
-            $('#ls-btn-delete').jqxButton({disabled: !(currentrow_streets != undefined)})
+            $('#ls-btn-update').jqxButton({disabled: !(ls.streets.row != undefined)})
+            $('#ls-btn-delete').jqxButton({disabled: !(ls.streets.row != undefined)})
         }
         
         $("#ls-streets-grid").on('rowselect', function (event) {
-            currentrow_streets = $('#ls-streets-grid').jqxGrid('getrowdata', event.args.rowindex);
+            var args = event.args;
+            ls.streets.rowindex = args.rowindex;
+            ls.streets.row = args.row;
             checkbutton();
         });
         
         $('#ls-btn-refresh').on('click', function() {
             if (ls.lock_operation) return;
-            
             ls.lock_operation = true;
-            $("#ls-streets-grid").jqxGrid('updatebounddata');
+            ls.streets.refresh(false);
         });
         
         $("#ls-streets-grid").on('rowdoubleclick', function(){
@@ -35,91 +41,50 @@
         });
         
         $("#ls-streets-grid").on('bindingcomplete', function() {
-            var idx = $('#ls-streets-grid').jqxGrid('selectedrowindex'); 
-            
-            if (ls.streets.id != 0) {
-                idx = $("#ls-streets-grid").jqxGrid('getrowboundindexbyid', ls.streets.id);
-                ls.streets.id = 0;
+            var idx  = ls.streets.rowindex;
+                        
+            if (ls.streets.rowid != undefined) {
+                idx = $("#ls-streets-grid").jqxGrid('getrowboundindexbyid', ls.streets.rowid);
+                ls.streets.rowid = undefined;
             }
-                       
-            
-            if (idx == -1)
+
+            var rows = $("#ls-streets-grid").jqxGrid('getrows');
+
+            if (idx == undefined || idx >= rows.length) 
                 idx = 0;
-            
+
             $("#ls-streets-grid").jqxGrid('selectrow', idx);
             $("#ls-streets-grid").jqxGrid('ensurerowvisible', idx);
-            
+
             checkbutton();
             ls.lock_operation = false;
         });
         
         $('#ls-btn-delete').on('click', function() {
             if ($('#ls-btn-delete').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_streets == undefined) return;            
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('streets/delete')) ?>,
-                type: 'POST',
-                data: {
-                    street_id: currentrow_streets.street_id
-                },
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $('#ls-btn-refresh').click();
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
+            if (ls.streets.row == undefined) return;            
+            ls.delete('streets', 'delete', {street_id: ls.streets.row.street_id}, function(Res) {
+                Res = JSON.parse(Res);
+                if (Res.state == 0) {
+                    ls.streets.rowindex--;
+                    ls.streets.refresh(false);
+                }
+                else {
+                    ls.showerrormassage('Ошибка! ' + Res.responseText);
                 }
             });
         });
         
         $('#ls-btn-update').on('click', function() {
             if ($('#ls-btn-update').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_streets == undefined) return;            
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('streets/update')) ?>,
-                type: 'POST',
-                data: {
-                    street_id: currentrow_streets.street_id
-                },
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $("#ls-dialog-content").html(Res.content);
-                        $("#ls-dialog-header-text").html(Res.dialog_header);
-                        $('#ls-dialog').jqxWindow('open');
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
-                }
-            });
+            if (ls.streets.row == undefined) return;            
+            ls.opendialogforedit('streets', 'update', {street_id: ls.streets.row.street_id}, 'POST', false, {width: '400px', height: '194px'});
         });
         
         $('#ls-btn-create').on('click', function() {
             if ($('#ls-btn-create').jqxButton('disabled') || ls.lock_operation) return;
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('streets/create')) ?>,
-                type: 'POST',
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $("#ls-dialog-content").html(Res.content);
-                        $("#ls-dialog-header-text").html(Res.dialog_header);
-                        $('#ls-dialog').jqxWindow('open');
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
-                }
-            });
+            ls.opendialogforedit('streets', 'create', {}, 'POST', false, {width: '400px', height: '194px'});
+            
         });
         
         $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 400, height: 194}));
@@ -131,7 +96,6 @@
         
         $("#ls-streets-grid").jqxGrid(
             $.extend(true, {}, ls.settings['grid'], {
-                source: streets_adapter,
                 columns: [
                     { text: 'Наименование', datafield: 'streetname', filtercondition: 'CONTAINS', width: 150},    
                     { text: 'Тип', datafield: 'streettype_name', filtercondition: 'CONTAINS', width: 150},    
@@ -141,19 +105,19 @@
 
         }));
         
-        
+        ls.streets.refresh(true);
     });
 </script>
 
 <?php
-    $this->pageTitle=Yii::app()->name . ' - Регионы';
+    $this->pageTitle= 'Регионы';
     $this->pageName = 'Справочник регионов';
     $this->breadcrumbs=array(
             'Главная' => 'site',
             'Регионы' => 'streets',
     );
 ?>
-<div style="height: calc(100% - 182px)">
+<div style="height: 100%">
     <div class="ls-row" style="height: calc(100% - 34px)">
         <div class="ls-grid" id="ls-streets-grid"></div>
     </div>

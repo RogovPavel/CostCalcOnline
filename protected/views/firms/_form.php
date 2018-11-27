@@ -3,10 +3,24 @@
         var state_insert = <?php if (mb_strtoupper(Yii::app()->controller->action->id) == mb_strtoupper('Create') || mb_strtoupper(Yii::app()->controller->action->id) == 'Insert') echo json_encode(true); else echo json_encode(false); ?>;
         var model = <?php echo json_encode($model); ?>;
         
-        var banks_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['banks']), {
-            loadError: function(jqXHR, status, error) {
-                ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
-                ls.lock_operation = false;
+        var databanks;
+        
+        $.ajax({
+            url: '/index.php/AjaxData/DataJQXSimpleList',
+            type: 'POST',
+            async: true,
+            data: {
+                Models: ['Banks']
+            },
+            success: function(Res) {
+                Res = JSON.parse(Res);
+                databanks = Res[0];
+                
+                $("#ls-firm-bank").jqxComboBox({source: databanks});
+                $("#ls-firm-bank").jqxComboBox('val', model.bank_id);
+            },
+            error: function(Res) {
+                ls.showerrormassage('Ошибка!', Res.responseText);
             }
         });
         
@@ -16,7 +30,7 @@
         $("#ls-firm-account").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
         $("#ls-firm-ogrn").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
         $("#ls-firm-okpo").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
-        $("#ls-firm-bank").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {selectedIndex: 0, source: banks_adapter, displayMember: "bankname", valueMember: "bank_id", width: 'calc(100% - 8px)'}));
+        $("#ls-firm-bank").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {selectedIndex: 0, displayMember: "bankname", valueMember: "bank_id", width: 'calc(100% - 8px)'}));
         $("#ls-firm-juraddress").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
         $("#ls-firm-factaddress").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
         
@@ -42,35 +56,23 @@
             ls.lock_operation = true;
             
             if (state_insert)
-                var url = <?php echo json_encode(Yii::app()->createUrl('firms/create')); ?>;
+                var action = 'create';
             else
-                var url = <?php echo json_encode(Yii::app()->createUrl('firms/update')); ?>;
-            $.ajax({
-                url: url,
-                type: 'POST',
-                data: $('#firms').serialize(),
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    ls.lock_operation = false;
-                    
-                    if (Res.error == 0) {
-                        ls.firms.id = parseInt(Res.id);
-                        $('#ls-btn-refresh').click();
-                        
-                        if ($('#ls-dialog').length>0)
-                        $('#ls-dialog').jqxWindow('close');
-                    } else {
-                        $("#ls-dialog-content").html(Res.content);
-                    }
-                    
-                    
-                    
-                    
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При сохранении данных произошла ошибка. Повторите попытку позже.');
-                    ls.lock_operation = false;
+                var action = 'update';
+            
+            ls.save('firms', action, $('#firms').serialize(), function(Res) {
+                Res = JSON.parse(Res);
+                ls.lock_operation = false;
+                if (Res.state == 0) {
+                    ls.firms.rowid = parseInt(Res.id);
+                    ls.firms.refresh(false);
+                    $('#ls-dialog').jqxWindow('close');
                 }
+                else if (Res.state == 1) 
+                    $("#ls-dialog-content").html(Res.responseText);
+                else
+                    ls.showerrormassage('Ошибка! ', Res.responseText);
+                
             });
         });
         

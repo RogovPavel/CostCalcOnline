@@ -1,33 +1,39 @@
 <script type="text/javascript">
     ls.units = {
-        id: 0
+        rowid: undefined,
+        row: undefined,
+        rowindex: undefined,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = false;
+            if (!$("#ls-units-grid").jqxGrid('isBindingCompleted'))
+                return;
+            if (reset) {
+                var adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['units']), {loadError: ls.loaderror});
+                $("#ls-units-grid").jqxGrid({source: adapter});
+            }
+            else
+                $("#ls-units-grid").jqxGrid('updatebounddata');
+        }
     };
     
     $(document).ready(function() {
-        var currentrow_units;
-        
-        var units_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['units']), {
-            loadError: function(jqXHR, status, error) {
-                ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
-                ls.lock_operation = false;
-            }
-        });
-        
         var checkbutton = function() {
-            $('#ls-btn-update').jqxButton({disabled: !(currentrow_units != undefined)})
-            $('#ls-btn-delete').jqxButton({disabled: !(currentrow_units != undefined)})
+            $('#ls-btn-update').jqxButton({disabled: !(ls.units.row != undefined)})
+            $('#ls-btn-delete').jqxButton({disabled: !(ls.units.row != undefined)})
         }
         
         $("#ls-units-grid").on('rowselect', function (event) {
-            currentrow_units = $('#ls-units-grid').jqxGrid('getrowdata', event.args.rowindex);
+            var args = event.args;
+            ls.units.rowindex = args.rowindex;
+            ls.units.row = args.row;
             checkbutton();
         });
         
         $('#ls-btn-refresh').on('click', function() {
             if (ls.lock_operation) return;
-            
             ls.lock_operation = true;
-            $("#ls-units-grid").jqxGrid('updatebounddata');
+            ls.units.refresh(false);
         });
         
         $("#ls-units-grid").on('rowdoubleclick', function(){
@@ -35,97 +41,50 @@
         });
         
         $("#ls-units-grid").on('bindingcomplete', function() {
-            var idx = $('#ls-units-grid').jqxGrid('selectedrowindex'); 
-            
-            if (ls.units.id != 0) {
-                idx = $("#ls-units-grid").jqxGrid('getrowboundindexbyid', ls.units.id);
-                ls.units.id = 0;
+            var idx  = ls.units.rowindex;
+                        
+            if (ls.units.rowid != undefined) {
+                idx = $("#ls-units-grid").jqxGrid('getrowboundindexbyid', ls.units.rowid);
+                ls.units.rowid = undefined;
             }
-                       
-            
-            if (idx == -1)
+
+            var rows = $("#ls-units-grid").jqxGrid('getrows');
+
+            if (idx == undefined || idx >= rows.length) 
                 idx = 0;
-            
+
             $("#ls-units-grid").jqxGrid('selectrow', idx);
             $("#ls-units-grid").jqxGrid('ensurerowvisible', idx);
-            
+
             checkbutton();
             ls.lock_operation = false;
         });
         
         $('#ls-btn-delete').on('click', function() {
             if ($('#ls-btn-delete').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_units == undefined) return;            
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('units/delete')) ?>,
-                type: 'POST',
-                data: {
-                    unit_id: currentrow_units.unit_id
-                },
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.state == 0) {
-                        var idx = $('#ls-units-grid').jqxGrid('selectedrowindex'); 
-                        var row = $('#ls-units-grid').jqxGrid('getrowdata', (idx-1));
-
-                        if (row != undefined)
-                            ls.units.id = row['unit_id'];
-                        
-                        $('#ls-btn-refresh').click();
-                    } else
-                        ls.showerrormassage('Ошибка! ', Res.error);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
+            if (ls.units.row == undefined) return;            
+            if (ls.units.row == undefined) return;            
+            ls.delete('units', 'delete', {unit_id: ls.units.row.unit_id}, function(Res) {
+                Res = JSON.parse(Res);
+                if (Res.state == 0) {
+                    ls.units.rowindex--;
+                    ls.units.refresh(false);
+                }
+                else {
+                    ls.showerrormassage('Ошибка! ' + Res.responseText);
                 }
             });
         });
         
         $('#ls-btn-update').on('click', function() {
             if ($('#ls-btn-update').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_units == undefined) return;            
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('units/update')) ?>,
-                type: 'POST',
-                data: {
-                    unit_id: currentrow_units.unit_id
-                },
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.state == 0) {
-                        $("#ls-dialog-content").html(Res.content);
-                        $("#ls-dialog-header-text").html(Res.dialog_header);
-                        $('#ls-dialog').jqxWindow('open');
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
-                }
-            });
+            if (ls.units.row == undefined) return;            
+            ls.opendialogforedit('units', 'update', {unit_id: ls.units.row.unit_id}, 'POST', false, {width: '400px', height: '124px'});
         });
         
         $('#ls-btn-create').on('click', function() {
             if ($('#ls-btn-create').jqxButton('disabled') || ls.lock_operation) return;
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('units/create')) ?>,
-                type: 'POST',
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.state == 0) {
-                        $("#ls-dialog-content").html(Res.content);
-                        $("#ls-dialog-header-text").html(Res.dialog_header);
-                        $('#ls-dialog').jqxWindow('open');
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
-                }
-            });
+            ls.opendialogforedit('units', 'create', {}, 'POST', false, {width: '400px', height: '124px'});
         });
         
         $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 400, height: 124}));
@@ -137,8 +96,6 @@
         
         $("#ls-units-grid").jqxGrid(
             $.extend(true, {}, ls.settings['grid'], {
-                source: units_adapter,
-//                height: 300,
                 columns: [
                     { text: 'Ед. изм.', datafield: 'unit_name', filtercondition: 'CONTAINS', width: 150},    
                     { text: 'Дата создания', datafield: 'date_create', filtercondition: 'CONTAINS', width: 130, cellsformat: 'dd.MM.yyyy HH:mm'},
@@ -146,7 +103,7 @@
 
         }));
         
-        
+        ls.units.refresh(true);
     });
 </script>
 
@@ -158,7 +115,7 @@
             'Ед. измерения' => 'units',
     );
 ?>
-<div style="height: calc(100% - 182px)">
+<div style="height: 100%">
     <div class="ls-row" style="height: calc(100% - 34px)">
         <div class="ls-grid" id="ls-units-grid"></div>
     </div>

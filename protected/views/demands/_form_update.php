@@ -50,6 +50,7 @@
         $("#ls-demands-edit-client").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {displayMember: "clientname", valueMember: "client_id", width: '400px'}));
         $("#ls-demands-edit-contact").jqxInput($.extend(true, {}, ls.settings['input'], {theme: ls.defaults.theme, width: '400px', height: 25}));
         $("#ls-demands-edit-demandtext").jqxTextArea($.extend(true, {}, ls.settings['textarea'], {height: '70px', width: 'calc(100% - 8px)'}));
+        $("#ls-demands-edit-dateexec").jqxDateTimeInput($.extend(true, {}, ls.settings['datetime'], {value: null, width: '150px', height: 25, formatString: 'dd.MM.yyyy HH:mm'}));
         
         $("#ls-demands-save").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
         $("#ls-demands-cancel").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
@@ -78,8 +79,8 @@
             
             ls.save('demands', action, $('#demands').serialize(), function(Res) {
                 Res = JSON.parse(Res);
-                ls.lock_operation = false;
                 if (Res.state == 0) {
+                    ls.lock_operation = false;
                     ls.demands.rowid = parseInt(Res.id);
                     ls.demands.refresh(true);
                     $('#ls-dialog').jqxWindow('close');
@@ -92,8 +93,16 @@
             });
         });
         
+        $("#ls-demands-edit-demand").jqxInput('val', model.demand_id);
+        $("#ls-demands-edit-datereg").jqxDateTimeInput('val', ls.dateconverttosjs(model.date_reg));
         $("#ls-demands-edit-objectgr").jqxComboBox('val', model.objectgr_id);
-        
+        $("#ls-demands-edit-demandtype").jqxComboBox('val', model.demandtype_id);
+        $("#ls-demands-edit-prior").jqxComboBox('val', model.prior_id);
+        $("#ls-demands-edit-deadline").jqxDateTimeInput('val', ls.dateconverttosjs(model.deadline));
+        $("#ls-demands-edit-client").jqxComboBox('val', model.client_id);
+        $("#ls-demands-edit-contact").jqxInput('val', model.contact);
+        $("#ls-demands-edit-demandtext").jqxTextArea('val', model.demand_text);
+        $("#ls-demands-edit-dateexec").jqxDateTimeInput('val', ls.dateconverttosjs(model.date_exec));        
     });
 </script>
 
@@ -154,6 +163,11 @@
             <div class="ls-form-label">Контакт:</div>
             <div class="ls-form-column" style="width: calc(100% - 126px);"><input id="ls-demands-edit-contact" name="demands[contact]" autocomplete="off" /></div>
             <div class="ls-form-error"><?php echo $form->error($model, 'contact'); ?></div>
+        </div>
+        <div class="ls-form-row">
+            <div class="ls-form-label" style="font-weight: bold;">Дата выполнения:</div>
+            <div class="ls-form-column" style="width: calc(100% - 126px);"><div id="ls-demands-edit-dateexec" name="demands[date_exec]"></div></div>
+            <div class="ls-form-error"><?php echo $form->error($model, 'date_exec'); ?></div>
         </div>
         <div class="ls-form-row">
             <div>Текст заявки:</div>

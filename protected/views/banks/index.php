@@ -1,33 +1,39 @@
 <script type="text/javascript">
     ls.banks = {
-        id: 0
+        rowid: undefined,
+        row: undefined,
+        rowindex: undefined,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = false;
+            if (!$("#ls-banks-grid").jqxGrid('isBindingCompleted'))
+                return;
+            if (reset) {
+                var adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['banks']), {loadError: ls.loaderror});
+                $("#ls-banks-grid").jqxGrid({source: adapter});
+            }
+            else
+                $("#ls-banks-grid").jqxGrid('updatebounddata');
+        }
     };
     
     $(document).ready(function() {
-        var currentrow_banks;
-        
-        var banks_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['banks']), {
-            loadError: function(jqXHR, status, error) {
-                ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
-                ls.lock_operation = false;
-            }
-        });
-        
         var checkbutton = function() {
-            $('#ls-btn-update').jqxButton({disabled: !(currentrow_banks != undefined)})
-            $('#ls-btn-delete').jqxButton({disabled: !(currentrow_banks != undefined)})
+            $('#ls-btn-update').jqxButton({disabled: !(ls.banks.row != undefined)})
+            $('#ls-btn-delete').jqxButton({disabled: !(ls.banks.row != undefined)})
         }
         
         $("#ls-banks-grid").on('rowselect', function (event) {
-            currentrow_banks = $('#ls-banks-grid').jqxGrid('getrowdata', event.args.rowindex);
+            var args = event.args;
+            ls.banks.rowindex = args.rowindex;
+            ls.banks.row = args.row;
             checkbutton();
         });
         
         $('#ls-btn-refresh').on('click', function() {
             if (ls.lock_operation) return;
-            
             ls.lock_operation = true;
-            $("#ls-banks-grid").jqxGrid('updatebounddata');
+            ls.banks.refresh(false);
         });
         
         $("#ls-banks-grid").on('rowdoubleclick', function(){
@@ -35,90 +41,48 @@
         });
         
         $("#ls-banks-grid").on('bindingcomplete', function() {
-            var idx = $('#ls-banks-grid').jqxGrid('selectedrowindex'); 
-            
-            if (ls.banks.id != 0) {
-                idx = $("#ls-banks-grid").jqxGrid('getrowboundindexbyid', ls.banks.id);
-                ls.banks.id = 0;
+            var idx  = ls.banks.rowindex;
+                        
+            if (ls.banks.rowid != undefined) {
+                idx = $("#ls-banks-grid").jqxGrid('getrowboundindexbyid', ls.banks.rowid);
+                ls.banks.rowid = undefined;
             }
-            
-            if (idx == -1)
+
+            var rows = $("#ls-banks-grid").jqxGrid('getrows');
+
+            if (idx == undefined || idx >= rows.length) 
                 idx = 0;
-            
+
             $("#ls-banks-grid").jqxGrid('selectrow', idx);
             $("#ls-banks-grid").jqxGrid('ensurerowvisible', idx);
-            
+
             checkbutton();
             ls.lock_operation = false;
         });
         
         $('#ls-btn-delete').on('click', function() {
             if ($('#ls-btn-delete').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_banks == undefined) return;            
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('banks/delete')) ?>,
-                type: 'POST',
-                data: {
-                    bank_id: currentrow_banks.bank_id
-                },
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $('#ls-btn-refresh').click();
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
+            if (ls.banks.row == undefined) return;            
+            ls.delete('banks', 'delete', {bank_id: ls.banks.row.bank_id}, function(Res) {
+                Res = JSON.parse(Res);
+                if (Res.state == 0) {
+                    ls.banks.rowindex--;
+                    ls.banks.refresh(false);
+                }
+                else {
+                    ls.showerrormassage('Ошибка! ' + Res.responseText);
                 }
             });
         });
         
         $('#ls-btn-update').on('click', function() {
             if ($('#ls-btn-update').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_banks == undefined) return;            
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('banks/update')) ?>,
-                type: 'POST',
-                data: {
-                    bank_id: currentrow_banks.bank_id
-                },
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $("#ls-dialog-content").html(Res.content);
-                        $("#ls-dialog-header-text").html(Res.dialog_header);
-                        $('#ls-dialog').jqxWindow('open');
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
-                }
-            });
+            ls.opendialogforedit('banks', 'update', {bank_id: ls.banks.row.bank_id}, 'POST', false, {width: '400px', height: '254px'});
         });
         
         $('#ls-btn-create').on('click', function() {
             if ($('#ls-btn-create').jqxButton('disabled') || ls.lock_operation) return;
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('banks/create')) ?>,
-                type: 'POST',
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $("#ls-dialog-content").html(Res.content);
-                        $("#ls-dialog-header-text").html(Res.dialog_header);
-                        $('#ls-dialog').jqxWindow('open');
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
-                }
-            });
+            ls.opendialogforedit('banks', 'create', {}, 'POST', false, {width: '400px', height: '254px'});
         });
         
         $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 400, height: 254}));
@@ -130,7 +94,6 @@
         
         $("#ls-banks-grid").jqxGrid(
             $.extend(true, {}, ls.settings['grid'], {
-                source: banks_adapter,
                 columns: [
                     { text: 'Наименование', datafield: 'bankname', filtercondition: 'CONTAINS', width: 150},
                     { text: 'Город', datafield: 'city', filtercondition: 'CONTAINS', width: 150},
@@ -142,7 +105,7 @@
 
         }));
         
-        
+        ls.banks.refresh(true);
     });
 </script>
 
@@ -154,7 +117,7 @@
             'Банки' => 'banks',
     );
 ?>
-<div style="height: calc(100% - 182px)">
+<div style="height: 100%">
     <div class="ls-row" style="height: calc(100% - 34px)">
         <div class="ls-grid" id="ls-banks-grid"></div>
     </div>

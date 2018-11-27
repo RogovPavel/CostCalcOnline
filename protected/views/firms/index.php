@@ -1,33 +1,39 @@
 <script type="text/javascript">
     ls.firms = {
-        id: 0
+        rowid: undefined,
+        row: undefined,
+        rowindex: undefined,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = false;
+            if (!$("#ls-firms-grid").jqxGrid('isBindingCompleted'))
+                return;
+            if (reset) {
+                var adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['firms']), {loadError: ls.loaderror});
+                $("#ls-firms-grid").jqxGrid({source: adapter});
+            }
+            else
+                $("#ls-firms-grid").jqxGrid('updatebounddata');
+        }
     };
     
     $(document).ready(function() {
-        var currentrow_firms;
-        
-        var firms_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['firms']), {
-            loadError: function(jqXHR, status, error) {
-                ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
-                ls.lock_operation = false;
-            }
-        });
-        
         var checkbutton = function() {
-            $('#ls-btn-update').jqxButton({disabled: !(currentrow_firms != undefined)})
-            $('#ls-btn-delete').jqxButton({disabled: !(currentrow_firms != undefined)})
+            $('#ls-btn-update').jqxButton({disabled: !(ls.firms.row != undefined)})
+            $('#ls-btn-delete').jqxButton({disabled: !(ls.firms.row != undefined)})
         }
         
         $("#ls-firms-grid").on('rowselect', function (event) {
-            currentrow_firms = $('#ls-firms-grid').jqxGrid('getrowdata', event.args.rowindex);
+            var args = event.args;
+            ls.firms.rowindex = args.rowindex;
+            ls.firms.row = args.row;
             checkbutton();
         });
         
         $('#ls-btn-refresh').on('click', function() {
             if (ls.lock_operation) return;
-            
             ls.lock_operation = true;
-            $("#ls-firms-grid").jqxGrid('updatebounddata');
+            ls.firms.refresh(false);
         });
         
         $("#ls-firms-grid").on('rowdoubleclick', function(){
@@ -35,90 +41,48 @@
         });
         
         $("#ls-firms-grid").on('bindingcomplete', function() {
-            var idx = $('#ls-firms-grid').jqxGrid('selectedrowindex'); 
-            
-            if (ls.firms.id != 0) {
-                idx = $("#ls-firms-grid").jqxGrid('getrowboundindexbyid', ls.firms.id);
-                ls.firms.id = 0;
+            var idx  = ls.firms.rowindex;
+                        
+            if (ls.firms.rowid != undefined) {
+                idx = $("#ls-firms-grid").jqxGrid('getrowboundindexbyid', ls.firms.rowid);
+                ls.firms.rowid = undefined;
             }
-            
-            if (idx == -1)
+
+            var rows = $("#ls-firms-grid").jqxGrid('getrows');
+
+            if (idx == undefined || idx >= rows.length) 
                 idx = 0;
-            
+
             $("#ls-firms-grid").jqxGrid('selectrow', idx);
             $("#ls-firms-grid").jqxGrid('ensurerowvisible', idx);
-            
+
             checkbutton();
             ls.lock_operation = false;
         });
         
         $('#ls-btn-delete').on('click', function() {
             if ($('#ls-btn-delete').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_firms == undefined) return;            
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('firms/delete')) ?>,
-                type: 'POST',
-                data: {
-                    firm_id: currentrow_firms.firm_id
-                },
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $('#ls-btn-refresh').click();
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
+            if (ls.firms.row == undefined) return;            
+            ls.delete('firms', 'delete', {firm_id: ls.firms.row.firm_id}, function(Res) {
+                Res = JSON.parse(Res);
+                if (Res.state == 0) {
+                    ls.firms.rowindex--;
+                    ls.firms.refresh(false);
+                }
+                else {
+                    ls.showerrormassage('Ошибка! ' + Res.responseText);
                 }
             });
         });
         
         $('#ls-btn-update').on('click', function() {
             if ($('#ls-btn-update').jqxButton('disabled') || ls.lock_operation) return;
-            if (currentrow_firms == undefined) return;            
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('firms/update')) ?>,
-                type: 'POST',
-                data: {
-                    firm_id: currentrow_firms.firm_id
-                },
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $("#ls-dialog-content").html(Res.content);
-                        $("#ls-dialog-header-text").html(Res.dialog_header);
-                        $('#ls-dialog').jqxWindow('open');
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
-                }
-            });
+            ls.opendialogforedit('firms', 'update', {firm_id: ls.firms.row.firm_id}, 'POST', false, {width: '400px', height: '404px'});
         });
         
         $('#ls-btn-create').on('click', function() {
             if ($('#ls-btn-create').jqxButton('disabled') || ls.lock_operation) return;
-            $.ajax({
-                url: <?php echo json_encode(Yii::app()->createUrl('firms/create')) ?>,
-                type: 'POST',
-                async: false,
-                success: function(Res) {
-                    Res = JSON.parse(Res);
-                    if (Res.error == 0) {
-                        $("#ls-dialog-content").html(Res.content);
-                        $("#ls-dialog-header-text").html(Res.dialog_header);
-                        $('#ls-dialog').jqxWindow('open');
-                    } else
-                        ls.showerrormassage('Ошибка! ' + Res.error_type, Res.error_text);
-                },
-                error: function(Res) {
-                    ls.showerrormassage('Ошибка', 'При попытке загрузить страницу произошла ошибка. Повторите попытку позже.');
-                }
-            });
+            ls.opendialogforedit('firms', 'create', {}, 'POST', false, {width: '400px', height: '404px'});
         });
         
         $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 400, height: 404}));
@@ -130,7 +94,6 @@
         
         $("#ls-firms-grid").jqxGrid(
             $.extend(true, {}, ls.settings['grid'], {
-                source: firms_adapter,
                 columns: [
                     { text: 'Наименование', datafield: 'firmname', filtercondition: 'CONTAINS', width: 150},
                     { text: 'ИНН', datafield: 'inn', filtercondition: 'CONTAINS', width: 150},
@@ -147,19 +110,19 @@
 
         }));
         
-        
+        ls.firms.refresh(true);
     });
 </script>
 
 <?php
-    $this->pageTitle=Yii::app()->name . ' - Организации';
+    $this->pageTitle='Мои организации';
     $this->pageName = 'Мои организации';
     $this->breadcrumbs=array(
             'Главная' => 'site',
             'Мои организации' => 'firms',
     );
 ?>
-<div style="height: calc(100% - 182px)">
+<div style="height: 100%">
     <div class="ls-row" style="height: calc(100% - 34px)">
         <div class="ls-grid" id="ls-firms-grid"></div>
     </div>
