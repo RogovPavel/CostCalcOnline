@@ -133,8 +133,6 @@
                 'bizRule' => null,
                 'data' => null,
                 'children' => array(
-                    'admin_profile',
-                    
                     'manager_users',
                     'manager_regions',
                     'manager_firms',
