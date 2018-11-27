@@ -22592,3 +22592,12 @@ in C:\Home\LS\index.php (13)
 in C:\Home\LS\protected\components\LSFormModel.php (134)
 in C:\Home\LS\protected\controllers\ObjectequipsController.php (98)
 in C:\Home\LS\index.php (13)
+2018/11/27 10:41:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in C:\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://ls.ru/
+---
