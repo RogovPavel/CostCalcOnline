@@ -313,6 +313,8 @@ class AjaxDataController extends Controller {
         if ($filters['sql'] != '')
             $command->andWhere($filters['sql'], $filters['params']);
         
+        $command->andWhere(str_replace('.', '', $model->alias) . '.group_id = :p_group_id', array(':p_group_id' => Yii::app()->user->group_id));
+        
         $rowquant = $command->queryRow();
 
         
