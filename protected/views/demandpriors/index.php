@@ -63,7 +63,6 @@
         $('#ls-btn-delete').on('click', function() {
             if ($('#ls-btn-delete').jqxButton('disabled') || ls.lock_operation) return;
             if (ls.demandpriors.row == undefined) return;            
-            if (ls.demandpriors.row == undefined) return;            
             ls.delete('demandpriors', 'delete', {demandprior_id: ls.demandpriors.row.demandprior_id}, function(Res) {
                 Res = JSON.parse(Res);
                 if (Res.state == 0) {
