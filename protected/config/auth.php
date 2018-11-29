@@ -55,6 +55,9 @@
         /* Оборудование в сметах */
         include(dirname(__FILE__).'/security/costcalcequips.php'),
             
+        /* Настройки */
+        include(dirname(__FILE__).'/security/settings.php'),
+            
         array(    
             'guest' => array(
                 'type' => CAuthItem::TYPE_ROLE,
@@ -92,6 +95,8 @@
                     
                     'admin_costcalculations',
                     'admin_costcalcequips',
+                    
+                    'admin_settings',
                 ),
             ),
         )

@@ -5,7 +5,8 @@
  */
 class Controller extends CController
 {
-	/**
+	public $theme = '';
+        /**
 	 * @var string the default layout for the controller view. Defaults to '//layouts/column1',
 	 * meaning using a single column layout. See 'protected/views/layouts/column1.php'.
 	 */
@@ -25,8 +26,30 @@ class Controller extends CController
         public $pageName;
         
         protected function beforeAction($action) {
-            if (!Yii::app()->user->isGuest)
+            if (!Yii::app()->user->isGuest) {
                 $this->layout = '//layouts/column2';
+                
+                if (isset($_SESSION['theme']))
+                    $this->theme = $_SESSION['theme'];
+                else {
+                    $settings = new Settings();
+                    $settings->get_by_conditions(array(array(
+                        'sql' => 's.user_id = :p_user_id',
+                        'params' => array(':p_user_id' => Yii::app()->user->user_id)
+                    )));
+                    
+                    if ($settings->theme != null && $settings->theme != '') {
+                        $_SESSION['theme'] = $settings->theme;
+                        $this->theme = $settings->theme;
+                    }
+                    else {
+                        $_SESSION['theme'] = 'ui-sunny';
+                        $this->theme = 'ui-sunny';
+                    }
+                }
+                
+            }
+            
             
             return parent::beforeAction($action);
         }

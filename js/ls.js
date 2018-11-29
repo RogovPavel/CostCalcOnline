@@ -4,6 +4,19 @@ ls.defaults = {
     theme: 'ui-sunny'
 };
 
+ls.themes = [
+    {id: 1, name: 'ui-sunny'},
+    {id: 2, name: 'classic'},
+    {id: 3, name: 'dark'},
+    {id: 4, name: 'metro'},
+];
+
+var theme = localStorage.getItem('theme');
+
+if (theme != null) {
+    ls.defaults.theme = theme;
+};
+
 ls.lock_operation = false;
 
 ls.sources = [];
