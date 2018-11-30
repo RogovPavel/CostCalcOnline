@@ -56,7 +56,7 @@
         include(dirname(__FILE__).'/security/costcalcequips.php'),
             
         /* Настройки */
-        include(dirname(__FILE__).'/security/settings.php'),
+        include(dirname(__FILE__).'/security/groupsettings.php'),
             
         array(    
             'guest' => array(
@@ -96,7 +96,7 @@
                     'admin_costcalculations',
                     'admin_costcalcequips',
                     
-                    'admin_settings',
+                    'admin_groupsettings',
                 ),
             ),
             
@@ -107,6 +107,7 @@
                 'data' => null,
                 'children' => array(
                     'admin_profile',
+                    'admin_groupsettings',
                     
                     'admin_users',
                     'admin_regions',
@@ -129,6 +130,7 @@
                     
                     'admin_costcalculations',
                     'admin_costcalcequips',
+                    
                 ),
             ),
             

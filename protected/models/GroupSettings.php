@@ -1,6 +1,6 @@
 <?php
 
-class Settings extends LSFormModel {
+class GroupSettings extends LSFormModel {
     
     public $setting_id;
     public $user_id;
@@ -12,12 +12,12 @@ class Settings extends LSFormModel {
     public function __construct($scenario = '') {
         parent::__construct($scenario);
         
-        $this->sp_insert_name = 'insert_settings';
-        $this->sp_update_name = 'update_settings';
-        $this->sp_delete_name = 'delete_setings';
+        $this->sp_insert_name = 'insert_groupsettings';
+        $this->sp_update_name = 'update_groupsettings';
+        $this->sp_delete_name = 'delete_groupsetings';
         
         $this->proc_params = array(
-            'update_settings' => array('setting_id', 'user_id', 'theme', 'user_change', 'group_id'),
+            'update_groupsettings' => array('setting_id', 'user_id', 'theme', 'user_change', 'group_id'),
         );
         
         $this->command->select = "s.setting_id,
@@ -26,7 +26,7 @@ class Settings extends LSFormModel {
                                     s.user_change,
                                     s.date_change,
                                     s.group_id,";
-        $this->command->from = "settings s";
+        $this->command->from = "groupsettings s";
         $this->command->order = 's.setting_id';
         
                 

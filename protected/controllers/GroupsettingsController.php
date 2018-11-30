@@ -1,6 +1,6 @@
 <?php
 
-class SettingsController extends Controller {
+class GroupsettingsController extends Controller {
     
     public function filters() {
         return array(
@@ -11,8 +11,8 @@ class SettingsController extends Controller {
     
     public function accessRules() {
         return array(
-            array('allow', 'actions'=>array('index', 'view', 'getdata'), 'roles'=>array('view_settings'),),
-            array('allow', 'actions'=>array('update'), 'roles'=>array('update_settings'),),
+            array('allow', 'actions'=>array('index', 'view', 'getdata'), 'roles'=>array('view_groupsettings'),),
+            array('allow', 'actions'=>array('update'), 'roles'=>array('update_groupsettings'),),
             array('deny',
                     'users'=>array('*'),
             ),
@@ -20,7 +20,7 @@ class SettingsController extends Controller {
     }
     
     public function actionGetData($id) {
-        $model = new Settings();
+        $model = new GroupSettings();
         
         $model->get_by_id($id);
         
@@ -28,7 +28,7 @@ class SettingsController extends Controller {
     }
     
     public function actionView($id) {
-        $model = new Settings();
+        $model = new GroupSettings();
         
         $model->get_by_id($id);
         
@@ -46,13 +46,13 @@ class SettingsController extends Controller {
         );
         
         try {
-            $model = new Settings();
+            $model = new GroupSettings();
 
             if (isset($_POST['params']))
                 $model->setAttributes($_POST['params']);
             
-            if (isset($_POST['settings'])) {
-                $model->setAttributes($_POST['settings']);
+            if (isset($_POST['groupsettings'])) {
+                $model->setAttributes($_POST['groupsettings']);
                 if ($model->validate()) {
                     $model->user_create = Yii::app()->user->user_id;
                     $res = $model->insert();
@@ -86,7 +86,7 @@ class SettingsController extends Controller {
         );
         
         try {
-            $model = new Settings();
+            $model = new GroupSettings();
             $model->user_id = Yii::app()->user->user_id;
                     
             if (isset($_POST['setting_id']))
@@ -95,8 +95,8 @@ class SettingsController extends Controller {
             if (isset($_POST['params']))
                 $model->setAttributes($_POST['params']);
             
-            if (isset($_POST['settings'])) {
-                $model->setAttributes($_POST['settings']);
+            if (isset($_POST['groupsettings'])) {
+                $model->setAttributes($_POST['groupsettings']);
                 if ($model->validate()) {
                     $model->user_change = Yii::app()->user->user_id;
                     $res = $model->update();
@@ -133,7 +133,7 @@ class SettingsController extends Controller {
         );
         
         try {
-            $model = new Settings();
+            $model = new GroupSettings();
             
             if (isset($_POST['setting_id'])) {
                 $model->get_by_id($_POST['setting_id']);

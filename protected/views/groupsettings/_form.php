@@ -12,7 +12,7 @@
             $('#ls-dialog').jqxWindow('close');
         });
         
-        $('#settings').on('keyup keypress', function(e) {
+        $('#groupsettings').on('keyup keypress', function(e) {
             var keyCode = e.keyCode || e.which;
             if (keyCode === 13) { 
                 e.preventDefault();
@@ -30,7 +30,7 @@
             else
                 var action = 'update';
             
-            ls.save('settings', action, $('#settings').serialize(), function(Res) {
+            ls.save('groupsettings', action, $('#groupsettings').serialize(), function(Res) {
                 Res = JSON.parse(Res);
                 ls.lock_operation = false;
                 if (Res.state == 0) {
@@ -54,7 +54,7 @@
 
 <?php 
     $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'settings',
+	'id'=>'groupsettings',
 	'htmlOptions'=>array(
             'class'=>'ls-form-html',
             
@@ -62,13 +62,13 @@
     )); 
 ?>
 
-<input type="hidden" name="settings[setting_id]" value="<?php echo $model->setting_id; ?>" />
+<input type="hidden" name="groupsettings[setting_id]" value="<?php echo $model->setting_id; ?>" />
 
 <div>
     <div class="ls-form-data">
         <div class="ls-form-row">
             <div class="ls-form-label">Тема:</div>
-            <div class="ls-form-column" style="width: calc(100% - 126px);"><div id="ls-setting-edit-theme" name="settings[theme]" autocomplete="off"></div></div>
+            <div class="ls-form-column" style="width: calc(100% - 126px);"><div id="ls-setting-edit-theme" name="groupsettings[theme]" autocomplete="off"></div></div>
             <div class="ls-form-error"><?php echo $form->error($model, 'theme'); ?></div>
         </div>
         <div class="ls-form-row">

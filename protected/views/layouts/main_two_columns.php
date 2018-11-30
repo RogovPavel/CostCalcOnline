@@ -4,16 +4,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="language" content="en">
         <link rel="shortcut icon" href="/images/favicon.ico">
-        
+        <meta name="meta-theme" theme="<?php echo $this->theme; ?>">
         <?php Yii::app()->clientScript->registerPackage('ls_libs'); ?>
         <?php Yii::app()->clientScript->registerCssFile(Yii::app()->request->baseUrl . "/js/jqwidgets/styles/jqx." . $this->theme . ".css"); ?>
         <?php Yii::app()->clientScript->registerCssFile(Yii::app()->request->baseUrl . "/css/main." . $this->theme . ".css"); ?>
-               
-        
-        
-        
-        
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+        <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     </head>
     <body>
         
@@ -137,7 +132,7 @@
         $("#ls-top-menu").jqxMenu({theme: ls.defaults.theme, width: 'calc(100% - 2px)', height: '28px'});
         $("#ls-top-menu").css('visibility', 'visible');
         $("#ls-left-menu").jqxNavigationBar({theme: ls.defaults.theme, width: 200, expandMode: 'multiple', expandedIndexes: [0, 1, 2]});
-        console.log(ls.defaults.theme);
+        
     });
 </script>
 

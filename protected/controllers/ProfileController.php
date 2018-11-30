@@ -29,15 +29,15 @@ class ProfileController extends Controller {
         
         $model->get_by_id(Yii::app()->user->user_id);
 
-        $settings = new Settings();
-        $settings->get_by_conditions(array(array(
-            'sql' => 's.user_id = :p_user_id',
-            'params' => array(':p_user_id' => Yii::app()->user->user_id),
+        $groupsettings = new GroupSettings();
+        $groupsettings->get_by_conditions(array(array(
+            'sql' => 's.group_id = :p_group_id',
+            'params' => array(':p_group_id' => Yii::app()->user->group_id),
         )));        
         
         $this->render('index', array(
             'model' => $model,
-            'settings' => $settings
+            'groupsettings' => $groupsettings
         ));
     }
 }

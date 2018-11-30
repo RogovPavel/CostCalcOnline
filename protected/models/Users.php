@@ -64,7 +64,7 @@ class Users extends LSFormModel {
                                     s.theme,
                                     u.deldate';
         $this->command->from = 'users u left join roles r on (u.role_id = r.role_id)
-                                    left join settings s on (u.user_id = s.user_id)';
+                                    left join groupsettings s on (u.group_id = s.group_id)';
         $this->command->where = 'u.deldate is null';
 
         

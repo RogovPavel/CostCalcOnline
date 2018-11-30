@@ -3,13 +3,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="language" content="en">
-        
+        <link rel="shortcut icon" href="/images/favicon.ico">
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
 	
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-3.3.1.min.js"></script>
-        <link>
+        <meta name="meta-theme" theme="ui-sunny">
         <?php Yii::app()->clientScript->registerPackage('ls_libs'); ?>
-        <link>
+        <?php Yii::app()->clientScript->registerCssFile(Yii::app()->request->baseUrl . "/js/jqwidgets/styles/jqx.ui-sunny.css"); ?>
+        
         <script type="text/javascript">
             $(document).ready(function() {
                 $("#ls-top-menu").jqxMenu({theme: ls.defaults.theme, width: 'calc(100% - 2px)', height: '28px'});

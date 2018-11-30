@@ -19,14 +19,14 @@
     
     ls.options = {
         rowid: undefined,
-        row: <?php echo json_encode($settings); ?>,
+        row: <?php echo json_encode($groupsettings); ?>,
         refresh: function(reset) {
             if (reset == undefined)
                 reset = true;
             
             if (reset) {
                 $.ajax({
-                    url: '/settings/getdata/' + <?php echo json_encode(Yii::app()->user->user_id); ?>,
+                    url: '/groupsettings/getdata/' + <?php echo json_encode(Yii::app()->user->user_id); ?>,
                     success: function(Res) {
                         ls.options.row = JSON.parse(Res);
                         ls.options.setvalues();
@@ -41,7 +41,7 @@
             }
         },
         setvalues: function() {
-            $("#ls-settings-theme").jqxInput('val', ls.options.row.theme);
+            $("#ls-groupsettings-theme").jqxInput('val', ls.options.row.theme);
         }
     };
     
@@ -55,12 +55,12 @@
         var initWidgets = function(tab) {
             switch(tab) {
                 case 0:
-                    $("#ls-settings-theme").jqxInput($.extend(true, {}, ls.settings['input'], {width: '150px', height: 25}));
-                    $('#ls-btn-edit-settings').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+                    $("#ls-groupsettings-theme").jqxInput($.extend(true, {}, ls.settings['input'], {width: '150px', height: 25}));
+                    $('#ls-btn-edit-groupsettings').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
                     
-                    $('#ls-btn-edit-settings').on('click', function() {
-                        if ($('#ls-btn-edit-settings').jqxButton('disabled') || ls.lock_operation) return;
-                        ls.opendialogforedit('settings', 'update', {setting_id: ls.options.row.setting_id}, 'POST', false, {width: '620px', height: '124px'});
+                    $('#ls-btn-edit-groupsettings').on('click', function() {
+                        if ($('#ls-btn-edit-groupsettings').jqxButton('disabled') || ls.lock_operation) return;
+                        ls.opendialogforedit('groupsettings', 'update', {setting_id: ls.options.row.setting_id}, 'POST', false, {width: '620px', height: '124px'});
                     });
                     
                     ls.options.setvalues();
@@ -209,10 +209,10 @@
             <div style="padding: 10px;">
                 <div class="ls-row">
                     <div class="ls-row-column" style="width: 100px">Тема:</div>
-                    <div class="ls-row-column"><input type="text" readonly="readonly" id="ls-settings-theme" autocomplete="off"/></div>
+                    <div class="ls-row-column"><input type="text" readonly="readonly" id="ls-groupsettings-theme" autocomplete="off"/></div>
                 </div>
                 <div class="ls-row">
-                    <div class="ls-row-column"><input type="button" id="ls-btn-edit-settings" value="Изменить" /></div>
+                    <div class="ls-row-column"><input type="button" id="ls-btn-edit-groupsettings" value="Изменить" /></div>
                 </div>
             </div>
             <div style="padding: 10px;">

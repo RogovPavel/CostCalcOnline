@@ -32,10 +32,10 @@ class Controller extends CController
                 if (isset($_SESSION['theme']))
                     $this->theme = $_SESSION['theme'];
                 else {
-                    $settings = new Settings();
+                    $settings = new GroupSettings();
                     $settings->get_by_conditions(array(array(
-                        'sql' => 's.user_id = :p_user_id',
-                        'params' => array(':p_user_id' => Yii::app()->user->user_id)
+                        'sql' => 's.group_id = :p_group_id',
+                        'params' => array(':p_group_id' => Yii::app()->user->group_id)
                     )));
                     
                     if ($settings->theme != null && $settings->theme != '') {
