@@ -14,7 +14,6 @@ ls.themes = [
 
 
 var theme = $('[name="meta-theme"]').attr('theme');
-console.log(theme);
 ls.defaults.theme = theme;
 
 
@@ -256,6 +255,11 @@ ls.settings['grid'] = {
     virtualmode: false,
     theme: ls.defaults.theme,
     localization: getLocalization('ru'),
+    columnsresize: true,
+    columnsreorder: true,
+    autosavestate: true,
+    autoloadstate: true,
+    
     rendergridrows: function (params) {
             return params.data;
     }    
@@ -632,6 +636,10 @@ ls.sources['objectgroups'] = {
         {name: 'address', type: 'string'},
         {name: 'client_id', type: 'int'},
         {name: 'clientname', type: 'string'},
+        {name: 'manger_id', type: 'int'},
+        {name: 'managername', type: 'string'},
+        {name: 'quantdoorway', type: 'int'},
+        {name: 'datebuild', type: 'date'},
         {name: 'note', type: 'string'}, 
     ],
     id: 'objectgr_id',

@@ -32,6 +32,10 @@
             $("#ls-og-clientname").jqxInput('val', ls.objectgroups.row.clientname);
             $("#ls-og-address").jqxInput('val', ls.objectgroups.row.address);
             $("#ls-og-note").jqxTextArea('val', ls.objectgroups.row.note);
+            $("#ls-og-quantdoorway").jqxInput('val', ls.objectgroups.row.quantdoorway);
+            $("#ls-og-datebuild").jqxDateTimeInput('val', ls.objectgroups.row.datebuild);
+            $("#ls-og-managername").jqxInput('val', ls.objectgroups.row.managername);
+            
         }
     };
     ls.objectgroupcontacts = {
@@ -170,12 +174,17 @@
                     $("#ls-og-clientname").jqxInput($.extend(true, {}, ls.settings['input'], {width: '250px', height: 25, disabled: false}));
                     $("#ls-og-address").jqxInput($.extend(true, {}, ls.settings['input'], {width: '250px', height: 25, disabled: false}));
                     $("#ls-og-note").jqxTextArea($.extend(true, {}, ls.settings['textarea'], {theme: ls.defaults.theme, width: 'calc(100% - 2px)', height: 'calc(100% - 2px)'}));
+                    $("#ls-og-quantdoorway").jqxInput($.extend(true, {}, ls.settings['input'], {width: '140px', height: 25, disabled: false}));
+                    $("#ls-og-datebuild").jqxDateTimeInput($.extend(true, {}, ls.settings['datetime'], {value: null, width: '130px', height: 25, formatString: 'dd.MM.yyyy'}));
+                    $("#ls-og-managername").jqxInput($.extend(true, {}, ls.settings['input'], {width: '140px', height: 25, disabled: false}));
+                    
+                    
                     $("#ls-og-edit").jqxButton($.extend(true, {}, ls.settings['button'], {theme: ls.defaults.theme, width: '100px', height: 30}));
                     ls.objectgroups.refresh(false);
                     
                     $('#ls-og-edit').on('click', function() {
                         if ($('#ls-og-edit').jqxButton('disabled') || ls.lock_operation) return;
-                        ls.opendialogforedit('objectgroups', 'update', {objectgr_id: ls.objectgroups.row.objectgr_id}, 'POST', false, {width: '600px', height: '300px'});
+                        ls.opendialogforedit('objectgroups', 'update', {objectgr_id: ls.objectgroups.row.objectgr_id}, 'POST', false, {width: '600px', height: '400px'});
                     });
                     
                     var checkbuttoncontacts = function() {
@@ -542,7 +551,7 @@
             <li style="">Коммерческие предложение и сметы</li>
         </ul>
         <div style="padding: 10px;">
-            <div class='ls-row' style="height: 190px">
+            <div class='ls-row' style="height: 252px">
                 <div class="ls-row">
                     <div class="ls-row-column" style="width: 130px;">Клиент:</div>
                     <div class="ls-row-column"><input type="text" readonly="readonly" autocomplete="off" id="ls-og-clientname"/></div>
@@ -551,13 +560,23 @@
                     <div class="ls-row-column" style="width: 130px;">Адрес:</div>
                     <div class="ls-row-column"><input type="text" readonly="readonly" autocomplete="off" id="ls-og-address"/></div>
                 </div>
+                <div class="ls-row">
+                    <div class="ls-row-column" style="width: 130px;">Кол-во подъездов:</div>
+                    <div class="ls-row-column"><input type="text" readonly="readonly" autocomplete="off" id="ls-og-quantdoorway"/></div>
+                    <div class="ls-row-column">Дата постройки:</div>
+                    <div class="ls-row-column"><div readonly="readonly" autocomplete="off" id="ls-og-datebuild"></div></div>
+                </div>
+                <div class="ls-row">
+                    <div class="ls-row-column" style="width: 130px;">Менеджер:</div>
+                    <div class="ls-row-column"><input type="text" readonly="readonly" autocomplete="off" id="ls-og-managername"/></div>
+                </div>
                 <div class="ls-row">Примечание:</div>
                 <div class="ls-row" style="height: 70px;"><textarea readonly="readonly" id="ls-og-note"></textarea></div>
                 <div class="ls-row">
                     <div class="ls-row-column" style="width: 130px;"><input type="button" id="ls-og-edit" value="Изменить"/></div>
                 </div>
             </div>
-            <div class='ls-row' style="height: calc(100% - 218px)">
+            <div class='ls-row' style="height: calc(100% - 280px)">
                 <div class="ls-row" style="height: calc(100% - 34px)">
                     <div class="ls-grid" id="ls-objectgroupcontacts-grid"></div>
                 </div>

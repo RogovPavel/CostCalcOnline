@@ -82,7 +82,7 @@
         
         $('#ls-btn-create').on('click', function() {
             if ($('#ls-btn-create').jqxButton('disabled') || ls.lock_operation) return;
-            ls.opendialogforedit('objectgroups', 'create', {}, 'POST', false, {width: '600px', height: '300px'});
+            ls.opendialogforedit('objectgroups', 'create', {}, 'POST', false, {width: '600px', height: '400px'});
         });
         
         $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 600, height: 300}));
@@ -97,6 +97,9 @@
                 columns: [
                     { text: 'Адрес', datafield: 'address', width: 250},    
                     { text: 'Клиент', datafield: 'clientname', width: 230},
+                    { text: 'Менеджер', datafield: 'managername', width: 150},
+                    { text: 'Дата постройки', datafield: 'datebuild', width: 150},
+                    { text: 'Кол-во подъездов', datafield: 'qountdoorway', width: 150},
                 ]
 
         }));
