@@ -24194,3 +24194,12 @@ Stack trace:
 REQUEST_URI=/favicon.ico
 HTTP_REFERER=http://ls.ru/
 ---
+2018/12/03 20:21:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\Work\Home\LS\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://ls.ru/
+---
