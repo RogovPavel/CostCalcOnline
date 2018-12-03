@@ -6,6 +6,7 @@ class Objects extends LSFormModel {
     public $objectgr_id;
     public $doorway;
     public $quant_flats;
+    public $numberflats;
     public $code;
     public $address;
     public $note; 
@@ -23,8 +24,8 @@ class Objects extends LSFormModel {
         $this->sp_delete_name = 'delete_objects';
         
         $this->proc_params = array(
-            'insert_objects' => array('object_id', 'objectgr_id', 'doorway', 'quant_flats', 'code', 'note', 'user_create', 'group_id'),
-            'update_objects' => array('object_id', 'objectgr_id', 'doorway', 'quant_flats', 'code', 'note', 'user_create', 'group_id'),
+            'insert_objects' => array('object_id', 'objectgr_id', 'doorway', 'quant_flats', 'numberflats', 'code', 'note', 'user_create', 'group_id'),
+            'update_objects' => array('object_id', 'objectgr_id', 'doorway', 'quant_flats', 'numberflats', 'code', 'note', 'user_create', 'group_id'),
             'delete_objects' => array('object_id', 'user_change', 'group_id'),
         );
         
@@ -32,6 +33,7 @@ class Objects extends LSFormModel {
                                     o.objectgr_id,
                                     o.doorway,
                                     o.quant_flats,
+                                    o.numberflats,
                                     o.code,
                                     o.address,
                                     o.note,
@@ -58,6 +60,7 @@ class Objects extends LSFormModel {
                     objectgr_id,
                     doorway,
                     quant_flats,
+                    numberflats,
                     code,
                     address,
                     note,
@@ -75,6 +78,7 @@ class Objects extends LSFormModel {
             'objectgr_id' => '',
             'doorway' => '',
             'quant_flats' => '',
+            'numberflats' => '',
             'code' => '',
             'address' => '',
             'note' => '',

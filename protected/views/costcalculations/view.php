@@ -76,6 +76,35 @@
         }
     };
     
+    ls.costcalcworks = {
+        rowid: undefined,
+        row: undefined,
+        rowindex: undefined,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = false;
+            if (!$("#ls-costcalcworks-grid").jqxGrid('isBindingCompleted'))
+                return;
+            if (reset) {
+                var adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['costcalcworks']), {
+                    loadError: ls.loaderror,
+                    formatData: function (data) {
+                        var fltrs = [];
+                        if (ls.costcalculations.row.calc_id != null && ls.costcalculations.row.calc_id != undefined)
+                            fltrs.push({field: 'ccw.calc_id', operand: 1, value: ls.costcalculations.row.calc_id});
+                        else
+                            fltrs.push({field: 'ccw.calc_id', operand: 1, value: -1});
+                        $.extend(data, {filters: fltrs});
+                        return data;
+                    },
+                });
+                $("#ls-costcalcworks-grid").jqxGrid({source: adapter});
+            }
+            else
+                $("#ls-costcalcworks-grid").jqxGrid('updatebounddata');
+        }
+    };
+    
     
     $(document).ready(function() {
         var settabindex = function(idx) {
@@ -96,7 +125,7 @@
         $("#ls-costcalculations-name").jqxInput($.extend(true, {}, ls.settings['input'], {width: '358px', height: 25, disabled: false}));
         $("#ls-costcalculations-client").jqxInput($.extend(true, {}, ls.settings['input'], {width: '358px', height: 25, disabled: false}));
         $("#ls-costcalculations-manager").jqxInput($.extend(true, {}, ls.settings['input'], {width: '158px', height: 25, disabled: false}));
-        $("#ls-costcalculations-demand").jqxInput($.extend(true, {}, ls.settings['input'], {width: '100px', height: 25, disabled: false}));
+        $("#ls-costcalculations-demand").jqxInput($.extend(true, {}, ls.settings['input'], {width: '80px', height: 25, disabled: false}));
         $("#ls-costcalculations-specnote").jqxTextArea($.extend(true, {}, ls.settings['textarea'], {height: '70px', width: 'calc(100% - 8px)'}));
         $("#ls-costcalculations-edit").jqxButton($.extend(true, {}, ls.settings['button'], {theme: ls.defaults.theme, width: '100px', height: 30}));
         
@@ -119,7 +148,7 @@
         
         $('#ls-costcalculations-edit').on('click', function() {
             if ($('#ls-costcalculations-edit').jqxButton('disabled') || ls.lock_operation) return;
-            ls.opendialogforedit('costcalculations', 'update', {calc_id: ls.costcalculations.row.calc_id}, 'POST', false, {width: '600px', height: '558px'});
+            ls.opendialogforedit('costcalculations', 'update', {calc_id: ls.costcalculations.row.calc_id}, 'POST', false, {width: '600px', height: '564px'});
         });
         
         var initWidgets = function(tab) {
@@ -226,12 +255,126 @@
                         }, 'POST', true)
                     });
                     break;
+                case 1:
+                    var checkbuttoncostcalcworks = function() {
+                        $('#ls-btn-add-costcalcworks').jqxButton({disabled: !(ls.costcalculations.row != undefined)})
+                    };
+                    
+                    $("#ls-costcalcworks-grid").on('bindingcomplete', function(event) {
+                        var idx  = ls.costcalcworks.rowindex;
+                        
+                        if (ls.costcalcworks.rowid != undefined) {
+                            idx = $("#ls-costcalcworks-grid").jqxGrid('getrowboundindexbyid', ls.costcalcworks.rowid);
+                            ls.costcalcworks.rowid = undefined;
+                        }
+                        
+                        var rows = $("#ls-costcalcworks-grid").jqxGrid('getrows');
+                        
+                        if (idx == undefined || idx >= rows.length) 
+                            idx = 0;
+                        
+                        $("#ls-costcalcworks-grid").jqxGrid('selectrow', idx);
+                        $("#ls-costcalcworks-grid").jqxGrid('ensurerowvisible', idx);
+
+                        checkbuttoncostcalcworks();
+                        ls.lock_operation = false;
+                    });
+                    
+                    $("#ls-costcalcworks-grid").on('rowselect', function (event) {
+                        var args = event.args;
+                        ls.costcalcworks.rowindex = args.rowindex;
+                        ls.costcalcworks.row = args.row;
+                        checkbuttoncostcalcworks();
+                    });
+                    
+                    $('#ls-btn-add-costcalcworks').jqxButton($.extend(true, {}, ls.settings['button'], {width: 120, height: 30}));
+                    $("#ls-btn-edit-costcalcworks").jqxButton($.extend(true, {}, ls.settings['button'], {width: 120, height: 30}));
+                    $('#ls-btn-del-costcalcworks').jqxButton($.extend(true, {}, ls.settings['button'], {width: 120, height: 30}));
+                    $('#ls-btn-refresh-costcalcworks').jqxButton($.extend(true, {}, ls.settings['button'], {width: 120, height: 30}));
+                    
+                    $("#ls-costcalcworks-grid").jqxGrid(
+                        $.extend(true, {}, ls.settings['grid'], {
+                            pageable: false,
+                            showstatusbar: true,
+                            showaggregates: true,
+                            columns: [
+                                {text: 'Наименование работ', columngroup: 'group1', datafield: 'worknamefull', width: 240},
+                                {text: 'Оборудование', columngroup: 'group1', datafield: 'equipname', width: 140},    
+                                {text: 'Ед. изм.', columngroup: 'group1', datafield: 'unit_name', width: 80},
+                                {text: 'Кол-во', columngroup: 'group1', datafield: 'quant', width: 80, cellsformat: 'f2'},    
+                                {text: 'Цена за единицу', columngroup: 'group1', datafield: 'price_high', width: 120, cellsformat: 'f2'},    
+                                {text: 'Стоимость', columngroup: 'group1', datafield: 'sum_price_high', width: 120, cellsformat: 'f2',
+                                    aggregates: [
+                                        { 'Сумма':
+                                            function (aggregatedValue, currentValue) {
+                                                return aggregatedValue + currentValue;
+                                            }
+                                        }
+                                    ]
+                                },
+                                {text: 'Цена за единицу', columngroup: 'group2', datafield: 'price_low', width: 120, cellsformat: 'f2'},    
+                                {text: 'Итого', columngroup: 'group2', datafield: 'sum_price_low', width: 120, cellsformat: 'f2',
+                                    aggregates: [
+                                        { 'Сумма':
+                                            function (aggregatedValue, currentValue) {
+                                                return aggregatedValue + currentValue;
+                                            }
+                                        }
+                                    ]
+                                },    
+                            ],
+                            columngroups: [
+                                { text: 'Работы', align: 'center', name: 'group1' },
+                                { text: 'Себестоимость', align: 'center', name: 'group2' },
+                            ]
+                    }));
+                    
+                    
+                    
+                    
+                    ls.costcalcworks.refresh(true);
+                    
+                    $('#ls-btn-add-costcalcworks').on('click', function() {
+                        if ($('#ls-btn-add-costcalcworks').jqxButton('disabled') || ls.lock_operation) return;
+                        ls.opendialogforedit('costcalcworks', 'create', {params: {calc_id: ls.costcalculations.row.calc_id}}, 'POST', false, {width: '700px', height: '380px'});
+                    });
+                    
+                    $('#ls-btn-edit-costcalcworks').on('click', function() {
+                        if ($('#ls-btn-add-costcalcworks').jqxButton('disabled') || ls.lock_operation) return;
+                        ls.opendialogforedit('costcalcworks', 'update', {cceq_id: ls.costcalcworks.row.cceq_id}, 'POST', false, {width: '700px', height: '380px'});
+                    });
+                    
+                    $('#ls-btn-refresh-costcalcworks').on('click', function() {
+                        ls.costcalcworks.refresh(false);
+                    });
+                    
+                    $('#ls-btn-del-costcalcworks').on('click', function() {
+                        ls.delete('costcalcworks', 'delete', {cceq_id: ls.costcalcworks.row.cceq_id}, function(Res) {
+                            Res = JSON.parse(Res);
+                            if (Res.state == 0) {
+                                ls.costcalcworks.rowindex--;
+                                ls.costcalcworks.refresh(false);
+                            }
+                            else
+                                ls.showerrormassage('Ошибка!', Res.responseText);
+                        }, 'POST', true)
+                    });
+                    break;
             };
         };
         
         $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 600, height: 524}));
         
-        $('#ls-costcalculations-tab').jqxTabs($.extend(true, {}, ls.settings['tab'], { width: 'calc(100% - 2px)', height: 'calc(100% - 2px)', position: 'top', initTabContent: initWidgets}));
+        $('#ls-costcalculations-tab').on('selected', function(event) {
+            var idx = event.args.item;
+            settabindex(idx);
+        });
+        
+        var idx = gettabindex();
+        if (isNaN(idx))
+            idx = 0;
+        
+        $('#ls-costcalculations-tab').jqxTabs($.extend(true, {}, ls.settings['tab'], {selectedItem: idx, width: 'calc(100% - 2px)', height: 'calc(100% - 2px)', position: 'top', initTabContent: initWidgets}));
         
         ls.costcalculations.setvalues();
     });
@@ -275,7 +418,7 @@
                     <div class="ls-row-column"><input type="text" id="ls-costcalculations-demand" style="" readonly="readonly"/></div>
                 </div>
             </div>
-            <div class="ls-row-column" style="width: calc(100% - 448px)">
+            <div class="ls-row-column" style="width: calc(100% - 480px)">
                 <div>Техническое задание:</div>
                 <div>
                     <textarea id="ls-costcalculations-specnote" autocomplete="off"></textarea>
@@ -290,10 +433,10 @@
         <div id='ls-costcalculations-tab'>
             <ul>
                 <li style="margin-left: 30px;">Оборудование</li>
-                <li style="">Работы</li>
+                <li style="">Перечень работ</li>
             </ul>
             <div style="padding: 10px;">
-                <div class="ls-row" style="height: calc(100% - 64px)">
+                <div class="ls-row" style="height: calc(100% - 54px)">
                     <div class="ls-grid" id="ls-costcalcequips-grid"></div>
                 </div>
                 <div class="ls-row">
@@ -304,38 +447,46 @@
                 </div>
             </div>
             <div style="padding: 10px;">
-                
+                <div class="ls-row" style="height: calc(100% - 54px)">
+                    <div class="ls-grid" id="ls-costcalcworks-grid"></div>
+                </div>
+                <div class="ls-row">
+                    <div class="ls-row-column"><input type="button" id="ls-btn-add-costcalcworks" value="Создать" /></div>
+                    <div class="ls-row-column"><input type="button" id="ls-btn-edit-costcalcworks" value="Изменить" /></div>
+                    <div class="ls-row-column"><input type="button" id="ls-btn-refresh-costcalcworks" value="Обновить" /></div>
+                    <div class="ls-row-column-right"><input type="button" id="ls-btn-del-costcalcworks" value="Удалить" /></div>
+                </div>
             </div>
         </div>
     </div>
     <div class="ls-row" style="height: 120px;">
         <div class="ls-row-column">
             <div class="ls-row">
-                <div class="ls-row-column" style="width: 140px; font-weight: bold;">Расходные материалы:</div>
+                <div class="ls-row-column" style="width: 200px; font-weight: bold;">Расходные материалы:</div>
                 <div class="ls-row-column"><div id="ls-costcalculations-summaterialslow"></div></div>
-                <div class="ls-row-column" style="width: 75px">Для клиента:</div>
+                <div class="ls-row-column" style="width: 105px; font-weight: bold;">Для клиента:</div>
                 <div class="ls-row-column"><div id="ls-costcalculations-summaterialshigh"></div></div>
             </div>
             <div class="ls-row">
-                <div class="ls-row-column" style="width: 140px; font-weight: bold;">Трансп. расходы:</div>
+                <div class="ls-row-column" style="width: 200px; font-weight: bold;">Трансп. расходы:</div>
                 <div class="ls-row-column"><div id="ls-costcalculations-sumexpenceslow"></div></div>
-                <div class="ls-row-column" style="width: 75px">Для клиента:</div>
+                <div class="ls-row-column" style="width: 105px; font-weight: bold;">Для клиента:</div>
                 <div class="ls-row-column"><div id="ls-costcalculations-sumexpenceshigh"></div></div>
             </div>
             <div class="ls-row">
-                <div class="ls-row-column" style="width: 140px; font-weight: bold;">Пускн. работы:</div>
+                <div class="ls-row-column" style="width: 200px; font-weight: bold;">Пускн. работы:</div>
                 <div class="ls-row-column"><div id="ls-costcalculations-sumstartworkslow"></div></div>
-                <div class="ls-row-column" style="width: 75px">Для клиента:</div>
+                <div class="ls-row-column" style="width: 105px; font-weight: bold;">Для клиента:</div>
                 <div class="ls-row-column"><div id="ls-costcalculations-sumstartworkshigh"></div></div>
             </div>
             <div class="ls-row">
-                <div class="ls-row-column" style="width: 140px; font-weight: bold;">Коэф. накрутки на ФОТ:</div>
+                <div class="ls-row-column" style="width: 200px; font-weight: bold;">Коэф. накрутки на ФОТ:</div>
                 <div class="ls-row-column"><div id="ls-costcalculations-koef"></div></div>
-                <div class="ls-row-column" style="width: 75px; height: 1px;"></div>
+                <div class="ls-row-column" style="width: 105px; height: 1px;"></div>
                 <div class="ls-row-column"><input type="button" id="ls-btn-edit-details" value="Изменить" /></div>
             </div>
         </div>
-        <div class="ls-row-column-right">
+        <div class="ls-row-column" style="margin-left: 60px;">
             <div class="ls-row">
                 <div class="ls-row-column-right"><div id="ls-costcalculations-sumlowfull"></div></div>
                 <div class="ls-row-column-right" style="font-weight: bold;">Себестоимость:</div>

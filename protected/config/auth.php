@@ -54,9 +54,14 @@
         include(dirname(__FILE__).'/security/costcalculations.php'),   
         /* Оборудование в сметах */
         include(dirname(__FILE__).'/security/costcalcequips.php'),
+        /* Работы в сметах */
+        include(dirname(__FILE__).'/security/costcalcworks.php'),
             
         /* Настройки */
         include(dirname(__FILE__).'/security/groupsettings.php'),
+            
+        /* Должности контактных лиц */
+        include(dirname(__FILE__).'/security/clientpositions.php'),
             
         array(    
             'guest' => array(
@@ -95,8 +100,10 @@
                     
                     'admin_costcalculations',
                     'admin_costcalcequips',
+                    'admin_costcalcworks',
                     
                     'admin_groupsettings',
+                    'admin_clientpositions'
                 ),
             ),
             
@@ -124,12 +131,16 @@
                     'admin_units',
                     'admin_equips',
                     'admin_objectequips',
+                    'admin_objectworks',
                     
                     'admin_demands',
                     'admin_demandcomments',
                     
                     'admin_costcalculations',
                     'admin_costcalcequips',
+                    'admin_costcalcworks',
+                    
+                    'admin_clientpositions'
                     
                 ),
             ),
@@ -161,6 +172,10 @@
                     
                     'manager_costcalculations',
                     'manager_costcalcequips',
+                    'manager_costcalcworks',
+                    
+                    
+                    'manager_clientpositions'
                 ),
             ),
             

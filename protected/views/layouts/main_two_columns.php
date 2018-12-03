@@ -42,6 +42,7 @@
                             <ul>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_firms'); ?>><a href='<?php echo Yii::app()->createUrl('firms'); ?>'>Мои организации</a></li>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_clients'); ?>><a href='<?php echo Yii::app()->createUrl('clients'); ?>'>Клиенты</a></li>
+                                <li <?php Yii::app()->security->HideShowMenuItem('view_clientpositions'); ?>><a href='<?php echo Yii::app()->createUrl('clientpositions'); ?>'>Должности</a></li>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_banks'); ?>><a href='<?php echo Yii::app()->createUrl('banks'); ?>'>Банки</a></li>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_regions'); ?>><a href='<?php echo Yii::app()->createUrl('regions'); ?>'>Регионы</a></li>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_streets'); ?>><a href='<?php echo Yii::app()->createUrl('streets'); ?>'>Улицы</a></li>

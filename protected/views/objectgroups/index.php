@@ -91,15 +91,18 @@
         $('#ls-btn-update').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
         $('#ls-btn-refresh').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
         $('#ls-btn-delete').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+        $('#ls-btn-create-demand').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
         
         $("#ls-objectgroups-grid").jqxGrid(
             $.extend(true, {}, ls.settings['grid'], {
+                showfilterrow: true,
+                filterable: true,
                 columns: [
                     { text: 'Адрес', datafield: 'address', width: 250},    
                     { text: 'Клиент', datafield: 'clientname', width: 230},
                     { text: 'Менеджер', datafield: 'managername', width: 150},
-                    { text: 'Дата постройки', datafield: 'datebuild', width: 150},
-                    { text: 'Кол-во подъездов', datafield: 'qountdoorway', width: 150},
+                    { text: 'Дата постройки', datafield: 'datebuild', width: 150, cellsformat: 'dd.MM.yyyy', filtertype: 'range'},
+                    { text: 'Кол-во подъездов', datafield: 'quantdoorway', width: 150},
                 ]
 
         }));
@@ -122,7 +125,8 @@
     </div>
     <div class="ls-row">
         <div class="ls-row-column"><input type="button" id="ls-btn-create" value="Создать" /></div>
-        <div class="ls-row-column"><input type="button" id="ls-btn-update" value="Изменить" /></div>
+        <div class="ls-row-column"><input type="button" id="ls-btn-update" value="Карточка" /></div>
+        <div class="ls-row-column"><input type="button" id="ls-btn-create-demand" value="Новая заявка" /></div>
         <div class="ls-row-column"><input type="button" id="ls-btn-refresh" value="Обновить" /></div>
         <div class="ls-row-column-right"><input type="button" id="ls-btn-delete" value="Удалить" /></div>
     </div>

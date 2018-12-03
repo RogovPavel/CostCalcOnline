@@ -152,6 +152,35 @@
                 $("#ls-objectequipsgeneral-grid").jqxGrid('updatebounddata');
         }
     };
+    ls.costcalculations = {
+        rowid: undefined,
+        row: undefined,
+        rowindex: undefined,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = false;
+            if (!$("#ls-costcalculations-grid").jqxGrid('isBindingCompleted'))
+                return;
+            
+            if (reset) {
+                var adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['costcalculations']), {
+                    loadError: ls.loaderror,
+                    formatData: function (data) {
+                        var fltrs = [];
+                        if (ls.objectgroups.row != undefined && ls.objectgroups.row.objectgr_id != null)
+                            fltrs.push({field: 'c.objectgr_id', operand: 1, value: ls.objectgroups.row.objectgr_id});
+                        else
+                            fltrs.push({field: 'c.object_id', operand: 1, value: -1});
+                        $.extend(data, {filters: fltrs});
+                        return data;
+                    },
+                });
+                $("#ls-costcalculations-grid").jqxGrid({source: adapter});
+            }
+            else 
+                $("#ls-costcalculations-grid").jqxGrid('updatebounddata');
+        }
+    };
     
     $(document).ready(function() {
         var settabindex = function(idx) {
@@ -222,10 +251,10 @@
                     $("#ls-objectgroupcontacts-grid").jqxGrid(
                         $.extend(true, {}, ls.settings['grid'], {
                             columns: [
-                                { text: 'ФИО', columngroup: 'group1', datafield: 'fullname', width: 180},    
-                                { text: 'Должность', columngroup: 'group1', datafield: 'position_name', width: 120},
-                                { text: 'Телефон', columngroup: 'group1', datafield: 'phonenumber', width: 120},
-                                { text: 'Почта', columngroup: 'group1', datafield: 'email', width: 120},
+                                { text: 'ФИО', columngroup: 'group1', datafield: 'fullname', width: 240},    
+                                { text: 'Должность', columngroup: 'group1', datafield: 'positionname', width: 220},
+                                { text: 'Телефон', columngroup: 'group1', datafield: 'phonenumber', width: 140},
+                                { text: 'Почта', columngroup: 'group1', datafield: 'email', width: 220},
                             ],
                             columngroups: [
                               { text: 'Контактные лица', align: 'center', name: 'group1' },
@@ -306,7 +335,10 @@
                     $("#ls-objects-grid").jqxGrid(
                         $.extend(true, {}, ls.settings['grid'], {
                             columns: [
-                                { text: 'Номер', columngroup: 'group1', datafield: 'doorway', width: 180},    
+                                { text: 'Номер', columngroup: 'group1', datafield: 'doorway', width: 180},
+                                { text: 'Кол-во квартир', columngroup: 'group1', datafield: 'quant_flats', width: 110},
+                                { text: 'Номера квартир', columngroup: 'group1', datafield: 'numberflats', width: 110},
+                                { text: 'Код домофона', columngroup: 'group1', datafield: 'code', width: 110},
                             ],
                             columngroups: [
                               { text: 'Подъезды', align: 'center', name: 'group1' },
@@ -509,12 +541,96 @@
                                     });
                                 });
                             break;
+                        case 2:
+                            
+                            break;
                         };
                     };
                     
                     /* Оборудование на подъездах */
                     $('#ls-objectequips-tab').jqxTabs($.extend(true, {}, ls.settings['tab'], { width: 'calc(100% - 2px)', height: 'calc(100% - 2px)', position: 'top', initTabContent: initWidgets2}));
                 break;
+                case 2:
+                    var checkbuttoncostcalculations = function() {
+                        $('#ls-btn-info-costcalculations').jqxButton({disabled: !(ls.costcalculations.row != undefined)})
+                        $('#ls-btn-delete-costcalculations').jqxButton({disabled: !(ls.costcalculations.row != undefined)})
+                    };
+
+                    $("#ls-costcalculations-grid").on('bindingcomplete', function() {
+                        var idx = ls.costcalculations.rowindex;
+
+                        if (ls.costcalculations.rowid != undefined) {
+                            idx = $("#ls-costcalculations-grid").jqxGrid('getrowboundindexbyid', ls.costcalculations.rowid);
+                            ls.costcalculations.rowid = undefined;
+                        }
+
+                        var rows = $("#ls-costcalculations-grid").jqxGrid('getrows');
+                        if (idx == undefined || idx >= rows.length) 
+                            idx = 0;
+                        $("#ls-costcalculations-grid").jqxGrid('selectrow', idx);
+                        $("#ls-costcalculations-grid").jqxGrid('ensurerowvisible', idx);
+
+                        checkbuttoncostcalculations();
+                        ls.lock_operation = false;
+                    });
+
+                    $("#ls-costcalculations-grid").on('rowselect', function (event) {
+                        var args = event.args;
+                        ls.costcalculations.rowindex = args.rowindex;
+                        ls.costcalculations.row = args.row;
+                        checkbuttoncostcalculations();
+                    });
+
+                    $("#ls-costcalculations-grid").jqxGrid(
+                        $.extend(true, {}, ls.settings['grid'], {
+                            columns: [
+                                { text: 'Номер', datafield: 'calc_id', width: 80},
+                                { text: 'Тип', datafield: 'typename', width: 130},
+                                { text: 'Наименование проекта', datafield: 'name', width: 280},
+                                { text: 'Дата', datafield: 'date', width: 120, cellsformat: 'dd.MM.yyyy'},
+                                { text: 'Составил', datafield: 'shortname', width: 150},
+                                { text: 'Дата готовности', datafield: 'date_ready', width: 120, cellsformat: 'dd.MM.yyyy'},
+                                { text: 'Сумма', datafield: 'sum_high_full', width: 120, cellsformat: 'f2', cellsalign: 'right'},
+                            ]
+                    }));
+
+                    $('#ls-btn-create-costcalculations').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+                    $('#ls-btn-info-costcalculations').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+                    $('#ls-btn-refresh-costcalculations').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+                    $('#ls-btn-delete-costcalculations').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+
+                    ls.costcalculations.refresh(true);
+
+                    $('#ls-btn-refresh-objectequipgeneral').on('click', function() {
+                        ls.costcalculations.refresh(false);
+                    });
+
+                    $('#ls-btn-create-costcalculations').on('click', function() {
+                        if ($('#ls-btn-create-costcalculations').jqxButton('disabled') || ls.lock_operation) return;
+                        ls.opendialogforedit('costcalculations', 'create', {params: {objectgr_id: ls.objectgroups.row.objectgr_id}}, 'POST', false, {width: '600px', height: '320px'});
+                    });
+
+                    $('#ls-btn-info-costcalculations').on('click', function() {
+
+                    });
+
+                    $('#ls-btn-delete-costcalculations').on('click', function() {
+                        if ($('#ls-btn-delete-objectequipgeneral').jqxButton('disabled') || ls.lock_operation) return;
+                        if (ls.costcalculations.row == undefined) return;
+
+                        ls.delete('costcalculations', 'delete', {objeq_id: ls.costcalculations.row.objeq_id}, function(Res) {
+                            Res = JSON.parse(Res);
+                            if (Res.state == 0) {
+                                ls.costcalculations.rowindex--;
+                                ls.costcalculations.refresh(false);
+                            }
+                            else {
+                                ls.showerrormassage('Ошибка! ' + Res.responseText);
+                            }
+                        });
+                    });
+                    break;
+                    
             };
         };
         $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 600, height: 260}));
@@ -632,7 +748,15 @@
             </div>
         </div>
         <div style="padding: 10px;">
-            
+            <div class="ls-row" style="height: calc(100% - 64px)">
+                <div class="ls-grid" id="ls-costcalculations-grid"></div>
+            </div>
+            <div class="ls-row">
+                <div class="ls-row-column"><input type="button" id="ls-btn-create-costcalculations" value="Создать" /></div>
+                <div class="ls-row-column"><input type="button" id="ls-btn-info-costcalculations" value="Карточка" /></div>
+                <div class="ls-row-column"><input type="button" id="ls-btn-refresh-costcalculations" value="Обновить" /></div>
+                <div class="ls-row-column-right"><input type="button" id="ls-btn-delete-costcalculations" value="Удалить" /></div>
+            </div>
         </div>
     </div>
 </div>

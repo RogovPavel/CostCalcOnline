@@ -141,7 +141,7 @@
             <div class="ls-form-error"><?php echo $form->error($model, 'client_id'); ?></div>
         </div>
         <div class="ls-form-row">
-            <div class="ls-form-label">Моя организация:</div>
+            <div class="ls-form-label">Моя орг.:</div>
             <div class="ls-form-column" style="width: calc(100% - 126px);"><div id="ls-costcalculations-edit-firm" name="costcalculations[firm_id]" autocomplete="off"></div></div>
             <div class="ls-form-error"><?php echo $form->error($model, 'firm_id'); ?></div>
         </div>

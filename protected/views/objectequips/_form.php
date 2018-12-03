@@ -3,9 +3,24 @@
         var state_insert = <?php if (mb_strtoupper(Yii::app()->controller->action->id) == mb_strtoupper('Create') || mb_strtoupper(Yii::app()->controller->action->id) == 'Insert') echo json_encode(true); else echo json_encode(false); ?>;
         var model = <?php echo json_encode($model); ?>;
         
-        var equips_adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['equips']), {
-            loadError: function(jqXHR, status, error) {
-                ls.showerrormassage('Ошибка', 'При обновлении данных произошла ошибка. Повторите попытку позже.');
+        var dataequips;
+        
+        $.ajax({
+            url: '/index.php/AjaxData/DataJQXSimpleList',
+            type: 'POST',
+            async: true,
+            data: {
+                Models: ['Equips']
+            },
+            success: function(Res) {
+                Res = JSON.parse(Res);
+                dataequips = Res[0];
+                
+                $("#ls-objectequip-equip").jqxComboBox({source: dataequips});
+                $("#ls-objectequip-equip").val(model.equip_id);
+            },
+            error: function(Res) {
+                ls.showerrormassage('Ошибка', Res.responseText);
                 ls.lock_operation = false;
             }
         });
@@ -19,7 +34,7 @@
             }
         }); 
         
-        $("#ls-objectequip-equip").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {source: equips_adapter, displayMember: "equipname", valueMember: "equip_id", width: '380px'}));
+        $("#ls-objectequip-equip").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {displayMember: "equipname", valueMember: "equip_id", width: '380px'}));
         $("#ls-objectequip-unit").jqxInput($.extend(true, {}, ls.settings['input'], {width: '70px'}));
         $("#ls-objectequip-quant").jqxNumberInput($.extend(true, {}, ls.settings['numberinput'], {width: '140px'}));
         $("#ls-objectequip-install").jqxDateTimeInput($.extend(true, {}, ls.settings['datetime'], {value: null, width: '150px', height: 25, formatString: 'dd.MM.yyyy'}));
@@ -54,8 +69,9 @@
             
             ls.save('objectequips', action, $('#objectequips').serialize(), function(Res) {
                 Res = JSON.parse(Res);
+                ls.lock_operation = false;
                 if (Res.state == 0) {
-                    ls.lock_operation = false;
+                    
                     var tab = $('#ls-objectequips-tab').jqxTabs('selectedItem');
                     
                     if (tab == 0) {
@@ -72,12 +88,11 @@
                 else if (Res.state == 1)
                     $("#ls-dialog-content").html(Res.responseText);
                 else 
-                    ls.showerrormassage('Ошибка! ' + Res.responseText);
+                    ls.showerrormassage('Ошибка!', Res.responseText);
                 
             });
         });
         
-        $("#ls-objectequip-equip").jqxComboBox('val', model.equip_id);
         $("#ls-objectequip-quant").jqxNumberInput('val', model.quant);
         $("#ls-objectequip-install").jqxDateTimeInput('val', ls.dateconverttosjs(model.install));
         $("#ls-objectequip-note").jqxTextArea('val', model.note);

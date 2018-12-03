@@ -10,7 +10,7 @@
             type: 'POST',
             async: false,
             data: {
-                Models: ['Positions']
+                Models: ['ClientPositions']
             },
             success: function(Res) {
                 Res = JSON.parse(Res);
@@ -22,7 +22,7 @@
         $("#ls-objectgroupcontact-surname").jqxInput($.extend(true, {}, ls.settings['input'], {theme: ls.defaults.theme, width: '180px', height: 25}));
         $("#ls-objectgroupcontact-firstname").jqxInput($.extend(true, {}, ls.settings['input'], {theme: ls.defaults.theme, width: '150px', height: 25}));
         $("#ls-objectgroupcontact-lastname").jqxInput($.extend(true, {}, ls.settings['input'], {theme: ls.defaults.theme, width: '180px', height: 25}));
-        $("#ls-objectgroupcontact-position").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {source: data_positions, displayMember: "position_name", valueMember: "position_id", width: '200px'}));
+        $("#ls-objectgroupcontact-position").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {source: data_positions, displayMember: "positionname", valueMember: "position_id", width: '200px'}));
         $("#ls-objectgroupcontact-phonenumber").jqxMaskedInput($.extend(true, {}, ls.settings['maskedinput'], { width: 200, mask: '(###) ###-##-##'}));
         $("#ls-objectgroupcontact-email").jqxInput($.extend(true, {}, ls.settings['input'], {theme: ls.defaults.theme, width: '200px', height: 25}));
         

@@ -4,7 +4,8 @@
         var model = <?php echo json_encode($model); ?>;
         
         $("#ls-object-doorway").jqxInput($.extend(true, {}, ls.settings['input'], {width: '100px'}));
-        $("#ls-object-quantflats").jqxNumberInput($.extend(true, {}, ls.settings['numberinput'], {width: '80px'}));
+        $("#ls-object-quantflats").jqxNumberInput($.extend(true, {}, ls.settings['numberinput'], {width: '100px'}));
+        $("#ls-object-numberflats").jqxInput($.extend(true, {}, ls.settings['input'], {width: '150px'}));
         $("#ls-object-code").jqxInput($.extend(true, {}, ls.settings['input'], {width: '100px'}));
         $("#ls-object-note").jqxTextArea($.extend(true, {}, ls.settings['textarea'], {height: '70px', width: 'calc(100% - 8px)'}));
         
@@ -36,8 +37,9 @@
             
             ls.save('objects', action, $('#objects').serialize(), function(Res) {
                 Res = JSON.parse(Res);
+                ls.lock_operation = false;
                 if (Res.state == 0) {
-                    ls.lock_operation = false;
+                    
                     ls.objects.rowid = parseInt(Res.id);
                     ls.objects.refresh(false);
                     $('#ls-dialog').jqxWindow('close');
@@ -45,7 +47,7 @@
                 else if (Res.state == 1)
                     $("#ls-dialog-content").html(Res.responseText);
                 else
-                    ls.showerrormassage('Ошибка! ' + Res.responseText);
+                    ls.showerrormassage('Ошибка! ', Res.responseText);
                 
             });
         });
@@ -83,9 +85,14 @@
         </div>
         <div class="ls-form-row">
             <div class="ls-form-label">Кол-во кв-р:</div>
-            <div class="ls-form-column" style="width: calc(100% - 126px);">
+            <div class="ls-form-column" style="">
                 <div id="ls-object-quantflats" name="objects[quant_flats]" autocomplete="off"></div>
                 <div class="ls-form-error"><?php echo $form->error($model, 'quant_flats'); ?></div>    
+            </div>
+            <div class="ls-form-label" style="min-width: 0px;">Номера кв-р:</div>
+            <div class="ls-form-column" style="">
+                <input type="text" id="ls-object-numberflats" name="objects[numberflats]" autocomplete="off" />
+                <div class="ls-form-error"><?php echo $form->error($model, 'numberflats'); ?></div>    
             </div>
             
         </div>
