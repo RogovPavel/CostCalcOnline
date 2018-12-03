@@ -10,6 +10,10 @@ class ObjectGroups extends LSFormModel {
     public $address;
     public $client_id;
     public $clientname;
+    public $manager_id;
+    public $managername;
+    public $quantdoorway;
+    public $datebuild;
     public $note; 
     public $object_id;
     
@@ -21,8 +25,8 @@ class ObjectGroups extends LSFormModel {
         $this->sp_delete_name = 'delete_objectgroups';
         
         $this->proc_params = array(
-            'insert_objectgroups' => array('objectgr_id', 'region_id', 'street_id', 'house', 'corp', 'client_id', 'note', 'user_create', 'group_id'),
-            'update_objectgroups' => array('objectgr_id', 'region_id', 'street_id', 'house', 'corp', 'client_id', 'note', 'user_change', 'group_id'),
+            'insert_objectgroups' => array('objectgr_id', 'region_id', 'street_id', 'house', 'corp', 'client_id', 'note', 'manager_id', 'quantdoorway', 'datebuild', 'user_create', 'group_id'),
+            'update_objectgroups' => array('objectgr_id', 'region_id', 'street_id', 'house', 'corp', 'client_id', 'note', 'manager_id', 'quantdoorway', 'datebuild', 'user_change', 'group_id'),
             'delete_objectgroups' => array('region_id', 'user_change', 'group_id'),
         );
         
@@ -34,9 +38,14 @@ class ObjectGroups extends LSFormModel {
                                     og.address,
                                     og.client_id,
                                     c.clientname,
+                                    og.manager_id,
+                                    u.shortname as managername,
+                                    og.quantdoorway,
+                                    og.datebuild,
                                     og.note,
                                     og.object_id";
-        $this->command->from = 'objectgroups og left join clients c on (og.client_id = c.client_id)';
+        $this->command->from = 'objectgroups og left join clients c on (og.client_id = c.client_id)'
+                . 'left join users u on (og.manager_id = u.user_id)';
         $this->command->where = 'og.deldate is null';
         $this->command->order = 'og.address';
         
@@ -57,6 +66,10 @@ class ObjectGroups extends LSFormModel {
                     address,
                     client_id,
                     clientname,
+                    manager_id,
+                    managername,
+                    quantdoorway,
+                    datebuild,
                     note,
                     object_id', 'safe'),
         );
@@ -72,6 +85,10 @@ class ObjectGroups extends LSFormModel {
             'address' => '',
             'client_id' => 'Клиент',
             'clientname' => '',
+            'manager_id' => '',
+            'managername' => '',
+            'quantdoorway' => '',
+            'datebuild' => '',
             'note' => '',
             'object_id' => '',
         );

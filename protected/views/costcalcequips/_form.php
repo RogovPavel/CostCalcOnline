@@ -70,6 +70,7 @@
                 ls.lock_operation = false;
                 if (Res.state == 0) {
                     ls.costcalcequips.rowid = parseInt(Res.id);
+                    ls.costcalculations.refresh(true);
                     ls.costcalcequips.refresh(true);
                     $('#ls-dialog').jqxWindow('close');
                 }

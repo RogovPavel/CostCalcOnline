@@ -135,6 +135,26 @@ class LSFormModel extends CFormModel
         return $res;
     }
     
+    public function get_by_conditions($conditions) {
+        foreach ($conditions as $key => $value) {
+            $this->command->andWhere($value['sql'], $value['params']);
+        }
+        
+        // Добавляем фильтр по группе
+        if (!Yii::app()->user->isGuest) {
+            if (Yii::app()->user->group_id != 1)
+                $this->command->andWhere(str_replace('.', '', $this->alias) . '.group_id = :p_group_id', array(':p_group_id' => Yii::app()->user->group_id));
+        }
+        else {
+            if (get_class($this) != 'Users')
+                return array();
+        }
+        
+        $res = $this->command->queryRow();
+        $this->setAttributes($res);
+        return $res;
+    }
+    
     public function attributeFilters() {
         return array();
     }

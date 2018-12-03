@@ -4,24 +4,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="language" content="en">
         <link rel="shortcut icon" href="/images/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main_two_column.css">
-	
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-3.3.1.min.js"></script>
-        <link>
+        <meta name="meta-theme" theme="<?php echo $this->theme; ?>">
         <?php Yii::app()->clientScript->registerPackage('ls_libs'); ?>
-        <link>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $("#ls-top-menu").jqxMenu({theme: ls.defaults.theme, width: 'calc(100% - 2px)', height: '28px'});
-                $("#ls-top-menu").css('visibility', 'visible');
-                $("#ls-left-menu").jqxNavigationBar({theme: ls.defaults.theme, width: 200, expandMode: 'multiple', expandedIndexes: [0, 1, 2]});
-            });
-        </script>
-        
-        
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+        <?php Yii::app()->clientScript->registerCssFile(Yii::app()->request->baseUrl . "/js/jqwidgets/styles/jqx." . $this->theme . ".css"); ?>
+        <?php Yii::app()->clientScript->registerCssFile(Yii::app()->request->baseUrl . "/css/main." . $this->theme . ".css"); ?>
+        <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     </head>
     <body>
+        
         <div class="ls-main-container">
             <div class="ls-column-left">
                 <div class="ls-left-menu-container">
@@ -52,6 +42,7 @@
                             <ul>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_firms'); ?>><a href='<?php echo Yii::app()->createUrl('firms'); ?>'>Мои организации</a></li>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_clients'); ?>><a href='<?php echo Yii::app()->createUrl('clients'); ?>'>Клиенты</a></li>
+                                <li <?php Yii::app()->security->HideShowMenuItem('view_clientpositions'); ?>><a href='<?php echo Yii::app()->createUrl('clientpositions'); ?>'>Должности</a></li>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_banks'); ?>><a href='<?php echo Yii::app()->createUrl('banks'); ?>'>Банки</a></li>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_regions'); ?>><a href='<?php echo Yii::app()->createUrl('regions'); ?>'>Регионы</a></li>
                                 <li <?php Yii::app()->security->HideShowMenuItem('view_streets'); ?>><a href='<?php echo Yii::app()->createUrl('streets'); ?>'>Улицы</a></li>
@@ -137,4 +128,12 @@
         </div>
     </body>
 </html>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#ls-top-menu").jqxMenu({theme: ls.defaults.theme, width: 'calc(100% - 2px)', height: '28px'});
+        $("#ls-top-menu").css('visibility', 'visible');
+        $("#ls-left-menu").jqxNavigationBar({theme: ls.defaults.theme, width: 200, expandMode: 'multiple', expandedIndexes: [0, 1, 2]});
+        
+    });
+</script>
 

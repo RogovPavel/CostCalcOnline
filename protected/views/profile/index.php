@@ -17,6 +17,34 @@
         }
     };
     
+    ls.options = {
+        rowid: undefined,
+        row: <?php echo json_encode($groupsettings); ?>,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = true;
+            
+            if (reset) {
+                $.ajax({
+                    url: '/groupsettings/getdata/' + <?php echo json_encode(Yii::app()->user->user_id); ?>,
+                    success: function(Res) {
+                        ls.options.row = JSON.parse(Res);
+                        ls.options.setvalues();
+                    },
+                    error: function(Res) {
+                        ls.showerrormassage('Ошибка', Res.responseText);
+                    }
+                });
+            }
+            else {
+                this.setvalues();
+            }
+        },
+        setvalues: function() {
+            $("#ls-groupsettings-theme").jqxInput('val', ls.options.row.theme);
+        }
+    };
+    
     $(document).ready(function() {
         
         var model = <?php echo json_encode($model); ?>;
@@ -27,6 +55,18 @@
         var initWidgets = function(tab) {
             switch(tab) {
                 case 0:
+                    $("#ls-groupsettings-theme").jqxInput($.extend(true, {}, ls.settings['input'], {width: '150px', height: 25}));
+                    $('#ls-btn-edit-groupsettings').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+                    
+                    $('#ls-btn-edit-groupsettings').on('click', function() {
+                        if ($('#ls-btn-edit-groupsettings').jqxButton('disabled') || ls.lock_operation) return;
+                        ls.opendialogforedit('groupsettings', 'update', {setting_id: ls.options.row.setting_id}, 'POST', false, {width: '620px', height: '124px'});
+                    });
+                    
+                    ls.options.setvalues();
+                    
+                    break;
+                case 1:
                     var checkbutton = function() {
                         $('#ls-btn-update').jqxButton({disabled: !(ls.users.row != undefined)})
                         $('#ls-btn-delete').jqxButton({disabled: !(ls.users.row != undefined)})
@@ -163,8 +203,18 @@
     <div class="ls-form-row" style="height: calc(100% - 2px);">
         <div id='ls-profile-tab'>
             <ul>
-                <li style="margin-left: 30px;">Мои сотрудники</li>
+                <li style="margin-left: 30px;">Настройки приложения</li>
+                <li style="margin-left: 0px;">Мои сотрудники</li>
             </ul>
+            <div style="padding: 10px;">
+                <div class="ls-row">
+                    <div class="ls-row-column" style="width: 100px">Тема:</div>
+                    <div class="ls-row-column"><input type="text" readonly="readonly" id="ls-groupsettings-theme" autocomplete="off"/></div>
+                </div>
+                <div class="ls-row">
+                    <div class="ls-row-column"><input type="button" id="ls-btn-edit-groupsettings" value="Изменить" /></div>
+                </div>
+            </div>
             <div style="padding: 10px;">
                 <div class="ls-row" style="height: calc(100% - 62px);">
                     <div id="ls-users-grid"></div>

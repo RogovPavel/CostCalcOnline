@@ -9,7 +9,7 @@ class ObjectGroupContacts extends LSFormModel {
     public $lastname;
     public $fullname;
     public $position_id;
-    public $position_name;
+    public $positionname;
     public $phonenumber;
     public $email;
     public $date_create;
@@ -39,7 +39,7 @@ class ObjectGroupContacts extends LSFormModel {
                                     ogc.lastname,
                                     ogc.fullname,
                                     ogc.position_id,
-                                    p.position_name,
+                                    cp.positionname,
                                     ogc.phonenumber,
                                     ogc.email,
                                     ogc.date_create,
@@ -48,7 +48,7 @@ class ObjectGroupContacts extends LSFormModel {
                                     ogc.user_change,
                                     ogc.group_id,
                                     ogc.deldate";
-        $this->command->from = 'objectgroupcontacts ogc left join positions p on (ogc.position_id = p.position_id)';
+        $this->command->from = 'objectgroupcontacts ogc left join clientpositions cp on (ogc.position_id = cp.position_id)';
         $this->command->where = 'ogc.deldate is null';
         $this->command->order = 'ogc.contact_id';
         
@@ -68,7 +68,7 @@ class ObjectGroupContacts extends LSFormModel {
                     lastname,
                     fullname,
                     position_id,
-                    position_name,
+                    positionname,
                     phonenumber,
                     email,
                     date_create,
@@ -89,7 +89,7 @@ class ObjectGroupContacts extends LSFormModel {
             'lastname' => 'Отчество',
             'fullname' => '',
             'position_id' => '',
-            'position_name' => '',
+            'positionname' => '',
             'phonenumber' => '',
             'email' => '',
             'date_create' => '',

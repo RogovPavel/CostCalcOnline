@@ -69,10 +69,12 @@ return array(
 		
             
                 'clientScript' => array(
+                    'coreScriptPosition' => CClientScript::POS_HEAD,
                     'packages' => array(
                         'ls_libs' => array(
                             'baseUrl' => Yii::app()->request->basePath . '/js',
                             'js' => array(
+                                'jquery-3.3.1.min.js',
                                 'jqwidgets/localization.js',
                                 'ls.js',
                                 'jqwidgets/jqx-all.js',
@@ -81,7 +83,7 @@ return array(
                             ),
                             'css' => array(
                                 'jqwidgets/styles/jqx.base.css',
-                                'jqwidgets/styles/jqx.ui-sunny.css',
+//                                'jqwidgets/styles/jqx.ui-sunny.css',
                             ),
                         ),
                     ),

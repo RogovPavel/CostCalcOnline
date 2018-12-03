@@ -4,6 +4,19 @@ ls.defaults = {
     theme: 'ui-sunny'
 };
 
+ls.themes = [
+    {id: 1, name: 'ui-sunny'},
+    {id: 2, name: 'classic'},
+    {id: 3, name: 'dark'},
+    {id: 4, name: 'metro'},
+];
+
+
+
+var theme = $('[name="meta-theme"]').attr('theme');
+ls.defaults.theme = theme;
+
+
 ls.lock_operation = false;
 
 ls.sources = [];
@@ -242,6 +255,11 @@ ls.settings['grid'] = {
     virtualmode: false,
     theme: ls.defaults.theme,
     localization: getLocalization('ru'),
+    columnsresize: true,
+    columnsreorder: true,
+    autosavestate: true,
+    autoloadstate: true,
+    
     rendergridrows: function (params) {
             return params.data;
     }    
@@ -618,6 +636,10 @@ ls.sources['objectgroups'] = {
         {name: 'address', type: 'string'},
         {name: 'client_id', type: 'int'},
         {name: 'clientname', type: 'string'},
+        {name: 'manger_id', type: 'int'},
+        {name: 'managername', type: 'string'},
+        {name: 'quantdoorway', type: 'int'},
+        {name: 'datebuild', type: 'date'},
         {name: 'note', type: 'string'}, 
     ],
     id: 'objectgr_id',
@@ -643,7 +665,7 @@ ls.sources['objectgroupcontacts'] = {
         {name: 'lastname', type: 'string'},
         {name: 'fullname', type: 'string'},
         {name: 'position_id', type: 'int'},
-        {name: 'position_name', type: 'string'},
+        {name: 'positionname', type: 'string'},
         {name: 'phonenumber', type: 'string'},
         {name: 'email', type: 'string'},
         {name: 'date_create', type: 'date'},
@@ -673,6 +695,7 @@ ls.sources['objects'] = {
         {name: 'objectgr_id', type: 'int'},
         {name: 'doorway', type: 'string'},
         {name: 'quant_flats', type: 'int'},
+        {name: 'numberflats', type: 'string'},
         {name: 'code', type: 'string'},
         {name: 'address', type: 'string'},
         {name: 'note', type: 'string'},
@@ -852,6 +875,7 @@ ls.sources['costcalculations'] = {
     datafields: [
         {name: 'calc_id', type: 'int'},
         {name: 'type', type: 'int'},
+        {name: 'name', type: 'string'},
         {name: 'typename', type: 'string'},
         {name: 'date', type: 'date'},
         {name: 'status_id', type: 'int'},
@@ -925,6 +949,68 @@ ls.sources['costcalcequips'] = {
     ],
     id: 'cceq_id',
     url: '/index.php/AjaxData/DataJQXSimple?ModelName=CostCalcEquips',
+    type: 'POST',
+    root: 'Rows',
+    cache: false,
+    async: true,
+    pagenum: 0,
+    pagesize: 200,
+    beforeprocessing: function (data) {
+        this.totalrecords = data[0].TotalRows;
+    }
+};
+
+ls.sources['clientpositions'] = {
+    datatype: "json",
+    datafields: [
+        {name: 'position_id', type: 'int'},
+        {name: 'positionname', type: 'string'},
+        {name: 'date_create', type: 'date'},
+        {name: 'user_create', type: 'int'},
+        {name: 'date_change', type: 'date'},
+        {name: 'user_change', type: 'int'},
+        {name: 'group_id', type: 'int'},
+        {name: 'deldate', type: 'date'},
+    ],
+    id: 'position_id',
+    url: '/index.php/AjaxData/DataJQXSimple?ModelName=ClientPositions',
+    type: 'POST',
+    root: 'Rows',
+    cache: false,
+    async: true,
+    pagenum: 0,
+    pagesize: 200,
+    beforeprocessing: function (data) {
+        this.totalrecords = data[0].TotalRows;
+    }
+};
+
+ls.sources['costcalcworks'] = {
+    datatype: "json",
+    datafields: [
+        {name: 'ccwk_id', type: 'int'},
+        {name: 'calc_id', type: 'int'},
+        {name: 'work_id', type: 'int'},
+        {name: 'workname', type: 'string'},
+        {name: 'worknamefull', type: 'string'},
+        {name: 'cceq_id', type: 'int'},
+        {name: 'equipname', type: 'string'},
+        {name: 'unit_name', type: 'string'},
+        {name: 'quant', type: 'float'},
+        {name: 'price_low', type: 'float'},
+        {name: 'price_high', type: 'float'},
+        {name: 'sum_price_low', type: 'float'},
+        {name: 'sum_price_high', type: 'float'},
+        {name: 'note', type: 'string'},
+        {name: 'date_create', type: 'date'},
+        {name: 'user_create', type: 'int'},
+        {name: 'date_change', type: 'date'},
+        {name: 'user_change', type: 'int'},
+        {name: 'group_id', type: 'int'},
+        {name: 'deldate', type: 'date'},
+    ],
+    id: 'ccwk_id',
+    url: '/index.php/AjaxData/DataJQXSimple?ModelName=CostCalcWorks',
     type: 'POST',
     root: 'Rows',
     cache: false,
