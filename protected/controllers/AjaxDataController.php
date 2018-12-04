@@ -135,19 +135,51 @@ class AjaxDataController extends Controller {
     public function actionDataJQXSimpleList() {
         
         $models = array();
+        $filters = array();
         $data = array();
+        $conditions = array();
         
         if (isset($_POST['Models']))
             $models = $_POST['Models'];
         if (isset($_GET['Models']))
             $models = $_GET['Models'];
         
+        if (isset($_POST['Filters']))
+            $filters = $_POST['Filters'];
+        if (isset($_GET['Filters']))
+            $filters = $_GET['Filters'];
+        
+        
         
         foreach ($models as $key => $value) {
-        
+            $conditions = array();
             $tmp = new $value();
-            $res = $tmp->find();
+            
+            if (isset($filters[$value])) {
+                $i = 0;
+                foreach ($filters[$value] as $key => $value) {
+                    $operand = ' = ';
+                    if ((int)$value['operand'] ==1)
+                        $operand = ' = ';
+                    if ((int)$value['operand'] == 2)
+                        $operand = ' != ';
+                    if ((int)$value['operand'] == 3)
+                        $operand = ' > ';
+                    if ((int)$value['operand'] == 4)
+                        $operand = ' < ';
+                    
+                    array_push($conditions, array('sql' => $value['field'] . $operand . ':p' . $i, 'params' => array(':p' . $i => $this->datetime_convert ($value['value'], 'yyyy-MM-dd HH:mm:ss'))));
+                    $i++;
+                }
+                
+                
+                
+                
+            }
+            
+            $res = $tmp->find($conditions);
             array_push($data, $res);
+            
         }
         
         echo json_encode($data);

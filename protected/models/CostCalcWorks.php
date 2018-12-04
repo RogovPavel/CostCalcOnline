@@ -64,7 +64,7 @@ class CostCalcWorks extends LSFormModel {
         $this->command->order = 'ccw.ccwk_id';
                 
         $this->filed_id = 'ccwk_id';
-        $this->field_id_with_tm = 'e.ccwk_id';
+        $this->field_id_with_tm = 'ccw.ccwk_id';
         $this->alias = 'ccw';
     }
     
