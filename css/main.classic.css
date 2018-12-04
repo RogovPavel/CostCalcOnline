@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #eee;
+    height: 100%;
     
     font-family: Verdana,Arial,sans-serif;
     font-style: normal;
@@ -26,28 +27,31 @@ a {
 .ls-main-container {
     min-width: 920px;
     width: calc(100% - 40px);
-    min-height: calc(100% - 40px);
+    height: calc(100% - 20px);
     padding: 0px 0px 20px 0px;
     background-color: #fff;
     float: left;
+    overflow: auto;
 }
 
 .ls-column-left {
     float: left;
     width: 250px;
     background-color: #eee;
-    height: calc(100% - 20px);
+    height: 100%;
+    overflow: auto;
 }
 
 .ls-column-right {
     float: left;
     width: calc(100% - 290px);
+    height: 100%;
     padding: 0 20px;
 }
 
 .ls-top-menu_container {
     height: 30px;
-    width: calc(100% - 0px);
+    width: 100%;
     padding-top: 8px;
     background-color: #fff;
 }
@@ -67,7 +71,8 @@ a {
     margin-top: 6px;
     border: 1px solid #aaa;
     border-radius: 3px;
-    min-height: calc(100% - 92px);
+    height: calc(100% - 70px);
+    overflow: auto;
 }
 
 .ls-body-header {
@@ -85,11 +90,13 @@ a {
 
 .ls-body-content {
     padding: 10px;
-    min-height: calc(100% - 142px);
+    height: calc(100% - 50px);
+    overflow: auto;
 }
 
 #content {
-    height: calc(100% - 142px);
+    height: 100%;
+    overflow: auto;
 }
 
 .ls-breadcrumbs-item {
