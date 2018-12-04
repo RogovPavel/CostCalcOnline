@@ -19,6 +19,14 @@ ls.defaults.theme = theme;
 
 ls.lock_operation = false;
 
+ls.content = {
+    size: {
+        x: 0,
+        y: 0
+    }
+};
+
+
 ls.sources = [];
 ls.settings = [];
 ls.functions = {};
