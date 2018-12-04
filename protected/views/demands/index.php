@@ -111,6 +111,8 @@
                 pageable: true,
                 sortable: true,
                 pagesize: 200,
+                width: 'calc(100% - 2px)',
+                height: 'calc(100% - 250px)',
                 columns: [
                     { text: 'Номер', datafield: 'demand_id', width: 70},    
                     { text: 'Адрес', datafield: 'address', width: 250},    

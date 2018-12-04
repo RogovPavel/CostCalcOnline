@@ -30016,1825 +30016,411 @@ in C:\Home\LS\protected\components\WebUser.php (8)
 in C:\Home\LS\protected\components\LSFormModel.php (134)
 in C:\Home\LS\protected\components\WebUser.php (16)
 in C:\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:25:28 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:25:32 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:25:34 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:25:36 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:25:37 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:26:21 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:26:24 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:26:26 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:26:28 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:26:28 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:26:29 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:28:41 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:28:43 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:28:44 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:28:45 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:28:46 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:28:53 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:28:59 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:28:59 [warning] [application] Не удалось присвоить небезопасный атрибут "equip_id" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (61)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:28:59 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'note' cannot be null. Выполнявшийся SQL-запрос: call insert_costcalcworks(@ccwk_id,@calc_id,@cceq_id,@work_id,@workname,@quant,@price_low,@price_high,@note,@user_create,@group_id);.
-in D:\Work\Home\LS\protected\components\LSStoredProc.php (122)
-in D:\Work\Home\LS\protected\components\LSFormModel.php (72)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (64)
-2018/12/03 20:29:05 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:29:05 [warning] [application] Не удалось присвоить небезопасный атрибут "equip_id" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (61)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:29:05 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:29:08 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:30:17 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:30:57 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:31:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] ������� ���������� ���������� ���� �����������, �.�. �� ������� ���������� �� ��������� ����� �� ������� ������ ������, ��� ���� ��������� ��� ������������� ���������� ��-�� ��������� ������� ��� ������������� ����������.
-' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
-Stack trace:
-#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
-#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
-#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
-#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
-#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
-#5 D:\Work\Home\LS\protected\models\Equips.php(18): LSFormModel->__construct('')
-#6 D:\Work\Home\LS\protected\controllers\AjaxDataController.php(148): Equips->__construct()
-#7 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimpleList()
-#8 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#9 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
-#10 D:\Work\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#11 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
-#12 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#13 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#14 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#15 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#16 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimpleLi...')
-#17 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
-#18 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#19 D:\Work\Home\LS\index.php(13): CApplication->run()
-#20 {main}
-REQUEST_URI=/index.php/AjaxData/DataJQXSimpleList
-HTTP_REFERER=http://ls.ru/costcalculations/view/4
----
-2018/12/03 20:31:43 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:32:11 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:32:14 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:32:18 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:32:36 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:32:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] ������� ���������� ���������� ���� �����������, �.�. �� ������� ���������� �� ��������� ����� �� ������� ������ ������, ��� ���� ��������� ��� ������������� ���������� ��-�� ��������� ������� ��� ������������� ����������.
-' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
-Stack trace:
-#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
-#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
-#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
-#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
-#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
-#5 D:\Work\Home\LS\protected\models\Users.php(30): LSFormModel->__construct('')
-#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
-#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
-#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
-#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
-#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
-#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
-#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('update_costcalc...')
-#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
-#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(CostcalcworksController), Object(CInlineAction), '127.0.0.1', 'POST')
-#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
-#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
-#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('update')
-#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('costcalcworks/u...')
-#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#24 D:\Work\Home\LS\index.php(13): CApplication->run()
-#25 {main}
-REQUEST_URI=/costcalcworks/update
-HTTP_REFERER=http://ls.ru/costcalculations/view/4
----
-2018/12/03 20:33:21 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:33:58 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:35:01 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:35:04 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:36:17 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:36:20 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:36:21 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:36:21 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.ccwk_id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT   ccw.ccwk_id,
-                                    ccw.calc_id,
-                                    ccw.work_id,
-                                    ccw.workname,
-                                    IF (ccw.workname is null, w.workname, ccw.workname) as worknamefull,
-                                    ccw.cceq_id,
-                                    eq.equipname,
-                                    u.unit_name,
-                                    ccw.quant,
-                                    ccw.price_low,
-                                    ccw.price_high,
-                                    ccw.sum_price_low,
-                                    ccw.sum_price_high,
-                                    ccw.note,
-                                    ccw.date_create,
-                                    ccw.user_create,
-                                    ccw.date_change,
-                                    ccw.user_change,
-                                    ccw.group_id,
-                                    ccw.deldate
-FROM costcalcworks ccw left join works w on (ccw.work_id = w.work_id)
-                                    left join costcalcequips cce on (ccw.cceq_id = cce.cceq_id)
-                                    left join equips eq on (cce.equip_id = eq.equip_id)
-                                    left join units u on (eq.unit_id = u.unit_id)
-WHERE ((ccw.deldate is null) AND (e.ccwk_id = :p_id)) AND (ccw.group_id = :p_group_id)
-ORDER BY `ccw`.`ccwk_id`.
-in D:\Work\Home\LS\protected\components\LSFormModel.php (132)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:37:39 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:37:42 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:37:42 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:37:48 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:37:48 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:37:51 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:37:51 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:40:45 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:40:46 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:42:20 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:42:20 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:42:23 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:42:23 [warning] [application] Не удалось присвоить небезопасный атрибут "equip_id" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (104)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:42:24 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:42:25 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:42:25 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:42:30 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:42:30 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:42:37 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:42:37 [warning] [application] Не удалось присвоить небезопасный атрибут "equip_id" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (104)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:42:37 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:42:40 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:42:40 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:43:41 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:43:41 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:46:25 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:46:29 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:46:29 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:46:32 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:46:32 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:46:34 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:46:34 [warning] [application] Не удалось присвоить небезопасный атрибут "equip_id" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (104)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:46:34 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:46:36 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:46:36 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:46:37 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:46:37 [warning] [application] Не удалось присвоить небезопасный атрибут "equip_id" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (104)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:46:38 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:46:38 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:46:39 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:46:49 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:46:49 [warning] [application] Не удалось присвоить небезопасный атрибут "equip_id" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (104)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:46:49 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:46:50 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:46:50 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:46:53 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:46:53 [warning] [application] Не удалось присвоить небезопасный атрибут "equip_id" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (104)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:46:54 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:46:54 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:46:54 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:49:13 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:49:13 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:49:17 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:49:17 [warning] [application] Не удалось присвоить небезопасный атрибут "equip_id" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (104)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:49:17 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:49:19 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:49:19 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:53:15 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:53:17 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:53:19 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:53:19 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:53:27 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:53:27 [warning] [application] Не удалось присвоить небезопасный атрибут "equip_id" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (104)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:53:28 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:53:29 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:53:29 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:53:35 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:53:35 [warning] [application] Не удалось присвоить небезопасный атрибут "equip_id" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (104)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:53:35 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:53:37 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:53:37 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 20:53:47 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 20:53:47 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:03:22 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:03:29 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:03:29 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:03:29 [error] [php] Illegal offset type in isset or empty (D:\Work\Home\LS\protected\controllers\AjaxDataController.php:158)
-Stack trace:
-#0 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(134): AjaxDataController->runAction()
-#1 D:\Work\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#2 D:\Work\Home\LS\framework\web\CController.php(1148): CAccessControlFilter->filter()
-#3 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): AjaxDataController->filterAccessControl()
-#4 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
-#5 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#6 D:\Work\Home\LS\framework\web\CController.php(265): AjaxDataController->runActionWithFilters()
-#7 D:\Work\Home\LS\framework\web\CWebApplication.php(282): AjaxDataController->run()
-#8 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController()
-#9 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#10 D:\Work\Home\LS\index.php(13): CWebApplication->run()
-REQUEST_URI=/index.php/AjaxData/DataJQXSimpleList
-in D:\Work\Home\LS\protected\controllers\AjaxDataController.php (158)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:04:11 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:04:14 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:04:14 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:04:14 [error] [php] Illegal offset type in isset or empty (D:\Work\Home\LS\protected\controllers\AjaxDataController.php:158)
-Stack trace:
-#0 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(134): AjaxDataController->runAction()
-#1 D:\Work\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#2 D:\Work\Home\LS\framework\web\CController.php(1148): CAccessControlFilter->filter()
-#3 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): AjaxDataController->filterAccessControl()
-#4 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
-#5 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#6 D:\Work\Home\LS\framework\web\CController.php(265): AjaxDataController->runActionWithFilters()
-#7 D:\Work\Home\LS\framework\web\CWebApplication.php(282): AjaxDataController->run()
-#8 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController()
-#9 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#10 D:\Work\Home\LS\index.php(13): CWebApplication->run()
-REQUEST_URI=/index.php/AjaxData/DataJQXSimpleList
-in D:\Work\Home\LS\protected\controllers\AjaxDataController.php (158)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:04:45 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:04:47 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:04:47 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:05:03 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:05:04 [error] [php] Undefined variable: i (D:\Work\Home\LS\protected\controllers\AjaxDataController.php:183)
-Stack trace:
-#0 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(134): AjaxDataController->runAction()
-#1 D:\Work\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#2 D:\Work\Home\LS\framework\web\CController.php(1148): CAccessControlFilter->filter()
-#3 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): AjaxDataController->filterAccessControl()
-#4 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
-#5 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#6 D:\Work\Home\LS\framework\web\CController.php(265): AjaxDataController->runActionWithFilters()
-#7 D:\Work\Home\LS\framework\web\CWebApplication.php(282): AjaxDataController->run()
-#8 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController()
-#9 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#10 D:\Work\Home\LS\index.php(13): CWebApplication->run()
-REQUEST_URI=/index.php/AjaxData/DataJQXSimpleList
-in D:\Work\Home\LS\protected\controllers\AjaxDataController.php (183)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:05:43 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:05:48 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:06:03 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:06:03 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:06:11 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:06:11 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:06:17 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:06:26 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:06:26 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:06:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] ������� ���������� ���������� ���� �����������, �.�. �� ������� ���������� �� ��������� ����� �� ������� ������ ������, ��� ���� ��������� ��� ������������� ���������� ��-�� ��������� ������� ��� ������������� ����������.
-' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
-Stack trace:
-#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
-#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
-#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
-#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
-#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
-#5 D:\Work\Home\LS\protected\models\Users.php(30): LSFormModel->__construct('')
-#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
-#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
-#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
-#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
-#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
-#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
-#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('update_costcalc...')
-#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
-#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(CostcalcworksController), Object(CInlineAction), '127.0.0.1', 'POST')
-#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
-#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
-#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('update')
-#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('costcalcworks/u...')
-#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#24 D:\Work\Home\LS\index.php(13): CApplication->run()
-#25 {main}
-REQUEST_URI=/costcalcworks/update
-HTTP_REFERER=http://ls.ru/costcalculations/view/4
----
-2018/12/03 21:06:54 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:06:54 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:11:11 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:14:05 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:14:07 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:15:10 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:15:12 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:16:00 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:16:15 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:16:18 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:16:18 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:16:23 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:16:23 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:16:24 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:16:24 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:16:47 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:16:49 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:16:49 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:16:52 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:16:52 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:16:54 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:16:54 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:16:58 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:16:58 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:17:09 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:17:09 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:17:13 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:17:13 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:17:15 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:17:15 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:17:28 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:17:28 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:18:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] ������� ���������� ���������� ���� �����������, �.�. �� ������� ���������� �� ��������� ����� �� ������� ������ ������, ��� ���� ��������� ��� ������������� ���������� ��-�� ��������� ������� ��� ������������� ����������.
-' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
-Stack trace:
-#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
-#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
-#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
-#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
-#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
-#5 D:\Work\Home\LS\protected\models\Users.php(30): LSFormModel->__construct('')
-#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
-#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
-#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
-#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
-#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
-#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
-#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('view_costcalcul...')
-#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
-#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(CostcalculationsController), Object(CInlineAction), '127.0.0.1', 'GET')
-#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
-#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
-#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('view')
-#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('costcalculation...')
-#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#24 D:\Work\Home\LS\index.php(13): CApplication->run()
-#25 {main}
-REQUEST_URI=/costcalculations/view/4
-HTTP_REFERER=http://ls.ru/costcalculations
----
-2018/12/03 21:18:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
-Stack trace:
-#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
-#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#2 D:\Work\Home\LS\index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/favicon.ico
-HTTP_REFERER=http://ls.ru/costcalculations/view/4
----
-2018/12/03 21:18:19 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:18:24 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:18:24 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:18:43 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:18:43 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:18:47 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:18:48 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:18:49 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:18:49 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:18:58 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:18:58 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:19:02 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:19:03 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:19:03 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:19:03 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:20:37 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:20:40 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:20:40 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:20:44 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:20:44 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:20:50 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:20:50 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:21:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] ������� ���������� ���������� ���� �����������, �.�. �� ������� ���������� �� ��������� ����� �� ������� ������ ������, ��� ���� ��������� ��� ������������� ���������� ��-�� ��������� ������� ��� ������������� ����������.
-' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
-Stack trace:
-#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
-#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
-#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
-#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
-#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
-#5 D:\Work\Home\LS\protected\models\Users.php(30): LSFormModel->__construct('')
-#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
-#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
-#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
-#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
-#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
-#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
-#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('view_costcalcul...')
-#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
-#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(CostcalculationsController), Object(CInlineAction), '127.0.0.1', 'GET')
-#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
-#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
-#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('view')
-#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('costcalculation...')
-#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#24 D:\Work\Home\LS\index.php(13): CApplication->run()
-#25 {main}
-REQUEST_URI=/costcalculations/view/4
-HTTP_REFERER=http://ls.ru/costcalculations
----
-2018/12/03 21:21:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] ������� ���������� ���������� ���� �����������, �.�. �� ������� ���������� �� ��������� ����� �� ������� ������ ������, ��� ���� ��������� ��� ������������� ���������� ��-�� ��������� ������� ��� ������������� ����������.
-' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
-Stack trace:
-#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
-#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
-#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
-#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
-#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
-#5 D:\Work\Home\LS\protected\models\Users.php(30): LSFormModel->__construct('')
-#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
-#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
-#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
-#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
-#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
-#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
-#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('view_costcalcul...')
-#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
-#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(CostcalculationsController), Object(CInlineAction), '127.0.0.1', 'GET')
-#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
-#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
-#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('view')
-#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('costcalculation...')
-#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#24 D:\Work\Home\LS\index.php(13): CApplication->run()
-#25 {main}
-REQUEST_URI=/costcalculations/view/4
-HTTP_REFERER=http://ls.ru/costcalculations
----
-2018/12/03 21:21:59 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:22:08 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:22:12 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:22:12 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:22:21 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:22:21 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:22:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] ������� ���������� ���������� ���� �����������, �.�. �� ������� ���������� �� ��������� ����� �� ������� ������ ������, ��� ���� ��������� ��� ������������� ���������� ��-�� ��������� ������� ��� ������������� ����������.
-' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
-Stack trace:
-#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
-#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
-#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
-#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
-#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
-#5 D:\Work\Home\LS\protected\models\CostCalcEquips.php(27): LSFormModel->__construct('')
-#6 D:\Work\Home\LS\protected\controllers\AjaxDataController.php(156): CostCalcEquips->__construct()
-#7 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimpleList()
-#8 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#9 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
-#10 D:\Work\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#11 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
-#12 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#13 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#14 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#15 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#16 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimpleLi...')
-#17 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
-#18 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#19 D:\Work\Home\LS\index.php(13): CApplication->run()
-#20 {main}
-REQUEST_URI=/index.php/AjaxData/DataJQXSimpleList
-HTTP_REFERER=http://ls.ru/costcalculations/view/4
----
-2018/12/03 21:22:43 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:23:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] ������� ���������� ���������� ���� �����������, �.�. �� ������� ���������� �� ��������� ����� �� ������� ������ ������, ��� ���� ��������� ��� ������������� ���������� ��-�� ��������� ������� ��� ������������� ����������.
-' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
-Stack trace:
-#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
-#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
-#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
-#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
-#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
-#5 D:\Work\Home\LS\protected\models\Users.php(30): LSFormModel->__construct('')
-#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
-#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
-#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
-#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
-#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
-#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
-#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('update_costcalc...')
-#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
-#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(CostcalcworksController), Object(CInlineAction), '127.0.0.1', 'POST')
-#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
-#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
-#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('update')
-#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('costcalcworks/u...')
-#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#24 D:\Work\Home\LS\index.php(13): CApplication->run()
-#25 {main}
-REQUEST_URI=/costcalcworks/update
-HTTP_REFERER=http://ls.ru/costcalculations/view/4
----
-2018/12/03 21:23:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] ������� ���������� ���������� ���� �����������, �.�. �� ������� ���������� �� ��������� ����� �� ������� ������ ������, ��� ���� ��������� ��� ������������� ���������� ��-�� ��������� ������� ��� ������������� ����������.
-' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
-Stack trace:
-#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
-#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
-#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
-#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
-#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
-#5 D:\Work\Home\LS\protected\models\Users.php(30): LSFormModel->__construct('')
-#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
-#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
-#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
-#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
-#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
-#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
-#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('update_costcalc...')
-#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
-#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(CostcalcworksController), Object(CInlineAction), '127.0.0.1', 'POST')
-#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
-#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
-#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('update')
-#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('costcalcworks/u...')
-#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#24 D:\Work\Home\LS\index.php(13): CApplication->run()
-#25 {main}
-REQUEST_URI=/costcalcworks/update
-HTTP_REFERER=http://ls.ru/costcalculations/view/4
----
-2018/12/03 21:23:37 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:23:37 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:24:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] ������� ���������� ���������� ���� �����������, �.�. �� ������� ���������� �� ��������� ����� �� ������� ������ ������, ��� ���� ��������� ��� ������������� ���������� ��-�� ��������� ������� ��� ������������� ����������.
-' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
-Stack trace:
-#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
-#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
-#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
-#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
-#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
-#5 D:\Work\Home\LS\protected\models\Users.php(30): LSFormModel->__construct('')
-#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
-#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
-#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
-#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
-#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
-#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
-#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('update_costcalc...')
-#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
-#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(CostcalcworksController), Object(CInlineAction), '127.0.0.1', 'POST')
-#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
-#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
-#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('update')
-#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('costcalcworks/u...')
-#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#24 D:\Work\Home\LS\index.php(13): CApplication->run()
-#25 {main}
-REQUEST_URI=/costcalcworks/update
-HTTP_REFERER=http://ls.ru/costcalculations/view/4
----
-2018/12/03 21:25:46 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:25:46 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:27:25 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:27:28 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:27:28 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:29:58 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:30:00 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:30:00 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:31:40 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:31:43 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:31:43 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:32:09 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:32:11 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:32:11 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:32:38 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:32:42 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:32:42 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:33:22 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:33:23 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:33:23 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:34:27 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:34:28 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:34:28 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:34:56 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:34:58 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:34:58 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:36:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] ������� ���������� ���������� ���� �����������, �.�. �� ������� ���������� �� ��������� ����� �� ������� ������ ������, ��� ���� ��������� ��� ������������� ���������� ��-�� ��������� ������� ��� ������������� ����������.
-' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
-Stack trace:
-#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
-#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
-#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
-#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
-#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
-#5 D:\Work\Home\LS\protected\models\Users.php(30): LSFormModel->__construct('')
-#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
-#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
-#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
-#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
-#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
-#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
-#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('view_costcalcul...')
-#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
-#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(CostcalculationsController), Object(CInlineAction), '127.0.0.1', 'GET')
-#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
-#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
-#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('view')
-#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('costcalculation...')
-#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#24 D:\Work\Home\LS\index.php(13): CApplication->run()
-#25 {main}
-REQUEST_URI=/costcalculations/view/4
-HTTP_REFERER=http://ls.ru/costcalculations
----
-2018/12/03 21:36:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\Work\Home\LS\framework\web\CWebApplication.php:286
-Stack trace:
-#0 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
-#1 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#2 D:\Work\Home\LS\index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/favicon.ico
-HTTP_REFERER=http://ls.ru/costcalculations/view/4
----
-2018/12/03 21:36:07 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:36:13 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:36:13 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:37:26 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:37:28 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:37:28 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:37:43 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:37:43 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:38:07 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:38:10 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:38:10 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:38:20 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:38:20 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:38:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] ������� ���������� ���������� ���� �����������, �.�. �� ������� ���������� �� ��������� ����� �� ������� ������ ������, ��� ���� ��������� ��� ������������� ���������� ��-�� ��������� ������� ��� ������������� ����������.
-' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
-Stack trace:
-#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
-#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
-#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
-#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
-#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
-#5 D:\Work\Home\LS\protected\models\CostCalcWorks.php(27): LSFormModel->__construct('')
-#6 D:\Work\Home\LS\protected\controllers\AjaxDataController.php(95): CostCalcWorks->__construct()
-#7 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
-#8 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#9 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
-#10 D:\Work\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#11 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
-#12 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#13 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#14 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#15 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#16 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
-#17 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
-#18 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#19 D:\Work\Home\LS\index.php(13): CApplication->run()
-#20 {main}
-REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=CostCalcWorks
-HTTP_REFERER=http://ls.ru/costcalculations/view/4
----
-2018/12/03 21:38:50 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:39:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] ������� ���������� ���������� ���� �����������, �.�. �� ������� ���������� �� ��������� ����� �� ������� ������ ������, ��� ���� ��������� ��� ������������� ���������� ��-�� ��������� ������� ��� ������������� ����������.
-' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
-Stack trace:
-#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
-#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
-#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
-#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
-#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
-#5 D:\Work\Home\LS\protected\models\CostCalcWorks.php(27): LSFormModel->__construct('')
-#6 D:\Work\Home\LS\protected\controllers\AjaxDataController.php(95): CostCalcWorks->__construct()
-#7 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimple()
-#8 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#9 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
-#10 D:\Work\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#11 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
-#12 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#13 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#14 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#15 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#16 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimple')
-#17 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
-#18 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#19 D:\Work\Home\LS\index.php(13): CApplication->run()
-#20 {main}
-REQUEST_URI=/index.php/AjaxData/DataJQXSimple?ModelName=CostCalcWorks
-HTTP_REFERER=http://ls.ru/costcalculations/view/4
----
-2018/12/03 21:39:33 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:39:35 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:39:35 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:39:45 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:39:46 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:39:47 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:39:47 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:39:51 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:39:51 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:39:52 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:39:52 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:39:54 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:39:54 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:39:55 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:39:55 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:40:06 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:41:30 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:41:33 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:41:33 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (140)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:41:37 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:41:52 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:41:52 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:41:57 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:41:57 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:42:25 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:42:38 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:42:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] ������� ���������� ���������� ���� �����������, �.�. �� ������� ���������� �� ��������� ����� �� ������� ������ ������, ��� ���� ��������� ��� ������������� ���������� ��-�� ��������� ������� ��� ������������� ����������.
-' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
-Stack trace:
-#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
-#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
-#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
-#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
-#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
-#5 D:\Work\Home\LS\protected\models\Users.php(30): LSFormModel->__construct('')
-#6 D:\Work\Home\LS\protected\components\WebUser.php(15): Users->__construct()
-#7 D:\Work\Home\LS\protected\components\WebUser.php(8): WebUser->getModel()
-#8 D:\Work\Home\LS\protected\components\LSPhpAuthManager.php(16): WebUser->getRole()
-#9 D:\Work\Home\LS\framework\base\CModule.php(394): LSPhpAuthManager->init()
-#10 D:\Work\Home\LS\framework\web\CWebApplication.php(185): CModule->getComponent('authManager')
-#11 D:\Work\Home\LS\framework\web\auth\CWebUser.php(817): CWebApplication->getAuthManager()
-#12 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(347): CWebUser->checkAccess('view_costcalcul...')
-#13 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(285): CAccessRule->isRoleMatched(Object(WebUser))
-#14 D:\Work\Home\LS\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(WebUser), Object(CostcalculationsController), Object(CInlineAction), '127.0.0.1', 'GET')
-#15 D:\Work\Home\LS\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
-#16 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
-#17 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#18 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#19 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#20 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#21 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('getdata')
-#22 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('costcalculation...')
-#23 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#24 D:\Work\Home\LS\index.php(13): CApplication->run()
-#25 {main}
-REQUEST_URI=/costcalculations/getdata/4
-HTTP_REFERER=http://ls.ru/costcalculations/view/4
----
-2018/12/03 21:43:29 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:43:29 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:43:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] ������� ���������� ���������� ���� �����������, �.�. �� ������� ���������� �� ��������� ����� �� ������� ������ ������, ��� ���� ��������� ��� ������������� ���������� ��-�� ��������� ������� ��� ������������� ����������.
-' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
-Stack trace:
-#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
-#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
-#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
-#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
-#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
-#5 D:\Work\Home\LS\protected\models\CostCalcEquips.php(27): LSFormModel->__construct('')
-#6 D:\Work\Home\LS\protected\controllers\AjaxDataController.php(156): CostCalcEquips->__construct()
-#7 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimpleList()
-#8 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#9 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
-#10 D:\Work\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#11 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
-#12 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#13 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#14 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#15 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#16 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimpleLi...')
-#17 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
-#18 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#19 D:\Work\Home\LS\index.php(13): CApplication->run()
-#20 {main}
-REQUEST_URI=/index.php/AjaxData/DataJQXSimpleList
-HTTP_REFERER=http://ls.ru/costcalculations/view/4
----
-2018/12/03 21:43:50 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:43:56 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:43:56 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:44:00 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:44:00 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:44:03 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:44:03 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (140)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 21:44:03 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:44:59 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:02 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:04 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:06 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:09 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:11 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:25 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:28 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:31 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:33 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:35 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:36 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:40 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:42 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:47 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:50 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:52 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:56 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:45:59 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:46:03 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:46:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] ������� ���������� ���������� ���� �����������, �.�. �� ������� ���������� �� ��������� ����� �� ������� ������ ������, ��� ���� ��������� ��� ������������� ���������� ��-�� ��������� ������� ��� ������������� ����������.
-' in D:\Work\Home\LS\framework\db\CDbConnection.php:399
-Stack trace:
-#0 D:\Work\Home\LS\framework\db\CDbConnection.php(347): CDbConnection->open()
-#1 D:\Work\Home\LS\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
-#2 D:\Work\Home\LS\framework\base\CModule.php(394): CDbConnection->init()
-#3 D:\Work\Home\LS\framework\base\CModule.php(103): CModule->getComponent('db')
-#4 D:\Work\Home\LS\protected\components\LSFormModel.php(29): CModule->__get('db')
-#5 D:\Work\Home\LS\protected\models\CostCalcEquips.php(27): LSFormModel->__construct('')
-#6 D:\Work\Home\LS\protected\controllers\AjaxDataController.php(156): CostCalcEquips->__construct()
-#7 D:\Work\Home\LS\framework\web\actions\CInlineAction.php(49): AjaxDataController->actionDataJQXSimpleList()
-#8 D:\Work\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#9 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
-#10 D:\Work\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#11 D:\Work\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
-#12 D:\Work\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#13 D:\Work\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#14 D:\Work\Home\LS\framework\web\CController.php(291): CFilterChain->run()
-#15 D:\Work\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#16 D:\Work\Home\LS\framework\web\CWebApplication.php(282): CController->run('DataJQXSimpleLi...')
-#17 D:\Work\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('AjaxData/DataJQ...')
-#18 D:\Work\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
-#19 D:\Work\Home\LS\index.php(13): CApplication->run()
-#20 {main}
-REQUEST_URI=/index.php/AjaxData/DataJQXSimpleList
-HTTP_REFERER=http://ls.ru/costcalculations/view/4
----
-2018/12/03 21:47:23 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 21:47:23 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 22:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 22:03:34 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:03:34 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:03:43 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:03:43 [warning] [application] Не удалось присвоить небезопасный атрибут "deldate" класса "CostCalcWorks".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\controllers\CostcalcworksController.php (98)
-in D:\Work\Home\LS\index.php (13)
-2018/12/03 22:03:51 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:03:51 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:03:54 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:04:00 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:04:00 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:04:02 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:04:05 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:04:05 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:04:07 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:04:12 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:04:12 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:04:39 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:05:07 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:05:10 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:05:12 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:05:19 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
-2018/12/03 22:05:21 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
-in D:\Work\Home\LS\protected\components\LSFormModel.php (134)
-in D:\Work\Home\LS\protected\components\WebUser.php (16)
-in D:\Work\Home\LS\protected\components\WebUser.php (8)
+2018/12/03 18:22:21 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 10:03:06 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 10:03:07 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 10:03:09 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 10:03:10 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 10:03:16 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 10:03:23 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 10:03:23 [warning] [application] Не удалось присвоить небезопасный атрибут "equip_id" класса "CostCalcWorks".
+in C:\Home\LS\protected\controllers\CostcalcworksController.php (61)
+in C:\Home\LS\index.php (13)
+2018/12/04 10:03:23 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'note' cannot be null. Выполнявшийся SQL-запрос: call insert_costcalcworks(@ccwk_id,@calc_id,@cceq_id,@work_id,@workname,@quant,@price_low,@price_high,@note,@user_create,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (72)
+in C:\Home\LS\protected\controllers\CostcalcworksController.php (64)
+2018/12/04 10:03:28 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 10:03:28 [warning] [application] Не удалось присвоить небезопасный атрибут "equip_id" класса "CostCalcWorks".
+in C:\Home\LS\protected\controllers\CostcalcworksController.php (61)
+in C:\Home\LS\index.php (13)
+2018/12/04 10:03:28 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 10:03:32 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 10:03:35 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 10:03:39 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:13:42 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:17:21 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:17:54 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:18:00 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:21:31 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:22:27 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:23:00 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:24:37 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:25:19 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:26:37 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:26:47 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:26:50 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:26:53 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:27:09 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:27:12 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:27:15 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:27:18 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:27:19 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:27:25 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:27:34 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:27:34 [warning] [application] Не удалось присвоить небезопасный атрибут "equip_id" класса "CostCalcWorks".
+in C:\Home\LS\protected\controllers\CostcalcworksController.php (61)
+in C:\Home\LS\index.php (13)
+2018/12/04 17:27:34 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'note' cannot be null. Выполнявшийся SQL-запрос: call insert_costcalcworks(@ccwk_id,@calc_id,@cceq_id,@work_id,@workname,@quant,@price_low,@price_high,@note,@user_create,@group_id);.
+in C:\Home\LS\protected\components\LSStoredProc.php (122)
+in C:\Home\LS\protected\components\LSFormModel.php (72)
+in C:\Home\LS\protected\controllers\CostcalcworksController.php (64)
+2018/12/04 17:27:37 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:27:37 [warning] [application] Не удалось присвоить небезопасный атрибут "equip_id" класса "CostCalcWorks".
+in C:\Home\LS\protected\controllers\CostcalcworksController.php (61)
+in C:\Home\LS\index.php (13)
+2018/12/04 17:27:38 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:27:42 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:27:45 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:27:50 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:27:58 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:28:42 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:28:48 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:28:56 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:29:02 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:29:45 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:29:53 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:29:59 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:30:02 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:30:09 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:30:23 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:33:45 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:43:05 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:44:10 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:44:55 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:45:35 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:45:46 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:46:50 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:47:55 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:48:34 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:49:42 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:51:08 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:51:30 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:52:35 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:53:33 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:53:47 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:53:50 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:58:53 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:59:36 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 17:59:51 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:00:24 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:00:53 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:01:02 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:01:32 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:01:52 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:02:02 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:07:17 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:07:22 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:07:53 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:08:08 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:09:25 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:09:45 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:10:27 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:10:32 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:11:28 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:11:45 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:12:00 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:12:42 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:12:49 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:13:29 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:14:39 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:14:43 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:14:48 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:14:55 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:14:57 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:15:10 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:15:11 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:15:43 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:15:57 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/04 18:16:00 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)

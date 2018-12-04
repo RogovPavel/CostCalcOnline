@@ -40,17 +40,34 @@
                         </div>
                         <div>
                             <ul>
-                                <li <?php Yii::app()->security->HideShowMenuItem('view_firms'); ?>><a href='<?php echo Yii::app()->createUrl('firms'); ?>'>Мои организации</a></li>
-                                <li <?php Yii::app()->security->HideShowMenuItem('view_clients'); ?>><a href='<?php echo Yii::app()->createUrl('clients'); ?>'>Клиенты</a></li>
-                                <li <?php Yii::app()->security->HideShowMenuItem('view_clientpositions'); ?>><a href='<?php echo Yii::app()->createUrl('clientpositions'); ?>'>Должности</a></li>
-                                <li <?php Yii::app()->security->HideShowMenuItem('view_banks'); ?>><a href='<?php echo Yii::app()->createUrl('banks'); ?>'>Банки</a></li>
-                                <li <?php Yii::app()->security->HideShowMenuItem('view_regions'); ?>><a href='<?php echo Yii::app()->createUrl('regions'); ?>'>Регионы</a></li>
-                                <li <?php Yii::app()->security->HideShowMenuItem('view_streets'); ?>><a href='<?php echo Yii::app()->createUrl('streets'); ?>'>Улицы</a></li>
-                                <li <?php Yii::app()->security->HideShowMenuItem('view_streettypes'); ?>><a href='<?php echo Yii::app()->createUrl('streettypes'); ?>'>Типы улиц</a></li>
-                                <li <?php Yii::app()->security->HideShowMenuItem('view_demandtypes'); ?>><a href='<?php echo Yii::app()->createUrl('demandtypes'); ?>'>Типы заявок</a></li>
-                                <li <?php Yii::app()->security->HideShowMenuItem('view_demandpriors'); ?>><a href='<?php echo Yii::app()->createUrl('demandpriors'); ?>'>Приоритеты заявок</a></li>
-                                <li <?php Yii::app()->security->HideShowMenuItem('view_units'); ?>><a href='<?php echo Yii::app()->createUrl('units'); ?>'>Ед. измерения</a></li>
-                                <li <?php Yii::app()->security->HideShowMenuItem('view_equips'); ?>><a href='<?php echo Yii::app()->createUrl('equips'); ?>'>Оборудование</a></li>
+                                <li>Адреса
+                                    <ul>
+                                        <li <?php Yii::app()->security->HideShowMenuItem('view_regions'); ?>><a href='<?php echo Yii::app()->createUrl('regions'); ?>'>Регионы</a></li>
+                                        <li <?php Yii::app()->security->HideShowMenuItem('view_streettypes'); ?>><a href='<?php echo Yii::app()->createUrl('streettypes'); ?>'>Типы улиц</a></li>
+                                        <li <?php Yii::app()->security->HideShowMenuItem('view_streets'); ?>><a href='<?php echo Yii::app()->createUrl('streets'); ?>'>Улицы</a></li>
+                                    </ul>
+                                </li>
+                                <li>Организации
+                                    <ul>
+                                        <li <?php Yii::app()->security->HideShowMenuItem('view_banks'); ?>><a href='<?php echo Yii::app()->createUrl('banks'); ?>'>Банки</a></li>
+                                        <li <?php Yii::app()->security->HideShowMenuItem('view_firms'); ?>><a href='<?php echo Yii::app()->createUrl('firms'); ?>'>Мои организации</a></li>
+                                        <li <?php Yii::app()->security->HideShowMenuItem('view_clients'); ?>><a href='<?php echo Yii::app()->createUrl('clients'); ?>'>Клиенты</a></li>
+                                        <li <?php Yii::app()->security->HideShowMenuItem('view_clientpositions'); ?>><a href='<?php echo Yii::app()->createUrl('clientpositions'); ?>'>Должности</a></li>
+                                    </ul>
+                                </li>
+                                <li>Заявки
+                                    <ul>
+                                        <li <?php Yii::app()->security->HideShowMenuItem('view_demandtypes'); ?>><a href='<?php echo Yii::app()->createUrl('demandtypes'); ?>'>Типы</a></li>
+                                        <li <?php Yii::app()->security->HideShowMenuItem('view_demandpriors'); ?>><a href='<?php echo Yii::app()->createUrl('demandpriors'); ?>'>Приоритеты</a></li>
+                                    </ul>
+                                </li>
+                                <li>Заявки
+                                    <ul>
+                                        <li <?php Yii::app()->security->HideShowMenuItem('view_units'); ?>><a href='<?php echo Yii::app()->createUrl('units'); ?>'>Ед. измерения</a></li>
+                                        <li <?php Yii::app()->security->HideShowMenuItem('view_equips'); ?>><a href='<?php echo Yii::app()->createUrl('equips'); ?>'>Оборудование</a></li>
+                                    </ul>
+                                </li>
+
                             </ul>
                         </div>
                         <div>
@@ -69,7 +86,9 @@
                             </ul>
                         </div>
                     </div>
+                    
                 </div>
+                
             </div>
             <div class="ls-column-right">
                 <div class="ls-top-menu_container">
@@ -126,6 +145,7 @@
                 </div>
             </div>
         </div>
+        <div style="clear: both;"></div>
     </body>
 </html>
 <script type="text/javascript">
