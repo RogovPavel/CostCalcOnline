@@ -30424,3 +30424,19 @@ in C:\Home\LS\protected\components\WebUser.php (8)
 in C:\Home\LS\protected\components\LSFormModel.php (134)
 in C:\Home\LS\protected\components\WebUser.php (16)
 in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/05 15:46:57 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/05 15:47:00 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/05 15:47:06 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/05 15:47:07 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (134)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
