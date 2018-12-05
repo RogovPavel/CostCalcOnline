@@ -341,7 +341,7 @@
                     
                     $('#ls-btn-edit-costcalcworks').on('click', function() {
                         if ($('#ls-btn-add-costcalcworks').jqxButton('disabled') || ls.lock_operation) return;
-                        ls.opendialogforedit('costcalcworks', 'update', {cceq_id: ls.costcalcworks.row.cceq_id}, 'POST', false, {width: '700px', height: '380px'});
+                        ls.opendialogforedit('costcalcworks', 'update', {ccwk_id: ls.costcalcworks.row.ccwk_id}, 'POST', false, {width: '700px', height: '380px'});
                     });
                     
                     $('#ls-btn-refresh-costcalcworks').on('click', function() {
@@ -349,10 +349,11 @@
                     });
                     
                     $('#ls-btn-del-costcalcworks').on('click', function() {
-                        ls.delete('costcalcworks', 'delete', {cceq_id: ls.costcalcworks.row.cceq_id}, function(Res) {
+                        ls.delete('costcalcworks', 'delete', {ccwk_id: ls.costcalcworks.row.ccwk_id}, function(Res) {
                             Res = JSON.parse(Res);
                             if (Res.state == 0) {
                                 ls.costcalcworks.rowindex--;
+                                ls.costcalculations.refresh(true);
                                 ls.costcalcworks.refresh(false);
                             }
                             else
@@ -501,7 +502,7 @@
             </div>
             <div class="ls-row">
                 <div class="ls-row-column-right"><div id="ls-costcalculations-marj"></div></div>
-                <div class="ls-row-column-right" style="font-weight: bold;">Маржа:</div>
+                <div class="ls-row-column-right" style="font-weight: bold;">Маржа %:</div>
             </div>
         </div>
     </div>

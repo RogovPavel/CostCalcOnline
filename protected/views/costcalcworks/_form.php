@@ -2,6 +2,7 @@
     $(document).ready(function() {
         var state_insert = <?php if (mb_strtoupper(Yii::app()->controller->action->id) == mb_strtoupper('Create') || mb_strtoupper(Yii::app()->controller->action->id) == 'Insert') echo json_encode(true); else echo json_encode(false); ?>;
         var model = <?php echo json_encode($model); ?>;
+        var first = true;
         
         var dataequips;
         var dataworks;
@@ -11,7 +12,10 @@
             type: 'POST',
             async: true,
             data: {
-                Models: ['Equips', 'Works']
+                Models: ['CostCalcEquips', 'Works'],
+                Filters: {
+                    CostCalcEquips: [{field: 'e.calc_id', operand: 1, value: model.calc_id}]
+                }
             },
             success: function(Res) {
                 Res = JSON.parse(Res);
@@ -19,25 +23,45 @@
                 dataequips = Res[0];
                 dataworks = Res[1];
                 
+                for (var i = 0; i < dataequips.length; i++)
+                    dataequips[i].html = dataequips[i].equipname + ', Кол-во:' + parseFloat(dataequips[i].quant) + ', Цена:' + parseFloat(dataequips[i].price_high);
+                
                 $("#ls-costcalcworks-equip").jqxComboBox({source: dataequips});
-                $("#ls-costcalcworks-equip").val(model.equip_id);
+                $("#ls-costcalcworks-equip").val(model.cceq_id);
                 $("#ls-costcalcworks-work").jqxComboBox({source: dataworks});
                 $("#ls-costcalcworks-work").val(model.work_id);
             }
         });
         
         $('#ls-costcalcworks-equip').on('select', function (event) {
+            if (first && !state_insert) {
+                first = false;
+                return;
+            }
+            
             var args = event.args;
             if (args) {
                 var item = args.item;
                 var data = item.originalItem;
                 $("#ls-costcalcworks-unit").val(data.unit_name);
+                $("#ls-costcalcworks-quant").jqxNumberInput('val', data.quant);
             }
         }); 
         
+        $("#ls-costcalcworks-quant").on('change', function(event) {
+            var value = event.args.value;
+            
+            var item = $("#ls-costcalcworks-equip").jqxComboBox('getSelectedItem'); 
+            
+            if (parseFloat(value) != parseFloat(item.originalItem.quant))
+                $("#ls-costcalcworks-quant > input").css({'color': 'red'});
+            else
+                $("#ls-costcalcworks-quant > input").css({'color': ''});
+        });
+        
         $("#ls-costcalcworks-workname").jqxInput($.extend(true, {}, ls.settings['input'], {width: '380px'}));
         $("#ls-costcalcworks-work").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {displayMember: "workname", valueMember: "work_id", width: '380px'}));
-        $("#ls-costcalcworks-equip").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {displayMember: "equipname", valueMember: "equip_id", width: '380px'}));
+        $("#ls-costcalcworks-equip").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {displayMember: "equipname", valueMember: "cceq_id", width: '380px'}));
         $("#ls-costcalcworks-unit").jqxInput($.extend(true, {}, ls.settings['input'], {width: '70px'}));
         $("#ls-costcalcworks-quant").jqxNumberInput($.extend(true, {}, ls.settings['numberinput'], {width: '140px'}));
         $("#ls-costcalcworks-pricelow").jqxNumberInput($.extend(true, {}, ls.settings['numberinput'], {width: '140px'}));
@@ -88,7 +112,7 @@
             });
         });
         
-        $("#ls-costcalcworks-equip").jqxComboBox('val', model.equip_id);
+        $("#ls-costcalcworks-workname").jqxInput('val', model.workname);
         $("#ls-costcalcworks-quant").jqxNumberInput('val', parseFloat(model.quant));
         $("#ls-costcalcworks-pricelow").jqxNumberInput('val', parseFloat(model.price_low));
         $("#ls-costcalcworks-pricehigh").jqxNumberInput('val', parseFloat(model.price_high));
@@ -160,8 +184,8 @@
             <div class="ls-form-column">
                 <div>Оборудование:</div>
                 <div>
-                    <div id="ls-costcalcworks-equip" name="costcalcworks[equip_id]" autocomplete="off"></div>
-                    <div class="ls-form-error"><?php echo $form->error($model, 'equip_id'); ?></div>
+                    <div id="ls-costcalcworks-equip" name="costcalcworks[cceq_id]" autocomplete="off"></div>
+                    <div class="ls-form-error"><?php echo $form->error($model, 'cceq_id'); ?></div>
                 </div>
             </div>
             <div class="ls-form-column">
