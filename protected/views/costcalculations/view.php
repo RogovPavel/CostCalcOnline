@@ -145,6 +145,10 @@
         
         $("#ls-btn-edit-details").jqxButton($.extend(true, {}, ls.settings['button'], {theme: ls.defaults.theme, width: '130px', height: 30}));
         
+        $("#ls-btn-edit-details").on('click', function() {
+            if ($('#ls-btn-edit-details').jqxButton('disabled') || ls.lock_operation) return;
+            ls.opendialogforedit('costcalculations', 'updatedetails', {calc_id: ls.costcalculations.row.calc_id}, 'POST', false, {width: '600px', height: '564px'});
+        });
         
         $('#ls-costcalculations-edit').on('click', function() {
             if ($('#ls-costcalculations-edit').jqxButton('disabled') || ls.lock_operation) return;
@@ -430,7 +434,7 @@
     <div class="ls-row">
         <div class="ls-row-column"><input type="button" id="ls-costcalculations-edit" value="Изменить"/></div>
     </div>
-    <div class="ls-row" style="height: calc(100% - 282px); min-height: 200px;">
+    <div class="ls-row" style="height: calc(100% - 286px); min-height: 200px;">
         <div id='ls-costcalculations-tab'>
             <ul>
                 <li style="margin-left: 30px;">Оборудование</li>
