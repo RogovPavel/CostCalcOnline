@@ -28,7 +28,7 @@ class CostCalcDetails extends LSFormModel {
         $this->sp_delete_name = '';
         
         $this->proc_params = array(
-            'update_firms' => array('calc_id', 'koef', 'discount', 'sum_materials_low', 'sum_materials_high', 'sum_startworks_low', 'sum_startworks_high', 'sum_works_low', 'sum_works_high', 'sum_equips_low', 'sum_equips_high', 'sum_expences_low', 'sum_expences_high', 'user_change', 'group_id'),
+            'update_costcalcdetails' => array('calc_id', 'koef', 'discount', 'sum_materials_low', 'sum_materials_high', 'sum_startworks_low', 'sum_startworks_high', 'sum_expences_low', 'sum_expences_high', 'user_change', 'group_id'),
         );
         
         $this->command->select = "  c.calc_id,

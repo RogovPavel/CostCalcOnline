@@ -26,6 +26,51 @@ ls.content = {
     }
 };
 
+ls.leftmenu = {
+    state: 0,
+    setstate: function(st) {
+        if (st == undefined)
+            st = 0;
+        
+        ls.leftmenu.state = st;
+        
+        if (this.state == 0) {
+            $(".ls-column-left").css({
+                'width': '50px'
+            });
+
+            $(".ls-column-right").css({
+                'width': 'calc(100% - 90px)'
+            });
+
+            $("#ls-left-menu").css({
+                'display': 'none'
+            });
+            
+            $(".ls-arrow").css({
+                'background-image': 'url(/js/jqwidgets/styles/images/icon-right-white.png)'
+            });
+        }
+        else {
+            $(".ls-column-left").css({
+                'width': '250px'
+            });
+
+            $(".ls-column-right").css({
+                'width': 'calc(100% - 290px)'
+            });
+
+            $("#ls-left-menu").css({
+                'display': 'block'
+            });
+            
+            $(".ls-arrow").css({
+                'background-image': 'url(/js/jqwidgets/styles/images/icon-left-white.png)'
+            });
+        }
+    }
+    
+};
 
 ls.sources = [];
 ls.settings = [];

@@ -36,17 +36,13 @@
             if (ls.lock_operation) return;
             ls.lock_operation = true;
             
-            if (state_insert)
-                var action = 'create';
-            else
-                var action = 'update';
+            var action = 'updatedetails';
             
-            ls.save('costcalcdetails', action, $('#costcalcdetails').serialize(), function(Res) {
+            ls.save('costcalculations', action, $('#costcalcdetails').serialize(), function(Res) {
                 Res = JSON.parse(Res);
                 ls.lock_operation = false;
                 if (Res.state == 0) {
-                    ls.costcalcdetails.rowid = parseInt(Res.id);
-                    ls.costcalcdetails.refresh(true);
+                    ls.costcalculations.refresh(true);
                     $('#ls-dialog').jqxWindow('close');
                 }
                 else if (Res.state == 1)

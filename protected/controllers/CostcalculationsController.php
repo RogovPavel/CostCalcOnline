@@ -11,14 +11,11 @@ class CostcalculationsController extends Controller {
     
     public function accessRules() {
         return array(
-            array('allow', 'actions'=>array('index', 'view', 'getdata'), 'roles'=>array('view_costcalculations'),),
-            array('allow', 'actions'=>array('create'), 'roles'=>array('create_costcalculations'),),
-            array('allow', 'actions'=>array('update'), 'roles'=>array('update_costcalculations'),),
-            array('allow', 'actions'=>array('updatedetails'), 'roles'=>array('update_costcalculations'),),
-            array('allow', 'actions'=>array('delete'), 'roles'=>array('delete_costcalculations'),),
-            array('deny',
-                    'users'=>array('*'),
-            ),
+            array('allow', 'actions'=>array('index', 'view', 'getdata'), 'roles'=>array('view_costcalculations')),
+            array('allow', 'actions'=>array('create'), 'roles'=>array('create_costcalculations')),
+            array('allow', 'actions'=>array('update', 'updatedetails', 'ready', 'undo'), 'roles'=>array('update_costcalculations')),
+            array('allow', 'actions'=>array('delete'), 'roles'=>array('delete_costcalculations')),
+            array('deny', 'users'=>array('*'))
         );
     }
     
@@ -124,6 +121,72 @@ class CostcalculationsController extends Controller {
             $result['state'] = 2;
             $result['responseText'] = $e->getMessage();
             
+        } finally {
+            echo json_encode($result);
+        }
+    }
+    
+    public function actionUndo() {
+        $result = array(
+            'state' => 0,
+            'header' => 'Редактирование записи',
+            'id' => 0,
+            'responseText' => '',
+        );
+        
+        try {
+            $sp = new LSStoredProc();
+    
+            $sp->sp_proc_name = 'undo_costcalculations';
+            $sp->proc_params = array('calc_id', 'user_change', 'group_id');
+            
+            if (isset($_POST['params'])) {
+                $params = array(
+                    'calc_id' => $_POST['params']['calc_id'],
+                    'user_change' => Yii::app()->user->user_id,
+                    'group_id' => Yii::app()->user->group_id
+                 );
+                
+                $res = $sp->execute($params);
+                $result['id'] = $res['data']['calc_id'];
+            }
+            
+        } catch (Exception $e) {
+            $result['state'] = 2;
+            $result['responseText'] = $e->getMessage();
+        } finally {
+            echo json_encode($result);
+        }
+    }
+    
+    public function actionReady() {
+        $result = array(
+            'state' => 0,
+            'header' => 'Редактирование записи',
+            'id' => 0,
+            'responseText' => '',
+        );
+        
+        try {
+            $sp = new LSStoredProc();
+    
+            $sp->sp_proc_name = 'ready_costcalculations';
+            $sp->proc_params = array('calc_id', 'user_change', 'group_id');
+            
+            if (isset($_POST['params'])) {
+                $params = array(
+                    'calc_id' => $_POST['params']['calc_id'],
+                    'user_change' => Yii::app()->user->user_id,
+                    'group_id' => Yii::app()->user->group_id
+                 );
+                
+                $res = $sp->execute($params);
+                $result['id'] = $res['data']['calc_id'];
+            }
+            
+        } catch (Exception $e) {
+            $result['state'] = 2;
+            $result['responseText'] = $e->getMessage();
         } finally {
             echo json_encode($result);
         }

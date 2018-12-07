@@ -15,6 +15,10 @@
         <div class="ls-main-container">
             <div class="ls-column-left">
                 <div class="ls-left-menu-container">
+                    <div id="ls-ar" class="ls-left-arrow">
+                        <div class="ls-arrow"></div>
+                    </div>
+                    <div style="clear: both"></div>
                     <div id="ls-left-menu">
                         <div>
                             <div style='margin-top: 2px;'>
@@ -153,6 +157,15 @@
         $("#ls-top-menu").jqxMenu({theme: ls.defaults.theme, width: 'calc(100% - 2px)', height: '28px'});
         $("#ls-top-menu").css('visibility', 'visible');
         $("#ls-left-menu").jqxNavigationBar({theme: ls.defaults.theme, width: 200, expandMode: 'multiple', expandedIndexes: [0, 1, 2]});
+        
+        $("#ls-ar").on('click', function() {
+//            console.log(ls.leftmenu.state);
+            if (ls.leftmenu.state == 0) {
+                ls.leftmenu.setstate(1);
+            }
+            else
+                ls.leftmenu.setstate(0);
+        });
         
     });
 </script>

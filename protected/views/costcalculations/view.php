@@ -12,6 +12,7 @@
                     success: function(Res) {
                         ls.costcalculations.row = JSON.parse(Res);
                         ls.costcalculations.setvalues();
+                        ls.costcalculations.checkbuttons();
                     },
                     error: function(Res) {
                         ls.showerrormassage('Ошибка', res.responseText);
@@ -43,7 +44,13 @@
             $("#ls-costcalculations-sumlowfull").jqxNumberInput('val', parseFloat(ls.costcalculations.row.sum_low_full));
             $("#ls-costcalculations-sumhighfull").jqxNumberInput('val', parseFloat(ls.costcalculations.row.sum_high_full));
             $("#ls-costcalculations-marj").jqxNumberInput('val', parseFloat(ls.costcalculations.row.percent_marj));
-            
+            $("#ls-costcalculations-discount").jqxNumberInput('val', parseFloat(ls.costcalculations.row.discount));
+        },
+        checkbuttons: function() {
+            $('#ls-costcalculations-edit').jqxButton({disabled: (this.row.date_ready != null)});
+            $('#ls-btn-edit-details').jqxButton({disabled: (this.row.date_ready != null)});
+            ls.costcalcequips.checkbutton();
+            ls.costcalcworks.checkbutton();
         }
     };
     
@@ -73,6 +80,11 @@
             }
             else
                 $("#ls-costcalcequips-grid").jqxGrid('updatebounddata');
+        },
+        checkbutton: function() {
+            $('#ls-btn-add-costcalcequips').jqxButton({disabled: !((ls.costcalculations.row != undefined) && (ls.costcalculations.row.date_ready == null))});
+            $('#ls-btn-edit-costcalcequips').jqxButton({disabled: !((ls.costcalcequips.row != undefined) && (ls.costcalculations.row.date_ready == null))});
+            $('#ls-btn-del-costcalcequips').jqxButton({disabled: !((ls.costcalcequips.row != undefined) && (ls.costcalculations.row.date_ready == null))});
         }
     };
     
@@ -102,6 +114,11 @@
             }
             else
                 $("#ls-costcalcworks-grid").jqxGrid('updatebounddata');
+        },
+        checkbutton: function() {
+            $('#ls-btn-add-costcalcworks').jqxButton({disabled: !((ls.costcalculations.row != undefined) && (ls.costcalculations.row.date_ready == null))})
+            $('#ls-btn-edit-costcalcworks').jqxButton({disabled: !((ls.costcalcworks.row != undefined) && (ls.costcalculations.row.date_ready == null))})
+            $('#ls-btn-del-costcalcworks').jqxButton({disabled: !((ls.costcalcworks.row != undefined) && (ls.costcalculations.row.date_ready == null))})
         }
     };
     
@@ -128,6 +145,8 @@
         $("#ls-costcalculations-demand").jqxInput($.extend(true, {}, ls.settings['input'], {width: '80px', height: 25, disabled: false}));
         $("#ls-costcalculations-specnote").jqxTextArea($.extend(true, {}, ls.settings['textarea'], {height: '70px', width: 'calc(100% - 8px)'}));
         $("#ls-costcalculations-edit").jqxButton($.extend(true, {}, ls.settings['button'], {theme: ls.defaults.theme, width: '100px', height: 30}));
+        $("#ls-costcalculations-ready").jqxButton($.extend(true, {}, ls.settings['button'], {theme: ls.defaults.theme, width: '100px', height: 30}));
+        $("#ls-costcalculations-undo").jqxButton($.extend(true, {}, ls.settings['button'], {theme: ls.defaults.theme, width: '140px', height: 30}));
         
         $("#ls-costcalculations-summaterialslow").jqxNumberInput($.extend(true, {}, ls.settings['numberinput'], {width: '130px', height: 25, readOnly: true}));
         $("#ls-costcalculations-summaterialshigh").jqxNumberInput($.extend(true, {}, ls.settings['numberinput'], {width: '130px', height: 25, readOnly: true}));
@@ -155,12 +174,36 @@
             ls.opendialogforedit('costcalculations', 'update', {calc_id: ls.costcalculations.row.calc_id}, 'POST', false, {width: '600px', height: '564px'});
         });
         
+        
+        
+        $('#ls-costcalculations-undo').on('click', function() {
+            if ($('#ls-costcalculations-undo').jqxButton('disabled') || ls.lock_operation) return;
+            ls.save('costcalculations', 'undo', {params: {calc_id: ls.costcalculations.row.calc_id}}, function(Res) {
+                Res = JSON.parse(Res);
+                if (Res.state == 0) {
+                    ls.costcalculations.refresh(true);
+                }
+                else
+                    ls.showerrormassage('Ошибка!', Res.responseText);
+            }, 'POST', true);
+        });
+        
+        $('#ls-costcalculations-ready').on('click', function() {
+            if ($('#ls-costcalculations-ready').jqxButton('disabled') || ls.lock_operation) return;
+            ls.save('costcalculations', 'ready', {params: {calc_id: ls.costcalculations.row.calc_id}}, function(Res) {
+                Res = JSON.parse(Res);
+                if (Res.state == 0) {
+                    ls.costcalculations.refresh(true);
+                }
+                else
+                    ls.showerrormassage('Ошибка!', Res.responseText);
+            }, 'POST', true);
+        });
+        
         var initWidgets = function(tab) {
             switch(tab) {
                 case 0:
-                    var checkbuttoncostcalcequips = function() {
-                        $('#ls-btn-add-costcalcequips').jqxButton({disabled: !(ls.costcalculations.row != undefined)})
-                    };
+                    
                     
                     $("#ls-costcalcequips-grid").on('bindingcomplete', function(event) {
                         var idx  = ls.costcalcequips.rowindex;
@@ -178,7 +221,7 @@
                         $("#ls-costcalcequips-grid").jqxGrid('selectrow', idx);
                         $("#ls-costcalcequips-grid").jqxGrid('ensurerowvisible', idx);
 
-                        checkbuttoncostcalcequips();
+                        ls.costcalcequips.checkbutton();
                         ls.lock_operation = false;
                     });
                     
@@ -186,7 +229,7 @@
                         var args = event.args;
                         ls.costcalcequips.rowindex = args.rowindex;
                         ls.costcalcequips.row = args.row;
-                        checkbuttoncostcalcequips();
+                        ls.costcalcequips.checkbutton();
                     });
                     
                     $("#ls-costcalcequips-grid").jqxGrid(
@@ -260,9 +303,7 @@
                     });
                     break;
                 case 1:
-                    var checkbuttoncostcalcworks = function() {
-                        $('#ls-btn-add-costcalcworks').jqxButton({disabled: !(ls.costcalculations.row != undefined)})
-                    };
+                    
                     
                     $("#ls-costcalcworks-grid").on('bindingcomplete', function(event) {
                         var idx  = ls.costcalcworks.rowindex;
@@ -280,7 +321,7 @@
                         $("#ls-costcalcworks-grid").jqxGrid('selectrow', idx);
                         $("#ls-costcalcworks-grid").jqxGrid('ensurerowvisible', idx);
 
-                        checkbuttoncostcalcworks();
+                        ls.costcalcworks.checkbutton();
                         ls.lock_operation = false;
                     });
                     
@@ -288,7 +329,7 @@
                         var args = event.args;
                         ls.costcalcworks.rowindex = args.rowindex;
                         ls.costcalcworks.row = args.row;
-                        checkbuttoncostcalcworks();
+                        ls.costcalcworks.checkbutton();
                     });
                     
                     $('#ls-btn-add-costcalcworks').jqxButton($.extend(true, {}, ls.settings['button'], {width: 120, height: 30}));
@@ -382,6 +423,7 @@
         $('#ls-costcalculations-tab').jqxTabs($.extend(true, {}, ls.settings['tab'], {selectedItem: idx, width: 'calc(100% - 2px)', height: 'calc(100% - 2px)', position: 'top', initTabContent: initWidgets}));
         
         ls.costcalculations.setvalues();
+        ls.costcalculations.checkbuttons();
     });
     
 </script>
@@ -433,6 +475,8 @@
     </div>
     <div class="ls-row">
         <div class="ls-row-column"><input type="button" id="ls-costcalculations-edit" value="Изменить"/></div>
+        <div class="ls-row-column"><input type="button" id="ls-costcalculations-ready" value="Готово"/></div>
+        <div class="ls-row-column"><input type="button" id="ls-costcalculations-undo" value="Снять готовность"/></div>
     </div>
     <div class="ls-row" style="height: calc(100% - 286px); min-height: 200px;">
         <div id='ls-costcalculations-tab'>

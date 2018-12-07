@@ -18,10 +18,18 @@ a {
     color: #4c3000;
 }
 
+li > ul {
+    padding-left: 20px;
+}
+
 .ls-left-menu-container {
     float: left;
     width: 200px;
    
+}
+
+#ls-left-menu {
+    display: none;
 }
 
 .ls-main-container {
@@ -36,7 +44,7 @@ a {
 
 .ls-column-left {
     float: left;
-    width: 250px;
+    width: 50px;
     background-color: #eee;
     height: 100%;
     overflow: auto;
@@ -44,7 +52,7 @@ a {
 
 .ls-column-right {
     float: left;
-    width: calc(100% - 290px);
+    width: calc(100% - 90px);
     height: 100%;
     padding: 0 20px;
 }
@@ -57,9 +65,32 @@ a {
 }
 
 .ls-left-menu-container {
-    margin-top: 68px;
+    margin-top: 70px;
     float: right;
     margin-right: 10px;
+}
+
+.ls-left-arrow {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    float: right;
+    background-color: #7a7a7a;
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#989898),to(#696969));
+    border: 1px solid #666;
+}
+
+.ls-left-arrow:hover {
+    cursor: pointer;
+}
+
+.ls-arrow {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/js/jqwidgets/styles/images/icon-right-white.png);
 }
 
 .ls-breadcrumbs-container {
