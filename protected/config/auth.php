@@ -63,6 +63,9 @@
         /* Должности контактных лиц */
         include(dirname(__FILE__).'/security/clientpositions.php'),
             
+        /* Шаблоны документов */
+        include(dirname(__FILE__).'/security/templates.php'),
+            
         array(    
             'guest' => array(
                 'type' => CAuthItem::TYPE_ROLE,
@@ -103,7 +106,8 @@
                     'admin_costcalcworks',
                     
                     'admin_groupsettings',
-                    'admin_clientpositions'
+                    'admin_clientpositions',
+                    'admin_templates',
                 ),
             ),
             
@@ -140,8 +144,8 @@
                     'admin_costcalcequips',
                     'admin_costcalcworks',
                     
-                    'admin_clientpositions'
-                    
+                    'admin_clientpositions',
+                    'admin_templates',
                 ),
             ),
             
@@ -175,7 +179,7 @@
                     'manager_costcalcworks',
                     
                     
-                    'manager_clientpositions'
+                    'manager_clientpositions',
                 ),
             ),
             

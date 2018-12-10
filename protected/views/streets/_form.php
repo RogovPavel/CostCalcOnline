@@ -11,7 +11,7 @@
             type: 'POST',
             async: true,
             data: {
-                Models: ['StreetTypes', 'Regions']
+                Models: ['TemplateTypes']
             },
             success: function(Res) {
                 Res = JSON.parse(Res);
@@ -29,7 +29,7 @@
         $("#ls-street-name").jqxInput({theme: ls.defaults.theme, width: 'calc(100% - 8px)', height: 25});
         $("#ls-street-streettype").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {displayMember: "streettype_name", valueMember: "streettype_id", width: 'calc(100% - 8px)'}));
         $("#ls-street-region").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {displayMember: "region_name", valueMember: "region_id", width: 'calc(100% - 8px)'}));
-        
+        $("#ls-demandprior-worktime").jqxCheckBox($.extend(true, {}, ls.settings['checkbox'], {theme: ls.defaults.theme, width: '300px', height: 25}));
         $("#ls-street-save").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
         $("#ls-street-cancel").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
         

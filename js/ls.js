@@ -76,6 +76,18 @@ ls.sources = [];
 ls.settings = [];
 ls.functions = {};
 
+ls.settabindex = function(idx) {
+    try {
+        history.pushState(null, null, '#' + idx);
+    } catch(e) {};
+};
+        
+ls.gettabindex = function() {
+    var idx = location.hash;
+    idx = idx.substr(1);
+    return parseInt(idx);
+};
+
 ls.wopen = function(url, params, wname) {
     var tmpurl = url;
     var i = 0;
@@ -259,6 +271,10 @@ ls.delete = function(controller, action, params, after, type, async) {
             ls.showerrormassage('Ошибка', Res.responseText);
         }
     });
+};
+
+ls.settings['editor'] = {
+    theme: ls.defaults.theme
 };
 
 ls.settings['datatable'] = {
@@ -1064,6 +1080,35 @@ ls.sources['costcalcworks'] = {
     ],
     id: 'ccwk_id',
     url: '/index.php/AjaxData/DataJQXSimple?ModelName=CostCalcWorks',
+    type: 'POST',
+    root: 'Rows',
+    cache: false,
+    async: true,
+    pagenum: 0,
+    pagesize: 200,
+    beforeprocessing: function (data) {
+        this.totalrecords = data[0].TotalRows;
+    }
+};
+
+ls.sources['templates'] = {
+    datatype: "json",
+    datafields: [
+        {name: 'template_id', type: 'int'},
+        {name: 'templatename', type: 'string'},
+        {name: 'type_id', type: 'int'},
+        {name: 'typename', type: 'string'},
+        {name: 'active', type: 'bool'},
+        {name: 'template', type: 'string'},
+        {name: 'date_create', type: 'date'},
+        {name: 'user_create', type: 'int'},
+        {name: 'date_change', type: 'date'},
+        {name: 'user_change', type: 'int'},
+        {name: 'group_id', type: 'int'},
+        {name: 'deldate', type: 'date'},
+    ],
+    id: 'template_id',
+    url: '/index.php/AjaxData/DataJQXSimple?ModelName=Templates',
     type: 'POST',
     root: 'Rows',
     cache: false,

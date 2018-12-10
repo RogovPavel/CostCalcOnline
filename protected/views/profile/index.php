@@ -17,6 +17,24 @@
         }
     };
     
+    ls.templates = {
+        rowid: undefined,
+        row: undefined,
+        rowindex: undefined,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = false;
+            if (!$("#ls-templates-grid").jqxGrid('isBindingCompleted'))
+                return;
+            if (reset) {
+                var adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['templates']), {loadError: ls.loaderror});
+                $("#ls-templates-grid").jqxGrid({source: adapter});
+            }
+            else
+                $("#ls-templates-grid").jqxGrid('updatebounddata');
+        }
+    };
+    
     ls.options = {
         rowid: undefined,
         row: <?php echo json_encode($groupsettings); ?>,
@@ -155,10 +173,102 @@
                         });
                     });
                 break;
+                case 2:
+                    var checkbutton = function() {
+                        $('#ls-btn-templates-update').jqxButton({disabled: !(ls.templates.row != undefined)})
+                        $('#ls-btn-templates-delete').jqxButton({disabled: !(ls.templates.row != undefined)})
+                    };
+                    
+                    $("#ls-templates-grid").on('rowselect', function (event) {
+                        var args = event.args;
+                        ls.templates.rowindex = args.rowindex;
+                        ls.templates.row = args.row;
+                        checkbutton();
+                    });
+                    
+                    $("#ls-templates-grid").on('rowdoubleclick', function(){
+                        $('#ls-btn-update').click();
+                    });
+                    
+                    $("#ls-templates-grid").on('bindingcomplete', function() {
+                        var idx  = ls.templates.rowindex;
+                        
+                        if (ls.templates.rowid != undefined) {
+                            idx = $("#ls-templates-grid").jqxGrid('getrowboundindexbyid', ls.templates.rowid);
+                            ls.templates.rowid = undefined;
+                        }
+
+                        var rows = $("#ls-templates-grid").jqxGrid('getrows');
+
+                        if (idx == undefined || idx >= rows.length) 
+                            idx = 0;
+
+                        $("#ls-templates-grid").jqxGrid('selectrow', idx);
+                        $("#ls-templates-grid").jqxGrid('ensurerowvisible', idx);
+
+                        checkbutton();
+                        ls.lock_operation = false;
+                    });
+                    
+                    $('#ls-btn-templates-create').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+                    $('#ls-btn-templates-update').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+                    $('#ls-btn-templates-refresh').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+                    $('#ls-btn-templates-delete').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+                    
+                    $("#ls-templates-grid").jqxGrid(
+                        $.extend(true, {}, ls.settings['grid'], {
+                            columns: [
+                                { text: 'Наименование', datafield: 'templatename', width: 150},
+                                { text: 'Тип', datafield: 'typename', width: 200},    
+                            ]
+                    }));
+                    
+                    ls.templates.refresh(true);
+                    
+                    $('#ls-btn-templates-create').on('click', function() {
+                        ls.wopen('templates/create', [], 'createtemplate');
+                    });
+                    
+                    $('#ls-btn-templates-update').on('click', function() {
+                        if ($('#ls-btn-update').jqxButton('disabled') || ls.lock_operation) return;
+                        if (ls.templates.row == undefined) return;
+                        ls.opendialogforedit('templates', 'update', {user_id: ls.templates.row.user_id}, 'POST', false, {width: '620px', height: '310px'});
+                    });
+                    
+                    $('#ls-btn-templates-refresh').on('click', function() {
+                        if (ls.lock_operation) return;
+                        ls.lock_operation = true;
+                        ls.templates.refresh(false);
+                    });
+                    
+                    $('#ls-btn-templates-delete').on('click', function() {
+                        if ($('#ls-btn-delete').jqxButton('disabled') || ls.lock_operation) return;
+                        if (ls.templates.row == undefined) return;            
+                        ls.delete('templates', 'delete', {user_id: ls.templates.row.user_id}, function(Res) {
+                            Res = JSON.parse(Res);
+                            if (Res.state == 0) {
+                                ls.templates.rowindex--;
+                                ls.templates.refresh(false);
+                            }
+                            else {
+                                ls.showerrormassage('Ошибка! ' + Res.responseText);
+                            }
+                        });
+                    });
+                break;
             }
         };
         
-        $('#ls-profile-tab').jqxTabs($.extend(true, {}, ls.settings['tab'], { width: 'calc(100% - 2px)', height: 'calc(100% - 2px)', position: 'top', initTabContent: initWidgets}));
+        $('#ls-profile-tab').on('selected', function(event) {
+            var idx = event.args.item;
+            ls.settabindex(idx);
+        });
+        
+        var idx = ls.gettabindex();
+        if (isNaN(idx))
+            idx = 0;
+        
+        $('#ls-profile-tab').jqxTabs($.extend(true, {}, ls.settings['tab'], {selectedItem: idx, width: 'calc(100% - 2px)', height: 'calc(100% - 2px)', position: 'top', initTabContent: initWidgets}));
         $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 600, height: 348}));
         
         $("#ls-login").jqxInput('val', model.login);
@@ -196,8 +306,6 @@
     </div>
     
 
-
-
 <?php if(Yii::app()->user->checkAccess('manager_profile')) { ?>
     <div class="ls-row" style="height: calc(100% - 118px)">
     <div class="ls-form-row" style="height: calc(100% - 2px);">
@@ -205,6 +313,7 @@
             <ul>
                 <li style="margin-left: 30px;">Настройки приложения</li>
                 <li style="margin-left: 0px;">Мои сотрудники</li>
+                <li style="margin-left: 0px;">Мои шаблоны документов</li>
             </ul>
             <div style="padding: 10px;">
                 <div class="ls-row">
@@ -224,6 +333,17 @@
                     <div class="ls-row-column"><input type="button" id="ls-btn-update" value="Изменить" /></div>
                     <div class="ls-row-column"><input type="button" id="ls-btn-refresh" value="Обновить" /></div>
                     <div class="ls-row-column-right"><input type="button" id="ls-btn-delete" value="Удалить" /></div>
+                </div>
+            </div>
+            <div style="padding: 10px;">
+                <div class="ls-row" style="height: calc(100% - 62px);">
+                    <div id="ls-templates-grid"></div>
+                </div>
+                <div class="ls-row">
+                    <div class="ls-row-column"><input type="button" id="ls-btn-templates-create" value="Создать" /></div>
+                    <div class="ls-row-column"><input type="button" id="ls-btn-templates-update" value="Изменить" /></div>
+                    <div class="ls-row-column"><input type="button" id="ls-btn-templates-refresh" value="Обновить" /></div>
+                    <div class="ls-row-column-right"><input type="button" id="ls-btn-templates-delete" value="Удалить" /></div>
                 </div>
             </div>
         </div>
