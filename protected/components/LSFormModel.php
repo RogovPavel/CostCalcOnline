@@ -22,6 +22,7 @@ class LSFormModel extends CFormModel
     
     public $command; // Комманда для выполения модели
     public $proc_params;
+    public $fieldsnodef = array();
     
     public function __construct($scenario = '') {
         parent::__construct($scenario);
@@ -67,9 +68,9 @@ class LSFormModel extends CFormModel
         $sp->proc_params = $this->proc_params[$this->sp_insert_name];
         
         if (count($params) > 0)
-            $res = $sp->execute($params);
+            $res = $sp->execute($params, $this->fieldsnodef);
         else
-            $res = $sp->execute($this);
+            $res = $sp->execute($this, $this->fieldsnodef);
         
         return array('tmp' => $res['tmp'], 'data' => $res['data'], 'sql' => $res['sql']);
         
@@ -82,9 +83,9 @@ class LSFormModel extends CFormModel
         $sp->proc_params = $this->proc_params[$this->sp_update_name];
         
         if (count($params) > 0)
-            $res = $sp->execute($params);
+            $res = $sp->execute($params, $this->fieldsnodef);
         else
-            $res = $sp->execute($this);
+            $res = $sp->execute($this, $this->fieldsnodef);
         
         return array('tmp' => $res['tmp'], 'data' => $res['data']);
     }
@@ -96,9 +97,9 @@ class LSFormModel extends CFormModel
         $sp->proc_params = $this->proc_params[$this->sp_delete_name];
         
         if (count($params) > 0)
-            $res = $sp->execute($params);
+            $res = $sp->execute($params, array());
         else
-            $res = $sp->execute($this);
+            $res = $sp->execute($this, array());
         
         return array('tmp' => $res['tmp'], 'data' => $res['data']);
     }

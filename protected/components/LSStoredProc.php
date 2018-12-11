@@ -76,7 +76,7 @@ class LSStoredProc extends CComponent {
         return $result;
     }
     
-    public function execute($params) {
+    public function execute($params, $fieldsnodef) {
         $sql_init_params = '';
         $sql_call_proc = 'call ' . $this->sp_proc_name . '(';
         $sql_select = 'select ';
@@ -105,8 +105,12 @@ class LSStoredProc extends CComponent {
                     $tmp[':p_' . $value] = 1;
                 else if ($params[$value] == 'false')
                     $tmp[':p_' . $value] = 0;
-                else
-                    $tmp[':p_' . $value] = htmlspecialchars(htmlentities($this->datetime_convert ($params[$value], 'yyyy-MM-dd HH:mm:ss'), ENT_NOQUOTES, "UTF-8"), ENT_NOQUOTES);
+                else {
+                    if (array_search($value, $fieldsnodef) !== false)
+                        $tmp[':p_' . $value] = $this->datetime_convert($params[$value], 'yyyy-MM-dd HH:mm:ss');
+                    else
+                        $tmp[':p_' . $value] = htmlspecialchars(htmlentities($this->datetime_convert ($params[$value], 'yyyy-MM-dd HH:mm:ss'), ENT_NOQUOTES, "UTF-8"), ENT_NOQUOTES);
+                }
 //                    $tmp[':p_' . $value] = htmlspecialchars($this->datetime_convert($params[$value], 'yyyy-MM-dd HH:mm:ss'), ENT_NOQUOTES);
             }
             else

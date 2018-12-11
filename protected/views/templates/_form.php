@@ -3,6 +3,9 @@
         var state_insert = <?php if (mb_strtoupper(Yii::app()->controller->action->id) == mb_strtoupper('Create') || mb_strtoupper(Yii::app()->controller->action->id) == 'Insert') echo json_encode(true); else echo json_encode(false); ?>;
         var model = <?php echo json_encode($model); ?>;
         
+        var closewindow = <?php echo json_encode($closewindow); ?>;
+        
+        
         var datatemplatetypes;
         
         $.ajax({
@@ -17,7 +20,6 @@
                 datatemplatetypes = Res[0];
                 
                 $("#ls-templates-type").jqxComboBox({source: datatemplatetypes});
-                
                 $("#ls-templates-type").jqxComboBox('val', model.type_id);
                 
             }
@@ -29,6 +31,17 @@
         $('#ls-templates-editor').jqxEditor($.extend(true, {}, ls.settings['editor'], {height: "calc(100% - 2px)", width: 'calc(100% - 2px)'}));
         $("#ls-templates-save").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
         $("#ls-templates-cancel").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
+        
+        $("#ls-templates-save").on('click', function() {
+            $('#ls-templates-template').val($('#ls-templates-editor').val());
+            $('#templates').submit();
+        });
+        
+        $("#ls-templates-name").jqxInput('val', model.templatename);
+        $('#ls-templates-editor').jqxEditor('val', model.template);
+        
+        if (closewindow)
+            window.close();
     });
 </script>
 
@@ -41,6 +54,8 @@
         ),
     )); 
 ?>
+
+<input type="hidden" id="ls-templates-template" name="templates[template]"/>
 
 <div class="ls-row" style="width: 1024px; height: 100%">
     <div style="margin-bottom: 12px;">
@@ -65,7 +80,8 @@
         </div>
     </div>
     <div class="ls-row" style="height: calc(100% - 104px);">
-        <textarea name="editor" id="ls-templates-editor"></textarea>
+        <textarea id="ls-templates-editor" name=""></textarea>
+        <div class="ls-form-error"><?php echo $form->error($model, 'template'); ?></div>
     </div>
     <div class="ls-row">
         <div class="ls-row-column"><input type="button" id="ls-templates-save" value="Сохранить"/></div>
@@ -73,47 +89,5 @@
     </div>
 </div>
     
-<?php $this->endWidget(); 
-
-/**
- * @param $dateStart string format "d.m.Y"
- * @param $dateEnd string format "d.m.Y"
- * @param array $hollydays mixed, string format "d.m.Y"
- * @return int
- */
-function getHollydaysCount($dateStart, $dateEnd, $hollydays = []) : int
-{
-    $dateStart = (new DateTime($dateStart, new DateTimeZone("Europe/Moscow")));
-    $dateEnd = new DateTime($dateEnd, new DateTimeZone("Europe/Moscow"));
-    $hollydaysCount = 0;
-
-    $hollydays = array_map(function ($v) {
-        return new DateTime($v, new DateTimeZone("Europe/Moscow"));
-    },$hollydays);
-
-    while ($dateStart <= $dateEnd)
-    {
-        if ($dateStart->format("N") >= 6 || in_array($dateStart, $hollydays))
-        {
-            $hollydaysCount++;
-        }
-
-        $dateStart->modify("+ 1 day");
-    }
-
-    return $hollydaysCount;
-}
-
-$hollydays = [
-    "02.01.2000",
-    "03.01.2000",
-    "04.01.2000",
-    "05.01.2000",
-];
-
-echo "<pre>";
-var_export(getHollydaysCount("01.01.2000", "30.01.2000", $hollydays));
-echo "</pre>";
-
-?>
+<?php $this->endWidget(); ?>
 

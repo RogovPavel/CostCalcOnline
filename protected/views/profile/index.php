@@ -64,6 +64,13 @@
     };
     
     $(document).ready(function() {
+    
+        window.onfocus = function () {
+            var Idx = $('#ls-profile-tab').jqxTabs('selectedItem');
+            
+            if (Idx == 2)
+                ls.templates.refresh(true);
+        };
         
         var model = <?php echo json_encode($model); ?>;
         
@@ -231,8 +238,9 @@
                     
                     $('#ls-btn-templates-update').on('click', function() {
                         if ($('#ls-btn-update').jqxButton('disabled') || ls.lock_operation) return;
-                        if (ls.templates.row == undefined) return;
-                        ls.opendialogforedit('templates', 'update', {user_id: ls.templates.row.user_id}, 'POST', false, {width: '620px', height: '310px'});
+                        var params = [];
+                        params['template_id'] = ls.templates.row.template_id;
+                        ls.wopen('templates/update', params, 'updatetemplate');
                     });
                     
                     $('#ls-btn-templates-refresh').on('click', function() {
@@ -244,7 +252,7 @@
                     $('#ls-btn-templates-delete').on('click', function() {
                         if ($('#ls-btn-delete').jqxButton('disabled') || ls.lock_operation) return;
                         if (ls.templates.row == undefined) return;            
-                        ls.delete('templates', 'delete', {user_id: ls.templates.row.user_id}, function(Res) {
+                        ls.delete('templates', 'delete', {template_id: ls.templates.row.template_id}, function(Res) {
                             Res = JSON.parse(Res);
                             if (Res.state == 0) {
                                 ls.templates.rowindex--;

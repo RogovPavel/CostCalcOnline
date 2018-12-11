@@ -18,14 +18,16 @@ class Templates extends LSFormModel {
     public function __construct($scenario = '') {
         parent::__construct($scenario);
         
+        $this->fieldsnodef = array('template');
+        
         $this->sp_insert_name = 'insert_templates';
         $this->sp_update_name = 'update_templates';
         $this->sp_delete_name = 'delete_templates';
         
         $this->proc_params = array(
-            'insert_templates' => array('street_id', 'streetname', 'streettype_id', 'region_id', 'user_create', 'group_id'),
-            'update_templates' => array('street_id', 'streetname', 'streettype_id', 'region_id', 'user_chnage', 'group_id'),
-            'delete_templates' => array('street_id', 'user_change', 'group_id'),
+            'insert_templates' => array('template_id', 'templatename', 'type_id', 'active', 'template', 'user_create', 'group_id'),
+            'update_templates' => array('template_id', 'templatename', 'type_id', 'active', 'template', 'user_change', 'group_id'),
+            'delete_templates' => array('template_id', 'user_change', 'group_id'),
         );
         
         $this->command->select = "  t.template_id,
