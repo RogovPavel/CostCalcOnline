@@ -82,6 +82,21 @@
                 case 0:
                     $("#ls-groupsettings-theme").jqxInput($.extend(true, {}, ls.settings['input'], {width: '150px', height: 25}));
                     $('#ls-btn-edit-groupsettings').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+                    $('#ls-file-load').jqxFileUpload({ width: 10, fileInputName: 'logo'});
+                    $('#ls-load-logo').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+                    
+                    $('#ls-load-logo').on('click', function() {
+                        $('#ls-file-load').jqxFileUpload({uploadUrl: <?php echo json_encode(Yii::app()->createUrl('groupsettings/loadimg')); ?>});
+                        $('#ls-file-load').jqxFileUpload('browse');
+                    });
+                    
+                    $('#ls-file-load').on('select', function (event) {
+                        $('#ls-file-load').jqxFileUpload('uploadAll');
+                    });
+
+                    $('#ls-file-load').on('uploadEnd', function (event) {
+                        ls.options.refresh();
+                    });
                     
                     $('#ls-btn-edit-groupsettings').on('click', function() {
                         if ($('#ls-btn-edit-groupsettings').jqxButton('disabled') || ls.lock_operation) return;
@@ -329,7 +344,15 @@
                     <div class="ls-row-column"><input type="text" readonly="readonly" id="ls-groupsettings-theme" autocomplete="off"/></div>
                 </div>
                 <div class="ls-row">
+                    <div class="ls-row-column" style="width: 100px">Логотип:</div>
+                    <div class="ls-row-column" style="border: 1px solid black; width: 500px; height: 70px;"></div>
+                    <div class="ls-row-column"><input type="button" id="ls-load-logo" value="Загрузить"/></div>
+                </div>
+                <div class="ls-row">
                     <div class="ls-row-column"><input type="button" id="ls-btn-edit-groupsettings" value="Изменить" /></div>
+                </div>
+                <div style="display: none;">
+                    <div id="ls-file-load"></div>
                 </div>
             </div>
             <div style="padding: 10px;">

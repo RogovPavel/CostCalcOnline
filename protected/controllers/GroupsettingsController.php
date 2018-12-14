@@ -12,7 +12,7 @@ class GroupsettingsController extends Controller {
     public function accessRules() {
         return array(
             array('allow', 'actions'=>array('index', 'view', 'getdata'), 'roles'=>array('view_groupsettings'),),
-            array('allow', 'actions'=>array('update'), 'roles'=>array('update_groupsettings'),),
+            array('allow', 'actions'=>array('update', 'loadimg'), 'roles'=>array('update_groupsettings'),),
             array('deny',
                     'users'=>array('*'),
             ),
@@ -149,5 +149,26 @@ class GroupsettingsController extends Controller {
             echo json_encode($result);
         }
     }
+    
+    public function actionLoadImg() {
+        $result = array(
+            'state' => 0,
+            'header' => 'Удаление записи',
+            'id' => 0,
+            'responseText' => '',
+        );
+        
+        try {
+            $result['state'] = 1;
+            $result['responseText'] = 'Файл успешно загружен';   
+            
+        } catch (Exception $e) {
+            $result['state'] = 2;
+            $result['responseText'] = $e->getMessage();
+        } finally {
+            echo json_encode($result);
+        }
+    }
+            
 }
 

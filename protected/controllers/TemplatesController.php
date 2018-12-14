@@ -66,7 +66,7 @@ class TemplatesController extends Controller {
                 $model->user_create = Yii::app()->user->user_id;
                 $res = $model->update();
                 $result['id'] = $res['data']['template_id'];
-                $closewindow = true;
+                $closewindow = false;
             }
         }
 
