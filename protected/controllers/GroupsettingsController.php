@@ -159,8 +159,43 @@ class GroupsettingsController extends Controller {
         );
         
         try {
-            $result['state'] = 1;
-            $result['responseText'] = 'Файл успешно загружен';   
+            if( !empty( $_FILES['logo']['name'] ) ) {
+                // Проверяем, что при загрузке не произошло ошибок
+                if ( $_FILES['logo']['error'] == 0 ) {
+                    // Если файл загружен успешно, то проверяем - графический ли он
+                    if( substr($_FILES['logo']['type'], 0, 5) == 'image' ) {
+                      // Читаем содержимое файла
+                        
+                      $image = file_get_contents($_FILES['logo']['tmp_name']);
+                      // Экранируем специальные символы в содержимом файла
+                      $image = mysql_escape_string($image);
+                    }
+                }
+            }
+            
+            $query = "INSERT INTO images (image, user_create, date_create, group_id) VALUES ('".$image."', " . Yii::app()->user->user_id . ", now(), " . Yii::app()->user->group_id . ")";
+            $command = Yii::app()->db->createCommand();
+            $command->text = $query;
+            $command->execute();
+            
+            $command->text = 'select last_insert_id() as rowid';
+            $row = $command->queryRow();
+            
+            if ((int)$row['rowid'] > 0)  {
+                
+                $groupsettings = new GroupSettings();
+                $groupsettings->get_by_conditions(array(array(
+                    'sql' => 's.group_id = :p_group_id',
+                    'params' => array(':p_group_id' => Yii::app()->user->group_id)
+                )));
+                $groupsettings->logo = $row['rowid'];
+                $groupsettings->update();
+                
+                $result['state'] = 0;
+                $result['responseText'] = 'Файл успешно загружен';
+            }
+            
+                
             
         } catch (Exception $e) {
             $result['state'] = 2;

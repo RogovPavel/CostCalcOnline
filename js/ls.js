@@ -1119,3 +1119,26 @@ ls.sources['templates'] = {
         this.totalrecords = data[0].TotalRows;
     }
 };
+
+ls.sources['images'] = {
+    datatype: "json",
+    datafields: [
+        {name: 'image_id', type: 'int'},
+        {name: 'user_create', type: 'int'},
+        {name: 'date_create', type: 'date'},
+        {name: 'user_change', type: 'int'},
+        {name: 'date_change', type: 'date'},
+        {name: 'group_id', type: 'int'},
+    ],
+    id: 'image_id',
+    url: '/index.php/AjaxData/DataJQXSimple?ModelName=ImagesList',
+    type: 'POST',
+    root: 'Rows',
+    cache: false,
+    async: true,
+    pagenum: 0,
+    pagesize: 200,
+    beforeprocessing: function (data) {
+        this.totalrecords = data[0].TotalRows;
+    }
+};

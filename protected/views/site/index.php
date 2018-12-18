@@ -6,7 +6,7 @@
     );
 ?>
 <div style="height: 100%;">
-    <p></p>
+    
 <!--    <h1>Приветствуем Вас!!!</h1>
 
     <p>
@@ -23,4 +23,11 @@
     <p></p>-->
 </div>
 
-
+<?php 
+    $model = new ImagesList();
+    
+    $res = $model->find(array());
+    
+    echo json_encode($res);
+    
+?>

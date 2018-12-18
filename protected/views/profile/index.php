@@ -35,6 +35,24 @@
         }
     };
     
+    ls.images = {
+        rowid: undefined,
+        row: undefined,
+        rowindex: undefined,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = false;
+            if (!$("#ls-images-grid").jqxGrid('isBindingCompleted'))
+                return;
+            if (reset) {
+                var adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['images']), {loadError: ls.loaderror});
+                $("#ls-images-grid").jqxGrid({source: adapter});
+            }
+            else
+                $("#ls-images-grid").jqxGrid('updatebounddata');
+        }
+    };
+    
     ls.options = {
         rowid: undefined,
         row: <?php echo json_encode($groupsettings); ?>,
@@ -60,6 +78,10 @@
         },
         setvalues: function() {
             $("#ls-groupsettings-theme").jqxInput('val', ls.options.row.theme);
+            if (ls.options.row.logo != null)
+                $("#ls-groupsettings-logo").attr("src", 'images/index/' + ls.options.row.logo);
+            else
+                $("#ls-groupsettings-logo").attr("src", '');
         }
     };
     
@@ -82,25 +104,11 @@
                 case 0:
                     $("#ls-groupsettings-theme").jqxInput($.extend(true, {}, ls.settings['input'], {width: '150px', height: 25}));
                     $('#ls-btn-edit-groupsettings').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
-                    $('#ls-file-load').jqxFileUpload({ width: 10, fileInputName: 'logo'});
-                    $('#ls-load-logo').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
                     
-                    $('#ls-load-logo').on('click', function() {
-                        $('#ls-file-load').jqxFileUpload({uploadUrl: <?php echo json_encode(Yii::app()->createUrl('groupsettings/loadimg')); ?>});
-                        $('#ls-file-load').jqxFileUpload('browse');
-                    });
-                    
-                    $('#ls-file-load').on('select', function (event) {
-                        $('#ls-file-load').jqxFileUpload('uploadAll');
-                    });
-
-                    $('#ls-file-load').on('uploadEnd', function (event) {
-                        ls.options.refresh();
-                    });
                     
                     $('#ls-btn-edit-groupsettings').on('click', function() {
                         if ($('#ls-btn-edit-groupsettings').jqxButton('disabled') || ls.lock_operation) return;
-                        ls.opendialogforedit('groupsettings', 'update', {setting_id: ls.options.row.setting_id}, 'POST', false, {width: '620px', height: '124px'});
+                        ls.opendialogforedit('groupsettings', 'update', {setting_id: ls.options.row.setting_id}, 'POST', false, {width: '620px', height: '164px'});
                     });
                     
                     ls.options.setvalues();
@@ -237,6 +245,7 @@
                     $('#ls-btn-templates-refresh').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
                     $('#ls-btn-templates-delete').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
                     
+                    
                     $("#ls-templates-grid").jqxGrid(
                         $.extend(true, {}, ls.settings['grid'], {
                             columns: [
@@ -272,6 +281,102 @@
                             if (Res.state == 0) {
                                 ls.templates.rowindex--;
                                 ls.templates.refresh(false);
+                            }
+                            else {
+                                ls.showerrormassage('Ошибка! ' + Res.responseText);
+                            }
+                        });
+                    });
+                break;
+                case 3:
+                    var checkbutton = function() {
+                        $('#ls-btn-images-delete').jqxButton({disabled: !(ls.images.row != undefined)})
+                    };
+                    
+                    $("#ls-images-grid").on('rowselect', function (event) {
+                        var args = event.args;
+                        ls.images.rowindex = args.rowindex;
+                        ls.images.row = args.row;
+                        checkbutton();
+                    });
+                    
+                    $("#ls-images-grid").on('rowdoubleclick', function(){
+                        $('#ls-btn-update').click();
+                    });
+                    
+                    $("#ls-images-grid").on('bindingcomplete', function() {
+                        var idx  = ls.images.rowindex;
+                        
+                        if (ls.images.rowid != undefined) {
+                            idx = $("#ls-images-grid").jqxGrid('getrowboundindexbyid', ls.images.rowid);
+                            ls.images.rowid = undefined;
+                        }
+
+                        var rows = $("#ls-images-grid").jqxGrid('getrows');
+
+                        if (idx == undefined || idx >= rows.length) 
+                            idx = 0;
+
+                        $("#ls-images-grid").jqxGrid('selectrow', idx);
+                        $("#ls-images-grid").jqxGrid('ensurerowvisible', idx);
+
+                        checkbutton();
+                        ls.lock_operation = false;
+                    });
+                    
+                    $('#ls-btn-images-refresh').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+                    $('#ls-btn-images-delete').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+                    $('#ls-file-load').jqxFileUpload({ width: 10, fileInputName: 'logo'});
+                    $('#ls-load-logo').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+                    
+                    $('#ls-load-logo').on('click', function() {
+                        $('#ls-file-load').jqxFileUpload({uploadUrl: <?php echo json_encode(Yii::app()->createUrl('groupsettings/loadimg')); ?>});
+                        $('#ls-file-load').jqxFileUpload('browse');
+                    });
+                    
+                    $('#ls-file-load').on('select', function (event) {
+                        $('#ls-file-load').jqxFileUpload('uploadAll');
+                    });
+
+                    $('#ls-file-load').on('uploadEnd', function (event) {
+                        ls.images.refresh();
+                    });
+                    
+                    var imagerenderer = function(row, datafield, value) {
+                        var data = $('#ls-images-grid').jqxGrid('getrowdata', row);
+                        return '<img style="margin-left: 5px;" height="60" width="120" src="/images/index/' + data['image_id'] + '"/>';
+                    };
+                    
+                    $("#ls-images-grid").jqxGrid(
+                        $.extend(true, {}, ls.settings['grid'], {
+                            rowsheight: 60,
+                            columns: [
+                                { text: 'ИД', datafield: 'image_id', width: 100},
+                                { text: 'Изображение', datafield: 'image', width: 120, cellsrenderer: imagerenderer},
+                            ]
+                    }));
+                    
+                    ls.images.refresh(true);
+                    
+                    $('#ls-btn-images-create').on('click', function() {
+                        
+                    });
+                    
+                    
+                    $('#ls-btn-images-refresh').on('click', function() {
+                        if (ls.lock_operation) return;
+                        ls.lock_operation = true;
+                        ls.images.refresh(false);
+                    });
+                    
+                    $('#ls-btn-images-delete').on('click', function() {
+                        if ($('#ls-btn-delete').jqxButton('disabled') || ls.lock_operation) return;
+                        if (ls.images.row == undefined) return;            
+                        ls.delete('images', 'delete', {image_id: ls.images.row.image_id}, function(Res) {
+                            Res = JSON.parse(Res);
+                            if (Res.state == 0) {
+                                ls.images.rowindex--;
+                                ls.images.refresh(false);
                             }
                             else {
                                 ls.showerrormassage('Ошибка! ' + Res.responseText);
@@ -337,6 +442,7 @@
                 <li style="margin-left: 30px;">Настройки приложения</li>
                 <li style="margin-left: 0px;">Мои сотрудники</li>
                 <li style="margin-left: 0px;">Мои шаблоны документов</li>
+                <li style="margin-left: 0px;">Мои изображения</li>
             </ul>
             <div style="padding: 10px;">
                 <div class="ls-row">
@@ -345,15 +451,13 @@
                 </div>
                 <div class="ls-row">
                     <div class="ls-row-column" style="width: 100px">Логотип:</div>
-                    <div class="ls-row-column" style="border: 1px solid black; width: 500px; height: 70px;"></div>
-                    <div class="ls-row-column"><input type="button" id="ls-load-logo" value="Загрузить"/></div>
+                    <div class="ls-row-column" style="border: 1px solid black; width: 500px; height: 70px;"><img id="ls-groupsettings-logo" width="100%" height="100%" src="/images/index/"/></div>
+                    
                 </div>
                 <div class="ls-row">
                     <div class="ls-row-column"><input type="button" id="ls-btn-edit-groupsettings" value="Изменить" /></div>
                 </div>
-                <div style="display: none;">
-                    <div id="ls-file-load"></div>
-                </div>
+                
             </div>
             <div style="padding: 10px;">
                 <div class="ls-row" style="height: calc(100% - 62px);">
@@ -375,6 +479,19 @@
                     <div class="ls-row-column"><input type="button" id="ls-btn-templates-update" value="Изменить" /></div>
                     <div class="ls-row-column"><input type="button" id="ls-btn-templates-refresh" value="Обновить" /></div>
                     <div class="ls-row-column-right"><input type="button" id="ls-btn-templates-delete" value="Удалить" /></div>
+                </div>
+            </div>
+            <div style="padding: 10px;">
+                <div class="ls-row" style="height: calc(100% - 62px);">
+                    <div id="ls-images-grid"></div>
+                </div>
+                <div class="ls-row">
+                    <div class="ls-row-column"><input type="button" id="ls-load-logo" value="Загрузить"/></div>
+                    <div class="ls-row-column"><input type="button" id="ls-btn-images-refresh" value="Обновить" /></div>
+                    <div class="ls-row-column-right"><input type="button" id="ls-btn-images-delete" value="Удалить" /></div>
+                </div>
+                <div style="display: none;">
+                    <div id="ls-file-load"></div>
                 </div>
             </div>
         </div>

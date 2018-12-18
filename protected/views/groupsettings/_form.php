@@ -3,7 +3,32 @@
         var state_insert = <?php if (mb_strtoupper(Yii::app()->controller->action->id) == mb_strtoupper('Create') || mb_strtoupper(Yii::app()->controller->action->id) == 'Insert') echo json_encode(true); else echo json_encode(false); ?>;
         var model = <?php echo json_encode($model); ?>;
         
+        var dataimages;
+        
+        $.ajax({
+            url: '/index.php/AjaxData/DataJQXSimpleList',
+            type: 'POST',
+            async: true,
+            data: {
+                Models: ['ImagesList']
+            },
+            success: function(Res) {
+                Res = JSON.parse(Res);
+                
+                var tmpdata = Res[0];
+                dataimages = [];
+                
+                for (var i = 0; i < tmpdata.length; i++) {
+                    dataimages[i] = {html: "<div style='padding: 0px; margin: 0px; height: 95px; float: left;'><img width='100%' height='100%' style='float: left; margin-top: 4px; margin-right: 15px;' src='images/index/" + tmpdata[i]['image_id'] + "'/><div style='margin-top: 10px; font-size: 13px;'>", value: tmpdata[i]['image_id']};
+                }
+                
+                $("#ls-setting-edit-logo").jqxComboBox({source: dataimages});
+                $("#ls-setting-edit-logo").val(model.logo);
+            }
+        });
+        
         $("#ls-setting-edit-theme").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {source: ls.themes, displayMember: "name", valueMember: "name", width: '200px'}));
+        $("#ls-setting-edit-logo").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {source: ls.themes, valueMember: "value", width: '200px'}));
         
         $("#ls-setting-save").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
         $("#ls-setting-cancel").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
@@ -70,6 +95,11 @@
             <div class="ls-form-label">Тема:</div>
             <div class="ls-form-column" style="width: calc(100% - 126px);"><div id="ls-setting-edit-theme" name="groupsettings[theme]" autocomplete="off"></div></div>
             <div class="ls-form-error"><?php echo $form->error($model, 'theme'); ?></div>
+        </div>
+        <div class="ls-form-row">
+            <div class="ls-form-label">Логотип:</div>
+            <div class="ls-form-column" style="width: calc(100% - 126px);"><div id="ls-setting-edit-logo" name="groupsettings[logo]" autocomplete="off"></div></div>
+            <div class="ls-form-error"><?php echo $form->error($model, 'logo'); ?></div>
         </div>
         <div class="ls-form-row">
             <div class="ls-form-column"><input type="button" id="ls-setting-save" value="Сохранить"/></div>

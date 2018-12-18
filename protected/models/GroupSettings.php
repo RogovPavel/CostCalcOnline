@@ -5,6 +5,7 @@ class GroupSettings extends LSFormModel {
     public $setting_id;
     public $user_id;
     public $theme;
+    public $logo;
     public $user_change;
     public $date_change;
     public $group_id;
@@ -17,11 +18,12 @@ class GroupSettings extends LSFormModel {
         $this->sp_delete_name = 'delete_groupsetings';
         
         $this->proc_params = array(
-            'update_groupsettings' => array('setting_id', 'user_id', 'theme', 'user_change', 'group_id'),
+            'update_groupsettings' => array('setting_id', 'user_id', 'theme', 'logo', 'user_change', 'group_id'),
         );
         
         $this->command->select = "s.setting_id,
                                     s.user_id,
+                                    s.logo,
                                     s.theme,
                                     s.user_change,
                                     s.date_change,
@@ -41,6 +43,7 @@ class GroupSettings extends LSFormModel {
             array('setting_id,
                     user_id,
                     theme,
+                    logo,
                     user_change,
                     date_change,
                     group_id', 'safe'),
@@ -52,6 +55,7 @@ class GroupSettings extends LSFormModel {
             'setting_id' => '',
             'user_id' => '',
             'theme' => '',
+            'logo' => '',
             'user_change' => '',
             'date_change' => '',
             'group_id' => '',

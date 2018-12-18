@@ -76,7 +76,7 @@ class LSStoredProc extends CComponent {
         return $result;
     }
     
-    public function execute($params, $fieldsnodef) {
+    public function execute($params, $fieldsnodef = array()) {
         $sql_init_params = '';
         $sql_call_proc = 'call ' . $this->sp_proc_name . '(';
         $sql_select = 'select ';

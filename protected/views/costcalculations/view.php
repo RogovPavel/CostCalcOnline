@@ -147,6 +147,7 @@
         $("#ls-costcalculations-edit").jqxButton($.extend(true, {}, ls.settings['button'], {theme: ls.defaults.theme, width: '100px', height: 30}));
         $("#ls-costcalculations-ready").jqxButton($.extend(true, {}, ls.settings['button'], {theme: ls.defaults.theme, width: '100px', height: 30}));
         $("#ls-costcalculations-undo").jqxButton($.extend(true, {}, ls.settings['button'], {theme: ls.defaults.theme, width: '140px', height: 30}));
+        $("#ls-costcalculations-print").jqxButton($.extend(true, {}, ls.settings['button'], {theme: ls.defaults.theme, width: '140px', height: 30}));
         
         $("#ls-costcalculations-summaterialslow").jqxNumberInput($.extend(true, {}, ls.settings['numberinput'], {width: '130px', height: 25, readOnly: true}));
         $("#ls-costcalculations-summaterialshigh").jqxNumberInput($.extend(true, {}, ls.settings['numberinput'], {width: '130px', height: 25, readOnly: true}));
@@ -477,6 +478,7 @@
         <div class="ls-row-column"><input type="button" id="ls-costcalculations-edit" value="Изменить"/></div>
         <div class="ls-row-column"><input type="button" id="ls-costcalculations-ready" value="Готово"/></div>
         <div class="ls-row-column"><input type="button" id="ls-costcalculations-undo" value="Снять готовность"/></div>
+        <div class="ls-row-column-right"><input type="button" id="ls-costcalculations-print" value="Печать"/></div>
     </div>
     <div class="ls-row" style="height: calc(100% - 286px); min-height: 200px;">
         <div id='ls-costcalculations-tab'>
