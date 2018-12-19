@@ -16,6 +16,8 @@ class Demands extends LSFormModel {
     public $prior_id;
     public $demandprior_name;
     public $deadline;
+    public $user_id;
+    public $executorname;
     public $demand_text;
     public $contact;
     public $date_exec;
@@ -33,8 +35,8 @@ class Demands extends LSFormModel {
         $this->sp_delete_name = 'delete_demands';
         
         $this->proc_params = array(
-            'insert_demands' => array('demand_id', 'client_id', 'objectgr_id', 'object_id', 'demandtype_id', 'date_reg', 'prior_id', 'deadline', 'demand_text', 'contact', 'user_create', 'group_id'),
-            'update_demands' => array('demand_id', 'client_id', 'objectgr_id', 'object_id', 'demandtype_id', 'date_reg', 'prior_id', 'deadline', 'demand_text', 'contact', 'date_exec', 'user_change', 'group_id'),
+            'insert_demands' => array('demand_id', 'client_id', 'objectgr_id', 'object_id', 'demandtype_id', 'date_reg', 'prior_id', 'deadline', 'user_id', 'demand_text', 'contact', 'user_create', 'group_id'),
+            'update_demands' => array('demand_id', 'client_id', 'objectgr_id', 'object_id', 'demandtype_id', 'date_reg', 'prior_id', 'deadline', 'user_id', 'demand_text', 'contact', 'date_exec', 'user_change', 'group_id'),
             'delete_demands' => array('demand_id', 'user_change', 'group_id'),
         );
         
@@ -52,6 +54,8 @@ class Demands extends LSFormModel {
                                     d.prior_id,
                                     dp.demandprior_name,
                                     d.deadline,
+                                    d.user_id,
+                                    u2.shortname as executorname,
                                     d.demand_text,
                                     d.contact,
                                     d.date_exec,
@@ -66,7 +70,8 @@ class Demands extends LSFormModel {
                                     LEFT JOIN demandstatus ds on (d.status_id = ds.status_id)
                                     LEFT JOIN demandtypes dt on (d.demandtype_id = dt.demandtype_id)
                                     LEFT JOIN demandpriors dp on (d.prior_id = dp.demandprior_id)
-                                    LEFT join users u on (d.user_create = u.shortname)';
+                                    LEFT join users u on (d.user_create = u.user_id)
+                                    LEFT join users u2 on (d.user_id = u2.user_id)';
         $this->command->where = 'd.deldate is null';
         $this->command->order = 'd.date_reg desc';
                 
@@ -92,6 +97,8 @@ class Demands extends LSFormModel {
                     prior_id,
                     demandprior_name,
                     deadline,
+                    user_id,
+                    executorname,
                     demand_text,
                     contact,
                     date_exec,
@@ -119,6 +126,8 @@ class Demands extends LSFormModel {
             'prior_id' => 'Приоритет',
             'demandprior_name' => '',
             'deadline' => '',
+            'user_id' => '',
+            'executorname' => '',
             'demand_text' => 'Тест заявки',
             'contact' => '',
             'date_exec' => '',

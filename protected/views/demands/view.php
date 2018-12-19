@@ -31,6 +31,8 @@
             $("#ls-demands-datereg").jqxDateTimeInput('val', ls.dateconverttosjs(ls.demands.row.date_reg));
             $("#ls-demands-client").jqxInput('val', ls.demands.row.clientname);
             $("#ls-demands-contact").jqxInput('val', ls.demands.row.contact);
+            $("#ls-demands-executorname").jqxInput('val', ls.demands.row.executorname);
+            
             $("#ls-demands-dateexec").jqxDateTimeInput('val', ls.dateconverttosjs(ls.demands.row.date_exec));
             $("#ls-demands-demandtext").jqxTextArea('val', ls.demands.row.demand_text);
         }
@@ -88,11 +90,14 @@
         $("#ls-demands-contact").jqxInput($.extend(true, {}, ls.settings['input'], {width: '358px', height: 25, disabled: false}));
         $("#ls-demands-dateexec").jqxDateTimeInput($.extend(true, {}, ls.settings['datetime'], {value: null, width: '150px', height: 25, formatString: 'dd.MM.yyyy HH:mm', readonly: true, showTimeButton: false, showCalendarButton: false}));
         $("#ls-demands-demandtext").jqxTextArea($.extend(true, {}, ls.settings['textarea'], {height: '70px', width: 'calc(100% - 8px)'}));
+        
         $("#ls-demands-edit").jqxButton($.extend(true, {}, ls.settings['button'], {theme: ls.defaults.theme, width: '100px', height: 30}));
+        $("#ls-demands-executorname").jqxInput($.extend(true, {}, ls.settings['input'], {width: '150px', height: 25, disabled: false}));
+        
         
         $('#ls-demands-edit').on('click', function() {
             if ($('#ls-demands-edit').jqxButton('disabled') || ls.lock_operation) return;
-            ls.opendialogforedit('demands', 'update', {demand_id: ls.demands.row.demand_id}, 'POST', false, {width: '600px', height: '430px'});
+            ls.opendialogforedit('demands', 'update', {demand_id: ls.demands.row.demand_id}, 'POST', false, {width: '600px', height: '470px'});
         });
         
         var initWidgets = function(tab) {
@@ -222,6 +227,8 @@
     <div class="ls-row">
         <div class="ls-row-column" style="width: 70px;">Контакт:</div>
         <div class="ls-row-column"><input type="text" id="ls-demands-contact" readonly="readonly"/></div>
+        <div class="ls-row-column" style="width: 158px; text-align: right; font-weight: bold;">Исполнитель:</div>
+        <div class="ls-row-column"><input type="text" id="ls-demands-executorname" readonly="readonly"/></div>
     </div>
     <div class="ls-row">
         <div>Текст заявки:</div>

@@ -7,13 +7,14 @@
         var datademandtypes;       
         var datademandpriors;
         var dataclients;
+        var datausers;
         
         $.ajax({
             url: '/index.php/AjaxData/DataJQXSimpleList',
             type: 'POST',
             async: true,
             data: {
-                Models: ['ObjectGroups', 'DemandTypes', 'DemandPriors', 'Clients']
+                Models: ['ObjectGroups', 'DemandTypes', 'DemandPriors', 'Clients', 'Users']
             },
             success: function(Res) {
                 Res = JSON.parse(Res);
@@ -21,6 +22,7 @@
                 datademandtypes = Res[1];
                 datademandpriors = Res[2];
                 dataclients = Res[3];
+                datausers = Res[4];
                 
                 initsource();
                 setvalues();
@@ -32,6 +34,7 @@
             $("#ls-demands-edit-demandtype").jqxComboBox({source: datademandtypes});
             $("#ls-demands-edit-prior").jqxComboBox({source: datademandpriors});
             $("#ls-demands-edit-client").jqxComboBox({source: dataclients});
+            $("#ls-demands-edit-user").jqxComboBox({source: datausers});
         };
         
         var setvalues = function() {
@@ -39,6 +42,7 @@
             $("#ls-demands-edit-demandtype").val(model.demandtype_id);
             $("#ls-demands-edit-prior").val(model.prior_id);
             $("#ls-demands-edit-client").val(model.client_id);
+            $("#ls-demands-edit-user").val(model.user_id);
         };
         
         $("#ls-demands-edit-demand").jqxInput($.extend(true, {}, ls.settings['input'], {theme: ls.defaults.theme, width: '100px', height: 25}));
@@ -51,6 +55,7 @@
         $("#ls-demands-edit-contact").jqxInput($.extend(true, {}, ls.settings['input'], {theme: ls.defaults.theme, width: '400px', height: 25}));
         $("#ls-demands-edit-demandtext").jqxTextArea($.extend(true, {}, ls.settings['textarea'], {height: '70px', width: 'calc(100% - 8px)'}));
         $("#ls-demands-edit-dateexec").jqxDateTimeInput($.extend(true, {}, ls.settings['datetime'], {value: null, width: '150px', height: 25, formatString: 'dd.MM.yyyy HH:mm'}));
+        $("#ls-demands-edit-user").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {displayMember: "shortname", valueMember: "user_id", width: '400px'}));
         
         $("#ls-demands-save").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
         $("#ls-demands-cancel").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
@@ -165,8 +170,13 @@
             <div class="ls-form-error"><?php echo $form->error($model, 'contact'); ?></div>
         </div>
         <div class="ls-form-row">
+            <div class="ls-form-label">Исполнитель:</div>
+            <div class="ls-form-column" style="width: calc(100% - 126px);"><div id="ls-demands-edit-user" name="demands[user_id]" autocomplete="off"></div></div>
+            <div class="ls-form-error"><?php echo $form->error($model, 'user_id'); ?></div>
+        </div>
+        <div class="ls-form-row">
             <div class="ls-form-label" style="font-weight: bold;">Дата выполнения:</div>
-            <div class="ls-form-column" style="width: calc(100% - 126px);"><div id="ls-demands-edit-dateexec" name="demands[date_exec]"></div></div>
+            <div class="ls-form-column" style="width: calc(100% - 156px);"><div id="ls-demands-edit-dateexec" name="demands[date_exec]"></div></div>
             <div class="ls-form-error"><?php echo $form->error($model, 'date_exec'); ?></div>
         </div>
         <div class="ls-form-row">

@@ -13,7 +13,7 @@ class ReportController extends Controller {
     public function accessRules() {
         return array(
             array('allow',
-                    'actions'=>array('CostCalcView'),
+                    'actions'=>array('CostCalcView', 'ExportPDF'),
                     'users'=>array('@'),
             ),
             array('deny',
@@ -36,7 +36,7 @@ class ReportController extends Controller {
             $result = $template;
             
             $parser = new LSParserHTML();
-            $result = $parser->parse($sources, $result);
+            $result = $parser->fillHTML($sources, $result);
             
         };
         
@@ -78,8 +78,8 @@ class ReportController extends Controller {
         
         $html = $this->Open(array(
             'calc' => $costcalculations,
-            'costcalcequips' => $costcalcequips,
-            'costcalcworks' => $costcalcworks
+            'calcequips' => $costcalcequips,
+            'calcworks' => $costcalcworks
         ), $template);
         
         
@@ -88,5 +88,4 @@ class ReportController extends Controller {
             'html' => $html
         ));
     }
-    
 }

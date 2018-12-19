@@ -889,6 +889,8 @@ ls.sources['demands'] = {
         {name: 'prior_id', type: 'int'},
         {name: 'demandprior_name', type: 'string'},
         {name: 'deadline', type: 'date'},
+        {name: 'user_id', type: 'date'},
+        {name: 'executorname', type: 'string'},
         {name: 'demand_text', type: 'string'},
         {name: 'contact', type: 'string'},
         {name: 'date_exec', type: 'date'},
@@ -1132,6 +1134,34 @@ ls.sources['images'] = {
     ],
     id: 'image_id',
     url: '/index.php/AjaxData/DataJQXSimple?ModelName=ImagesList',
+    type: 'POST',
+    root: 'Rows',
+    cache: false,
+    async: true,
+    pagenum: 0,
+    pagesize: 200,
+    beforeprocessing: function (data) {
+        this.totalrecords = data[0].TotalRows;
+    }
+};
+
+ls.sources['costcalcpayments'] = {
+    datatype: "json",
+    datafields: [
+        {name: 'payment_id', type: 'int'},
+        {name: 'calc_id', type: 'int'},
+        {name: 'user_id', type: 'int'},
+        {name: 'shortname', type: 'string'},
+        {name: 'sumpay', type: 'float'},
+        {name: 'user_create', type: 'int'},
+        {name: 'date_create', type: 'date'},
+        {name: 'user_change', type: 'int'},
+        {name: 'date_change', type: 'date'},
+        {name: 'deldate', type: 'date'},
+        {name: 'group_id', type: 'int'},
+    ],
+    id: 'payment_id',
+    url: '/index.php/AjaxData/DataJQXSimple?ModelName=CostCalcPayments',
     type: 'POST',
     root: 'Rows',
     cache: false,

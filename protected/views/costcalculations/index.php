@@ -115,6 +115,10 @@
                     { text: 'Номер', datafield: 'calc_id', width: 70},    
                     { text: 'Тип', datafield: 'typename', width: 130},
                     { text: 'Адрес', datafield: 'address', width: 250},    
+                    { text: 'Проект', datafield: 'name', width: 250},
+                    { text: 'Дата', datafield: 'date', width: 110, cellsformat: 'dd.MM.yyyy'},
+                    { text: 'Менеджер', datafield: 'shortname', width: 150},
+                    { text: 'Сумма', datafield: 'sum_high_full', width: 110, cellsformat: 'f2'},
                 ]
 
         }));

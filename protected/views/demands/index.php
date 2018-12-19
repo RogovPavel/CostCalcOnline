@@ -93,7 +93,7 @@
         
         $('#ls-btn-create').on('click', function() {
             if ($('#ls-btn-create').jqxButton('disabled') || ls.lock_operation) return;
-            ls.opendialogforedit('demands', 'create', {}, 'POST', false, {width: '600px', height: '400px'});
+            ls.opendialogforedit('demands', 'create', {}, 'POST', false, {width: '600px', height: '430px'});
         });
         
         $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 600, height: 350}));
@@ -118,6 +118,7 @@
                     { text: 'Адрес', datafield: 'address', width: 250},    
                     { text: 'Тип заявки', datafield: 'demandtype_name', width: 130},
                     { text: 'Приоритет', datafield: 'demandprior_name', width: 130},
+                    { text: 'Исполнитель', datafield: 'executorname', width: 130},
                     { text: 'Предельная дата', datafield: 'deadline', columntype: 'date', filtertype: 'date', width: 130, cellsformat: 'dd.MM.yyyy HH:mm'},
                     { text: 'Дата вып.', datafield: 'date_exec', columntype: 'date', filtertype: 'date', width: 130, cellsformat: 'dd.MM.yyyy HH:mm'},
                     { text: 'Контакт', datafield: 'contact', width: 200},

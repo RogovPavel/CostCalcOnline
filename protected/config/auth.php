@@ -66,6 +66,9 @@
         /* Шаблоны документов */
         include(dirname(__FILE__).'/security/templates.php'),
             
+        /* Оплаты по смете */
+        include(dirname(__FILE__).'/security/costcalcpayments.php'),
+            
         array(    
             'guest' => array(
                 'type' => CAuthItem::TYPE_ROLE,
@@ -108,6 +111,7 @@
                     'admin_groupsettings',
                     'admin_clientpositions',
                     'admin_templates',
+                    'admin_costcalcpayments',
                 ),
             ),
             
@@ -146,6 +150,7 @@
                     
                     'admin_clientpositions',
                     'admin_templates',
+                    'admin_costcalcpayments'
                 ),
             ),
             
@@ -180,6 +185,7 @@
                     
                     
                     'manager_clientpositions',
+                    'user_costcalcpayments'
                 ),
             ),
             

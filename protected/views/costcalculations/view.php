@@ -122,6 +122,40 @@
         }
     };
     
+    ls.costcalcpayments = {
+        rowid: undefined,
+        row: undefined,
+        rowindex: undefined,
+        refresh: function(reset) {
+            if (reset == undefined)
+                reset = false;
+            if (!$("#ls-costcalcpayments-grid").jqxGrid('isBindingCompleted'))
+                return;
+            if (reset) {
+                var adapter = new $.jqx.dataAdapter($.extend(true, {}, ls.sources['costcalcpayments']), {
+                    loadError: ls.loaderror,
+                    formatData: function (data) {
+                        var fltrs = [];
+                        if (ls.costcalculations.row.calc_id != null && ls.costcalculations.row.calc_id != undefined)
+                            fltrs.push({field: 'p.calc_id', operand: 1, value: ls.costcalculations.row.calc_id});
+                        else
+                            fltrs.push({field: 'p.calc_id', operand: 1, value: -1});
+                        $.extend(data, {filters: fltrs});
+                        return data;
+                    },
+                });
+                $("#ls-costcalcpayments-grid").jqxGrid({source: adapter});
+            }
+            else
+                $("#ls-costcalcpayments-grid").jqxGrid('updatebounddata');
+        },
+        checkbutton: function() {
+            $('#ls-btn-add-costcalcpayments').jqxButton({disabled: !((ls.costcalculations.row != undefined) && (ls.costcalculations.row.date_ready == null))})
+            $('#ls-btn-edit-costcalcpayments').jqxButton({disabled: !((ls.costcalcpayments.row != undefined) && (ls.costcalculations.row.date_ready == null))})
+            $('#ls-btn-del-costcalcpayments').jqxButton({disabled: !((ls.costcalcpayments.row != undefined) && (ls.costcalculations.row.date_ready == null))})
+        }
+    };
+    
     
     $(document).ready(function() {
         var settabindex = function(idx) {
@@ -164,6 +198,11 @@
         
         
         $("#ls-btn-edit-details").jqxButton($.extend(true, {}, ls.settings['button'], {theme: ls.defaults.theme, width: '130px', height: 30}));
+        
+        $("#ls-costcalculations-print").on('click', function() {
+            window.open('/report/costcalcview/' + ls.costcalculations.row.calc_id);
+        });
+        
         
         $("#ls-btn-edit-details").on('click', function() {
             if ($('#ls-btn-edit-details').jqxButton('disabled') || ls.lock_operation) return;
@@ -407,6 +446,91 @@
                         }, 'POST', true)
                     });
                     break;
+                case 2:
+                    $("#ls-costcalcpayments-grid").on('bindingcomplete', function(event) {
+                        var idx  = ls.costcalcpayments.rowindex;
+                        
+                        if (ls.costcalcpayments.rowid != undefined) {
+                            idx = $("#ls-costcalcpayments-grid").jqxGrid('getrowboundindexbyid', ls.costcalcpayments.rowid);
+                            ls.costcalcpayments.rowid = undefined;
+                        }
+                        
+                        var rows = $("#ls-costcalcpayments-grid").jqxGrid('getrows');
+                        
+                        if (idx == undefined || idx >= rows.length) 
+                            idx = 0;
+                        
+                        $("#ls-costcalcpayments-grid").jqxGrid('selectrow', idx);
+                        $("#ls-costcalcpayments-grid").jqxGrid('ensurerowvisible', idx);
+
+                        ls.costcalcpayments.checkbutton();
+                        ls.lock_operation = false;
+                    });
+                    
+                    $("#ls-costcalcpayments-grid").on('rowselect', function (event) {
+                        var args = event.args;
+                        ls.costcalcpayments.rowindex = args.rowindex;
+                        ls.costcalcpayments.row = args.row;
+                        ls.costcalcpayments.checkbutton();
+                    });
+                    
+                    $('#ls-btn-add-costcalcpayments').jqxButton($.extend(true, {}, ls.settings['button'], {width: 120, height: 30}));
+                    $("#ls-btn-edit-costcalcpayments").jqxButton($.extend(true, {}, ls.settings['button'], {width: 120, height: 30}));
+                    $('#ls-btn-del-costcalcpayments').jqxButton($.extend(true, {}, ls.settings['button'], {width: 120, height: 30}));
+                    $('#ls-btn-refresh-costcalcpayments').jqxButton($.extend(true, {}, ls.settings['button'], {width: 120, height: 30}));
+                    
+                    $("#ls-costcalcpayments-grid").jqxGrid(
+                        $.extend(true, {}, ls.settings['grid'], {
+                            pageable: false,
+                            showstatusbar: true,
+                            showaggregates: true,
+                            columns: [
+                                {text: 'Сотрудник', datafield: 'shortname', width: 240},
+                                {text: 'Сумма', datafield: 'sumpay', width: 120, cellsformat: 'f2',
+                                    aggregates: [
+                                        { 'Сумма':
+                                            function (aggregatedValue, currentValue) {
+                                                return aggregatedValue + currentValue;
+                                            }
+                                        }
+                                    ]
+                                },
+                            ],
+                    }));
+                    
+                    
+                    
+                    
+                    ls.costcalcpayments.refresh(true);
+                    
+                    $('#ls-btn-add-costcalcpayments').on('click', function() {
+                        if ($('#ls-btn-add-costcalcpayments').jqxButton('disabled') || ls.lock_operation) return;
+                        ls.opendialogforedit('costcalcpayments', 'create', {params: {calc_id: ls.costcalculations.row.calc_id}}, 'POST', false, {width: '560px', height: '160px'});
+                    });
+                    
+                    $('#ls-btn-edit-costcalcpayments').on('click', function() {
+                        if ($('#ls-btn-add-costcalcpayments').jqxButton('disabled') || ls.lock_operation) return;
+                        ls.opendialogforedit('costcalcpayments', 'update', {payment_id: ls.costcalcpayments.row.payment_id}, 'POST', false, {width: '560px', height: '160px'});
+                    });
+                    
+                    $('#ls-btn-refresh-costcalcpayments').on('click', function() {
+                        ls.costcalcpayments.refresh(false);
+                    });
+                    
+                    $('#ls-btn-del-costcalcpayments').on('click', function() {
+                        ls.delete('costcalcpayments', 'delete', {ccwk_id: ls.costcalcpayments.row.ccwk_id}, function(Res) {
+                            Res = JSON.parse(Res);
+                            if (Res.state == 0) {
+                                ls.costcalcpayments.rowindex--;
+                                ls.costcalculations.refresh(true);
+                                ls.costcalcpayments.refresh(false);
+                            }
+                            else
+                                ls.showerrormassage('Ошибка!', Res.responseText);
+                        }, 'POST', true)
+                    });
+                    
+                    break;
             };
         };
         
@@ -485,6 +609,7 @@
             <ul>
                 <li style="margin-left: 30px;">Оборудование</li>
                 <li style="">Перечень работ</li>
+                <li style="">Выплаты</li>
             </ul>
             <div style="padding: 10px;">
                 <div class="ls-row" style="height: calc(100% - 54px)">
@@ -506,6 +631,17 @@
                     <div class="ls-row-column"><input type="button" id="ls-btn-edit-costcalcworks" value="Изменить" /></div>
                     <div class="ls-row-column"><input type="button" id="ls-btn-refresh-costcalcworks" value="Обновить" /></div>
                     <div class="ls-row-column-right"><input type="button" id="ls-btn-del-costcalcworks" value="Удалить" /></div>
+                </div>
+            </div>
+            <div style="padding: 10px;">
+                <div class="ls-row" style="height: calc(100% - 54px)">
+                    <div class="ls-grid" id="ls-costcalcpayments-grid"></div>
+                </div>
+                <div class="ls-row">
+                    <div class="ls-row-column"><input type="button" id="ls-btn-add-costcalcpayments" value="Создать" /></div>
+                    <div class="ls-row-column"><input type="button" id="ls-btn-edit-costcalcpayments" value="Изменить" /></div>
+                    <div class="ls-row-column"><input type="button" id="ls-btn-refresh-costcalcpayments" value="Обновить" /></div>
+                    <div class="ls-row-column-right"><input type="button" id="ls-btn-del-costcalcpayments" value="Удалить" /></div>
                 </div>
             </div>
         </div>
