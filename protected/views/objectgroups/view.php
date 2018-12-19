@@ -601,17 +601,17 @@
 
                     ls.costcalculations.refresh(true);
 
-                    $('#ls-btn-refresh-objectequipgeneral').on('click', function() {
+                    $('#ls-btn-refresh-costcalculations').on('click', function() {
                         ls.costcalculations.refresh(false);
                     });
 
                     $('#ls-btn-create-costcalculations').on('click', function() {
                         if ($('#ls-btn-create-costcalculations').jqxButton('disabled') || ls.lock_operation) return;
-                        ls.opendialogforedit('costcalculations', 'create', {params: {objectgr_id: ls.objectgroups.row.objectgr_id}}, 'POST', false, {width: '600px', height: '320px'});
+                        ls.opendialogforedit('costcalculations', 'create', {params: {objectgr_id: ls.objectgroups.row.objectgr_id}}, 'POST', false, {width: '600px', height: '568px'});
                     });
 
                     $('#ls-btn-info-costcalculations').on('click', function() {
-
+                        ls.wopen('costcalculations/view', {calc_id: ls.costcalculations.row.calc_id}, 'costcalculations_' + ls.costcalculations.row.calc_id);
                     });
 
                     $('#ls-btn-delete-costcalculations').on('click', function() {

@@ -71,8 +71,8 @@ li > ul {
 }
 
 .ls-left-arrow {
-    height: 30px;
-    width: 30px;
+    height: 28px;
+    width: 28px;
     margin-bottom: 20px;
     border-radius: 3px;
     float: right;
@@ -90,7 +90,7 @@ li > ul {
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(/js/jqwidgets/styles/images/icon-right-white.png);
+    background-image: url(/js/jqwidgets/styles/images/icon-left-white.png);
 }
 
 .ls-breadcrumbs-container {

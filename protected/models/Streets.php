@@ -4,6 +4,7 @@ class Streets extends LSFormModel {
     
     public $street_id;
     public $streetname;
+    public $streetnamefull;
     public $streettype_id;
     public $streettype_name;
     public $region_id;
@@ -29,7 +30,8 @@ class Streets extends LSFormModel {
         );
         
         $this->command->select = "s.street_id,
-                                    concat(s.streetname, ' ', st.streettype_name) as streetname,
+                                    s.streetname,
+                                    concat(s.streetname, ' ', st.streettype_name) as streetnamefull,
                                     s.streettype_id,
                                     st.streettype_name,
                                     s.region_id,
@@ -57,6 +59,7 @@ class Streets extends LSFormModel {
             array('streetname, streettype_id, region_id', 'required'),
             array('street_id,
                     streetname,
+                    streetnamefull,
                     streettype_id,
                     streettype_name,
                     region_id,
@@ -74,6 +77,7 @@ class Streets extends LSFormModel {
         return array(
             'street_id' => '',
             'streetname' => 'Улица',
+            'streetnamefull' => 'Улица',
             'streettype_id' => 'Тип улицы',
             'streettype_name' => '',
             'region_id' => 'Регион',

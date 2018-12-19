@@ -112,7 +112,7 @@
                 sortable: true,
                 pagesize: 200,
                 width: 'calc(100% - 2px)',
-                height: 'calc(100% - 250px)',
+                height: 'calc(100% - 2px)',
                 columns: [
                     { text: 'Номер', datafield: 'demand_id', width: 70},    
                     { text: 'Адрес', datafield: 'address', width: 250},    
@@ -127,7 +127,7 @@
 
         }));
         
-        $("#ls-demands-demandtext").jqxTextArea($.extend(true, {}, ls.settings['textarea'], {height: '130px', width: 'calc(100% - 8px)'}));
+        $("#ls-demands-demandtext").jqxTextArea($.extend(true, {}, ls.settings['textarea'], {height: '130px', width: 'calc(100% - 2px)'}));
         
         ls.demands.refresh(true);
     });
@@ -142,7 +142,7 @@
     );
 ?>
 <div style="height: 100%">
-    <div class="ls-row" style="height: calc(100% - 184px)">
+    <div class="ls-row" style="height: calc(100% - 194px)">
         <div class="ls-grid" id="ls-demands-grid"></div>
     </div>
     <div class="ls-row" style="height: 150px">

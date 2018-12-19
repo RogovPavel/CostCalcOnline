@@ -43,12 +43,19 @@ ls.leftmenu = {
                 'width': 'calc(100% - 90px)'
             });
 
-            $("#ls-left-menu").css({
-                'display': 'none'
-            });
+//            $("#ls-left-menu").css({
+//                'display': 'none'
+//            });
+            
+            $("#ls-left-menu").toggle(100);
             
             $(".ls-arrow").css({
-                'background-image': 'url(/js/jqwidgets/styles/images/icon-right-white.png)'
+                'background-image': 'url(/js/jqwidgets/styles/images/icon-left-white.png)',
+                'float': 'right',
+            });
+            
+            $("#ls-ar").css({
+                'float': 'right',
             });
         }
         else {
@@ -60,12 +67,19 @@ ls.leftmenu = {
                 'width': 'calc(100% - 290px)'
             });
 
-            $("#ls-left-menu").css({
-                'display': 'block'
-            });
+//            $("#ls-left-menu").css({
+//                'display': 'block'
+//            });
+            
+            $("#ls-left-menu").toggle(100);
             
             $(".ls-arrow").css({
-                'background-image': 'url(/js/jqwidgets/styles/images/icon-left-white.png)'
+                'background-image': 'url(/js/jqwidgets/styles/images/icon-right-white.png)',
+                'float': 'left',
+            });
+            
+            $("#ls-ar").css({
+                'float': 'left',
             });
         }
     }
@@ -574,6 +588,7 @@ ls.sources['streets'] = {
     datafields: [
         {name: 'street_id', type: 'int'},
         {name: 'streetname', type: 'string'},
+        {name: 'streetnamefull', type: 'string'},
         {name: 'streettype_id', type: 'int'},
         {name: 'streettype_name', type: 'string'},
         {name: 'region_id', type: 'int'},

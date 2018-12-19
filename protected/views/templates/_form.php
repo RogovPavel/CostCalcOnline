@@ -34,6 +34,10 @@
         $("#ls-templates-cancel").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
         $("#ls-templates-show-view").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
         
+        $("#ls-templates-cancel").on('click', function() {
+            window.close();
+        });
+        
         $("#ls-templates-show-view").on('click', function() {
             if (!state) {
                 $('#ls-templates-code').css({'display': 'none'});

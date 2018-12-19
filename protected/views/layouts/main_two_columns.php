@@ -159,7 +159,6 @@
         $("#ls-left-menu").jqxNavigationBar({theme: ls.defaults.theme, width: 200, expandMode: 'multiple', expandedIndexes: [0, 1, 2]});
         
         $("#ls-ar").on('click', function() {
-//            console.log(ls.leftmenu.state);
             if (ls.leftmenu.state == 0) {
                 ls.leftmenu.setstate(1);
             }
