@@ -39093,3 +39093,163 @@ in C:\Home\LS\protected\components\WebUser.php (8)
 in C:\Home\LS\protected\components\LSFormModel.php (135)
 in C:\Home\LS\protected\components\WebUser.php (16)
 in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:13:08 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:13:14 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:13:14 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\controllers\ProfileController.php (30)
+in C:\Home\LS\index.php (13)
+2018/12/19 18:13:14 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\Home\LS\framework\web\CController.php:337
+Stack trace:
+#0 C:\Home\LS\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('index')
+#9 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('images/index')
+#10 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\Home\LS\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/images/index/
+HTTP_REFERER=http://ls.ru/profile
+---
+2018/12/19 18:13:16 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:13:19 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:13:19 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:13:19 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\controllers\ProfileController.php (30)
+in C:\Home\LS\index.php (13)
+2018/12/19 18:13:19 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\Home\LS\framework\web\CController.php:337
+Stack trace:
+#0 C:\Home\LS\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('index')
+#9 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('images/index')
+#10 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\Home\LS\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/images/index/
+HTTP_REFERER=http://ls.ru/profile
+---
+2018/12/19 18:13:26 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:13:27 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:13:30 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:13:36 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:13:36 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\controllers\ProfileController.php (30)
+in C:\Home\LS\index.php (13)
+2018/12/19 18:13:36 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\Home\LS\framework\web\CController.php:337
+Stack trace:
+#0 C:\Home\LS\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('index')
+#9 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('images/index')
+#10 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\Home\LS\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/images/index/
+HTTP_REFERER=http://ls.ru/profile
+---
+2018/12/19 18:13:37 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:13:40 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:13:40 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:13:40 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\controllers\ProfileController.php (30)
+in C:\Home\LS\index.php (13)
+2018/12/19 18:13:40 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\Home\LS\framework\web\CController.php:337
+Stack trace:
+#0 C:\Home\LS\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\Home\LS\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\Home\LS\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\Home\LS\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\Home\LS\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\Home\LS\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\Home\LS\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\Home\LS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\Home\LS\framework\web\CWebApplication.php(282): CController->run('index')
+#9 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController('images/index')
+#10 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\Home\LS\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/images/index/
+HTTP_REFERER=http://ls.ru/profile
+---
+2018/12/19 18:13:45 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:13:47 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:16:26 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:18:22 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:18:23 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2018/12/19 18:18:32 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (16)
+in C:\Home\LS\protected\components\WebUser.php (8)
