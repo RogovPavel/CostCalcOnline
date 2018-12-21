@@ -13,6 +13,7 @@ class Firms extends LSFormModel {
     public $bankname;
     public $jur_address;
     public $fact_address;
+    public $calctemplate_id;
     public $date_create;
     public $user_create;
     public $date_change;
@@ -28,8 +29,8 @@ class Firms extends LSFormModel {
         $this->sp_delete_name = 'delete_firms';
         
         $this->proc_params = array(
-            'insert_firms' => array('firm_id', 'firmname', 'inn', 'kpp', 'account', 'ogrn', 'okpo', 'bank_id', 'jur_address', 'fact_address', 'user_create', 'group_id'),
-            'update_firms' => array('firm_id', 'firmname', 'inn', 'kpp', 'account', 'ogrn', 'okpo', 'bank_id', 'jur_address', 'fact_address', 'user_change', 'group_id'),
+            'insert_firms' => array('firm_id', 'firmname', 'inn', 'kpp', 'account', 'ogrn', 'okpo', 'bank_id', 'jur_address', 'fact_address', 'calctemplate_id', 'user_create', 'group_id'),
+            'update_firms' => array('firm_id', 'firmname', 'inn', 'kpp', 'account', 'ogrn', 'okpo', 'bank_id', 'jur_address', 'fact_address', 'calctemplate_id', 'user_change', 'group_id'),
             'delete_firms' => array('firm_id', 'user_change', 'group_id'),
         );
         
@@ -44,6 +45,7 @@ class Firms extends LSFormModel {
                                     b.bankname,
                                     f.jur_address,
                                     f.fact_address,
+                                    f.calctemplate_id,
                                     f.date_create,
                                     f.user_create,
                                     f.date_change,
@@ -75,6 +77,7 @@ class Firms extends LSFormModel {
                     bankname,
                     jur_address,
                     fact_address,
+                    calctemplate_id,
                     date_create,
                     user_create,
                     date_change,
@@ -97,6 +100,7 @@ class Firms extends LSFormModel {
             'bankname' => '',
             'jur_address' => '',
             'fact_address' => '',
+            'calctemplate_id' => '',
             'date_create' => '',
             'user_create' => '',
             'date_change' => '',

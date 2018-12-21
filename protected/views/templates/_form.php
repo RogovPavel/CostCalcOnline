@@ -7,27 +7,7 @@
         var closewindow = <?php echo json_encode($closewindow); ?>;
         
         
-        var datatemplatetypes;
-        
-        $.ajax({
-            url: '/index.php/AjaxData/DataJQXSimpleList',
-            type: 'POST',
-            async: true,
-            data: {
-                Models: ['TemplateTypes']
-            },
-            success: function(Res) {
-                Res = JSON.parse(Res);
-                datatemplatetypes = Res[0];
-                
-                $("#ls-templates-type").jqxComboBox({source: datatemplatetypes});
-                $("#ls-templates-type").jqxComboBox('val', model.type_id);
-                
-            }
-        });
-        
         $("#ls-templates-name").jqxInput($.extend(true, {}, ls.settings['input'], {theme: ls.defaults.theme, width: 'calc(100% - 8px)', height: 25}));
-        $("#ls-templates-type").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {displayMember: "typename", valueMember: "type_id", width: '200px'}));
         $("#ls-templates-active").jqxCheckBox($.extend(true, {}, ls.settings['checkbox'], {theme: ls.defaults.theme, width: '300px', height: 25}));
         $('#ls-templates-editor').jqxTextArea($.extend(true, {}, ls.settings['textarea'], {height: "calc(100% - 2px)", width: 'calc(100% - 2px)'}));
         $("#ls-templates-save").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
@@ -61,6 +41,7 @@
         
         $("#ls-templates-name").jqxInput('val', model.templatename);
         $('#ls-templates-editor').jqxTextArea('val', model.template);
+        $("#ls-templates-active").jqxCheckBox('val', ls.stringtobool(model.active));
         
         if (closewindow)
             window.close();
@@ -89,11 +70,6 @@
             </div>
         </div>
         <div class="ls-row">
-            <div class="ls-row-column">
-                <div class="ls-form-label">Тип:</div>
-                <div class="ls-row-column"><div id="ls-templates-type" name="templates[type_id]" autocomplete="off"></div></div>
-                <div class="ls-form-error"><?php echo $form->error($model, 'type_id'); ?></div>
-            </div>
             <div class="ls-row-column">
                 <div class="ls-form-column"><div id="ls-templates-active" name="templates[active]">Активно</div></div>
                 <div class="ls-form-error"><?php echo $form->error($model, 'active'); ?></div>

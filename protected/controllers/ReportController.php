@@ -13,7 +13,7 @@ class ReportController extends Controller {
     public function accessRules() {
         return array(
             array('allow',
-                    'actions'=>array('CostCalcView', 'ExportPDF'),
+                    'actions'=>array('CostCalcView', 'Open'),
                     'users'=>array('@'),
             ),
             array('deny',
@@ -29,8 +29,25 @@ class ReportController extends Controller {
         
     }
     
-    public function Open($sources = array(), $template = null) {
+    public function actionOpen() {
+        $this->layout = '//layouts/report_column';
+        
         $result = '';
+        
+        $sources = array();
+        $template = null;
+        
+        if (isset($_POST['sources'])) {
+            $sources = $_POST['sources'];
+            $sources = json_decode($sources, true);
+        }
+        
+        if (isset($_POST['template'])) {
+            $templates = new Templates();
+            $templates->get_by_id($_POST['template']);
+            
+            $template = $templates->template;
+        }
         
         if ($template != null) {
             $result = $template;
@@ -40,7 +57,9 @@ class ReportController extends Controller {
             
         };
         
-        return $result;
+        $this->render('index', array(
+            'html' => $result
+        ));
     }
     
     

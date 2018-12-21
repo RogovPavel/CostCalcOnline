@@ -4,20 +4,24 @@
         var model = <?php echo json_encode($model); ?>;
         
         var databanks;
+        var datatemplates;
         
         $.ajax({
             url: '/index.php/AjaxData/DataJQXSimpleList',
             type: 'POST',
             async: true,
             data: {
-                Models: ['Banks']
+                Models: ['Banks', 'Templates']
             },
             success: function(Res) {
                 Res = JSON.parse(Res);
                 databanks = Res[0];
+                datatemplates = Res[1];
                 
                 $("#ls-firm-bank").jqxComboBox({source: databanks});
                 $("#ls-firm-bank").jqxComboBox('val', model.bank_id);
+                $("#ls-firm-calctemplate").jqxComboBox({source: datatemplates});
+                $("#ls-firm-calctemplate").jqxComboBox('val', model.calctemplate_id);
             },
             error: function(Res) {
                 ls.showerrormassage('Ошибка!', Res.responseText);
@@ -25,12 +29,13 @@
         });
         
         $("#ls-firm-name").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
-        $("#ls-firm-inn").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
-        $("#ls-firm-kpp").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
-        $("#ls-firm-account").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
-        $("#ls-firm-ogrn").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
-        $("#ls-firm-okpo").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
+        $("#ls-firm-inn").jqxInput($.extend(true, {}, ls.settings['input'], {width: '140px'}));
+        $("#ls-firm-kpp").jqxInput($.extend(true, {}, ls.settings['input'], {width: '140px'}));
+        $("#ls-firm-account").jqxInput($.extend(true, {}, ls.settings['input'], {width: '230px'}));
+        $("#ls-firm-ogrn").jqxInput($.extend(true, {}, ls.settings['input'], {width: '200px;'}));
+        $("#ls-firm-okpo").jqxInput($.extend(true, {}, ls.settings['input'], {width: '200px'}));
         $("#ls-firm-bank").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {selectedIndex: 0, displayMember: "bankname", valueMember: "bank_id", width: 'calc(100% - 8px)'}));
+        $("#ls-firm-calctemplate").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {selectedIndex: 0, displayMember: "templatename", valueMember: "template_id", width: 'calc(100% - 8px)'}));
         $("#ls-firm-juraddress").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
         $("#ls-firm-factaddress").jqxInput($.extend(true, {}, ls.settings['input'], {width: 'calc(100% - 8px)'}));
         
@@ -108,29 +113,44 @@
             <div class="ls-form-error"><?php echo $form->error($model, 'firmname'); ?></div>
         </div>
         <div class="ls-form-row">
-            <div class="ls-form-label">ИНН:</div>
-            <div class="ls-form-column" style="width: calc(100% - 126px);"><input type="text" id="ls-firm-inn" name="firms[inn]" autocomplete="off"/></div>
-            <div class="ls-form-error"><?php echo $form->error($model, 'inn'); ?></div>
+            <div class="ls-form-column">
+                <div>ИНН:</div>
+                <div>
+                    <input type="text" id="ls-firm-inn" name="firms[inn]" autocomplete="off"/>
+                    <div class="ls-form-error"><?php echo $form->error($model, 'inn'); ?></div>
+                </div>
+            </div>
+            <div class="ls-form-column">
+                <div>КПП:</div>
+                <div>
+                    <input type="text" id="ls-firm-kpp" name="firms[kpp]" autocomplete="off"/>
+                    <div class="ls-form-error"><?php echo $form->error($model, 'kpp'); ?></div>
+                </div>
+            </div>
+            <div class="ls-form-column">
+                <div>Р/Счет:</div>
+                <div>
+                    <input type="text" id="ls-firm-account" name="firms[account]" autocomplete="off"/>
+                    <div class="ls-form-error"><?php echo $form->error($model, 'account'); ?></div>
+                </div>
+            </div>
         </div>
+        
         <div class="ls-form-row">
-            <div class="ls-form-label">КПП:</div>
-            <div class="ls-form-column" style="width: calc(100% - 126px);"><input type="text" id="ls-firm-kpp" name="firms[kpp]" autocomplete="off"/></div>
-            <div class="ls-form-error"><?php echo $form->error($model, 'kpp'); ?></div>
-        </div>
-        <div class="ls-form-row">
-            <div class="ls-form-label">Р/Счет:</div>
-            <div class="ls-form-column" style="width: calc(100% - 126px);"><input type="text" id="ls-firm-account" name="firms[account]" autocomplete="off"/></div>
-            <div class="ls-form-error"><?php echo $form->error($model, 'account'); ?></div>
-        </div>
-        <div class="ls-form-row">
-                <div class="ls-form-label">ОГРН:</div>
-            <div class="ls-form-column" style="width: calc(100% - 126px);"><input type="text" id="ls-firm-ogrn" name="firms[ogrn]" autocomplete="off"/></div>
-            <div class="ls-form-error"><?php echo $form->error($model, 'ogrn'); ?></div>
-        </div>
-        <div class="ls-form-row">
-            <div class="ls-form-label">ОКПО:</div>
-            <div class="ls-form-column" style="width: calc(100% - 126px);"><input type="text" id="ls-firm-okpo" name="firms[okpo]" autocomplete="off"/></div>
-            <div class="ls-form-error"><?php echo $form->error($model, 'okpo'); ?></div>
+            <div class="ls-form-column">
+                <div>ОГРН:</div>
+                <div>
+                    <input type="text" id="ls-firm-ogrn" name="firms[ogrn]" autocomplete="off"/>
+                    <div class="ls-form-error"><?php echo $form->error($model, 'ogrn'); ?></div>
+                </div>
+            </div>
+            <div class="ls-form-column">
+                <div>ОКПО:</div>
+                <div>
+                    <input type="text" id="ls-firm-okpo" name="firms[okpo]" autocomplete="off"/>
+                    <div class="ls-form-error"><?php echo $form->error($model, 'okpo'); ?></div>
+                </div>
+            </div>
         </div>
         <div class="ls-form-row">
             <div class="ls-form-label">Банк:</div>
@@ -146,6 +166,11 @@
             <div class="ls-form-label">Факт. адрес:</div>
             <div class="ls-form-column" style="width: calc(100% - 126px);"><input type="text" id="ls-firm-factaddress" name="firms[fact_address]" autocomplete="off"/></div>
             <div class="ls-form-error"><?php echo $form->error($model, 'fact_address'); ?></div>
+        </div>
+        <div class="ls-form-row">
+            <div class="ls-form-label">Шаблон смет:</div>
+            <div class="ls-form-column" style="width: calc(100% - 126px);"><div id="ls-firm-calctemplate" name="firms[calctemplate_id]" autocomplete="off"/></div></div>
+            <div class="ls-form-error"><?php echo $form->error($model, 'calctemplate_id'); ?></div>
         </div>
         <div class="ls-form-row">
             <div class="ls-form-column"><input type="button" id="ls-firm-save" value="Сохранить"/></div>

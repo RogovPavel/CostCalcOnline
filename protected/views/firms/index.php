@@ -77,12 +77,12 @@
         
         $('#ls-btn-update').on('click', function() {
             if ($('#ls-btn-update').jqxButton('disabled') || ls.lock_operation) return;
-            ls.opendialogforedit('firms', 'update', {firm_id: ls.firms.row.firm_id}, 'POST', false, {width: '400px', height: '404px'});
+            ls.opendialogforedit('firms', 'update', {firm_id: ls.firms.row.firm_id}, 'POST', false, {width: '600px', height: '404px'});
         });
         
         $('#ls-btn-create').on('click', function() {
             if ($('#ls-btn-create').jqxButton('disabled') || ls.lock_operation) return;
-            ls.opendialogforedit('firms', 'create', {}, 'POST', false, {width: '400px', height: '404px'});
+            ls.opendialogforedit('firms', 'create', {}, 'POST', false, {width: '600px', height: '404px'});
         });
         
         $('#ls-dialog').jqxWindow($.extend(true, {}, ls.settings['dialog'], {width: 400, height: 404}));

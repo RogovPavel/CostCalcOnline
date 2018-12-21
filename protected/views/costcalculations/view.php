@@ -200,7 +200,17 @@
         $("#ls-btn-edit-details").jqxButton($.extend(true, {}, ls.settings['button'], {theme: ls.defaults.theme, width: '130px', height: 30}));
         
         $("#ls-costcalculations-print").on('click', function() {
-            window.open('/report/costcalcview/' + ls.costcalculations.row.calc_id);
+            var sources = {
+                calc: ls.costcalculations.row,
+                calcequips: $('#ls-costcalcequips-grid').jqxGrid('getRows'),
+                calcworks: $('#ls-costcalcworks-grid').jqxGrid('getRows')
+            };
+            
+            
+        
+            $('#report-template').val(13);
+            $('#report-sources').val(JSON.stringify(sources));
+            $('#reportform').submit();
         });
         
         
@@ -485,7 +495,9 @@
                             showstatusbar: true,
                             showaggregates: true,
                             columns: [
+                                {text: 'Дата', datafield: 'date', width: 120, cellsformat: 'dd.MM.yyyy'},
                                 {text: 'Сотрудник', datafield: 'shortname', width: 240},
+                                {text: 'Подрядчик', datafield: 'clientname', width: 240},
                                 {text: 'Сумма', datafield: 'sumpay', width: 120, cellsformat: 'f2',
                                     aggregates: [
                                         { 'Сумма':
@@ -495,6 +507,7 @@
                                         }
                                     ]
                                 },
+                                {text: 'Примечание', datafield: 'note', width: 440},
                             ],
                     }));
                     
@@ -505,12 +518,12 @@
                     
                     $('#ls-btn-add-costcalcpayments').on('click', function() {
                         if ($('#ls-btn-add-costcalcpayments').jqxButton('disabled') || ls.lock_operation) return;
-                        ls.opendialogforedit('costcalcpayments', 'create', {params: {calc_id: ls.costcalculations.row.calc_id}}, 'POST', false, {width: '560px', height: '160px'});
+                        ls.opendialogforedit('costcalcpayments', 'create', {params: {calc_id: ls.costcalculations.row.calc_id}}, 'POST', false, {width: '560px', height: '360px'});
                     });
                     
                     $('#ls-btn-edit-costcalcpayments').on('click', function() {
                         if ($('#ls-btn-add-costcalcpayments').jqxButton('disabled') || ls.lock_operation) return;
-                        ls.opendialogforedit('costcalcpayments', 'update', {payment_id: ls.costcalcpayments.row.payment_id}, 'POST', false, {width: '560px', height: '160px'});
+                        ls.opendialogforedit('costcalcpayments', 'update', {payment_id: ls.costcalcpayments.row.payment_id}, 'POST', false, {width: '560px', height: '360px'});
                     });
                     
                     $('#ls-btn-refresh-costcalcpayments').on('click', function() {
@@ -693,3 +706,8 @@
         </div>
     </div>
 </div>
+<!--target="_blank"-->
+<form id="reportform" method="post" action="/report/open" target="_blank">
+    <input id="report-sources" type="hidden" name="sources" value="">
+    <input id="report-template" type="hidden" name="template" value="">
+</form>

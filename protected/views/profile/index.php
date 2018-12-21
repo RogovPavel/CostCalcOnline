@@ -250,7 +250,7 @@
                         $.extend(true, {}, ls.settings['grid'], {
                             columns: [
                                 { text: 'Наименование', datafield: 'templatename', width: 150},
-                                { text: 'Тип', datafield: 'typename', width: 200},    
+                                { text: 'Активно', datafield: 'active', columntype: 'checkbox', width: 200},    
                             ]
                     }));
                     

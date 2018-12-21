@@ -5,7 +5,11 @@ class CostCalcPayments extends LSFormModel {
     public $payment_id;
     public $calc_id;
     public $user_id;
+    public $client_id;
+    public $clientname;
+    public $date;
     public $sumpay;
+    public $note;
     public $user_create;
     public $date_create;
     public $user_change;
@@ -21,23 +25,28 @@ class CostCalcPayments extends LSFormModel {
         $this->sp_delete_name = 'delete_costcalcpayments';
         
         $this->proc_params = array(
-            'insert_costcalcpayments' => array('payment_id', 'calc_id', 'user_id', 'sumpay', 'user_create', 'group_id'),
-            'update_costcalcpayments' => array('payment_id', 'calc_id', 'user_id', 'sumpay', 'user_change', 'group_id'),
+            'insert_costcalcpayments' => array('payment_id', 'calc_id', 'user_id', 'client_id', 'date', 'sumpay', 'note', 'user_create', 'group_id'),
+            'update_costcalcpayments' => array('payment_id', 'calc_id', 'user_id', 'client_id', 'date', 'sumpay', 'note', 'user_change', 'group_id'),
             'delete_costcalcpayments' => array('payment_id', 'user_change', 'group_id'),
         );
         
         $this->command->select = "p.payment_id,
                                     p.calc_id,
                                     p.user_id,
+                                    p.client_id,
+                                    c.clientname,
                                     u.shortname,
+                                    p.date,
                                     p.sumpay,
+                                    p.note,
                                     p.user_create,
                                     p.date_create,
                                     p.user_change,
                                     p.date_change,
                                     p.deldate,
                                     p.group_id,";
-        $this->command->from = 'costcalcpayments p left join users u on (p.user_id = u.user_id)';
+        $this->command->from = 'costcalcpayments p left join users u on (p.user_id = u.user_id)'
+                . 'left join clients c on (p.client_id = c.client_id)';
         $this->command->where = 'p.deldate is null';
         $this->command->order = 'p.payment_id';
         
@@ -49,11 +58,15 @@ class CostCalcPayments extends LSFormModel {
     
     public function rules() {
         return array(
-            array('calc_id, user_id, sumpay', 'required'),
+            array('calc_id, sumpay', 'required'),
             array('payment_id,
                     calc_id,
                     user_id,
+                    client_id,
+                    clientname,
+                    date,
                     sumpay,
+                    note,
                     user_create,
                     date_create,
                     user_change,
@@ -67,8 +80,12 @@ class CostCalcPayments extends LSFormModel {
         return array(
             'payment_id' => '',
             'calc_id' => '',
-            'user_id' => '',
+            'user_id' => 'Сотрудник',
+            'client_id' => 'Подрядчик',
+            'clientname' => '',
+            'date' => '',
             'sumpay' => '',
+            'note' => '',
             'user_create' => '',
             'date_create' => '',
             'user_change' => '',

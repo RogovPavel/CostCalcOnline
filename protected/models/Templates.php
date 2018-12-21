@@ -4,8 +4,6 @@ class Templates extends LSFormModel {
     
     public $template_id;
     public $templatename;
-    public $type_id;
-    public $typename;
     public $active;
     public $template;
     public $date_create;
@@ -25,15 +23,13 @@ class Templates extends LSFormModel {
         $this->sp_delete_name = 'delete_templates';
         
         $this->proc_params = array(
-            'insert_templates' => array('template_id', 'templatename', 'type_id', 'active', 'template', 'user_create', 'group_id'),
-            'update_templates' => array('template_id', 'templatename', 'type_id', 'active', 'template', 'user_change', 'group_id'),
+            'insert_templates' => array('template_id', 'templatename', 'active', 'template', 'user_create', 'group_id'),
+            'update_templates' => array('template_id', 'templatename', 'active', 'template', 'user_change', 'group_id'),
             'delete_templates' => array('template_id', 'user_change', 'group_id'),
         );
         
         $this->command->select = "  t.template_id,
                                     t.templatename,
-                                    t.type_id,
-                                    tp.typename,
                                     t.active,
                                     t.template,
                                     t.date_create,
@@ -42,7 +38,7 @@ class Templates extends LSFormModel {
                                     t.user_change,
                                     t.group_id,
                                     t.deldate";
-        $this->command->from = "templates t left join templatetypes tp on (t.type_id = tp.type_id)";
+        $this->command->from = "templates t";
         $this->command->where = 't.deldate is null';
         $this->command->order = 't.template_id';
         
@@ -54,11 +50,9 @@ class Templates extends LSFormModel {
     
     public function rules() {
         return array(
-            array('templatename, type_id, template', 'required'),
+            array('templatename, template', 'required'),
             array('template_id,
                     templatename,
-                    type_id,
-                    typename,
                     active,
                     template,
                     date_create,
@@ -74,8 +68,6 @@ class Templates extends LSFormModel {
         return array(
             'template_id' => '',
             'templatename' => '',
-            'type_id' => '',
-            'typename' => '',
             'active' => '',
             'template' => '',
             'date_create' => '',

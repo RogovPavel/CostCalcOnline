@@ -54,7 +54,7 @@ class LSParserHTML extends CComponent {
             $tbody .= '<tr>';
             for ($j = 0; $j < count($columns); $j++) {
                 if ($columns[$j]['fieldname'] == 'recno')
-                    $tbody .= '<td class="' . $columns[$j]['class'] . '">' . $i . '</td>';
+                    $tbody .= '<td class="' . $columns[$j]['class'] . '">' . ($i + 1) . '</td>';
                 else
                     $tbody .= '<td class="' . $columns[$j]['class'] . '">' . $source[$i][$columns[$j]['fieldname']] . '</td>';
             }
@@ -75,7 +75,8 @@ class LSParserHTML extends CComponent {
             $tds = pq($elem)->find('td');
             
             $columns = $this->getsourcecolumns($tds);
-            $this->fillTable($sources[$source], $columns[$source], $elem);
+            if (isset($sources[$source]))
+                $this->fillTable($sources[$source], $columns[$source], $elem);
         }
         
         foreach(pq('[field]') as $elem) {
