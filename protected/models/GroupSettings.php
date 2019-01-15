@@ -6,6 +6,11 @@ class GroupSettings extends LSFormModel {
     public $user_id;
     public $theme;
     public $logo;
+    public $host;
+    public $port;
+    public $username;
+    public $password;
+    public $fromaddress;
     public $user_change;
     public $date_change;
     public $group_id;
@@ -18,13 +23,18 @@ class GroupSettings extends LSFormModel {
         $this->sp_delete_name = 'delete_groupsetings';
         
         $this->proc_params = array(
-            'update_groupsettings' => array('setting_id', 'user_id', 'theme', 'logo', 'user_change', 'group_id'),
+            'update_groupsettings' => array('setting_id', 'user_id', 'theme', 'logo', 'host', 'port', 'username', 'password', 'fromaddress', 'user_change', 'group_id'),
         );
         
         $this->command->select = "s.setting_id,
                                     s.user_id,
                                     s.logo,
                                     s.theme,
+                                    s.host,
+                                    s.port,
+                                    s.username,
+                                    s.password,
+                                    s.fromaddress,
                                     s.user_change,
                                     s.date_change,
                                     s.group_id,";
@@ -44,6 +54,11 @@ class GroupSettings extends LSFormModel {
                     user_id,
                     theme,
                     logo,
+                    host,
+                    port,
+                    username,
+                    password,
+                    fromaddress,
                     user_change,
                     date_change,
                     group_id', 'safe'),
@@ -56,6 +71,11 @@ class GroupSettings extends LSFormModel {
             'user_id' => '',
             'theme' => '',
             'logo' => '',
+            'host' => '',
+            'port' => '',
+            'username' => '',
+            'password' => '',
+            'fromaddress' => '',
             'user_change' => '',
             'date_change' => '',
             'group_id' => '',

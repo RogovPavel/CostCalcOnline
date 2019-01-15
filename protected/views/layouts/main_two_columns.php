@@ -13,99 +13,14 @@
     <body>
         
         <div class="ls-main-container">
-            <div class="ls-column-left">
-                <div class="ls-left-menu-container">
-                    <div id="ls-ar" class="ls-left-arrow">
-                        <div class="ls-arrow"></div>
-                    </div>
-                    <div style="clear: both"></div>
-                    <div id="ls-left-menu">
-                        <div>
-                            <div style='margin-top: 2px;'>
-                                <div style='float: left;'>
-                                    <img alt='Genegals' src='/images/notesIcon.png' />
-                                </div>
-                                <div style='margin-left: 4px; float: left;'>Общие</div>
-                            </div>
-                        </div>
-                        <div>
-                            <ul>
-                                <li <?php Yii::app()->security->HideShowMenuItem('view_profile'); ?>><a href='<?php echo Yii::app()->createUrl('profile'); ?>'>Админка</a></li>
-                                <li><a href='#'>Обратная связь</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div style='margin-top: 2px;'>
-                                <div style='float: left;'>
-                                    <img alt='Genegals' src='/images/contactsIcon.png' />
-                                </div>
-                                <div style='margin-left: 4px; float: left;'>Справочники</div>
-                            </div>
-                        </div>
-                        <div>
-                            <ul>
-                                <li>Адреса
-                                    <ul>
-                                        <li <?php Yii::app()->security->HideShowMenuItem('view_regions'); ?>><a href='<?php echo Yii::app()->createUrl('regions'); ?>'>Регионы</a></li>
-                                        <li <?php Yii::app()->security->HideShowMenuItem('view_streettypes'); ?>><a href='<?php echo Yii::app()->createUrl('streettypes'); ?>'>Типы улиц</a></li>
-                                        <li <?php Yii::app()->security->HideShowMenuItem('view_streets'); ?>><a href='<?php echo Yii::app()->createUrl('streets'); ?>'>Улицы</a></li>
-                                    </ul>
-                                </li>
-                                <li>Организации
-                                    <ul>
-                                        <li <?php Yii::app()->security->HideShowMenuItem('view_banks'); ?>><a href='<?php echo Yii::app()->createUrl('banks'); ?>'>Банки</a></li>
-                                        <li <?php Yii::app()->security->HideShowMenuItem('view_firms'); ?>><a href='<?php echo Yii::app()->createUrl('firms'); ?>'>Мои организации</a></li>
-                                        <li <?php Yii::app()->security->HideShowMenuItem('view_clients'); ?>><a href='<?php echo Yii::app()->createUrl('clients'); ?>'>Клиенты</a></li>
-                                        <li <?php Yii::app()->security->HideShowMenuItem('view_clientpositions'); ?>><a href='<?php echo Yii::app()->createUrl('clientpositions'); ?>'>Должности</a></li>
-                                    </ul>
-                                </li>
-                                <li>Заявки
-                                    <ul>
-                                        <li <?php Yii::app()->security->HideShowMenuItem('view_demandtypes'); ?>><a href='<?php echo Yii::app()->createUrl('demandtypes'); ?>'>Типы</a></li>
-                                        <li <?php Yii::app()->security->HideShowMenuItem('view_demandpriors'); ?>><a href='<?php echo Yii::app()->createUrl('demandpriors'); ?>'>Приоритеты</a></li>
-                                    </ul>
-                                </li>
-                                <li>Заявки
-                                    <ul>
-                                        <li <?php Yii::app()->security->HideShowMenuItem('view_units'); ?>><a href='<?php echo Yii::app()->createUrl('units'); ?>'>Ед. измерения</a></li>
-                                        <li <?php Yii::app()->security->HideShowMenuItem('view_equips'); ?>><a href='<?php echo Yii::app()->createUrl('equips'); ?>'>Оборудование</a></li>
-                                    </ul>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <div>
-                            <div style='margin-top: 2px;'>
-                                <div style='float: left;'>
-                                    <img alt='Genegals' src='/images/contactsIcon.png' />
-                                </div>
-                                <div style='margin-left: 4px; float: left;'>Реестры</div>
-                            </div>
-                        </div>
-                        <div>
-                            <ul>
-                                <li <?php Yii::app()->security->HideShowMenuItem('view_objectgroups'); ?>><a href='<?php echo Yii::app()->createUrl('objectgroups'); ?>'>Реестр объектов</a></li>
-                                <li <?php Yii::app()->security->HideShowMenuItem('view_demands'); ?>><a href='<?php echo Yii::app()->createUrl('demands'); ?>'>Реестр заявок</a></li>
-                                <li <?php Yii::app()->security->HideShowMenuItem('view_costcalculations'); ?>><a href='<?php echo Yii::app()->createUrl('costcalculations'); ?>'>Реестр смет</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-            </div>
             <div class="ls-column-right">
                 <div class="ls-top-menu_container">
                     <div id="ls-top-menu" style="visibility: hidden;">
-                        <ul>
-                            <li><a href="#">Главная</a></li>
-                            <li><a href="#">Поддержка</a></li>
-                            <?php if (Yii::app()->user->isGuest) { ?>
-                                <li><a href="<?php echo Yii::app()->createUrl('site/login'); ?>">Вход</a></li>
-                            <?php } else { ?>
-                                <li><a href="<?php echo Yii::app()->createUrl('site/logout'); ?>">Выход (<?php echo Yii::app()->user->login; ?>)</a></li>
-                            <?php } ?>
-                        </ul>
+                        <!--Подгружаем меню-->
+                        <?php 
+                            $menu = include(Yii::app()->basePath . '/config/menu.php');
+                            echo $menu;
+                        ?>
                     </div>
                 </div>
                 <div class="ls-breadcrumbs-container">
@@ -154,18 +69,8 @@
 </html>
 <script type="text/javascript">
     $(document).ready(function() {
-        $("#ls-top-menu").jqxMenu({theme: ls.defaults.theme, width: 'calc(100% - 2px)', height: '28px'});
+        $("#ls-top-menu").jqxMenu({theme: ls.defaults.theme, width: 'calc(100% - 2px)', height: '30px'});
         $("#ls-top-menu").css('visibility', 'visible');
-        $("#ls-left-menu").jqxNavigationBar({theme: ls.defaults.theme, width: 200, expandMode: 'multiple', expandedIndexes: [0, 1, 2]});
-        
-        $("#ls-ar").on('click', function() {
-            if (ls.leftmenu.state == 0) {
-                ls.leftmenu.setstate(1);
-            }
-            else
-                ls.leftmenu.setstate(0);
-        });
-        
     });
 </script>
 

@@ -22,7 +22,10 @@ class GroupsettingsController extends Controller {
     public function actionGetData($id) {
         $model = new GroupSettings();
         
-        $model->get_by_id($id);
+        $model->get_by_conditions(array(array(
+            'sql' => 's.group_id = :p_group_id',
+            'params' => array(':p_group_id' => $id),
+        )));
         
         echo json_encode($model);
     }

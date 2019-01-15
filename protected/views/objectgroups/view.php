@@ -597,8 +597,36 @@
                     $('#ls-btn-create-costcalculations').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
                     $('#ls-btn-info-costcalculations').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
                     $('#ls-btn-refresh-costcalculations').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+                    $('#ls-btn-copy-costcalculations').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
+                    $('#ls-btn-paste-costcalculations').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
                     $('#ls-btn-delete-costcalculations').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
-
+                    
+                    $('#ls-btn-copy-costcalculations').on('click', function() {
+                        var copyobject = {
+                            calc_id: parseInt(ls.costcalculations.row.calc_id),
+                            objectgr_id: parseInt(ls.objectgroups.row.objectgr_id)
+                        };
+                        
+                        localStorage.setItem('copycostcalc', JSON.stringify(copyobject));
+                    });
+                    
+                    $('#ls-btn-paste-costcalculations').on('click', function() {
+                        var copyobject = JSON.parse(localStorage.getItem('copycostcalc'));
+                        
+                        if (copyobject != null)
+                            ls.save('costcalculations', 'copy', {params: {calc_id: copyobject.calc_id, objectgr_id: ls.objectgroups.row.objectgr_id}}, function(Res) {
+                                Res = JSON.parse(Res);
+                                if (Res.state == 0) {
+                                    ls.costcalculations.refresh(true);
+                                }
+                                else
+                                    ls.showerrormassage('Ошибка!', Res.responseText);
+                            }, 'POST', true);
+                        else
+                            ls.showerrormassage('Ошибка', 'Не выбрана смета для копирования');
+                        
+                    });
+                    
                     ls.costcalculations.refresh(true);
 
                     $('#ls-btn-refresh-costcalculations').on('click', function() {
@@ -755,6 +783,8 @@
                 <div class="ls-row-column"><input type="button" id="ls-btn-create-costcalculations" value="Создать" /></div>
                 <div class="ls-row-column"><input type="button" id="ls-btn-info-costcalculations" value="Карточка" /></div>
                 <div class="ls-row-column"><input type="button" id="ls-btn-refresh-costcalculations" value="Обновить" /></div>
+                <div class="ls-row-column"><input type="button" id="ls-btn-copy-costcalculations" value="Копировать" /></div>
+                <div class="ls-row-column"><input type="button" id="ls-btn-paste-costcalculations" value="Вставить" /></div>
                 <div class="ls-row-column-right"><input type="button" id="ls-btn-delete-costcalculations" value="Удалить" /></div>
             </div>
         </div>

@@ -7,10 +7,14 @@ body {
     padding: 0;
     background-color: #eee;
     height: 100%;
-    
+    min-width: 1000px;
     font-family: Verdana,Arial,sans-serif;
     font-style: normal;
     font-size: 13px;
+}
+
+form {
+    margin: 0px;
 }
 
 a {
@@ -34,9 +38,11 @@ li > ul {
 
 .ls-main-container {
     min-width: 920px;
-    width: calc(100% - 40px);
+    width: calc(100% - 80px);
     height: calc(100% - 20px);
     padding: 0px 0px 20px 0px;
+    margin-left: 40px;
+    margin-right: 40px;
     background-color: #fff;
     float: left;
     overflow: auto;
@@ -52,13 +58,13 @@ li > ul {
 
 .ls-column-right {
     float: left;
-    width: calc(100% - 90px);
+    width: calc(100% - 40px);
     height: 100%;
     padding: 0 20px;
 }
 
 .ls-top-menu_container {
-    height: 30px;
+    height: 32px;
     width: 100%;
     padding-top: 8px;
     background-color: #fff;
@@ -70,29 +76,6 @@ li > ul {
     margin-right: 10px;
 }
 
-.ls-left-arrow {
-    height: 28px;
-    width: 28px;
-    margin-bottom: 20px;
-    border-radius: 3px;
-    float: right;
-    background-color: #7a7a7a;
-    background-image: -webkit-gradient(linear,0 0,0 100%,from(#989898),to(#696969));
-    border: 1px solid #666;
-}
-
-.ls-left-arrow:hover {
-    cursor: pointer;
-}
-
-.ls-arrow {
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url(/js/jqwidgets/styles/images/icon-left-white.png);
-}
-
 .ls-breadcrumbs-container {
     margin-top: 6px;
     height: 20px;
@@ -102,7 +85,7 @@ li > ul {
     margin-top: 6px;
     border: 1px solid #aaa;
     border-radius: 3px;
-    height: calc(100% - 70px);
+    height: calc(100% - 74px);
     overflow: auto;
 }
 

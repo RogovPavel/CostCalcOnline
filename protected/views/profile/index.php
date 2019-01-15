@@ -78,6 +78,11 @@
         },
         setvalues: function() {
             $("#ls-groupsettings-theme").jqxInput('val', ls.options.row.theme);
+            $("#ls-groupsettings-host").jqxInput('val', ls.options.row.host);
+            $("#ls-groupsettings-port").jqxInput('val', ls.options.row.port);
+            $("#ls-groupsettings-username").jqxInput('val', ls.options.row.username);
+            $("#ls-groupsettings-password").jqxInput('val', ls.options.row.password);
+            $("#ls-groupsettings-fromaddress").jqxInput('val', ls.options.row.fromaddress);
             if (ls.options.row.logo != null)
                 $("#ls-groupsettings-logo").attr("src", 'images/index/' + ls.options.row.logo);
             else
@@ -103,12 +108,17 @@
             switch(tab) {
                 case 0:
                     $("#ls-groupsettings-theme").jqxInput($.extend(true, {}, ls.settings['input'], {width: '150px', height: 25}));
+                    $("#ls-groupsettings-host").jqxInput($.extend(true, {}, ls.settings['input'], {width: '150px', height: 25}));
+                    $("#ls-groupsettings-port").jqxInput($.extend(true, {}, ls.settings['input'], {width: '150px', height: 25}));
+                    $("#ls-groupsettings-username").jqxInput($.extend(true, {}, ls.settings['input'], {width: '150px', height: 25}));
+                    $("#ls-groupsettings-password").jqxInput($.extend(true, {}, ls.settings['input'], {width: '150px', height: 25}));
+                    $("#ls-groupsettings-fromaddress").jqxInput($.extend(true, {}, ls.settings['input'], {width: '250px', height: 25}));
                     $('#ls-btn-edit-groupsettings').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
                     
                     
                     $('#ls-btn-edit-groupsettings').on('click', function() {
                         if ($('#ls-btn-edit-groupsettings').jqxButton('disabled') || ls.lock_operation) return;
-                        ls.opendialogforedit('groupsettings', 'update', {setting_id: ls.options.row.setting_id}, 'POST', false, {width: '620px', height: '164px'});
+                        ls.opendialogforedit('groupsettings', 'update', {setting_id: ls.options.row.setting_id}, 'POST', false, {width: '620px', height: '374px'});
                     });
                     
                     ls.options.setvalues();
@@ -451,10 +461,33 @@
                 </div>
                 <div class="ls-row">
                     <div class="ls-row-column" style="width: 100px">Логотип:</div>
-                    <div class="ls-row-column" style="border: 1px solid black; width: 500px; height: 70px;"><img id="ls-groupsettings-logo" width="100%" height="100%" src="/images/index/"/></div>
+                    <div class="ls-row-column" style="border: 1px solid black; width: 500px; height: 70px;"><img id="ls-groupsettings-logo" width="100%" height="100%" src=""/></div>
                     
                 </div>
+                <div class="ls-row" style="margin-top: 10px;">
+                    <div class="ls-row-column" style="width: 200px; font-weight: bold;"><u>Почтовые настройки:</u></div>
+                </div>
                 <div class="ls-row">
+                    <div class="ls-row-column" style="width: 200px">Адрес:</div>
+                    <div class="ls-row-column"><input type="text" readonly="readonly" id="ls-groupsettings-host" autocomplete="off"/></div>
+                </div>
+                <div class="ls-row">
+                    <div class="ls-row-column" style="width: 200px">Порт:</div>
+                    <div class="ls-row-column"><input type="text" readonly="readonly" id="ls-groupsettings-port" autocomplete="off"/></div>
+                </div>
+                <div class="ls-row">
+                    <div class="ls-row-column" style="width: 200px">Логин:</div>
+                    <div class="ls-row-column"><input type="text" readonly="readonly" id="ls-groupsettings-username" autocomplete="off"/></div>
+                </div>
+                <div class="ls-row">
+                    <div class="ls-row-column" style="width: 200px">Пароль:</div>
+                    <div class="ls-row-column"><input type="text" readonly="readonly" id="ls-groupsettings-password" autocomplete="off"/></div>
+                </div>
+                <div class="ls-row">
+                    <div class="ls-row-column" style="width: 200px">Адрес отправителя:</div>
+                    <div class="ls-row-column"><input type="text" readonly="readonly" id="ls-groupsettings-fromaddress" autocomplete="off"/></div>
+                </div>
+                <div class="ls-row" style="margin-top: 30px;">
                     <div class="ls-row-column"><input type="button" id="ls-btn-edit-groupsettings" value="Изменить" /></div>
                 </div>
                 

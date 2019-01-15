@@ -5,7 +5,7 @@
             'Главная' => 'site/index',
     );
 ?>
-<div style="height: 100%;">
+<div style="">
     
     <div style="font-weight: bold;">
         Новости\Последние изменения от 01.12.2018
@@ -19,3 +19,10 @@
 </div>
 
 
+<?php 
+    $sender = new LSPHPMailer();
+    
+    $sender->Send(array('pasha-rogov@yandex.ru'), array(), 'test', 'test', '', true);
+    
+//    Send($recipients = array(), $attachments = array(), $subject, $body, $replyto, $html = true) {
+?>

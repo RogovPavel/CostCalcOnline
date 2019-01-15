@@ -12,7 +12,7 @@ class CostcalculationsController extends Controller {
     public function accessRules() {
         return array(
             array('allow', 'actions'=>array('index', 'view', 'getdata'), 'roles'=>array('view_costcalculations')),
-            array('allow', 'actions'=>array('create'), 'roles'=>array('create_costcalculations')),
+            array('allow', 'actions'=>array('create', 'copy'), 'roles'=>array('create_costcalculations')),
             array('allow', 'actions'=>array('update', 'updatedetails', 'ready', 'undo'), 'roles'=>array('update_costcalculations')),
             array('allow', 'actions'=>array('delete'), 'roles'=>array('delete_costcalculations')),
             array('deny', 'users'=>array('*'))
@@ -256,6 +256,41 @@ class CostcalculationsController extends Controller {
             $result['state'] = 2;
             $result['responseText'] = $e->getMessage();
             
+        } finally {
+            echo json_encode($result);
+        }
+    }
+    
+    public function actionCopy() {
+        $result = array(
+            'state' => 0,
+            'header' => 'Копирование записи',
+            'id' => 0,
+            'responseText' => '',
+        );
+        
+        try {
+            $sp = new LSStoredProc();
+    
+            $sp->sp_proc_name = 'copy_costcalculations';
+            $sp->proc_params = array('calc_id', 'out_calc_id', 'objectgr_id', 'user_create', 'group_id');
+            
+            if (isset($_POST['params'])) {
+                $params = array(
+                    'calc_id' => null,
+                    'out_calc_id' => $_POST['params']['calc_id'],
+                    'objectgr_id' => $_POST['params']['objectgr_id'],
+                    'user_create' => Yii::app()->user->user_id,
+                    'group_id' => Yii::app()->user->group_id
+                 );
+                
+                $res = $sp->execute($params);
+                $result['id'] = $res['data']['calc_id'];
+            }
+            
+        } catch (Exception $e) {
+            $result['state'] = 2;
+            $result['responseText'] = $e->getMessage();
         } finally {
             echo json_encode($result);
         }

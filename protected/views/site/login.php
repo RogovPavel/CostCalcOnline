@@ -12,6 +12,15 @@
             $('#LoginForm').submit();
         });
         
+        $('#LoginForm').on('keyup keypress', function(e) {
+            var keyCode = e.keyCode || e.which;
+            if (keyCode === 13) { 
+                e.preventDefault();
+                $("#ls-btn-login").click();
+                return false;
+            }
+        });
+        
         $("#ls-login").jqxInput('val', model.username);
         $("#ls-password").jqxPasswordInput('val', model.password);
     });

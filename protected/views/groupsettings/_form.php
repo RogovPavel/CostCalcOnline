@@ -29,6 +29,11 @@
         
         $("#ls-setting-edit-theme").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {source: ls.themes, displayMember: "name", valueMember: "name", width: '200px'}));
         $("#ls-setting-edit-logo").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {source: ls.themes, valueMember: "value", width: '200px'}));
+        $("#ls-setting-edit-host").jqxInput($.extend(true, {}, ls.settings['input'], {width: '200px', height: 25}));
+        $("#ls-setting-edit-port").jqxInput($.extend(true, {}, ls.settings['input'], {width: '200px', height: 25}));
+        $("#ls-setting-edit-username").jqxInput($.extend(true, {}, ls.settings['input'], {width: '200px', height: 25}));
+        $("#ls-setting-edit-password").jqxInput($.extend(true, {}, ls.settings['input'], {width: '200px', height: 25}));
+        $("#ls-setting-edit-fromaddress").jqxInput($.extend(true, {}, ls.settings['input'], {width: '200px', height: 25}));
         
         $("#ls-setting-save").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
         $("#ls-setting-cancel").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
@@ -61,7 +66,7 @@
                 if (Res.state == 0) {
                     
                     localStorage.setItem('theme', $("#ls-setting-edit-theme").val());
-                    location.reload();
+                    ls.options.refresh(true);
                     
                     $('#ls-dialog').jqxWindow('close');
                 }
@@ -74,6 +79,11 @@
         });
         
         $("#ls-setting-edit-theme").jqxComboBox('val', model.theme);
+        $("#ls-setting-edit-host").jqxInput('val', model.host);
+        $("#ls-setting-edit-port").jqxInput('val', model.port);
+        $("#ls-setting-edit-username").jqxInput('val', model.username);
+        $("#ls-setting-edit-password").jqxInput('val', model.password);
+        $("#ls-setting-edit-fromaddress").jqxInput('val', model.fromaddress);
     });
 </script>
 
@@ -100,6 +110,34 @@
             <div class="ls-form-label">Логотип:</div>
             <div class="ls-form-column" style="width: calc(100% - 126px);"><div id="ls-setting-edit-logo" name="groupsettings[logo]" autocomplete="off"></div></div>
             <div class="ls-form-error"><?php echo $form->error($model, 'logo'); ?></div>
+        </div>
+        <div class="ls-form-row">
+            <div class="ls-form-column" style="font-weight: bold"><u>Почтовые настройки</u></div>
+        </div>
+        <div class="ls-form-row">
+            <div class="ls-form-label" style="width: 150px;">Адрес сервера:</div>
+            <div class="ls-form-column" style="width: calc(100% - 156px);"><input type="text" id="ls-setting-edit-host" name="groupsettings[host]" autocomplete="off" /></div>
+            <div class="ls-form-error"><?php echo $form->error($model, 'host'); ?></div>
+        </div>
+        <div class="ls-form-row">
+            <div class="ls-form-label" style="width: 150px;">Порт:</div>
+            <div class="ls-form-column" style="width: calc(100% - 156px);"><input type="text" id="ls-setting-edit-port" name="groupsettings[port]" autocomplete="off" /></div>
+            <div class="ls-form-error"><?php echo $form->error($model, 'port'); ?></div>
+        </div>
+        <div class="ls-form-row">
+            <div class="ls-form-label" style="width: 150px;">Логин:</div>
+            <div class="ls-form-column" style="width: calc(100% - 156px);"><input type="text" id="ls-setting-edit-username" name="groupsettings[username]" autocomplete="off" /></div>
+            <div class="ls-form-error"><?php echo $form->error($model, 'username'); ?></div>
+        </div>
+        <div class="ls-form-row">
+            <div class="ls-form-label" style="width: 150px;">Пароль:</div>
+            <div class="ls-form-column" style="width: calc(100% - 156px);"><input type="text" id="ls-setting-edit-password" name="groupsettings[password]" autocomplete="off" /></div>
+            <div class="ls-form-error"><?php echo $form->error($model, 'password'); ?></div>
+        </div>
+        <div class="ls-form-row">
+            <div class="ls-form-label" style="width: 150px;">Адрес отправителя:</div>
+            <div class="ls-form-column" style="width: calc(100% - 156px);"><input type="text" id="ls-setting-edit-fromaddress" name="groupsettings[fromaddress]" autocomplete="off" /></div>
+            <div class="ls-form-error"><?php echo $form->error($model, 'fromaddress'); ?></div>
         </div>
         <div class="ls-form-row">
             <div class="ls-form-column"><input type="button" id="ls-setting-save" value="Сохранить"/></div>

@@ -6,15 +6,24 @@ body {
     margin: 0;
     padding: 0;
     background-color: #eee;
-    
+    height: 100%;
+    min-width: 1000px;
     font-family: Verdana,Arial,sans-serif;
     font-style: normal;
     font-size: 13px;
 }
 
+form {
+    margin: 0px;
+}
+
 a {
     text-decoration: underline;
-    color: #fff;
+    color: #4c3000;
+}
+
+li > ul {
+    padding-left: 20px;
 }
 
 .ls-left-menu-container {
@@ -23,37 +32,46 @@ a {
    
 }
 
+#ls-left-menu {
+    display: none;
+}
+
 .ls-main-container {
     min-width: 920px;
-    width: calc(100% - 40px);
-    min-height: calc(100% - 40px);
+    width: calc(100% - 80px);
+    height: calc(100% - 20px);
     padding: 0px 0px 20px 0px;
+    margin-left: 40px;
+    margin-right: 40px;
     background-color: #fff;
     float: left;
+    overflow: auto;
 }
 
 .ls-column-left {
     float: left;
-    width: 250px;
+    width: 50px;
     background-color: #eee;
-    height: calc(100% - 20px);
+    height: 100%;
+    overflow: auto;
 }
 
 .ls-column-right {
     float: left;
-    width: calc(100% - 290px);
+    width: calc(100% - 40px);
+    height: 100%;
     padding: 0 20px;
 }
 
 .ls-top-menu_container {
-    height: 30px;
-    width: calc(100% - 0px);
+    height: 32px;
+    width: 100%;
     padding-top: 8px;
     background-color: #fff;
 }
 
 .ls-left-menu-container {
-    margin-top: 68px;
+    margin-top: 70px;
     float: right;
     margin-right: 10px;
 }
@@ -61,18 +79,14 @@ a {
 .ls-breadcrumbs-container {
     margin-top: 6px;
     height: 20px;
-    color: #3e3e42 !important;
-}
-
-.ls-breadcrumbs-container a {
-    color: #3e3e42 !important;
 }
 
 .ls-body-container {
     margin-top: 6px;
     border: 1px solid #aaa;
     border-radius: 3px;
-    min-height: calc(100% - 92px);
+    height: calc(100% - 74px);
+    overflow: auto;
 }
 
 .ls-body-header {
@@ -83,17 +97,18 @@ a {
     border-radius: 3px 3px 0px 0px;
     font-weight: bold;
     font-size: 13px;
-    background-color: #3e3e42;
+    background: #3e3e42;
     color: #fff;
 }
 
 .ls-body-content {
     padding: 10px;
-    min-height: calc(100% - 142px);
+    height: calc(100% - 50px);
+    overflow: auto;
 }
 
 #content {
-    height: calc(100% - 142px);
+    height: 100%;
 }
 
 .ls-breadcrumbs-item {
@@ -141,7 +156,7 @@ a {
     height: auto;
     white-space: nowrap;
     overflow: hidden;
-    background-color: #3e3e42;
+    background: #3e3e42;
     border-radius: 8px;
     color: #ffffff;
     line-height: 1.231;
