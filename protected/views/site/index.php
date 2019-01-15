@@ -22,7 +22,11 @@
 <?php 
     $sender = new LSPHPMailer();
     
-    $sender->Send(array('pasha-rogov@yandex.ru'), array(), 'test', 'test', '', true);
+    $sender->host = 'it-pc-02';
+    $sender->port = 2155;
+    $sender->username = 'reglament';
+    $sender->password = 'resetboard';
+    $sender->fromaddress = 'reglament@aliton.ru';
     
-//    Send($recipients = array(), $attachments = array(), $subject, $body, $replyto, $html = true) {
+//    $sender->Send(array('pasha-rogov@yandex.ru'), array(), 'test22', 'test', '', true);
 ?>

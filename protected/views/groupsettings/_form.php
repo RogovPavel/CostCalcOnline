@@ -4,18 +4,20 @@
         var model = <?php echo json_encode($model); ?>;
         
         var dataimages;
+        var datatemplates;
         
         $.ajax({
             url: '/index.php/AjaxData/DataJQXSimpleList',
             type: 'POST',
             async: true,
             data: {
-                Models: ['ImagesList']
+                Models: ['ImagesList', 'Templates']
             },
             success: function(Res) {
                 Res = JSON.parse(Res);
                 
                 var tmpdata = Res[0];
+                datatemplates = Res[1];
                 dataimages = [];
                 
                 for (var i = 0; i < tmpdata.length; i++) {
@@ -24,6 +26,8 @@
                 
                 $("#ls-setting-edit-logo").jqxComboBox({source: dataimages});
                 $("#ls-setting-edit-logo").val(model.logo);
+                $("#ls-setting-edit-template").jqxComboBox({source: datatemplates});
+                $("#ls-setting-edit-template").val(model.templatefordemands);
             }
         });
         
@@ -34,6 +38,7 @@
         $("#ls-setting-edit-username").jqxInput($.extend(true, {}, ls.settings['input'], {width: '200px', height: 25}));
         $("#ls-setting-edit-password").jqxInput($.extend(true, {}, ls.settings['input'], {width: '200px', height: 25}));
         $("#ls-setting-edit-fromaddress").jqxInput($.extend(true, {}, ls.settings['input'], {width: '200px', height: 25}));
+        $("#ls-setting-edit-template").jqxComboBox($.extend(true, {}, ls.settings['combobox'], {source: datatemplates, displayMember: "templatename", valueMember: "template_id", width: '300px'}));
         
         $("#ls-setting-save").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
         $("#ls-setting-cancel").jqxButton({theme: ls.defaults.theme, width: '100px', height: 30});
@@ -138,6 +143,11 @@
             <div class="ls-form-label" style="width: 150px;">Адрес отправителя:</div>
             <div class="ls-form-column" style="width: calc(100% - 156px);"><input type="text" id="ls-setting-edit-fromaddress" name="groupsettings[fromaddress]" autocomplete="off" /></div>
             <div class="ls-form-error"><?php echo $form->error($model, 'fromaddress'); ?></div>
+        </div>
+        <div class="ls-form-row">
+            <div class="ls-form-label" style="width: 150px;">Шаблон для заявок:</div>
+            <div class="ls-form-column" style="width: calc(100% - 156px);"><div id="ls-setting-edit-template" name="groupsettings[templatefordemands]" autocomplete="off"></div></div>
+            <div class="ls-form-error"><?php echo $form->error($model, 'templatefordemands'); ?></div>
         </div>
         <div class="ls-form-row">
             <div class="ls-form-column"><input type="button" id="ls-setting-save" value="Сохранить"/></div>

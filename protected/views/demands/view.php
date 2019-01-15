@@ -92,8 +92,13 @@
         $("#ls-demands-demandtext").jqxTextArea($.extend(true, {}, ls.settings['textarea'], {height: '70px', width: 'calc(100% - 8px)'}));
         
         $("#ls-demands-edit").jqxButton($.extend(true, {}, ls.settings['button'], {theme: ls.defaults.theme, width: '100px', height: 30}));
+        $("#ls-demands-send").jqxButton($.extend(true, {}, ls.settings['button'], {theme: ls.defaults.theme, width: '300px', height: 30}));
+        
         $("#ls-demands-executorname").jqxInput($.extend(true, {}, ls.settings['input'], {width: '150px', height: 25, disabled: false}));
         
+        $("#ls-demands-send").on('click', function() {
+            
+        });
         
         $('#ls-demands-edit').on('click', function() {
             if ($('#ls-demands-edit').jqxButton('disabled') || ls.lock_operation) return;
@@ -239,6 +244,7 @@
 </div>
 <div class="ls-row">
     <div class="ls-row-column"><input type="button" id="ls-demands-edit" value="Изменить"/></div>
+    <div class="ls-row-column"><input type="button" id="ls-demands-send" value="Отправить на почту исполнителю"/></div>
 </div>
 <div class="ls-row" style="height: calc(100% - 266px)">
     <div id='ls-demands-tab'>

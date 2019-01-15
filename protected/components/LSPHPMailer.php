@@ -4,9 +4,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 
-require_once(Yii::app()->request->baseUrl . '/protected/extensions/PHPMailer/src/PHPMailer.php');
-require_once(Yii::app()->request->baseUrl . '/protected/extensions/PHPMailer/src/Exception.php');
-require_once(Yii::app()->request->baseUrl . '/protected/extensions/PHPMailer/src/SMTP.php');
+require_once(Yii::app()->request->baseUrl . 'protected/extensions/PHPMailer/src/PHPMailer.php');
+require_once(Yii::app()->request->baseUrl . 'protected/extensions/PHPMailer/src/Exception.php');
+require_once(Yii::app()->request->baseUrl . 'protected/extensions/PHPMailer/src/SMTP.php');
 
 class LSPHPMailer extends CApplicationComponent {
 
@@ -21,6 +21,7 @@ class LSPHPMailer extends CApplicationComponent {
     public function __construct() {
         $this->mail = new PHPMailer(true);
         
+               
         $groupsettings = new GroupSettings();
         $groupsettings->get_by_conditions(array(array(
             'sql' => 's.group_id = :p_group_id',
@@ -37,7 +38,7 @@ class LSPHPMailer extends CApplicationComponent {
     
     public function Send($recipients = array(), $attachments = array(), $subject, $body, $replyto, $html = true) {
         try {
-            $this->mail->SMTPDebug = 0;                                 // Enable verbose debug output
+            $this->mail->SMTPDebug = 1;                                 // Enable verbose debug output
             $this->mail->isSMTP();                                      // Set mailer to use SMTP
             $this->mail->Host = $this->host;
             $this->mail->SMTPAuth = true;                               // Enable SMTP authentication

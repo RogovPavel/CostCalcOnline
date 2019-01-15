@@ -118,7 +118,7 @@
                     
                     $('#ls-btn-edit-groupsettings').on('click', function() {
                         if ($('#ls-btn-edit-groupsettings').jqxButton('disabled') || ls.lock_operation) return;
-                        ls.opendialogforedit('groupsettings', 'update', {setting_id: ls.options.row.setting_id}, 'POST', false, {width: '620px', height: '374px'});
+                        ls.opendialogforedit('groupsettings', 'update', {setting_id: ls.options.row.setting_id}, 'POST', false, {width: '620px', height: '404px'});
                     });
                     
                     ls.options.setvalues();
