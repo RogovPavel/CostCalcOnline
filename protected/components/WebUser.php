@@ -6,7 +6,10 @@ class WebUser extends CWebUser {
     
     public function getRole() {
         if($user = $this->getModel()){
-            return $user->rolenameyii;
+            if ($user->rolenameyii == null)
+                return 'guest';
+            else
+                return $user->rolenameyii;
         }
     }
     

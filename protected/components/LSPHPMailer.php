@@ -38,7 +38,7 @@ class LSPHPMailer extends CApplicationComponent {
     
     public function Send($recipients = array(), $attachments = array(), $subject, $body, $replyto, $html = true) {
         try {
-            $this->mail->SMTPDebug = 1;                                 // Enable verbose debug output
+            $this->mail->SMTPDebug = 0;                                 // Enable verbose debug output
             $this->mail->isSMTP();                                      // Set mailer to use SMTP
             $this->mail->Host = $this->host;
             $this->mail->SMTPAuth = true;                               // Enable SMTP authentication

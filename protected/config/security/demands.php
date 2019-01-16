@@ -12,6 +12,7 @@
                 'create_demands',
                 'update_demands',
                 'delete_demands',
+                'send_demands',
             ),
         ),
         
@@ -25,6 +26,7 @@
                 'view_demands',
                 'create_demands',
                 'update_demands',
+                'send_demands',
             ),
         ),
         
@@ -63,6 +65,13 @@
         'delete_demands' => array(
             'type' => CAuthItem::TYPE_OPERATION,
             'description' => 'delete_demands',
+            'bizRule' => null,
+            'data' => null,
+        ),
+        
+        'send_demands' => array(
+            'type' => CAuthItem::TYPE_OPERATION,
+            'description' => 'send_demands',
             'bizRule' => null,
             'data' => null,
         ),

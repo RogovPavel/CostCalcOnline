@@ -97,7 +97,25 @@
         $("#ls-demands-executorname").jqxInput($.extend(true, {}, ls.settings['input'], {width: '150px', height: 25, disabled: false}));
         
         $("#ls-demands-send").on('click', function() {
+            var sources = {
+                demands: ls.demands.row,
+                demandcommnets: $('#ls-demandcomments-grid').jqxGrid('getRows'),
+            };
             
+            $.ajax({
+                url: <?php echo json_encode(Yii::app()->createUrl('demands/send')); ?>,
+                type: 'POST',
+                data: {
+                    user_id: ls.demands.row.user_id,
+                    sources: JSON.stringify(sources)
+                },
+                success: function(Res) {
+                    Res = JSON.parse(Res);
+                    
+                    if (Res.state == 0)
+                        ls.showerrormassage('Успешно', 'Письмо отправлено успешно.');
+                }
+            });
         });
         
         $('#ls-demands-edit').on('click', function() {
@@ -152,13 +170,24 @@
                     $('#ls-btn-add-message').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
                     $('#ls-btn-del-message').jqxButton($.extend(true, {}, ls.settings['button'], { width: 120, height: 30 }));
                     
+                    $('#ls-demands-message').on('keydown', function(e) {
+                        var keyCode = e.keyCode || e.which;
+                        if (keyCode === 13)
+                            $("#ls-btn-add-message").click();
+                        return true;
+                    });
+                    
+                    
                     ls.demandcomments.refresh(true);
                     
                     $('#ls-btn-add-message').on('click', function() {
                         ls.save('demandcomments', 'create', {demandcomments: {demand_id: ls.demands.row.demand_id, text: $("#ls-demands-message").val()}}, function(Res) {
                             Res = JSON.parse(Res);
-                            if (Res.state == 0)
+                            if (Res.state == 0) {
                                 ls.demandcomments.refresh(false);
+                                $("#ls-demands-message").val('');
+                                $("#ls-demands-message").focus();
+                            }
                             else
                                 ls.showerrormassage('Ошибка!', Res.responseText);
                         }, 'POST', true)

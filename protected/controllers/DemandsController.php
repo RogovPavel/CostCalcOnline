@@ -15,10 +15,76 @@ class DemandsController extends Controller {
             array('allow', 'actions'=>array('create'), 'roles'=>array('create_demands'),),
             array('allow', 'actions'=>array('update'), 'roles'=>array('update_demands'),),
             array('allow', 'actions'=>array('delete'), 'roles'=>array('delete_demands'),),
+            array('allow', 'actions'=>array('send'), 'roles'=>array('send_demands'),),
             array('deny',
                     'users'=>array('*'),
             ),
         );
+    }
+    
+    public function actionSend() {
+        $result = array(
+            'state' => 0,
+            'header' => 'Вставка записи',
+            'id' => 0,
+            'responseText' => '',
+        );
+        
+        $sources = array();
+        $user_id = null;
+        $recipient = null;
+        
+        try {
+            // вычисляем адрес кому отправляем
+            if (isset($_POST['user_id'])) {
+                $user = new Users();
+                $user->get_by_id($_POST['user_id']);
+
+                $user_id = $user->user_id;
+                $recipient = $user->work_email;
+            }
+            
+            if ($recipient == null) {
+                $result['state'] = 2;
+                $result['responseText'] = 'Нет адреса электронной почты получателя.';
+                return;
+            }
+            
+            if (isset($_POST['sources'])) {
+                $sources = $_POST['sources'];
+                $sources = json_decode($sources, true);
+            }
+
+            $groupsettings = new GroupSettings();
+            $groupsettings->get_by_conditions(array(array(
+                'sql' => 's.group_id = :p_group_id',
+                'params' => array(':p_group_id' => Yii::app()->user->group_id),
+            )));
+
+            $template = new Templates();
+            $template->get_by_id($groupsettings->templatefordemands);
+
+            $parser = new LSParserHTML();
+            $temp = $parser->fillHTML($sources, $template->template);
+
+            $sender = new LSPHPMailer();
+
+            $sender->host = 'it-pc-02';
+            $sender->port = 2155;
+            $sender->username = 'reglament';
+            $sender->password = 'resetboard';
+            $sender->fromaddress = 'reglament@aliton.ru';
+
+            $sender->Send(array($recipient), array(), 'test22', $temp, '', true);
+            
+            
+        } catch (Exception $e) {
+            $result['state'] = 2;
+            $result['responseText'] = $e->getMessage();
+            
+        } finally {
+            echo json_encode($result);
+        }
     }
     
     public function actionIndex() {

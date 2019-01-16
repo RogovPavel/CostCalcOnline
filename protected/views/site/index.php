@@ -20,13 +20,13 @@
 
 
 <?php 
-    $sender = new LSPHPMailer();
-    
-    $sender->host = 'it-pc-02';
-    $sender->port = 2155;
-    $sender->username = 'reglament';
-    $sender->password = 'resetboard';
-    $sender->fromaddress = 'reglament@aliton.ru';
+//    $sender = new LSPHPMailer();
+//    
+//    $sender->host = 'it-pc-02';
+//    $sender->port = 2155;
+//    $sender->username = 'reglament';
+//    $sender->password = 'resetboard';
+//    $sender->fromaddress = 'reglament@aliton.ru';
     
 //    $sender->Send(array('pasha-rogov@yandex.ru'), array(), 'test22', 'test', '', true);
 ?>
