@@ -20,13 +20,16 @@
 
 
 <?php 
-//    $sender = new LSPHPMailer();
-//    
-//    $sender->host = 'it-pc-02';
-//    $sender->port = 2155;
-//    $sender->username = 'reglament';
-//    $sender->password = 'resetboard';
-//    $sender->fromaddress = 'reglament@aliton.ru';
+    $arr = array();
+    $text = 'Здесь будет какойто хаотичный кот123 текст. например слова кот123 и т.д.';
     
-//    $sender->Send(array('pasha-rogov@yandex.ru'), array(), 'test22', 'test', '', true);
+    $regexp = '/кот[1-3]{3}/';
+    
+    preg_match_all($regexp, $text, $arr);
+    
+    echo '<pre>';
+    print_r($arr);
+    echo '</pre>';
+    
+       
 ?>
