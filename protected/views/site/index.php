@@ -18,18 +18,3 @@
     </ul>
 </div>
 
-
-<?php 
-    $arr = array();
-    $text = 'Здесь будет какойто хаотичный кот123 текст. например слова кот123 и т.д.';
-    
-    $regexp = '/кот[1-3]{3}/';
-    
-    preg_match_all($regexp, $text, $arr);
-    
-    echo '<pre>';
-    print_r($arr);
-    echo '</pre>';
-    
-       
-?>

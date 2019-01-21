@@ -45181,3 +45181,84 @@ in C:\Home\LS\protected\components\WebUser.php (8)
 in C:\Home\LS\protected\components\LSFormModel.php (135)
 in C:\Home\LS\protected\components\WebUser.php (19)
 in C:\Home\LS\protected\components\WebUser.php (8)
+2019/01/17 11:24:33 [error] [php] session_regenerate_id(): Session object destruction failed (C:\Home\LS\framework\web\CHttpSession.php:190)
+Stack trace:
+#0 C:\Home\LS\framework\web\auth\CWebUser.php(235): WebUser->changeIdentity()
+#1 C:\Home\LS\protected\models\LoginForm.php(88): WebUser->login()
+#2 C:\Home\LS\protected\controllers\SiteController.php(63): LoginForm->login()
+#3 C:\Home\LS\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\Home\LS\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Home\LS\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\Home\LS\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\Home\LS\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\Home\LS\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Home\LS\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Home\LS\index.php(13): CWebApplication->run()
+REQUEST_URI=/site/login
+in C:\Home\LS\protected\models\LoginForm.php (88)
+in C:\Home\LS\protected\controllers\SiteController.php (63)
+in C:\Home\LS\index.php (13)
+2019/01/17 11:24:34 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (19)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2019/01/17 11:50:08 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (19)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2019/01/17 12:29:20 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (19)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2019/01/17 12:29:22 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (19)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2019/01/17 12:31:16 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (19)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2019/01/17 12:33:17 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (19)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2019/01/17 12:42:22 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (19)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2019/01/17 12:44:39 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (19)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2019/01/17 12:45:34 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (19)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2019/01/17 12:46:54 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (19)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2019/01/17 12:47:15 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (19)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2019/01/17 12:48:32 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (19)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2019/01/17 12:48:48 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (19)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2019/01/17 12:49:18 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (19)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2019/01/17 12:52:31 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (19)
+in C:\Home\LS\protected\components\WebUser.php (8)
+2019/01/17 13:09:11 [warning] [application] Не удалось присвоить небезопасный атрибут "theme" класса "Users".
+in C:\Home\LS\protected\components\LSFormModel.php (135)
+in C:\Home\LS\protected\components\WebUser.php (19)
+in C:\Home\LS\protected\components\WebUser.php (8)

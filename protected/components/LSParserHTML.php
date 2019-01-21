@@ -1,6 +1,6 @@
 <?php
 
-require_once(Yii::app()->request->baseUrl . '/protected/extensions/phpquery/phpQuery-onefile.php');
+require_once(Yii::app()->request->baseUrl . 'protected/extensions/phpquery/phpQuery-onefile.php');
 
 class LSParserHTML extends CComponent {
     
